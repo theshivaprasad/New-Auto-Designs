@@ -582,7 +582,7 @@ li {
 
 .hero-search-form .tab-content .tab-pane {
     padding: 35px;
-    margin-right: -120px;
+    margin-right: 0px;
     background-color: rgba(67, 25, 161, 0.65);
 }
 
@@ -670,7 +670,7 @@ li {
 
 .all-catagories {
     position: relative;
-    top: -90%;
+    top: -80%;
     z-index: 15;
 }
 
