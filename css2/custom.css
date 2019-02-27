@@ -161,13 +161,10 @@ select {
 	top: -6px;
 }
 .form-block {
-	background:#000;
+	background:transparent;
 	width:100%;
 	margin:10px 0px;
-	border-radius:8px;
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 8px;
-	box-shadow: -1px 1px 12px 2px #0000002e;
+
 }
 .form-title {
 	background:#404535;
@@ -191,7 +188,7 @@ select {
 	text-align:center;
 }
 .form-title2 {
-	background:#404535;
+	background:;
 	width:100%;
 	padding:14px 25px 14px 25px;
 }
@@ -484,7 +481,7 @@ select {
 	font-size: 14px;
 }
 .blogdiv-content {
-	background:#404535;	
+	background:#7643ea;	
 	padding:15px;
 }
 .blogdiv-content h2 {
@@ -1183,7 +1180,7 @@ transform: scale(1.1,1.1);
 	padding: 11px 0px 12px 21px;
 }
 .form-custompartrequest .col-form-label{
-	padding: 5px 0px 12px 21px;
+	padding: 5px 0px 12px 15px;
 }
 .form-custompartrequest .form-group {
     margin-bottom: .5rem;
