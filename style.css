@@ -1078,14 +1078,24 @@ li {
 
 .explore-search-area,
 .explore-map-area,
-.explore-search-form,
-.explore-search-result {
+.explore-search-form {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     width: 50%;
 }
+.explore-search-result {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 1300px;
+            flex: 0 0 1300px;
+    width: 1300px;
+}
 
+.part2:hover{
+background-color: #362654;
+color: #fff;
+z-index: 11;
+}
 .explore-search-form {
     background-color: #7643ea;
     padding: 50px 40px;
@@ -1150,7 +1160,7 @@ li {
 }
 
 .explore-search-result {
-    padding: 0 40px;
+    
     position: relative;
     z-index: 1;
     height: 1100px;
