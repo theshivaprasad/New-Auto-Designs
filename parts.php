@@ -1,3 +1,20 @@
+<?php
+    include_once "includes/database.php";
+    function extractId($conn, $node, $item) {
+        $sql = "SELECT ".$node."_id FROM tbl_car_".$node." WHERE ".$node."_name=\"".$item."\"";
+        $result = $conn->query($sql);
+        if($result) {
+            if (mysqli_num_rows($result)>0) {
+                $row = $result->fetch_assoc();
+                return $row[$node.'_id'];
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+    if (isset($_GET["part"])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +41,37 @@
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-
+    <script type="text/javascript">
+         function myFunction(e) {
+        var xmlhttp = new XMLHttpRequest();
+        if (e.currentTarget.id == "maker") {
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("model").innerHTML = this.responseText;
+                }
+            };
+        } else if (e.currentTarget.id == "model") {
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("year").innerHTML = this.responseText;
+                }
+            };
+        } else if (e.currentTarget.id == "part")  {
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("year").innerHTML = this.responseText;
+                }
+            };
+        }
+        if (e.currentTarget.id == "maker")
+            xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
+        else if (e.currentTarget.id == "model") 
+            xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
+        else if (e.currentTarget.id == "part") 
+            xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
+        xmlhttp.send();
+    }
+    </script>
 </head>
 
 <body>
@@ -94,54 +141,122 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-        <section class="pagebanner layer-overlay overlay-dark-5">
+      <section class="pagebanner layer-overlay overlay-dark-5" style="background-image: url(images/cars/AMC-Rebel.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-sm-12">
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
+                    <h1>USED <span class="text-black fnt-big"> amc </span> OEM PARTS</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Breadcumb Area End ***** -->
+
+    <!-- Explore Area -->
+    <section class="dorne-explore-area d-md-flex">
+        <!-- Explore Search Area -->
+        <div class="explore-search-area d-md-flex">
+            <!-- Explore Search Form -->
+            <div class="explore-search-form">
+                <h6>FIND THE PART NOW</h6>
+                <!-- Tabs -->
+                <!-- Tabs Content -->
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
+                        <form action="final.php" method="get">
+                            <select  name="maker" id="maker" oninput="myFunction(event)" class="custom-select" id="destinations">
+                                 <option disabled selected value="">Select Maker</option>
+                                    <?php
+                                        $sql="SELECT DISTINCT m.maker_name as maker FROM tbl_car_maker m, tbl_car_model mo, tbl_inventory i WHERE m.maker_id=mo.maker_id AND mo.model_id=i.model_id AND i.part_id=\"".extractId($conn,"part",$_GET['part'])."\"";
+                                        $result=$conn->query($sql);
+                                        while ($row=$result->fetch_assoc()) {
+                                            echo "<option value=\"".$row['maker']."\">".$row['maker']."</option>";
+                                        }
+                                    ?>
+                            </select>
+                            <select name="model" id="model" oninput="myFunction(event)" class="custom-select" id="catagories">
+                               <option disabled selected value="">Select Model</option>
+                            </select>
+                            <select name="part" id="part" oninput="myFunction(event)" class="custom-select" id="price-range">
+                               <option disabled >Select Part</option>
+                                <?php
+                                    $sql="SELECT part_name as part FROM tbl_car_part ORDER BY part_name";
+                                    $result=$conn->query($sql);
+                                    while ($row=$result->fetch_assoc()) {
+                                        if ($row["part"]==$_GET["part"]) {
+                                            echo "<option selected value=\"".$row['part']."\">".$row['part']."</option>";
+                                        } else {
+                                            echo "<option value=\"".$row['part']."\">".$row['part']."</option>";
+                                        }
+                                    }
+                                ?>
+                            </select>
+                            <select name="year" id="year" oninput="myFunction(event)" class="custom-select" id="proximity">
+                                <option disabled selected>Year</option>
+                            </select>
+                            <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Explore Search Result -->
+            <div class="explore-search-result">
+                        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <article class="body">
+                        <div class="wm-zoom-container my-zoom-1">
+                            <div class="wm-zoom-box" style="padding-top: 20px;">
+                                <img id="zoo" src="assets/img/small-image.jpg" class="wm-zoom-default-img" alt="alternative text" data-hight-src="assets/img/big-image.jpg" data-loader-src="assets/img/loader.gif">
+                            </div>
+                        </div>
+
+                        <br><hr><br>
+                    </article>
                     
                 </div>
+              </div>
+
+        </div>
+              <section class=" mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12 col-sm-12">
+                    <div class="reelative"><h2 class="subtitle">Lorem Ipsum</h2></div>
+                    <div class="makecontent">
+                   <p><u><b>Lorem Ipsum</b></u></p>
+                        <?php
+                          if ($fh = fopen('lorem.txt','r')) {
+                            echo "<p>";
+                            while (!feof($fh)) {
+                              $s = fgets($fh);
+                              if (("\n" == $s) || ("\r\n" == $s)) {
+                                echo "</p><p>";
+                              }
+                              echo "$s";
+                            }
+                          }
+                        ?>  
+                    </div>
+                </div>
+
+                <!--#partshidetrow-->
+                <!--partshidetrow#-->
+            </div>
+        </div>
+    </section>  <!-- Single Features Area -->
+
             </div>
         </div>
 
-    </section>
-    <section class="bggrey bg-img bg-overlay-9 " style="background-image: url(img/bg-img/hero-2.jpg);">
-        <center>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 offset-md-1 col-sm-12">
-                    <div class="contdivtxt">
-                        <div class="captionh5 text-red text-left"><strong>1974 Amc Ambassador Ac Condenser</strong></div>
-                        <p class="text-black">Hey, Thanks for your Part Request. For the fastest service and quote, call us at <span><a href="tel:1-866-293-3731" class="text-red"><strong>1-866-293-3731</strong></a></span> during the hours of 9am to 6pm Central Time - Monday to Saturday</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </center>
-    </section>
-    <section class="bggrey" style="background-color: #7643ea;">
-        <div class="container">
-            <div class="row">           
-                <div class="col-12 caption">
-                    <h2 class="text-black">Millions of Quality Used OEM Parts</h2>
-                </div>
-                <div class="col-md-10 offset-md-1 col-sm-12">
-                    <div class="col-md-6 col-sm-12 float-left">
-                        <h3 class="h3qttxt"><i class="text-blue"></i> Quick Quotes that save you money</h3>
-                    </div>
-                    <div class="col-md-6 col-sm-12 float-left">
-                        <h3 class="h3qttxt"><i class=" text-blue"></i> Save over 50% off dealer prices</h3>
-                    </div>
-                    <div class="col-md-6 col-sm-12 float-left">
-                        <h3 class="h3qttxt"><i class=" text-blue"></i> Fast delivery to your home or mechanic</h3>
-                    </div>
-                    <div class="col-md-6 col-sm-12 float-left">
-                        <h3 class="h3qttxt"><i class=" text-blue"></i> We service all major makes</h3>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -461,3 +576,8 @@
 </body>
 
 </html>
+      <?php
+    } else {
+        header("Location: partlist.php");
+    }
+?>

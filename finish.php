@@ -94,116 +94,54 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-      <section class="pagebanner layer-overlay overlay-dark-5" style="background-image: url(images/cars/AMC-Rebel.jpg);">
+        <section class="pagebanner layer-overlay overlay-dark-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-sm-12">
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1>USED <span class="text-black fnt-big"> amc </span> OEM PARTS</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Breadcumb Area End ***** -->
-
-    <!-- Explore Area -->
-    <section class="dorne-explore-area d-md-flex">
-        <!-- Explore Search Area -->
-        <div class="explore-search-area d-md-flex">
-            <!-- Explore Search Form -->
-            <div class="explore-search-form">
-                <h6>FIND THE PART NOW</h6>
-                <!-- Tabs -->
-                <!-- Tabs Content -->
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                        <form action="#" method="get">
-                            <select class="custom-select" id="destinations">
-                                 <option selected>Make</option>
-                                <option value="1">AMC</option>
-                                <option value="2">Acura</option>
-                                <option value="3">Alfa-Romeo</option>
-                                <option value="4">Audi</option>
-                                <option value="5">BMW</option>
-                            </select>
-                            <select class="custom-select" id="catagories">
-                                <option selected>Model</option>
-                                <option value="1">Ambassador</option>
-                                <option value="2">American</option>
-                                <option value="3">Amx</option>
-                                <option value="4">Classic</option>
-                            </select>
-                            <select class="custom-select" id="price-range">
-                               <option selected>Part</option>
-                                <option value="1">AC Compressor</option>
-                                <option value="2">AC Condensor</option>
-                                <option value="3">AC Evaporator</option>
-                                <option value="4">Air Injection Pump</option>
-                            </select>
-                            <select class="custom-select" id="proximity">
-                                <option selected>Year</option>
-                                <option value="1">1974</option>
-                                <option value="2">1973</option>
-                                <option value="3">1972</option>
-                                <option value="3">1971</option>
-                                <option value="3">1970</option>
-                            </select>
-                            <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Explore Search Result -->
-            <div class="explore-search-result">
-                        <div class="container">
-
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                    <article class="body">
-                        <div class="wm-zoom-container my-zoom-1">
-                            <div class="wm-zoom-box" style="padding-top: 20px;">
-                                <img id="zoo" src="assets/img/small-image.jpg" class="wm-zoom-default-img" alt="alternative text" data-hight-src="assets/img/big-image.jpg" data-loader-src="assets/img/loader.gif">
-                            </div>
-                        </div>
-
-                        <br><hr><br>
-                    </article>
                     
                 </div>
-              </div>
-
+            </div>
         </div>
-              <section class=" mt-5 mb-5">
+
+    </section>
+    <section class="bggrey bg-img bg-overlay-9 " style="background-image: url(img/bg-img/hero-2.jpg);">
+        <center>
         <div class="container">
             <div class="row">
-                
-                <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h2 class="subtitle">AMC Used Parts - Auto Parts - Buy Quality Parts for a AMC</h2></div>
-                    <div class="makecontent">
-                   <p><u><b>Used AC Compressor</b></u></p>
-<p>AC compressor is one of the most important component of vehicle's AC system. In the modern vehicles, every vehicles come with AC system. <b>AC compressor</b> pumps the evaporator liquid into the condenser and expansion valve and return to the evaporator again. Compressor removes the low - pressure coolant from the evaporator and compresses it according to air temperature and speed. The <b>AC compressor</b> compresses and increases the temperature of the refrigerant.</p>
-<p><u>Know the right time to <b>buy used AC Compressor</b> for your vehicle</u></p> 
-<p>AC compressor even though it is not used frequently, but they has to be checked atleast every month to keep it functioning. Having a good quality AC compressor installed in your car is important. Sometimes due to an internal fault with the wiring or a malfunctioning part can cause a serious problem with the car system.  The role of the <b>used AC compressor online</b> is to provide cooling and maintain an optimum temperature according to the weather conditions. What you need to do is determine the root cause of the problem first. You can buy the right type of <b>online used OEM AC compressor</b> according to your car make and model. You can also enter the year of car manufacturing to find the compatible <b>auto parts</b> that will fit in your vehicle without any type of modifications or alterations.</p>
-<p>Installing the <b>Used OEM AC compressor</b> is to pressurize the whole AC system and maintain the flow of the refrigerant which runs every time the car engine is on. If you have noticed a change in the cabin temperature or if the AC is not providing as much cooling as it used to, then it is the right time to get the <b>AC compressor</b>. Another way to determine the right time to install the <b>used auto parts</b> is by noticing the noise your car makes every time the AC is on. You can also purchase other <b>OEM parts</b> such as bolts, engine belt, and window regulator at the online stores without any hassle.</p>
-<p><u>Get the supreme quality <b>salvage parts</b> for your vehicle online</u></p> 
-<p>Now you don't have to worry if you haven't been able to find the car parts in the <b>junk yards</b>. QAP is one of the finest online platforms where you can easily locate the <b>used car parts</b> and place the order in a matter of few seconds. In case the <b>used OEM parts</b> have any kind of defect or need to be repaired, then you can place an online request on the website.</p>  
+                <div class="col-md-10 offset-md-1 col-sm-12">
+                    <div class="contdivtxt">
+                        <div class="captionh5 text-red text-left"><strong><?php echo $_GET['year']." ".$_GET['maker']." ".$_GET['model']." ".$_GET['part']; ?></strong></div>
+                        <p class="text-black">Hey, Thanks for your Part Request. For the fastest service and quote, call us at <span><a href="tel:1-866-293-3731" class="text-red"><strong>1-866-293-3731</strong></a></span> during the hours of 9am to 6pm Central Time - Monday to Saturday</p>
                     </div>
                 </div>
-
-                <!--#partshidetrow-->
-                <!--partshidetrow#-->
             </div>
         </div>
-    </section>  <!-- Single Features Area -->
-
+    </center>
+    </section>
+    <section class="bggrey" style="background-color: #7643ea;">
+        <div class="container">
+            <div class="row">           
+                <div class="col-12 caption">
+                    <h2 class="text-black">Millions of Quality Used OEM Parts</h2>
+                </div>
+                <div class="col-md-10 offset-md-1 col-sm-12">
+                    <div class="col-md-6 col-sm-12 float-left">
+                        <h3 class="h3qttxt"><i class="text-blue"></i> Quick Quotes that save you money</h3>
+                    </div>
+                    <div class="col-md-6 col-sm-12 float-left">
+                        <h3 class="h3qttxt"><i class=" text-blue"></i> Save over 50% off dealer prices</h3>
+                    </div>
+                    <div class="col-md-6 col-sm-12 float-left">
+                        <h3 class="h3qttxt"><i class=" text-blue"></i> Fast delivery to your home or mechanic</h3>
+                    </div>
+                    <div class="col-md-6 col-sm-12 float-left">
+                        <h3 class="h3qttxt"><i class=" text-blue"></i> We service all major makes</h3>
+                    </div>
+                </div>
             </div>
-        </div>
-
         </div>
     </section>
 

@@ -102,7 +102,7 @@
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
                     <div class="caption d-none d-md-block d-lg-block">
-                            <center><h1 class='captionh5 text-black text-left'><strong>You have selected a <span class='text-red'><strong>1974 Amc Ambassador Ac-condenser</strong></span> Complete the fields to get an Instant Quote </strong></h1></center>
+                            <center><h1 class='captionh5 text-black text-left'><strong>You have selected a <span class='text-red'><strong><?php echo $_GET['year']." ".$_GET['maker']." ".$_GET['model']." ".$_GET['part']; ?></strong></span> Complete the fields to get an Instant Quote </strong></h1></center>
                         </div>
                 </div>
             </div>
@@ -152,10 +152,11 @@
                                 <option value="3">1971</option>
                                 <option value="3">1970</option>
                             </select>
+                        </form>
 
                             
                                                                          <div class="contact-form">
-                <form action="#">
+                <form action="finish.php">
                     <div class="row">
                         <div class="col-12">
                             <input type="text" name="name" class="form-control" placeholder="Your Name">
@@ -169,9 +170,12 @@
                          <div class="col-12">
                             <input type="text" name="zip" class="form-control" placeholder="ZIP">
                         </div>
-                        
+                        <input type="hidden" name="maker" id="qap_make" value=<?php echo "\"".$_GET["maker"]."\""?>>
+                        <input type="hidden" name="model" id="qap_model" value=<?php echo "\"".$_GET["model"]."\""?>>
+                        <input type="hidden" name="part" id="qap_part" value=<?php echo "\"".$_GET["part"]."\""?>>
+                        <input type="hidden" name="qap_part_url" id="qap_part_url" value=''>
+                        <input type="hidden" name="year" id="qap_year" value=<?php echo "\"".$_GET["year"]."\""?>>
                     </div>
-                </form>
             </div>
                             <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
                         </form>

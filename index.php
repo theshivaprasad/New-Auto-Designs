@@ -24,6 +24,38 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
+    <script type="text/javascript">
+        function myFunction(e) {
+                var xmlhttp = new XMLHttpRequest();
+                if (e.currentTarget.id == "maker") {
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("model").innerHTML = this.responseText;
+                        }
+                    };
+                } else if (e.currentTarget.id == "model") {
+                  xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("part").innerHTML = this.responseText;
+                        }
+                    };
+                } else if (e.currentTarget.id == "part")  {
+                  xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("year").innerHTML = this.responseText;
+                        }
+                    };
+                }
+                  if (e.currentTarget.id == "maker")
+                    xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
+                  else if (e.currentTarget.id == "model") 
+                    xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
+                  else if (e.currentTarget.id == "part") 
+                    xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
+                  xmlhttp.send();
+            }
+    </script>
+
 </head>
 
 <body>
@@ -60,13 +92,13 @@
                         <div class="collapse navbar-collapse" id="dorneNav">
                             <ul class="navbar-nav mr-auto" id="dorneMenu">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="aboutus.html">About Us</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="partslist.html">Part List</a>
+                                    <a class="nav-link" href="partslist.php">Part List</a>
                                 </li>
                                            <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Part Request</a>
@@ -115,31 +147,26 @@
                                 <h6>What are you looking for?</h6>
                                 <center>
                                 <form action="#" method="get">
-                                    <select class="custom-select">
-                                        <option selected>Select Make</option>
-                                        <option value="1">AMC</option>
-                                        <option value="2">Acura</option>
-                                        <option value="3">Alfa</option>
-                                        <option value="4">Romeo</option>
-                                        <option value="5">Audi</option>
+                                    <select id="maker" class="custom-select" oninput="myFunction(event)">
+                                        <option disabled selected>Select Maker</option>
+                                       <?php
+                                          include_once "includes/database.php";
+
+                                          $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
+                                          $result=$conn->query($sql);
+                                          while ($row=$result->fetch_assoc()) {
+                                            echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
+                                          }
+                                        ?>
                                     </select>
-                                    <select class="custom-select">
-                                        <option selected>Select Model</option>
-                                        <option value="1">Catagories 1</option>
-                                        <option value="2">Catagories 2</option>
-                                        <option value="3">Catagories 3</option>
+                                    <select id="model" class="custom-select" oninput="myFunction(event)">
+                                        <option disabled selected>Select Model</option>
                                     </select>
-                                    <select class="custom-select">
-                                        <option selected>Select Part</option>
-                                        <option value="1">Catagories 1</option>
-                                        <option value="2">Catagories 2</option>
-                                        <option value="3">Catagories 3</option>
+                                    <select id="part" class="custom-select" oninput="myFunction(event)">
+                                        <option disabled selected>Select Part</option>
                                     </select>
-                                     <select class="custom-select">
-                                        <option selected>Select Year</option>
-                                        <option value="1">Catagories 1</option>
-                                        <option value="2">Catagories 2</option>
-                                        <option value="3">Catagories 3</option>
+                                     <select id="year" class="custom-select" >
+                                        <option disabled selected>Select Year</option>
                                     </select>
                                     <button type="submit" class="btn dorne-btn"><i></i> Get Quote</button>
                                 </form>

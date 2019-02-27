@@ -1,3 +1,27 @@
+<?php
+    include_once "includes/database.php";
+    
+    function extractId($conn, $node, $item) {
+        $sql = "SELECT ".$node."_id FROM tbl_car_".$node." WHERE ".$node."_name=\"".$item."\"";
+        $result = $conn->query($sql);
+        if($result) {
+            if (mysqli_num_rows($result)>0) {
+                $row = $result->fetch_assoc();
+                return $row[$node.'_id'];
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+  if (isset($_GET["year"])) {
+    if (!empty($_GET["year"])) {
+      header("Location: final.php?year=".$_GET["year"]."&maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]." ");
+    }
+  }
+  if (isset($_GET["maker"])) {
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +48,37 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
+    <script type="text/javascript">
+        function myFunction(e) {
+        var xmlhttp = new XMLHttpRequest();
+        if (e.currentTarget.id == "maker") {
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("model").innerHTML = this.responseText;
+                }
+            };
+        } else if (e.currentTarget.id == "model") {
+          xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("part").innerHTML = this.responseText;
+                }
+            };
+        } else if (e.currentTarget.id == "part")  {
+          xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("year").innerHTML = this.responseText;
+                }
+            };
+        }
+          if (e.currentTarget.id == "maker")
+            xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
+          else if (e.currentTarget.id == "model") 
+            xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
+          else if (e.currentTarget.id == "part") 
+            xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
+          xmlhttp.send();
+    }
+    </script>
 </head>
 
 <body>
@@ -118,36 +173,61 @@
                 <!-- Tabs Content -->
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                        <form action="#" method="get">
-                            <select class="custom-select" id="destinations">
-                                 <option selected>Make</option>
-                                <option value="1">AMC</option>
-                                <option value="2">Acura</option>
-                                <option value="3">Alfa-Romeo</option>
-                                <option value="4">Audi</option>
-                                <option value="5">BMW</option>
+                        <form action="maker.php" method="GET">
+                            <select name="maker" class="custom-select" id="maker" onchange="myFunction(event)">
+                                 <option disabled selected>Maker</option>
+                                <?php
+                                  $sql="SELECT maker_name as maker FROM tbl_car_maker ORDER BY maker_name";
+                                  $result=$conn->query($sql);
+                                  while ($row=$result->fetch_assoc()) {
+                                    if ($row["maker"]==$_GET["maker"]) {
+                                      echo "<option selected value=\"".$row['maker']."\">".$row['maker']."</option>";
+                                    } else {
+                                      echo "<option value=\"".$row['maker']."\">".$row['maker']."</option>";
+                                    }
+                                  }
+                                ?>
                             </select>
-                            <select class="custom-select" id="catagories">
-                                <option selected>Model</option>
-                                <option value="1">Ambassador</option>
-                                <option value="2">American</option>
-                                <option value="3">Amx</option>
-                                <option value="4">Classic</option>
+                            <select name="model" class="custom-select" id="model" oninput="myFunction(event)">
+                                <option disabled selected>Select Model</option>
+                                <?php
+                                  $sql="SELECT model_name as model FROM tbl_car_model WHERE maker_id=\"".extractId($conn,'maker',$_GET["maker"])."\"";
+                                  $result=$conn->query($sql);
+                                  while ($row=$result->fetch_assoc()) {
+                                    if ($row["model"]==$_GET["model"]) {
+                                      echo "<option selected value=\"".$row['model']."\">".$row['model']."</option>";
+                                    } else {
+                                      echo "<option value=\"".$row['model']."\">".$row['model']."</option>";
+                                    }
+                                  }
+                                ?>
                             </select>
-                            <select class="custom-select" id="price-range">
-                               <option selected>Part</option>
-                                <option value="1">AC Compressor</option>
-                                <option value="2">AC Condensor</option>
-                                <option value="3">AC Evaporator</option>
-                                <option value="4">Air Injection Pump</option>
+                            <select name="part" class="custom-select" id="part" oninput="myFunction(event)">
+                               <option disabled selected>Select Part</option>
+                              <?php
+                                echo $_GET["model"];
+                                if (isset($_GET["model"])) {
+                                  echo "wow";
+                                  $sql="SELECT p.part_name as part FROM tbl_car_part p INNER JOIN tbl_inventory i ON p.part_id = i.part_id WHERE i.model_id=\"".extractId($conn,'model',$_GET["model"])."\" ORDER BY p.part_name";
+                                  $result=$conn->query($sql);
+                                  while ($row=$result->fetch_assoc()) {
+                                    if ($row["part"]==$_GET["part"]) {
+                                      echo "<option selected value=\"".$row['part']."\">".$row['part']."</option>";
+                                    } else {
+                                      echo "<option value=\"".$row['part']."\">".$row['part']." </option>";
+                                    }
+                                  }
+                                }
+                              ?>
                             </select>
-                            <select class="custom-select" id="proximity">
-                                <option selected>Year</option>
-                                <option value="1">1974</option>
-                                <option value="2">1973</option>
-                                <option value="3">1972</option>
-                                <option value="3">1971</option>
-                                <option value="3">1970</option>
+                            <select name="year" class="custom-select" id="year">
+                                 <option disabled selected>Select Year</option>
+                                <?php
+                                  if(isset($_GET["part"])){
+                                    for($i=idate('Y');$i>=1960;$i--) {
+                                    echo "<option value=\"".$i."\">".$i."</option>";
+                                    }
+                                }?>
                             </select>
                             <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
                         </form>
@@ -162,247 +242,57 @@
             <div class="row">
                 
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h2 class="subtitle">AMC Used Parts - Auto Parts - Buy Quality Parts for a AMC</h2></div>
+                    <div class="reelative"><h2 class="subtitle"><!--<?php echo $_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']; ?>-->Lorem Ipsum</h2></div>
                     <div class="makecontent">
-                        <p><p><strong>Used AMC parts</strong></p>
-
-<p>AMC- The leading manufacturer of the passenger vehicle</p>
-
-<p>American Motors Corporation is an automobile manufacturing company founded in the year 1954. AMC is known to manufacture high-quality compact cars such as Rambler, Hornet, and Pacer. After the company was bought by Chrysler, AMC began to manufacture utility vehicles such as jeeps and passenger crossover vehicles.</p>
-
-<p>How to find the <strong>AMC OEM parts </strong>for your vehicle?</p>
-
-<p>The role of the <strong>AMC used parts online </strong>such as the<strong> </strong>abs control module is to make sure that the antilock brake system of your car works properly. It also transfers the information from the sensors and the hydraulic brakes. Having the quality <strong>online AMC parts </strong>is essential as it prevents skidding and provides stability. Such <strong>OEM parts </strong>have a dashboard which uses the warning light as an indicator. You should <strong>buy used AMC parts, </strong>in case there is something wrong with the brake system of the car.</p>
-
-<p>The purpose of having quality <strong>3 other makes parts online </strong>installed in your vehicle is to ensure that the brakes work the way they are supposed to. Otherwise, the car will lose the traction control which can cause a serious road accident. It is common for the <strong>auto parts </strong>to stop working properly due to the daily wear and tear<strong>. </strong>For instance- The ABS lights began to flicker to indicate an internal issue. You should always buy the <strong>online OEM parts </strong>that are compatible with your vehicle. But the question is how will you do it? The online website is your answer.</p>
-
-<p>QAP- The best platform to find the <strong>used auto parts </strong>for the automobiles.</p>
-
-<p>If the ABS control module or the warning lights of your car are not functioning properly, then you should definitely replace them with the used<strong> OEM parts. </strong>Buying the <strong>used car parts </strong>is a cost-effective way to improve the performance of your vehicle. You can find the <strong>salvage parts </strong>at reduced prices. After you enter the make and model of your car, you can view the online inventory and also locate the nearest <strong>salvage yards. </strong>You can personally visit the <strong>junk yards</strong> and test the electrical parts to ensure that they are in working condition.</p>
-</p> 
+                        <p><p><strong>Lorem Ipsum</strong></p>
+                        <?php
+                          if ($fh = fopen('lorem.txt','r')) {
+                            echo "<p>";
+                            while (!feof($fh)) {
+                              $s = fgets($fh);
+                              if (("\n" == $s) || ("\r\n" == $s)) {
+                                echo "</p><p>";
+                              }
+                              echo "$s";
+                            }
+                          }
+                        ?>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><div class="subtitle">Popular AMC Used Parts - Auto Parts - Buy Quality Parts for a AMC Model</div></div>
+                    <div class="reelative"><div class="subtitle"><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
+                     echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></div></div>
                 
 
                     <div class="make-listpart">
                         <ul>
-                            
-                            <li><a href="ac-compressor.html" title="Ambassador">Amc Ambassador</a></li>
-                            
-                            <li><a href="amc/american.html" title="American">Amc American</a></li>
-                            
-                            <li><a href="amc/amx.html" title="Amx">Amc Amx</a></li>
-                            
-                            <li><a href="amc/classic.html" title="Classic">Amc Classic</a></li>
-                            
-                            <li><a href="amc/concord.html" title="Concord">Amc Concord</a></li>
-                            
-                            <li><a href="amc/eagle.html" title="Eagle">Amc Eagle</a></li>
-                            
-                            <li><a href="amc/gremlin.html" title="Gremlin">Amc Gremlin</a></li>
-                            
-                            <li><a href="amc/hornet.html" title="Hornet">Amc Hornet</a></li>
-                            
-                            <li><a href="amc/javelin.html" title="Javelin">Amc Javelin</a></li>
-                            
-                            <li><a href="amc/marlin.html" title="Marlin">Amc Marlin</a></li>
-                            
-                            <li><a href="amc/pacer.html" title="Pacer">Amc Pacer</a></li>
-                            
-                            <li><a href="amc/rambler.html" title="Rambler">Amc Rambler</a></li>
-                            
-                            <li><a href="amc/rebel.html" title="Rebel">Amc Rebel</a></li>
-                            
-                            <li><a href="amc/spirit.html" title="Spirit">Amc Spirit</a></li>
-                            
+                            <?php
+                              $sql="SELECT model_name as model FROM tbl_car_model WHERE maker_id=\"".extractId($conn,'maker',$_GET['maker'])."\"";
+                              $result=$conn->query($sql);
+                              $numOfRowElements=0;
+                              while ($row=$result->fetch_assoc()) {
+                                echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&model=".$row["model"]."\">".$row["model"]."</a></li>";
+                                 }
+                               } 
+                               echo "</table>";
+                            ?>
                         </ul>
                     </div>
                 </div>
                 <!--#partshidetrow-->
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><div class="subtitle">Popular Amc Used Parts - Auto Parts</div></div>
+                    <div class="reelative"><div class="subtitle"><?php if (!isset($_GET["part"])) {
+                     echo "Popular ".$_GET['maker']." Used Parts - Auto Parts";?></div></div>
                     <div class="make-listpart">
                         <ul>
-                            
-                            <li><a href="amc/abs-system.html" title="ABS System (Anti-Lock)">Amc ABS System (Anti-Lock)</a></li>
-                            
-                            <li><a href="amc/ac-compressor-clutch.html" title="AC Compressor Clutch">Amc AC Compressor Clutch</a></li>
-                            
-                            <li><a href="amc/ac-evaporator.html" title="AC Evaporator">Amc AC Evaporator</a></li>
-                            
-                            <li><a href="amc/ac-selector.html" title="AC Selector">Amc AC Selector</a></li>
-                            
-                            <li><a href="amc/air-cleaner-box.html" title="Air Cleaner Box">Amc Air Cleaner Box</a></li>
-                            
-                            <li><a href="amc/air-injection-pump.html" title="Air Injection Pump">Amc Air Injection Pump</a></li>
-                            
-                            <li><a href="amc/alternator.html" title="Alternator">Amc Alternator</a></li>
-                            
-                            <li><a href="amc/automatic-headlamp-dimmer.html" title="Automatic Headlamp Dimmer">Amc Automatic Headlamp Dimmer</a></li>
-                            
-                            <li><a href="amc/rear-axle.html" title="Axle - Rear">Amc Axle - Rear</a></li>
-                            
-                            <li><a href="amc/axle-housing.html" title="Axle Housing">Amc Axle Housing</a></li>
-                            
-                            <li><a href="amc/axle-shaft.html" title="Axle Shaft">Amc Axle Shaft</a></li>
-                            
-                            <li><a href="amc/backup-lamp.html" title="Backup Lamp">Amc Backup Lamp</a></li>
-                            
-                            <li><a href="amc/bell-housing.html" title="Bell Housing">Amc Bell Housing</a></li>
-                            
-                            <li><a href="amc/body-control-module.html" title="Body Control Module">Amc Body Control Module</a></li>
-                            
-                            <li><a href="amc/computer.html" title="Brain Box (Not Engine)">Amc Brain Box (Not Engine)</a></li>
-                            
-                            <li><a href="amc/brake-prop-vlv.html" title="Brake Proportioning Valve">Amc Brake Proportioning Valve</a></li>
-                            
-                            <li><a href="amc/rear-bumper.html" title="Bumper - Rear">Amc Bumper - Rear</a></li>
-                            
-                            <li><a href="amc/f-bumper-renf.html" title="Bumper Reinforcement - Front">Amc Bumper Reinforcement - Front</a></li>
-                            
-                            <li><a href="amc/camera-projector.html" title="Camera/Projector">Amc Camera/Projector</a></li>
-                            
-                            <li><a href="amc/car-window-lifter.html" title="Car Window Lifter">Amc Car Window Lifter</a></li>
-                            
-                            <li><a href="amc/carburetor.html" title="Carburetor">Amc Carburetor</a></li>
-                            
-                            <li><a href="amc/carrier-case.html" title="Carrier Case">Amc Carrier Case</a></li>
-                            
-                            <li><a href="amc/clock-spring.html" title="Clock Spring">Amc Clock Spring</a></li>
-                            
-                            <li><a href="amc/mastercylinder.html" title="Clutch Master Cylinder">Amc Clutch Master Cylinder</a></li>
-                            
-                            <li><a href="amc/engine-coil.html" title="Coil - Engine">Amc Coil - Engine</a></li>
-                            
-                            <li><a href="amc/column-shifter.html" title="Column Shift Lever">Amc Column Shift Lever</a></li>
-                            
-                            <li><a href="amc/column-switch.html" title="Column Switch">Amc Column Switch</a></li>
-                            
-                            <li><a href="amc/ecu.html" title="Computer (Engine)">Amc Computer (Engine)</a></li>
-                            
-                            <li><a href="amc/radiator-fan.html" title="Condenser Fan">Amc Condenser Fan</a></li>
-                            
-                            <li><a href="amc/front-lower-control-arm.html" title="Control Arm - Lower (Front)">Amc Control Arm - Lower (Front)</a></li>
-                            
-                            <li><a href="amc/front-upper-control-arm.html" title="Control Arm - Upper (Front)">Amc Control Arm - Upper (Front)</a></li>
-                            
-                            <li><a href="amc/convertible-top-lift.html" title="Convertible Top Lift">Amc Convertible Top Lift</a></li>
-                            
-                            <li><a href="amc/cooling-fan.html" title="Cooling Fan">Amc Cooling Fan</a></li>
-                            
-                            <li><a href="amc/crankshaft.html" title="Crankshaft">Amc Crankshaft</a></li>
-                            
-                            <li><a href="amc/cruise-control-switch.html" title="Cruise Switch">Amc Cruise Switch</a></li>
-                            
-                            <li><a href="amc/cylinder-head.html" title="Cylinder Head">Amc Cylinder Head</a></li>
-                            
-                            <li><a href="amc/dash-panel.html" title="Dash Panel">Amc Dash Panel</a></li>
-                            
-                            <li><a href="amc/trunk-lid.html" title="Decklid">Amc Decklid</a></li>
-                            
-                            <li><a href="amc/differential-assembly.html" title="Differential Assembly">Amc Differential Assembly</a></li>
-                            
-                            <li><a href="amc/differential-flange.html" title="Differential Flange">Amc Differential Flange</a></li>
-                            
-                            <li><a href="amc/differential-side-gears.html" title="Differential Side Gears">Amc Differential Side Gears</a></li>
-                            
-                            <li><a href="amc/engine-coil.html" title="Distributor Coil">Amc Distributor Coil</a></li>
-                            
-                            <li><a href="amc/rear-door-asm.html" title="Door Assembly - Rear">Amc Door Assembly - Rear</a></li>
-                            
-                            <li><a href="amc/front-door-glass.html" title="Door Glass - Front (Side)">Amc Door Glass - Front (Side)</a></li>
-                            
-                            <li><a href="amc/door-lock-control-module.html" title="Door Lock Control Module">Amc Door Lock Control Module</a></li>
-                            
-                            <li><a href="amc/rear-ventglass.html" title="Door Vent Glass - Rear (Side)">Amc Door Vent Glass - Rear (Side)</a></li>
-                            
-                            <li><a href="amc/power-window-motor.html" title="Door Window Motor">Amc Door Window Motor</a></li>
-                            
-                            <li><a href="amc/rear-win-reg.html" title="Door Window Regulator - Rear">Amc Door Window Regulator - Rear</a></li>
-                            
-                            <li><a href="amc/rear-drive-shaft.html" title="Drive Shaft - Rear">Amc Drive Shaft - Rear</a></li>
-                            
-                            <li><a href="amc/computer.html" title="ECM/ECU (Not Engine)">Amc ECM/ECU (Not Engine)</a></li>
-                            
-                            <li><a href="amc/egr-maintenance-reminder.html" title="EGR Maintenance Reminder">Amc EGR Maintenance Reminder</a></li>
-                            
-                            <li><a href="amc/door-switch.html" title="Electrical Switch (Door)">Amc Electrical Switch (Door)</a></li>
-                            
-                            <li><a href="amc/computer.html" title="Electronic Control Module (Not Engine)">Amc Electronic Control Module (Not Engine)</a></li>
-                            
-                            <li><a href="amc/engine.html" title="Engine Assembly">Amc Engine Assembly</a></li>
-                            
-                            <li><a href="amc/engine-computer.html" title="Engine Computer">Amc Engine Computer</a></li>
-                            
-                            <li><a href="amc/engine-oil-cooler.html" title="Engine Oil Cooler">Amc Engine Oil Cooler</a></li>
-                            
-                            <li><a href="amc/exhaust-manifold.html" title="Exhaust Manifold">Amc Exhaust Manifold</a></li>
-                            
-                            <li><a href="amc/fan-clutch.html" title="Fan Clutch">Amc Fan Clutch</a></li>
-                            
-                            <li><a href="amc/filter-water-separator.html" title="Filter/Water Separator">Amc Filter/Water Separator</a></li>
-                            
-                            <li><a href="amc/floor-shift-assembly.html" title="Floor Shift Assembly">Amc Floor Shift Assembly</a></li>
-                            
-                            <li><a href="amc/fog-light-lever.html" title="Fog Light Stalk">Amc Fog Light Stalk</a></li>
-                            
-                            <li><a href="amc/front-axle-i-beam.html" title="Front Axle I-Beam (2WD)">Amc Front Axle I-Beam (2WD)</a></li>
-                            
-                            <li><a href="amc/front-bumper.html" title="Front Bumper">Amc Front Bumper</a></li>
-                            
-                            <li><a href="amc/front-clip.html" title="Front Clip">Amc Front Clip</a></li>
-                            
-                            <li><a href="amc/front-door-glass.html" title="Front Door Glass (Side)">Amc Front Door Glass (Side)</a></li>
-                            
-                            <li><a href="amc/frnt-vent-glass.html" title="Front Door Vent Glass (Side)">Amc Front Door Vent Glass (Side)</a></li>
-                            
-                            <li><a href="amc/front-fender.html" title="Front Fender">Amc Front Fender</a></li>
-                            
-                            <li><a href="amc/front-spoiler.html" title="Front Spoiler">Amc Front Spoiler</a></li>
-                            
-                            <li><a href="amc/front-window-lifter.html" title="Front Window Lifter">Amc Front Window Lifter</a></li>
-                            
-                            <li><a href="amc/fuel-filler-neck.html" title="Fuel Filler Neck">Amc Fuel Filler Neck</a></li>
-                            
-                            <li><a href="amc/fuel-injection-parts.html" title="Fuel Injection Parts">Amc Fuel Injection Parts</a></li>
-                            
-                            <li><a href="amc/fuel-pump-control-module.html" title="Fuel Pump Control Module">Amc Fuel Pump Control Module</a></li>
-                            
-                            <li><a href="amc/fuel-vapor-canister.html" title="Fuel Vapor Canister">Amc Fuel Vapor Canister</a></li>
-                            
-                            <li><a href="amc/glove-box.html" title="Glove Box">Amc Glove Box</a></li>
-                            
-                            <li><a href="amc/grille.html" title="Grille">Amc Grille</a></li>
-                            
-                            <li><a href="amc/head-light.html" title="Head Light Assembly">Amc Head Light Assembly</a></li>
-                            
-                            <li><a href="amc/head-light-motor.html" title="Head Light Motor">Amc Head Light Motor</a></li>
-                            
-                            <li><a href="amc/head-light-wiper-motor.html" title="Head Light Wiper Motor">Amc Head Light Wiper Motor</a></li>
-                            
-                            <li><a href="amc/headlamp-washer-motor.html" title="Headlamp Washer Motor">Amc Headlamp Washer Motor</a></li>
-                            
-                            <li><a href="amc/heater-core.html" title="Heater Core">Amc Heater Core</a></li>
-                            
-                            <li><a href="amc/heater-or-air-conditioner-parts-misc.html" title="Heater or Air Conditioner Parts - Misc.">Amc Heater </a></li>
-                            
-                            <li><a href="amc/hood.html" title="Hood">Amc Hood</a></li>
-                            
-                            <li><a href="amc/hub-brakes.html" title="Hub Brakes">Amc Hub Brakes</a></li>
-                            
-                            <li><a href="amc/idler-arm.html" title="Idler Arm">Amc Idler Arm</a></li>
-                            
-                            <li><a href="amc/instrument-cluster.html" title="Instrument Cluster">Amc Instrument Cluster</a></li>
-                            
-                            <li><a href="amc/intercooler.html" title="Intercooler">Amc Intercooler</a></li>
-                            
-                            <li><a href="amc/suspension-crossmember.html" title="K-Frame">Amc K-Frame</a></li>
-                            
-                            <li><a href="amc/knuckle-support.html" title="Knuckle Support">Amc Knuckle Support</a></li>
-                        
-                            
+                           <?php 
+                                $sql="SELECT DISTINCT p.part_name as part FROM tbl_car_maker m, tbl_car_model mo, tbl_inventory i, tbl_car_part p WHERE m.maker_id=\"".extractId($conn,'maker',$_GET['maker'])."\" AND mo.model_id=i.model_id AND i.part_id=p.part_id ORDER BY p.part_name";
+                                $result=$conn->query($sql);
+                                while ($row=$result->fetch_assoc()) {
+                                  echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
+                                 }
+                                } 
+                            ?>
                         </ul>
                     </div>
                 </div>
@@ -721,3 +611,8 @@
 </body>
 
 </html>
+<?php
+  } else {
+    header("Location: partslist.php");
+  }
+?>
