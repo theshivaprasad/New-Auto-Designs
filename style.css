@@ -553,8 +553,6 @@ li {
     margin-top: 0px;
     position: relative;
     z-index: 10;
-    height: calc(-300vh);
-
 }
 
 .hero-search-form .nav-tabs {
@@ -672,7 +670,7 @@ li {
 
 .all-catagories {
     position: relative;
-    top: -80%;
+    top: -100%;
     z-index: 15;
 }
 
