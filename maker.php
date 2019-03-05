@@ -127,10 +127,10 @@
                                     <a class="nav-link" href="contact.html">Part Request</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Resources</a>
+                                    <a class="nav-link" href="resources.html">Resources</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Customer Service</a>
+                                    <a class="nav-link" href="customerservice.html">Customer Service</a>
                                 </li>
                             </ul>
                             <!-- Search btn -->

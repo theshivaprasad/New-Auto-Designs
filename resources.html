@@ -1,20 +1,3 @@
-<?php
-    include_once "includes/database.php";
-    function extractId($conn, $node, $item) {
-        $sql = "SELECT ".$node."_id FROM tbl_car_".$node." WHERE ".$node."_name=\"".$item."\"";
-        $result = $conn->query($sql);
-        if($result) {
-            if (mysqli_num_rows($result)>0) {
-                $row = $result->fetch_assoc();
-                return $row[$node.'_id'];
-            }
-            else {
-                return 0;
-            }
-        }
-    }
-    if (isset($_GET["part"])) {
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,41 +20,10 @@
 <link href="css2/animate.css" rel="stylesheet">
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="wm-zoom/jquery.wm-zoom-1.0.min.css">
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-    <script type="text/javascript">
-         function myFunction(e) {
-        var xmlhttp = new XMLHttpRequest();
-        if (e.currentTarget.id == "maker") {
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("model").innerHTML = this.responseText;
-                }
-            };
-        } else if (e.currentTarget.id == "model") {
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("year").innerHTML = this.responseText;
-                }
-            };
-        } else if (e.currentTarget.id == "part")  {
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("year").innerHTML = this.responseText;
-                }
-            };
-        }
-        if (e.currentTarget.id == "maker")
-            xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
-        else if (e.currentTarget.id == "model") 
-            xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
-        else if (e.currentTarget.id == "part") 
-            xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
-        xmlhttp.send();
-    }
-    </script>
+
 </head>
 
 <body>
@@ -105,22 +57,21 @@
                         <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                             <ul class="navbar-nav mr-auto" id="dorneMenu">
+         <div class="collapse navbar-collapse" id="dorneNav">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu">
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="aboutus.html">About Us</a>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="aboutus.html">About Us </a>
+                                </li>
+                                           <li class="nav-item">
+                                    <a class="nav-link" href="partslist.html">Part List </a>
+                                   <li class="nav-item">
+                                    <a class="nav-link" href="partsrequest.html">Parts Request </a>
                                 </li>
                                            <li class="nav-item active">
-                                    <a class="nav-link" href="partslist.html">Part List <span class="sr-only">(current)</span></a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Part Request</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="resources.html">Resources</a>
+                                    <a class="nav-link" href="resources.html">Resources <span class="sr-only">(current)</span></a>
                                 </li>
                                            <li class="nav-item">
                                     <a class="nav-link" href="customerservice.html">Customer Service</a>
@@ -139,121 +90,116 @@
         </div>
 
     </header>
-    <!-- ***** Header Area End ***** -->
-
-      <section class="pagebanner layer-overlay overlay-dark-5" style="background-image: url(images/cars/AMC-Rebel.jpg);">
+        <section class="pagebanner layer-overlay overlay-dark-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-sm-12">
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1>USED <span class="text-black fnt-big"> amc </span> OEM PARTS</h1>
+                    <h1 class="pagebannerh1h1">RESOURCES <span class="text-blue"></span></h1>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ***** Breadcumb Area End ***** -->
 
-    <!-- Explore Area -->
-    <section class="dorne-explore-area d-md-flex">
-        <!-- Explore Search Area -->
-        <div class="explore-search-area d-md-flex">
-            <!-- Explore Search Form -->
-            <div class="explore-search-form">
-                <h6>FIND THE PART NOW</h6>
-                <!-- Tabs -->
-                <!-- Tabs Content -->
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                        <form action="final.php" method="get">
-                            <select  name="maker" id="maker" oninput="myFunction(event)" class="custom-select" id="destinations">
-                                 <option disabled selected value="">Select Maker</option>
-                                    <?php
-                                        $sql="SELECT DISTINCT m.maker_name as maker FROM tbl_car_maker m, tbl_car_model mo, tbl_inventory i WHERE m.maker_id=mo.maker_id AND mo.model_id=i.model_id AND i.part_id=\"".extractId($conn,"part",$_GET['part'])."\"";
-                                        $result=$conn->query($sql);
-                                        while ($row=$result->fetch_assoc()) {
-                                            echo "<option value=\"".$row['maker']."\">".$row['maker']."</option>";
-                                        }
-                                    ?>
-                            </select>
-                            <select name="model" id="model" oninput="myFunction(event)" class="custom-select" id="catagories">
-                               <option disabled selected value="">Select Model</option>
-                            </select>
-                            <select name="part" id="part" oninput="myFunction(event)" class="custom-select" id="price-range">
-                               <option disabled >Select Part</option>
-                                <?php
-                                    $sql="SELECT part_name as part FROM tbl_car_part ORDER BY part_name";
-                                    $result=$conn->query($sql);
-                                    while ($row=$result->fetch_assoc()) {
-                                        if ($row["part"]==$_GET["part"]) {
-                                            echo "<option selected value=\"".$row['part']."\">".$row['part']."</option>";
-                                        } else {
-                                            echo "<option value=\"".$row['part']."\">".$row['part']."</option>";
-                                        }
-                                    }
-                                ?>
-                            </select>
-                            <select name="year" id="year" oninput="myFunction(event)" class="custom-select" id="proximity">
-                                <option disabled selected>Year</option>
-                            </select>
-                            <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Explore Search Result -->
-            <div class="explore-search-result">
-                
- <section class=" mt-5 mb-5">
+    </section>
+    <section class=" mt-5 mb-5">
         <div class="container">
             <div class="row">
+
                 
-                <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h2 class="subtitle">Lorem Ipsum</h2></div>
-                    <div class="makecontent">
-                   <p><u><b>Lorem Ipsum</b></u></p>
-                        <?php
-                          if ($fh = fopen('lorem.txt','r')) {
-                            echo "<p>";
-                            while (!feof($fh)) {
-                              $s = fgets($fh);
-                              if (("\n" == $s) || ("\r\n" == $s)) {
-                                echo "</p><p>";
-                              }
-                              echo "$s";
-                            }
-                          }
-                        ?>  
-                    </div>
-                    <div class="reelative"><h1 class='captionh5 text-black text-left'><strong>You have selected a <span class='text-blue'><strong>1974 Amc Ambassador Ac-condenser</strong></span> Complete the fields to get an Instant Quote </strong></h1></div>
-                    <div class="makecontent">
-                        <p><u>Used AC condenser</u></p>
-<p>AC condenser is an system used by cooling a substance gaseous liquid state. In this way, the latent heat is released from the substance and transferred to the environment around it. The condenser is occupied by heat transfer blades from outside to inside the unit through which cooling air can circulate. Condenser made up of copper is good when compared to aluminium.</p>
-<p>Locate the AC Condenser online and improve your car's performance. </p>
-<p>Air conditioning is an important part of vehicles that is responsible to maintain the cooling level. A car should have a proper ventilation system so that you can travel comfortably. It consists of several parts such as condenser, compressor and not to forget the accumulator. You should <b>buy used AC Condenser</b> as it is uses the refrigerant gas Freon and take in the water and other contaminants out of the AC system. If the AC system has stopped providing cool air, then you should definitely think of purchasing the <b>online AC Condenser. </b></p>
-<p>You should examine the AC Condenser from time to time to identify the exact problem. Sometimes you feel warm air coming out from the AC as soon as you turn it on, it may happen due to the low level of refrigerant. The AC Condenser is placed between the grille and car radiator and generates a proper airflow whenever the vehicle is moving. The refrigerant travels through the path directly into the evaporator. Before placing the order for the used auto parts make sure to check the warranty statement.  </p>
-<p>The OEM parts should be installed in case there is a leak in the refrigerant. You can find a variety of auto parts at the online store. You can also buy the salvage parts in bulk quantity and get them replaced or repaired free of cost. </p>
-<p>Visit the online site of QAP to get the cost-effective used car parts</p>
-<p>If you are looking for the used OEM parts for your vehicle, then QAP is the perfect platform for you. The site allows the customers to view the different car parts. Each car part sold online has the product description that allows the customers to learn more about the product dimensions and the kind of material used to manufacture it. All the auto parts can be installed in the car easily without any modifications. </p>
-                </div>
- <div class="authimg">
-                            <img src="img/auth.jpg" alt="Authorized" />
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Auto-Part-Insights.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-insight.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Auto Part Insights</h2> 
+                                <div class="badge badge-primary float-right fa-lg">15</div>
+                            </div>
                         </div>
-                <!--#partshidetrow-->
-                <!--partshidetrow#-->
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Car-Accessories.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-accessories.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Car Accessories</h2>    
+                                <div class="badge badge-primary float-right fa-lg">6</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Car-Care.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-carcare.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Car Care</h2>   
+                                <div class="badge badge-primary float-right fa-lg">3</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Recreational-Vehicles.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-rv.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Recreational Vehicles</h2>  
+                                <div class="badge badge-primary float-right fa-lg">5</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Tips-and-Advice.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-tips.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Tips & Tricks</h2>  
+                                <div class="badge badge-primary float-right fa-lg">6</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Tires-and-Wheels.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/tyre_wheel1.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Tire and Wheels</h2>    
+                                <div class="badge badge-primary float-right fa-lg">6</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
             </div>
         </div>
-    </section> 
-            </div>
-        </div>
+    </section>  
 
-        </div>
-    </section>
-
-    <!-- ****** Footer Area Start ****** -->
-     <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
+    <!-- ***** Features Events Area Start ***** -->
+    <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -283,7 +229,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
-                                        <h3 class="text-red">Daniel Frank, Seo Master</h3>
+                                        <h3 class="text-black">Daniel Frank, Seo Master</h3>
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +244,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
-                                        <h3 class="text-red">Leah Jordan</h3>
+                                        <h3 class="text-black">Leah Jordan</h3>
                                     </div>
                                 </div>
                             </div>
@@ -313,7 +259,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
-                                        <h3 class="text-red">Brian McNaught</h3>
+                                        <h3 class="text-black">Brian McNaught</h3>
                                     </div>
                                 </div>
                             </div>
@@ -328,7 +274,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
-                                        <h3 class="text-red">Lee Barker</h3>
+                                        <h3 class="text-black">Lee Barker</h3>
                                     </div>
                                 </div>
                             </div>
@@ -463,19 +409,7 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
-        <script type="text/javascript" src="assets/js/jquery-1.11.1.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="wm-zoom/jquery.wm-zoom-1.0.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.my-zoom-1').WMZoom();
-                $('.my-zoom-2').WMZoom({
-                    config : {
-                        inner : true
-                    }
-                });
-            });
-        </script>
+
 
   
 <script src="js/particles.js"></script>
@@ -568,8 +502,3 @@
 </body>
 
 </html>
-      <?php
-    } else {
-        header("Location: partlist.php");
-    }
-?>

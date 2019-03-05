@@ -1,20 +1,3 @@
-<?php
-    include_once "includes/database.php";
-    function extractId($conn, $node, $item) {
-        $sql = "SELECT ".$node."_id FROM tbl_car_".$node." WHERE ".$node."_name=\"".$item."\"";
-        $result = $conn->query($sql);
-        if($result) {
-            if (mysqli_num_rows($result)>0) {
-                $row = $result->fetch_assoc();
-                return $row[$node.'_id'];
-            }
-            else {
-                return 0;
-            }
-        }
-    }
-    if (isset($_GET["part"])) {
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,40 +20,40 @@
 <link href="css2/animate.css" rel="stylesheet">
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="wm-zoom/jquery.wm-zoom-1.0.min.css">
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+
     <script type="text/javascript">
-         function myFunction(e) {
-        var xmlhttp = new XMLHttpRequest();
-        if (e.currentTarget.id == "maker") {
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("model").innerHTML = this.responseText;
+        function myFunction(e) {
+                var xmlhttp = new XMLHttpRequest();
+                if (e.currentTarget.id == "maker") {
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("model").innerHTML = this.responseText;
+                        }
+                    };
+                } else if (e.currentTarget.id == "model") {
+                  xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("part").innerHTML = this.responseText;
+                        }
+                    };
+                } else if (e.currentTarget.id == "part")  {
+                  xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("year").innerHTML = this.responseText;
+                        }
+                    };
                 }
-            };
-        } else if (e.currentTarget.id == "model") {
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("year").innerHTML = this.responseText;
-                }
-            };
-        } else if (e.currentTarget.id == "part")  {
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("year").innerHTML = this.responseText;
-                }
-            };
-        }
-        if (e.currentTarget.id == "maker")
-            xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
-        else if (e.currentTarget.id == "model") 
-            xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
-        else if (e.currentTarget.id == "part") 
-            xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
-        xmlhttp.send();
-    }
+                  if (e.currentTarget.id == "maker")
+                    xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
+                  else if (e.currentTarget.id == "model") 
+                    xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
+                  else if (e.currentTarget.id == "part") 
+                    xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
+                  xmlhttp.send();
+            }
     </script>
 </head>
 
@@ -105,19 +88,18 @@
                         <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                             <ul class="navbar-nav mr-auto" id="dorneMenu">
+         <div class="collapse navbar-collapse" id="dorneNav">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu">
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="aboutus.html">About Us</a>
-                                </li>
-                                           <li class="nav-item active">
-                                    <a class="nav-link" href="partslist.html">Part List <span class="sr-only">(current)</span></a>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="aboutus.html">About Us </a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Part Request</a>
+                                    <a class="nav-link" href="partslist.html">Part List </a>
+                                   <li class="nav-item active">
+                                    <a class="nav-link" href="partsrequest.html">Parts Request <span class="sr-only">(current)</span></a>
                                 </li>
                                            <li class="nav-item">
                                     <a class="nav-link" href="resources.html">Resources</a>
@@ -139,121 +121,228 @@
         </div>
 
     </header>
-    <!-- ***** Header Area End ***** -->
-
-      <section class="pagebanner layer-overlay overlay-dark-5" style="background-image: url(images/cars/AMC-Rebel.jpg);">
+        <section class="pagebanner layer-overlay overlay-dark-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-sm-12">
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1>USED <span class="text-black fnt-big"> amc </span> OEM PARTS</h1>
+                    <h1 class="pagebannerh1h1">PART REQUEST <span class="text-blue"></span></h1>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ***** Breadcumb Area End ***** -->
 
-    <!-- Explore Area -->
-    <section class="dorne-explore-area d-md-flex">
-        <!-- Explore Search Area -->
-        <div class="explore-search-area d-md-flex">
-            <!-- Explore Search Form -->
-            <div class="explore-search-form">
-                <h6>FIND THE PART NOW</h6>
-                <!-- Tabs -->
-                <!-- Tabs Content -->
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                        <form action="final.php" method="get">
-                            <select  name="maker" id="maker" oninput="myFunction(event)" class="custom-select" id="destinations">
-                                 <option disabled selected value="">Select Maker</option>
-                                    <?php
-                                        $sql="SELECT DISTINCT m.maker_name as maker FROM tbl_car_maker m, tbl_car_model mo, tbl_inventory i WHERE m.maker_id=mo.maker_id AND mo.model_id=i.model_id AND i.part_id=\"".extractId($conn,"part",$_GET['part'])."\"";
-                                        $result=$conn->query($sql);
-                                        while ($row=$result->fetch_assoc()) {
-                                            echo "<option value=\"".$row['maker']."\">".$row['maker']."</option>";
-                                        }
-                                    ?>
-                            </select>
-                            <select name="model" id="model" oninput="myFunction(event)" class="custom-select" id="catagories">
-                               <option disabled selected value="">Select Model</option>
-                            </select>
-                            <select name="part" id="part" oninput="myFunction(event)" class="custom-select" id="price-range">
-                               <option disabled >Select Part</option>
-                                <?php
-                                    $sql="SELECT part_name as part FROM tbl_car_part ORDER BY part_name";
-                                    $result=$conn->query($sql);
-                                    while ($row=$result->fetch_assoc()) {
-                                        if ($row["part"]==$_GET["part"]) {
-                                            echo "<option selected value=\"".$row['part']."\">".$row['part']."</option>";
-                                        } else {
-                                            echo "<option value=\"".$row['part']."\">".$row['part']."</option>";
-                                        }
-                                    }
-                                ?>
-                            </select>
-                            <select name="year" id="year" oninput="myFunction(event)" class="custom-select" id="proximity">
-                                <option disabled selected>Year</option>
-                            </select>
-                            <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
+    </section>
+    <section class=" mt-3 mb-3" style="background-color: #d8b6f7;">
+        <div class="container-fluid">
+            <div class="row"> 
+            <div class="col-md-2 col-sm-12 d-none d-md-block d-lg-block detads">
+                    <div class="ads">
+                      
+                    </div>
+                </div>                      
+                                <div class="col-md-8 col-sm-12 det2">
+                    <div class="form-block bg-grey overflow-none bt-radius">
+                        <div class="form-title2 bt-radius">
+                            <h1>Find A Part Now : <small><span id="yr"></span> <span id="mke"></span> <span id="mdl"></span> <span id="prt"></span></small></h1>
+                        </div>
+                        <form id="qapform" class="form-custompartrequest w-100 float-left bb-radius" method='get' action="finish.php" style="background-color: #d8b6f7;">
+                            <div class="col-md-6 col-sm-12 no-pad float-left">
+                                <div class="form-group row">
+                                    <label for="qap_make" class="col-3 col-form-label">Make <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="maker" id="maker" oninput="myFunction(event)" class="form-control">
+                                            <option disabled selected>Select Maker</option>
+                                           <?php
+                                              include_once "includes/database.php";
+
+                                              $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
+                                              $result=$conn->query($sql);
+                                              while ($row=$result->fetch_assoc()) {
+                                                echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
+                                              }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    
+                                    <label for="qap_model" class="col-3 col-form-label">Model <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="model" id="model" oninput="myFunction(event)" class="form-control">
+                                             <option disabled selected>Select Model</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                  
+                                    <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="part" id="part" oninput="myFunction(event)" class="form-control ">
+                                             <option disabled selected>Select Model</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    
+                                    <label for="qap_year" class="col-3 col-form-label">Year <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class">
+                                             <option disabled selected>Select Model</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row optone d-none">
+                                   
+                                    <label for="MainOpt1" class="col-3 col-form-label">Option 1 <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt1" id="MainOpt1" class="form-control">
+                                            <option value="">Select Option1</option>
+                                            <!--#option1_row-->
+                                            <option value=""></option>
+                                            <!--option1_row#-->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row opttwo d-none">
+                                    
+                                    <label for="MainOpt2" class="col-3 col-form-label">Option 2 <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt2" id="MainOpt2" class="form-control">
+                                            <option value="">Select Option2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row optthree d-none">
+                                 
+                                    <label for="opt3" class="col-3 col-form-label">Option 3 <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt3" id="MainOpt3" class="form-control">
+                                            <option value="">Select Option2</option>
+                                             
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row d-none optfour">
+                                  
+                                    <label for="MainOpt4" class="col-3 col-form-label">Option 4<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt4" id="MainOpt4" class="form-control">
+                                            <option value="">Select Option4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row d-none optfive">
+                                   
+                                    <label for="MainOpt5" class="col-3 col-form-label">Option 5<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt5" id="MainOpt5" class="form-control">
+                                            <option value="">Select Option5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row d-none optsix">
+                                    
+                                    <label for="MainOpt6" class="col-3 col-form-label">Option 6<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt6" id="MainOpt6" class="form-control">
+                                            <option value="">Select Option6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row d-none optseven">
+                                  
+                                    <label for="MainOpt7" class="col-3 col-form-label">Option 7<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt7" id="MainOpt7" class="form-control">
+                                            <option value="">Select Option7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row d-none opteight">
+                                  
+                                    <label for="MainOpt7" class="col-3 col-form-label">Option 8<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt8" id="MainOpt8" class="form-control">
+                                            <option value="">Select Option8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row d-none optnine">
+                                    
+                                    <label for="MainOpt9" class="col-3 col-form-label">Option 9<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt9" id="MainOpt9" class="form-control">
+                                            <option value="">Select Option9</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row d-none optten">
+                                   
+                                    <label for="MainOpt10" class="col-3 col-form-label">Option 10<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="MainOpt10" id="MainOpt10" class="form-control">
+                                            <option value="">Select Option10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 no-pad float-left">
+                                <div class="form-group row">
+                                    <span class="customername d-none">
+                                        
+                                    </span>
+                                    <label for="customername" class="col-3 col-form-label">Name <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="text" id="customername" name="customername"  placeholder="Enter Your Name" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <span class="phone d-none">
+                                                                           </span>
+                                    <label for="phone" class="col-3 col-form-label">Phone <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="tel" id="phone" name="phone" onkeyup="jm_phonemask(this);" onblur="jm_phonemask(this);" placeholder="Enter Your Phone" />
+                                    </div>
+                                </div>
+                                <div style="position: relative;width: 100%;"><div class='col-md-12 pull-left d-none' id='pmsg'></div></div>
+                                <div class="form-group row">
+                                    <span class="email d-none">
+                                        
+                                    </span>
+                                    <label for="email" class="col-3 col-form-label">Email <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="email" id="email" name="email" placeholder="Enter Your Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                 
+                                    <label for="zip" class="col-3 col-form-label">Zip <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="Enter Your Zip" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-7 offset-md-5 col-sm-12 text-right">
+                                        <button type="submit" class="btn btn-custom">Find Part</button>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
-                </div>
+                </div>              
+              
             </div>
-            
-            <!-- Explore Search Result -->
-            <div class="explore-search-result">
-                
- <section class=" mt-5 mb-5">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h2 class="subtitle">Lorem Ipsum</h2></div>
-                    <div class="makecontent">
-                   <p><u><b>Lorem Ipsum</b></u></p>
-                        <?php
-                          if ($fh = fopen('lorem.txt','r')) {
-                            echo "<p>";
-                            while (!feof($fh)) {
-                              $s = fgets($fh);
-                              if (("\n" == $s) || ("\r\n" == $s)) {
-                                echo "</p><p>";
-                              }
-                              echo "$s";
-                            }
-                          }
-                        ?>  
-                    </div>
-                    <div class="reelative"><h1 class='captionh5 text-black text-left'><strong>You have selected a <span class='text-blue'><strong>1974 Amc Ambassador Ac-condenser</strong></span> Complete the fields to get an Instant Quote </strong></h1></div>
-                    <div class="makecontent">
-                        <p><u>Used AC condenser</u></p>
-<p>AC condenser is an system used by cooling a substance gaseous liquid state. In this way, the latent heat is released from the substance and transferred to the environment around it. The condenser is occupied by heat transfer blades from outside to inside the unit through which cooling air can circulate. Condenser made up of copper is good when compared to aluminium.</p>
-<p>Locate the AC Condenser online and improve your car's performance. </p>
-<p>Air conditioning is an important part of vehicles that is responsible to maintain the cooling level. A car should have a proper ventilation system so that you can travel comfortably. It consists of several parts such as condenser, compressor and not to forget the accumulator. You should <b>buy used AC Condenser</b> as it is uses the refrigerant gas Freon and take in the water and other contaminants out of the AC system. If the AC system has stopped providing cool air, then you should definitely think of purchasing the <b>online AC Condenser. </b></p>
-<p>You should examine the AC Condenser from time to time to identify the exact problem. Sometimes you feel warm air coming out from the AC as soon as you turn it on, it may happen due to the low level of refrigerant. The AC Condenser is placed between the grille and car radiator and generates a proper airflow whenever the vehicle is moving. The refrigerant travels through the path directly into the evaporator. Before placing the order for the used auto parts make sure to check the warranty statement.  </p>
-<p>The OEM parts should be installed in case there is a leak in the refrigerant. You can find a variety of auto parts at the online store. You can also buy the salvage parts in bulk quantity and get them replaced or repaired free of cost. </p>
-<p>Visit the online site of QAP to get the cost-effective used car parts</p>
-<p>If you are looking for the used OEM parts for your vehicle, then QAP is the perfect platform for you. The site allows the customers to view the different car parts. Each car part sold online has the product description that allows the customers to learn more about the product dimensions and the kind of material used to manufacture it. All the auto parts can be installed in the car easily without any modifications. </p>
-                </div>
- <div class="authimg">
-                            <img src="img/auth.jpg" alt="Authorized" />
-                        </div>
-                <!--#partshidetrow-->
-                <!--partshidetrow#-->
-            </div>
-        </div>
-    </section> 
-            </div>
-        </div>
-
         </div>
     </section>
 
-    <!-- ****** Footer Area Start ****** -->
-     <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
+
+
+    <!-- ***** Features Events Area Start ***** -->
+    <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -463,19 +552,7 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
-        <script type="text/javascript" src="assets/js/jquery-1.11.1.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="wm-zoom/jquery.wm-zoom-1.0.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.my-zoom-1').WMZoom();
-                $('.my-zoom-2').WMZoom({
-                    config : {
-                        inner : true
-                    }
-                });
-            });
-        </script>
+
 
   
 <script src="js/particles.js"></script>
@@ -568,8 +645,3 @@
 </body>
 
 </html>
-      <?php
-    } else {
-        header("Location: partlist.php");
-    }
-?>

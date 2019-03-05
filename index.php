@@ -101,13 +101,13 @@
                                     <a class="nav-link" href="partslist.php">Part List</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Part Request</a>
+                                    <a class="nav-link" href="partsrequest.html">Part Request</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Resources</a>
+                                    <a class="nav-link" href="resources.html">Resources</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Customer Service</a>
+                                    <a class="nav-link" href="customerservice.html">Customer Service</a>
                                 </li>
                             </ul>
                             <!-- Search btn -->
@@ -183,73 +183,7 @@
     <!-- ***** Welcome Area End ***** -->
 
     <!-- ***** Catagory Area Start ***** -->
-    <section class="dorne-catagory-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="all-catagories">
-                        <div class="row">
-                            <!-- Single Catagory Area -->
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.2s">
-                                    <div class="catagory-content">
-                                        <img src="img/core-img/icon-1.png" alt="">
-                                        <a href="#">
-                                            <h6>Hotels</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Catagory Area -->
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <div class="catagory-content">
-                                        <img src="img/core-img/icon-2.png" alt="">
-                                        <a href="#">
-                                            <h6>Restaurants</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Catagory Area -->
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.6s">
-                                    <div class="catagory-content">
-                                        <img src="img/core-img/icon-3.png" alt="">
-                                        <a href="#">
-                                            <h6>Shopping</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Catagory Area -->
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.8s">
-                                    <div class="catagory-content">
-                                        <img src="img/core-img/icon-4.png" alt="">
-                                        <a href="#">
-                                            <h6>Beauty &amp; Spa</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Catagory Area -->
-                            <div class="col-12 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="1s">
-                                    <div class="catagory-content">
-                                        <img src="img/core-img/icon-5.png" alt="">
-                                        <a href="#">
-                                            <h6>Cinenma</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!-- ***** Catagory Area End ***** -->
 
     <!-- ***** About Area Start ***** -->
