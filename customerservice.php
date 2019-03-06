@@ -133,22 +133,22 @@
                 <div class="contact-form-title">
                     <h6>Contact Business</h6>
                 </div>
-                <form action="#">
+                <form action="#" method="post">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <input type="email" name="email" class="form-control" placeholder="Email Address">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject">
+                        <div class="col-12 col-md-6" >
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                         </div>
                         <div class="col-12">
-                            <textarea name="message" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn dorne-btn">Send</button>
+                            <textarea name="message" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button name="submit" type="submit" class="btn dorne-btn">Send</button>
                         </div>
                     </div>
                 </form>
@@ -461,3 +461,14 @@
 </body>
 
 </html>
+<?php
+    if (isset($_POST['submit'])) {
+        include_once 'includes/database.php';
+
+        $sql = "INSERT INTO tbl_cust_data (cust_name, cust_email_id, cust_subject, cust_message) VALUES (\"".$_POST['name']."\", \"".$_POST['email']."\", \"".$_POST['subject']."\", \"".$_POST['message']."\");";
+
+        $result = $conn->query($sql);
+
+        echo "<script>alert('Request submitted.'); window.location.href='customerservice.php';</script>";
+    }
+?>
