@@ -48,50 +48,7 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header_area main" id="header">
-        <div class="wrapper">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-                        <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                                                        <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="aboutus.html">About Us</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partslist.html">Part List </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partsrequest.html">Part Request</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="resources.html">Resources</a>
-                                </li>
-                                           <li class="nav-item active">
-                                    <a class="nav-link" href="customerservice.html">Customer Service <span class="sr-only">(current)</span></a>
-                                </li>
-                            </ul>
-
-                            <!-- Search btn -->
-                            <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="#" class="btn dorne-btn">Free Quote $</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-
-        </div>
-
-    </header>
+    <?php include_once 'includes/header.php'?>
     <!-- ***** Header Area End ***** -->
 
     <section class="pagebanner layer-overlay overlay-dark-5">
@@ -316,46 +273,7 @@
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
-    <footer class="dorne-footer-area bg-default">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Part Request</h4>
-                    <ul>
-                        <li><a href="partrequest.html">Find A Part</a></li>
-                        <li><a href="carsearchmakes/car-make.html">Search By Car Make</a></li>
-                        <li><a href="carsearchmakes/part-type.html">Search By Part Type</a></li>
-                        <li><a href="sitemap.html">Sitemap  </a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="customerservice.html">Submit A Ticket</a></li>
-                        <li><a href="warranty.html">Warranty Policy</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="resources.html">Articles</a></li>
-                        <li><a href="reviews.html">Testimonials</a></li>
-                        <li><a href="importantlinks.html">Important Links</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="aboutus.html">Why AP?</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms and Conditions</a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once 'includes/footer.php'; ?>
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->

@@ -48,107 +48,116 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header_area main" id="header">
-        <div class="wrapper">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-                        <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                            <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="aboutus.html">About Us <span class="sr-only">(current)</span></a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partslist.html">Part List </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partrequest.html">Part Request</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="resources.html">Resources</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="customerservice.html">Customer Service</a>
-                                </li>
-                            </ul>
-                            <!-- Search btn -->
-                            <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="#" class="btn dorne-btn">Free Quote $</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+    <?php include_once 'includes/header.php'?>
 
-        </div>
-
-    </header>
-    <!-- ***** Header Area End ***** -->
-
-    <section class="pagebanner layer-overlay overlay-dark-5">
+    
+        <section class="pagebanner layer-overlay overlay-dark-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-sm-12">
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1 class="pagebannerh1h1">About Us <span class="text-blue"></span></h1>
+                    <h1 class="pagebannerh1h1">RESOURCES <span class="text-blue"></span></h1>
                 </div>
             </div>
         </div>
 
     </section>
-    <section class="bggrey bg-img bg-overlay-9 " style="background-image: url(img/bg-img/hero-2.jpg);">
+    <section class=" mt-5 mb-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 offset-md-1 col-sm-12">
-                    <div class="contdivtxt">
-                        <p style="color: #fff;">Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.</p>
-                        <p style="color: #fff;">We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
-                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:(866) 293-3731"><strong>(866) 293-3731</strong></a></span>
-                        </p>
 
-                    </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Auto-Part-Insights.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-insight.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Auto Part Insights</h2> 
+                                <div class="badge badge-primary float-right fa-lg">15</div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Car-Accessories.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-accessories.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Car Accessories</h2>    
+                                <div class="badge badge-primary float-right fa-lg">6</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Car-Care.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-carcare.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Car Care</h2>   
+                                <div class="badge badge-primary float-right fa-lg">3</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Recreational-Vehicles.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-rv.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Recreational Vehicles</h2>  
+                                <div class="badge badge-primary float-right fa-lg">5</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Tips-and-Advice.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/resources-tips.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Tips & Tricks</h2>  
+                                <div class="badge badge-primary float-right fa-lg">6</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-12">
+                    <a href="Resources/Tires-and-Wheels.html">
+                        <div class="blogdiv mt-2 mb-3">
+                            <div class="blogdiv-image">
+                                <img src="img/tyre_wheel1.jpg" alt="Part 1">
+                            </div>
+                            <div class="blogdiv-content col-12 clearfix">
+                                <h2 class="float-left text-black">Tire and Wheels</h2>    
+                                <div class="badge badge-primary float-right fa-lg">6</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
             </div>
         </div>
-    </section>
-
-    <section class="bggreypl">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><div class="subtitle">Why choose us?</div></div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="abtliststyle">
-                        <ul>
-                            <li>Easily Find Quality Used Parts</li>
-                            <li>Great Service Backed By A Great Team</li>
-                            <li>Parts Stored Inside Our Facility</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="abtliststyle">
-                        <ul>
-                            <li>Save Money Buying Used Parts</li>
-                            <li>Top Highest Green Quality Operations</li>
-                            <li>Serving all over 15+ Years</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>   
+    </section>  
 
     <!-- ***** Features Events Area Start ***** -->
     <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
@@ -181,7 +190,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
-                                        <h3 class="text-red">Daniel Frank, Seo Master</h3>
+                                        <h3 class="text-black">Daniel Frank, Seo Master</h3>
                                     </div>
                                 </div>
                             </div>
@@ -196,7 +205,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
-                                        <h3 class="text-red">Leah Jordan</h3>
+                                        <h3 class="text-black">Leah Jordan</h3>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +220,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
-                                        <h3 class="text-red">Brian McNaught</h3>
+                                        <h3 class="text-black">Brian McNaught</h3>
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +235,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
-                                        <h3 class="text-red">Lee Barker</h3>
+                                        <h3 class="text-black">Lee Barker</h3>
                                     </div>
                                 </div>
                             </div>
@@ -309,46 +318,7 @@
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
-    <footer class="dorne-footer-area bg-default">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Part Request</h4>
-                    <ul>
-                        <li><a href="partrequest.html">Find A Part</a></li>
-                        <li><a href="carsearchmakes/car-make.html">Search By Car Make</a></li>
-                        <li><a href="carsearchmakes/part-type.html">Search By Part Type</a></li>
-                        <li><a href="sitemap.html">Sitemap  </a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="customerservice.html">Submit A Ticket</a></li>
-                        <li><a href="warranty.html">Warranty Policy</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="resources.html">Articles</a></li>
-                        <li><a href="reviews.html">Testimonials</a></li>
-                        <li><a href="importantlinks.html">Important Links</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="aboutus.html">Why AP?</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms and Conditions</a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once 'includes/footer.php'; ?>
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->

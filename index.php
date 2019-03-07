@@ -144,49 +144,7 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header_area main" id="header">
-        <div class="wrapper">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-                        <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                            <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="aboutus.html">About Us</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partslist.php">Part List</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partsrequest.html">Part Request</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="resources.html">Resources</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="customerservice.html">Customer Service</a>
-                                </li>
-                            </ul>
-                            <!-- Search btn -->
-                            <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="#" class="btn dorne-btn">Free Quote $</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-
-        </div>
-
-    </header>
+    <?php include_once 'includes/header.php'?>
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Welcome Area Start ***** -->
@@ -229,9 +187,9 @@
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                              
                                 <center>
-                                <form action="#" method="get">
-                                    <select id="maker" class="custom-select" oninput="myFunction(event)">
-                                        <option disabled selected>Select Maker</option>
+                                <form action="maker.php" method="get">
+                                    <select name="maker" id="maker" required class="custom-select" oninput="myFunction(event)" required>
+                                        <option disabled selected value="">Select Maker</option>
                                        <?php
                                           include_once "includes/database.php";
 
@@ -242,13 +200,13 @@
                                           }
                                         ?>
                                     </select>
-                                    <select id="model" class="custom-select" oninput="myFunction(event)">
+                                    <select name="model" id="model" class="custom-select" oninput="myFunction(event)" required>
                                         <option disabled selected>Select Model</option>
                                     </select>
-                                    <select id="part" class="custom-select" oninput="myFunction(event)">
+                                    <select name="part" id="part" class="custom-select" oninput="myFunction(event)" required>
                                         <option disabled selected>Select Part</option>
                                     </select>
-                                     <select id="year" class="custom-select" >
+                                     <select name="year" id="year" class="custom-select" required>
                                         <option disabled selected>Select Year</option>
                                     </select>
                                     <button type="submit" class="btn dorne-btn"><i></i> Get Quote</button>
@@ -733,16 +691,16 @@
                 <div class="col-md-3 col-sm-12 infooter">
                     <h4>Part Request</h4>
                     <ul>
-                        <li><a href="partrequest.html">Find A Part</a></li>
-                        <li><a href="carsearchmakes/car-make.html">Search By Car Make</a></li>
-                        <li><a href="carsearchmakes/part-type.html">Search By Part Type</a></li>
+                        <li><a href="partsrequest.php">Find A Part</a></li>
+                        <li><a href="carsearchmakes/partslist.php">Search By Car Make</a></li>
+                        <li><a href="carsearchmakes/partslist.php">Search By Part Type</a></li>
                         <li><a href="sitemap.html">Sitemap  </a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-12 infooter">
                     <h4>Customer Service</h4>
                     <ul>
-                        <li><a href="customerservice.html">Submit A Ticket</a></li>
+                        <li><a href="customerservice.php">Submit A Ticket</a></li>
                         <li><a href="warranty.html">Warranty Policy</a></li>
                         <li><a href="contactus.html">Contact Us</a></li>
                     </ul>
