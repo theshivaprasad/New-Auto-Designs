@@ -56,6 +56,70 @@
             }
     </script>
 
+        <style type="text/css">
+        .section1{
+            position:relative;
+            max-height: 100px;
+            background-color: red;
+            
+        }
+.container1{
+    margin:auto;
+    width:  250px;
+    height: 0px;
+    position:relative;
+    -webkit-perspective: 1800px;
+    z-index:999;    
+}
+#carousel{
+    width: 80%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotation 40s infinite linear;
+
+}
+#carousel:hover{
+    animation-play-state: paused;
+
+}
+#carousel figure{
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: -10px;
+    right: -10px;
+
+}
+#carousel figure:nth-child(1) { -webkit-transform:  rotateY(0deg)  translateZ(700px);}
+#carousel figure:nth-child(2) { -webkit-transform: rotateY(40deg) translateZ(700px);}
+#carousel figure:nth-child(3) { -webkit-transform: rotateY(80deg) translateZ(700px);}
+#carousel figure:nth-child(4) { -webkit-transform: rotateY(120deg) translateZ(700px);}
+#carousel figure:nth-child(5) { -webkit-transform: rotateY(160deg) translateZ(700px);}
+#carousel figure:nth-child(6) { -webkit-transform: rotateY(200deg) translateZ(700px);}
+#carousel figure:nth-child(7) { -webkit-transform: rotateY(240deg) translateZ(700px);}
+#carousel figure:nth-child(8) { -webkit-transform: rotateY(280deg) translateZ(700px);}
+#carousel figure:nth-child(9) { -webkit-transform: rotateY(320deg) translateZ(700px);}
+
+.img1{
+    cursor: pointer;
+    transition: all .2s linear;
+    width: 100%;
+}
+.img1:hover{
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+    from{
+        transform: rotateY(360deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
+        </style>
 </head>
 
 <body>
@@ -127,6 +191,8 @@
 
     <!-- ***** Welcome Area Start ***** -->
     <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg);">
+         
+
         
         <!-- Hero Social Btn -->
 
@@ -134,8 +200,25 @@
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-12 col-md-10">
 
+
                     <!-- Hero Search Form -->
-                    <div class="hero-search-form">
+
+                </div>
+            </div>
+        </div>
+                            <canvas id="effect-js"></canvas>
+         <div id="particles-js"></div>
+    </section>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Catagory Area Start ***** -->
+        <section class="dorne-catagory-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-catagories">
+                        <div class="row">
+                                               <div class="hero-search-form">
                         <!-- Tabs -->
                         <div class="nav nav-tabs" id="heroTab" role="tablist">
                             <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Find a Part Now</a>
@@ -144,7 +227,7 @@
                         <!-- Tabs Content -->
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                                <h6>What are you looking for?</h6>
+                             
                                 <center>
                                 <form action="#" method="get">
                                     <select id="maker" class="custom-select" oninput="myFunction(event)">
@@ -174,15 +257,13 @@
                             </div>
                         </div>
                     </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-                            <canvas id="effect-js"></canvas>
-         <div id="particles-js"></div>
     </section>
-    <!-- ***** Welcome Area End ***** -->
-
-    <!-- ***** Catagory Area Start ***** -->
    
     <!-- ***** Catagory Area End ***** -->
 
@@ -564,7 +645,7 @@
                         <span></span>
                         <h4>Some of our Clients</h4>
                         <p>Editor’s pick</p>
-                    </div>
+                    </div>                    
                     <div class="row">
                         <div class="col-md-4 col-4"><img src="img/client-logo-1.jpg" class="img-fluid" alt=""></div>
                         <div class="col-md-4 col-4"><img src="img/client-logo-2.jpg" class="img-fluid" alt=""></div>
@@ -578,13 +659,31 @@
         </div>
     </section>
     <!-- ***** Features Events Area End ***** -->
+    <!--rotating cars start-->
 
+<!--rotating cars end-->
     <!-- ***** Clients Area Start ***** -->
-   <section class="partnersdiv">
+    <section class="partnersdiv">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
-                   <div class="regular slider">
+            	
+
+                <div class="col-12" style="height: 100px;">
+                	<div class="container1">
+        <div id="carousel">         
+            <figure><img class="img1" src="images/car1.png" alt=""></figure>
+            <figure><img class="img1" src="images/car2.png" alt=""></figure>
+            <figure><img class="img1" src="images/car3.png" alt=""></figure>
+            <figure><img class="img1" src="images/car4.png" alt=""></figure>
+            <figure><img class="img1" src="images/car10.png" alt=""></figure>
+            <figure><img class="img1" src="images/car12.png" alt=""></figure>
+            <figure><img class="img1" src="images/car11.png" alt=""></figure>
+            <figure><img class="img1" src="images/car1.webp" alt=""></figure>
+            <figure><img class="img1" src="images/car18.png" alt=""></figure>
+        </div>    
+    </div>
+                   <!--<div class="regular slider">
+
                         <div>
                             <div class="item">
                                 <img src="img/partnerslogos/acura.jpg" alt="ACURA" />
@@ -620,11 +719,11 @@
                                 <img src="img/partnerslogos/Cooper.png" alt="COOPER" />
                             </div>
                         </div>
-                   </div>
+                   </div>-->
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
@@ -680,7 +779,7 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
-
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
   
 <script src="js/particles.js"></script>
