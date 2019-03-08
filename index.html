@@ -22,56 +22,72 @@
     <link href="css/responsive/responsive.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
         <style type="text/css">
-        .section1{
-            position:relative;
-            max-height: 100px;
-            background-color: red;
-            
-        }
+.section1{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+    box-sizing: border-box;
+    height: 150px;
+    overflow: hidden;
+    
+}
+.section1:before,
+.section1:after{
+    margin:0;
+  padding: 0;
+  outline: none;
+  border: none;
+    box-sizing:border-box;
+
+}
+.section1:after{
+    bottom: 0;
+}
+
 .container1{
-    margin:auto;
-    width:  250px;
+    margin-left:40%;  
+    width:  200px;
     height: 0px;
     position:relative;
-    -webkit-perspective: 1800px;
-    z-index:999;    
+    perspective: 1800px;
 }
-#carousel{
+.carousel{
     width: 80%;
     height: 100%;
-    position: relative;
+    position: absolute;
     transform-style: preserve-3d;
     animation: rotation 40s infinite linear;
 
 }
-#carousel:hover{
+.carousel:hover{
     animation-play-state: paused;
-
 }
-#carousel figure{
-    display: block;
+.carousel figure{
+    display:block;
     position: absolute;
-    width: 80%;
-    height: 100%;
-    left: -10px;
-    right: -10px;
-
+    width: 90%;
+    height: 50%px;
+    left: 10px;
+    top: 10px;
+    overflow: hidden;
 }
-#carousel figure:nth-child(1) { -webkit-transform:  rotateY(0deg)  translateZ(700px);}
-#carousel figure:nth-child(2) { -webkit-transform: rotateY(40deg) translateZ(700px);}
-#carousel figure:nth-child(3) { -webkit-transform: rotateY(80deg) translateZ(700px);}
-#carousel figure:nth-child(4) { -webkit-transform: rotateY(120deg) translateZ(700px);}
-#carousel figure:nth-child(5) { -webkit-transform: rotateY(160deg) translateZ(700px);}
-#carousel figure:nth-child(6) { -webkit-transform: rotateY(200deg) translateZ(700px);}
-#carousel figure:nth-child(7) { -webkit-transform: rotateY(240deg) translateZ(700px);}
-#carousel figure:nth-child(8) { -webkit-transform: rotateY(280deg) translateZ(700px);}
-#carousel figure:nth-child(9) { -webkit-transform: rotateY(320deg) translateZ(700px);}
+.carousel figure:nth-child(1) { -webkit-transform:  rotateY(0deg)  translateZ(725px);}
+.carousel figure:nth-child(2) { -webkit-transform: rotateY(40deg) translateZ(725px);}
+.carousel figure:nth-child(3) { -webkit-transform: rotateY(80deg) translateZ(725px);}
+.carousel figure:nth-child(4) { -webkit-transform: rotateY(120deg) translateZ(725px);}
+.carousel figure:nth-child(5) { -webkit-transform: rotateY(160deg) translateZ(725px);}
+.carousel figure:nth-child(6) { -webkit-transform: rotateY(200deg) translateZ(725px);}
+.carousel figure:nth-child(7) { -webkit-transform: rotateY(240deg) translateZ(725px);}
+.carousel figure:nth-child(8) { -webkit-transform: rotateY(280deg) translateZ(725px);}
+.carousel figure:nth-child(9) { -webkit-transform: rotateY(320deg) translateZ(725px);}
 
 .img1{
     cursor: pointer;
-    transition: all .2s linear;
+    transition: all .5s linear;
     width: 100%;
 }
 .img1:hover{
@@ -86,7 +102,8 @@
         transform: rotateY(0deg);
     }
 }
-        </style>
+
+    </style>
         
 </head>
 
@@ -316,8 +333,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="responsive slider">
-                        
+                    <div class="responsive slider">                        
                         <div>
                             <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Side-View-Mirror')" >
                                 <div class="popularpdt">
@@ -633,18 +649,13 @@
         </div>
     </section>
     <!-- ***** Features Events Area End ***** -->
-    <!--rotating cars start-->
-
-<!--rotating cars end-->
     <!-- ***** Clients Area Start ***** -->
-    <section class="partnersdiv">
+    <!--<section class="partnersdiv">
         <div class="container-fluid">
-            <div class="row">
-            	
-
-                <div class="col-12" style="height: 100px;">
+            <div class="row"> -->         
+            <section class="section1">
                 	<div class="container1">
-        <div id="carousel">         
+        <div class="carousel">         
             <figure><img class="img1" src="images/car1.png" alt=""></figure>
             <figure><img class="img1" src="images/car2.png" alt=""></figure>
             <figure><img class="img1" src="images/car3.png" alt=""></figure>
@@ -695,8 +706,8 @@
                         </div>
                    </div>-->
                 </div>
-            </div>
-        </div>
+            <!--</div>
+        </div>-->
     </section> 
     <!-- ***** Clients Area End ***** -->
 
@@ -754,6 +765,7 @@
         <script src="slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script></pre>
         <script type="text/javascript">
+
             new WOW().init();
             $(document).ready(function() {
                 
