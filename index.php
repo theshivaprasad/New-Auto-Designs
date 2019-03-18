@@ -51,7 +51,7 @@
                   else if (e.currentTarget.id == "model") 
                     xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
                   else if (e.currentTarget.id == "part") 
-                    xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
+                    xmlhttp.open("GET", "show.php?part=" + e.target.value + "&model=" + document.getElementById("model").value, true);
                   xmlhttp.send();
             }
     </script>

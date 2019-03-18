@@ -45,13 +45,21 @@
                           document.getElementById("year").innerHTML = this.responseText;
                         }
                     };
+                } else if (e.currentTarget.id == "year")  {
+                  xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                          document.getElementById("wow").innerHTML = this.responseText;
+                        }
+                    };
                 }
                   if (e.currentTarget.id == "maker")
                     xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
                   else if (e.currentTarget.id == "model") 
                     xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
                   else if (e.currentTarget.id == "part") 
-                    xmlhttp.open("GET", "show.php?part=" + e.target.value, true);
+                    xmlhttp.open("GET", "show.php?part=" + e.target.value+ "&model=" + document.getElementById("model").value, true);
+                  else if (e.currentTarget.id == "year") 
+                    xmlhttp.open("GET", "show.php?year=" + e.target.value+ "&part=" + document.getElementById("part").value+ "&model=" + document.getElementById("model").value, true);
                   xmlhttp.send();
             }
     </script>
@@ -141,7 +149,7 @@
                                     <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="part" id="part" oninput="myFunction(event)" class="form-control ">
-                                             <option disabled selected>Select Model</option>
+                                             <option disabled selected>Select Part</option>
                                         </select>
                                     </div>
                                 </div>
@@ -150,22 +158,11 @@
                                     <label for="qap_year" class="col-3 col-form-label">Year <span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class">
-                                             <option disabled selected>Select Model</option>
+                                             <option disabled selected>Select Year</option>
                                         </select>
                                     </div>
                                 </div>
-                                
-                                <div class="form-group row optone d-none">
-                                   
-                                    <label for="MainOpt1" class="col-3 col-form-label">Option 1 <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <select name="MainOpt1" id="MainOpt1" class="form-control">
-                                            <option value="">Select Option1</option>
-                                            <!--#option1_row-->
-                                            <option value=""></option>
-                                            <!--option1_row#-->
-                                        </select>
-                                    </div>
+                                <div id="wow">
                                 </div>
                                 <div class="form-group row opttwo d-none">
                                     

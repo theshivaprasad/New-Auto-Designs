@@ -104,7 +104,7 @@
 		while ($row=$result->fetch_assoc()) {
 			echo "<option value=\"".$row['model']."\">".$row['model']."</option>";
 		}
-	} elseif (isset($_GET['model'])) {
+	} elseif (isset($_GET['model'])&&!isset($_GET['part'])) {
 		$model = $_GET['model'];
 		$sql="SELECT p.part_name as part FROM tbl_car_part p INNER JOIN tbl_inventory i ON p.part_id = i.part_id WHERE i.model_id=\"".extractId($conn,'model',$model)."\" ORDER BY p.part_name";
 		$result=$conn->query($sql);
@@ -112,11 +112,35 @@
 		while ($row=$result->fetch_assoc()) {
 			echo "<option value=\"".$row['part']."\">".$row['part']."</option>";
 		}
-	} elseif (isset($_GET['part'])) {
+	} elseif (isset($_GET['part'])&&isset($_GET['model'])&&!isset($_GET['year'])) {
 		echo "<option disabled selected value=''>Select Year</option>";
 		
-		for($i=idate('Y');$i>=1960;$i--) {
-			echo "<option value=\"".$i."\">".$i."</option>";
+        $inv_id = extractInvId($conn, extractId($conn, "part", $_GET['part']), extractId($conn, "model", $_GET['model']));
+
+        $sql = "SELECT DISTINCT y.year as year from tbl_part_details p INNER JOIN tbl_year y ON p.year_id = y.year_id WHERE inv_id=".$inv_id;
+        $result=$conn->query($sql);
+
+		while($row=$result->fetch_assoc()) {
+			echo "<option value=\"".$row['year']."\">".$row['year']."</option>";
 		}
-	}
+	} elseif (isset($_GET['year'])) {
+        ?>
+        <div class="form-group row optone">                     
+            <label for="MainOpt1" class="col-3 col-form-label">Option 1 <span class="text-danger">*</span></label>
+            <div class="col-9">
+                <select name="MainOpt1" id="MainOpt1" class="form-control">
+        <?php
+        echo "<option disabled selected value=''>Select Option</option>";
+        
+        $inv_id = extractInvId($conn, extractId($conn, "part", $_GET['part']), extractId($conn, "model", $_GET['model']));
+
+        $sql = "SELECT DISTINCT o.opt_name as opt from tbl_part_details p INNER JOIN tbl_part_options o ON p.opt_id = o.opt_id WHERE inv_id=".$inv_id;
+        $result=$conn->query($sql);
+
+        while($row=$result->fetch_assoc()) {
+            echo "<option value=\"".$row['opt']."\">".$row['opt']."</option>";
+        }
+        
+        echo "</select></div></div>";
+    }
 ?>
