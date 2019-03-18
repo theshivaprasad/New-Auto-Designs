@@ -70,7 +70,7 @@
 
                 
                 <div class="col-md-4 col-sm-12">
-                    <a href="Resources/Auto-Part-Insights.html">
+                    <a href="insites.html">
                         <div class="blogdiv mt-2 mb-3">
                             <div class="blogdiv-image">
                                 <img src="img/resources-insight.jpg" alt="Part 1">
@@ -84,7 +84,7 @@
                 </div>
                 
                 <div class="col-md-4 col-sm-12">
-                    <a href="Resources/Car-Accessories.html">
+                    <a href="insites.html">
                         <div class="blogdiv mt-2 mb-3">
                             <div class="blogdiv-image">
                                 <img src="img/resources-accessories.jpg" alt="Part 1">
@@ -98,7 +98,7 @@
                 </div>
                 
                 <div class="col-md-4 col-sm-12">
-                    <a href="Resources/Car-Care.html">
+                    <a href="insites.html">
                         <div class="blogdiv mt-2 mb-3">
                             <div class="blogdiv-image">
                                 <img src="img/resources-carcare.jpg" alt="Part 1">
@@ -113,7 +113,7 @@
 
                 
                 <div class="col-md-4 col-sm-12">
-                    <a href="Resources/Recreational-Vehicles.html">
+                    <a href="insites.html">
                         <div class="blogdiv mt-2 mb-3">
                             <div class="blogdiv-image">
                                 <img src="img/resources-rv.jpg" alt="Part 1">
@@ -127,7 +127,7 @@
                 </div>
                 
                 <div class="col-md-4 col-sm-12">
-                    <a href="Resources/Tips-and-Advice.html">
+                    <a href="insites.html">
                         <div class="blogdiv mt-2 mb-3">
                             <div class="blogdiv-image">
                                 <img src="img/resources-tips.jpg" alt="Part 1">
@@ -141,7 +141,7 @@
                 </div>
                 
                 <div class="col-md-4 col-sm-12">
-                    <a href="Resources/Tires-and-Wheels.html">
+                    <a href="insites.html">
                         <div class="blogdiv mt-2 mb-3">
                             <div class="blogdiv-image">
                                 <img src="img/tyre_wheel1.jpg" alt="Part 1">
@@ -187,7 +187,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-black">Daniel Frank, Seo Master</h3>
@@ -202,7 +202,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-black">Leah Jordan</h3>
@@ -217,7 +217,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                        <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-black">Brian McNaught</h3>
@@ -232,7 +232,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-black">Lee Barker</h3>

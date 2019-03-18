@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body style="overflow-x: hidden;overflow-y: scroll;">
     <!-- Preloader -->
 
 
@@ -68,11 +68,11 @@
         <div class="container">
             <div class="row">
             <div class="contact-text">
-                                <div class="col-md-10 offset-md-1 col-sm-12">
+                                <div class="col-md-12 col-sm-12">
                     <div class="contdivtxt">
                         <p style="color: #fff;">Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.</p>
                         <p style="color: #fff;">We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
-                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:(866) 293-3731"><strong>(866) 293-3731</strong></a></span>
+                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:"><strong></strong></a></span>
                         </p>
 
 
@@ -142,7 +142,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                      <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Daniel Frank, Seo Master</h3>
@@ -157,7 +157,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                    <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Leah Jordan</h3>
@@ -172,7 +172,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                        <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Brian McNaught</h3>
@@ -187,7 +187,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                        <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Lee Barker</h3>
@@ -270,6 +270,8 @@
             </div>
         </div>
     </section>
+
+                
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->

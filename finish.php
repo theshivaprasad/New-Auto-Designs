@@ -146,7 +146,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Leah Jordan</h3>
@@ -161,7 +161,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                      <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Brian McNaught</h3>
@@ -176,7 +176,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Lee Barker</h3>

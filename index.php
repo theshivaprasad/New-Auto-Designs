@@ -22,6 +22,7 @@
     <link href="css/responsive/responsive.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
     <script type="text/javascript">
@@ -120,6 +121,8 @@
     }
 }
         </style>
+
+    </style>
 </head>
 
 <body>
@@ -154,14 +157,13 @@
         
         <!-- Hero Social Btn -->
 
-                <div class="container h-100">
+                <div class="container h-75">
             <div class="row h-100 align-items-center justify-content-center">
-                <div class="col-12 col-md-10">
+                 <div class="col-12">
+<div class="subbannerproduct cstbanner2"><img src="img/car.png" class="banner34">     <div class="whe"> <img src="img/wheel.png" alt="Lights" class="mimg1 mimg">  <img src="img/wheel.png" alt="Lights" class="mimg2 mimg"></div></div>
+</div>
+                    
 
-
-                    <!-- Hero Search Form -->
-
-                </div>
             </div>
         </div>
                             <canvas id="effect-js"></canvas>
@@ -301,8 +303,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="responsive slider">
-                        
+                    <div class="responsive slider">                        
                         <div>
                             <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Side-View-Mirror')" >
                                 <div class="popularpdt">
@@ -536,7 +537,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Daniel Frank, Seo Master</h3>
@@ -551,7 +552,8 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+
+                                        <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Leah Jordan</h3>
@@ -566,7 +568,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Brian McNaught</h3>
@@ -581,7 +583,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Lee Barker</h3>
@@ -617,18 +619,13 @@
         </div>
     </section>
     <!-- ***** Features Events Area End ***** -->
-    <!--rotating cars start-->
-
-<!--rotating cars end-->
     <!-- ***** Clients Area Start ***** -->
-    <section class="partnersdiv">
+    <!--<section class="partnersdiv">
         <div class="container-fluid">
-            <div class="row">
-            	
-
-                <div class="col-12" style="height: 100px;">
+            <div class="row"> -->         
+            <section class="section1">
                 	<div class="container1">
-        <div id="carousel">         
+        <div class="carousel">         
             <figure><img class="img1" src="images/car1.png" alt=""></figure>
             <figure><img class="img1" src="images/car2.png" alt=""></figure>
             <figure><img class="img1" src="images/car3.png" alt=""></figure>
@@ -679,52 +676,13 @@
                         </div>
                    </div>-->
                 </div>
-            </div>
-        </div>
+            <!--</div>
+        </div>-->
     </section> 
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
-    <footer class="dorne-footer-area bg-default">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Part Request</h4>
-                    <ul>
-                        <li><a href="partsrequest.php">Find A Part</a></li>
-                        <li><a href="carsearchmakes/partslist.php">Search By Car Make</a></li>
-                        <li><a href="carsearchmakes/partslist.php">Search By Part Type</a></li>
-                        <li><a href="sitemap.html">Sitemap  </a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="customerservice.php">Submit A Ticket</a></li>
-                        <li><a href="warranty.html">Warranty Policy</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="resources.html">Articles</a></li>
-                        <li><a href="reviews.html">Testimonials</a></li>
-                        <li><a href="importantlinks.html">Important Links</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="aboutus.html">Why AP?</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms and Conditions</a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once 'includes/footer.php'; ?>
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->
@@ -745,6 +703,7 @@
         <script src="slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script></pre>
         <script type="text/javascript">
+
             new WOW().init();
             $(document).ready(function() {
                 

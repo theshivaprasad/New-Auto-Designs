@@ -67,11 +67,11 @@
     <section class="bggrey bg-img bg-overlay-9 " style="background-image: url(img/bg-img/hero-2.jpg);">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 offset-md-1 col-sm-12">
+                <div class="col-md-12 col-sm-12" style="">
                     <div class="contdivtxt">
                         <p style="color: #fff;">Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.</p>
                         <p style="color: #fff;">We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
-                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:(866) 293-3731"><strong>(866) 293-3731</strong></a></span>
+                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:"><strong></strong></a></span>
                         </p>
 
                     </div>
@@ -136,7 +136,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Daniel Frank, Seo Master</h3>
@@ -151,7 +151,8 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+
+                                        <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Leah Jordan</h3>
@@ -166,7 +167,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Brian McNaught</h3>
@@ -181,7 +182,7 @@
                         <h4>Client Testimonials</h4>
                         <p>Editor’s pick</p>
                     </div>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
+                                       <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
                                     <div class="author_2">
                                         <h3 class="text-red">Lee Barker</h3>
@@ -203,7 +204,7 @@
                         <span></span>
                         <h4>Some of our Clients</h4>
                         <p>Editor’s pick</p>
-                    </div>
+                    </div>                    
                     <div class="row">
                         <div class="col-md-4 col-4"><img src="img/client-logo-1.jpg" class="img-fluid" alt=""></div>
                         <div class="col-md-4 col-4"><img src="img/client-logo-2.jpg" class="img-fluid" alt=""></div>
@@ -267,7 +268,49 @@
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
+<<<<<<< HEAD:aboutus.php
     <?php include_once 'includes/footer.php'; ?>
+=======
+ <footer class="dorne-footer-area bg-default">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 infooter">
+                    <h4>Part Request</h4>
+                    <ul>
+                        <li><a href="partsrequest.html">Find A Part</a></li>
+                        <li><a href="partslist.html">Search by Car Make</a></li>
+                         <li><a href="partslist.html">Search by Part Type</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                </div>
+                <div class="col-md-3 col-sm-12 infooter">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="customerservice.html">Submit A Ticket</a></li>
+                        <li><a href="warranty.html">Warranty</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12 infooter">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html">Articles</a></li>
+                        <li><a href="reviews.html">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12 infooter">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="aboutus.html">Why AP?</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                    </a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+>>>>>>> 4b98bdeef6f9f74ef4bbe814bbc97265c6d34989:aboutus.html
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->
