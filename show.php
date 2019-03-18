@@ -119,6 +119,7 @@
 
         $sql = "SELECT DISTINCT y.year as year from tbl_part_details p INNER JOIN tbl_year y ON p.year_id = y.year_id WHERE inv_id=".$inv_id;
         $result=$conn->query($sql);
+        echo $sql;
 
 		while($row=$result->fetch_assoc()) {
 			echo "<option value=\"".$row['year']."\">".$row['year']."</option>";

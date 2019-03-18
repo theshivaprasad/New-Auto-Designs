@@ -53,7 +53,7 @@
                 } else if (e.currentTarget.id == "model") {
                   xmlhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("part").innerHTML = this.responseText;
+                          document.getElementById("year").innerHTML = this.responseText;
                         }
                     };
                 } else if (e.currentTarget.id == "part")  {
@@ -66,7 +66,7 @@
                   if (e.currentTarget.id == "maker")
                     xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
                   else if (e.currentTarget.id == "model") 
-                    xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
+                    xmlhttp.open("GET", "show.php?model=" + e.target.value + "&part=" + document.getElementById("part").value, true);
                   else if (e.currentTarget.id == "part") 
                     xmlhttp.open("GET", "show.php?part=" + e.target.value + "&model=" + document.getElementById("model").value, true);
                   xmlhttp.send();

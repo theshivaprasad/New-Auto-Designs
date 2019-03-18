@@ -218,9 +218,11 @@
                                 include_once "includes/database.php";
 
                                 $inv_id = extractInvId($conn, extractId($conn, "part", $_GET['part']), extractId($conn, "model", $_GET['model']));
+                                $opt_id = 
                                 $year_id = extractYearId($conn, $_GET['year']);
 
-                                if(ifExists($conn, $inv_id, $year_id)) {?>
+                                if(ifExists($conn, $inv_id, $year_id)&&!ifOptExists($conn, $inv_id, 15, $year_id)
+                            ) {?>
                                     <div class="col-12">
                                         <select class="custom-select" id="opt1">
                                             <option disabled selected>Select Option</option>

@@ -1,6 +1,19 @@
 <?php
     include_once "includes/database.php";
     
+    function ifOptExists($conn, $inv_id, $opt_id, $year_id) {
+        $sql = "SELECT opt_id FROM tbl_part_details WHERE inv_id=\"".$inv_id."\" AND opt_id=\"".$opt_id."\" AND year_id=\"".$year_id."\"";
+        $result = $conn->query($sql);
+        if($result) {
+            if (mysqli_num_rows($result)>0) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+
     function extractId($conn, $node, $item) {
         $sql = "SELECT ".$node."_id FROM tbl_car_".$node." WHERE ".$node."_name=\"".$item."\"";
         $result = $conn->query($sql);
@@ -8,6 +21,61 @@
             if (mysqli_num_rows($result)>0) {
                 $row = $result->fetch_assoc();
                 return $row[$node.'_id'];
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+
+    function extractOptId($conn, $item) {
+        $sql = "SELECT opt_id FROM tbl_part_options WHERE opt_name=\"".$item."\"";
+        $result = $conn->query($sql);
+        if($result) {
+            if (mysqli_num_rows($result)>0) {
+                $row = $result->fetch_assoc();
+                return $row['opt_id'];
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+
+    function extractYearId($conn, $item) {
+        $sql = "SELECT year_id FROM tbl_year WHERE year=\"".$item."\"";
+        $result = $conn->query($sql);
+        if($result) {
+            if (mysqli_num_rows($result)>0) {
+                $row = $result->fetch_assoc();
+                return $row['year_id'];
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+
+    function checkInventory($conn, $part_id, $model_id) {
+        $sql = "SELECT inv_id FROM tbl_inventory WHERE part_id=\"".$part_id."\" AND model_id=\"".$model_id."\"";
+        $result = $conn->query($sql);
+        if($result) {
+            if (mysqli_num_rows($result)>0) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+
+    function extractInvId($conn, $part_id, $model_id) {
+        $sql = "SELECT inv_id FROM tbl_inventory WHERE part_id=\"".$part_id."\" AND model_id=\"".$model_id."\"";
+        $result = $conn->query($sql);
+        if($result) {
+            if (mysqli_num_rows($result)>0) {
+                $row = $result->fetch_assoc();
+                return $row['inv_id'];
             }
             else {
                 return 0;
@@ -182,9 +250,16 @@
                                  <option disabled selected>Select Year</option>
                                 <?php
                                   if(isset($_GET["part"])){
-                                    for($i=idate('Y');$i>=1960;$i--) {
-                                    echo "<option value=\"".$i."\">".$i."</option>";
-                                    }
+    
+                                    $inv_id = extractInvId($conn, extractId($conn, "part", $_GET['part']), extractId($conn, "model", $_GET['model']));
+
+                                    $sql = "SELECT DISTINCT y.year as year from tbl_part_details p INNER JOIN tbl_year y ON p.year_id = y.year_id WHERE inv_id=".$inv_id;
+                                    $result=$conn->query($sql);
+                                    echo $sql;
+
+                                while($row=$result->fetch_assoc()) {
+                                  echo "<option value=\"".$row['year']."\">".$row['year']."</option>";
+                                }
                                 }?>
                             </select>
                             <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
