@@ -60,8 +60,8 @@
         <style type="text/css">
         .section1{
             position:relative;
-            max-height: 100px;
-            background-color: red;
+            max-height: 30%;
+            background-color: #EEE;
             
         }
 .container1{
