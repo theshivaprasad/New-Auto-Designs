@@ -476,7 +476,7 @@ li {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(14, 2, 35, 0.5);
+    
     z-index: -1;
 }
 
@@ -588,13 +588,13 @@ li {
     z-index: 9999;
     height: 80px;
     top: 0;
-    background-color: rgba(54, 38, 84, 0.64);
+    
     left: 0;
     z-index: 99;
     -webkit-transition-duration: 700ms;
     transition-duration: 700ms;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 0 30px;
+    
+    
 }
 
 .sticky .header_area {
