@@ -169,36 +169,29 @@
             <div class="row">
                 
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h2 class="subtitle">Lorem Ipsum</h2></div>
+                    <div class="reelative"><h1 class='captionh5 text-black text-left'><strong>You have selected a <span class='text-blue'><strong><?php echo $_GET["part"]; ?></strong></span> Complete the fields to get an Instant Quote </strong></h1></div>
                     <div class="makecontent">
-                   <p><u><b>Lorem Ipsum</b></u></p>
-                        <?php
-                          if ($fh = fopen('lorem.txt','r')) {
-                            echo "<p>";
-                            while (!feof($fh)) {
-                              $s = fgets($fh);
-                              if (("\n" == $s) || ("\r\n" == $s)) {
-                                echo "</p><p>";
-                              }
-                              echo "$s";
-                            }
-                          }
-                        ?>  
+                        <div class="subbannerproduct cstbanner2">
+                            <?php
+                            if (glob("images/".strtolower($_GET["part"]).".png")) {
+                                echo "<img src=\"images/".strtolower($_GET["part"]).".png\">";
+                                echo "<p>";
+                                $fh = fopen("images/".strtolower($_GET["part"]).".txt",'r');
+                                  while (! feof($fh)) {
+                                    $s = fgets($fh);
+                                    if (("\n" == $s) || ("\r\n" == $s)) {
+                                        echo "<br><br>";
+                                    }
+                                    echo "$s";
+                                  }
+                                echo "</p>";
+                                fclose($fh);
+                            }?>
                     </div>
-                    <div class="reelative"><h1 class='captionh5 text-black text-left'><strong>You have selected a <span class='text-blue'><strong>1974 Amc Ambassador Ac-condenser</strong></span> Complete the fields to get an Instant Quote </strong></h1></div>
-                    <div class="makecontent">
-                        <p><u>Used AC condenser</u></p>
+                        <!-- <p><u>Used AC condenser</u></p>
 <p>AC condenser is an system used by cooling a substance gaseous liquid state. In this way, the latent heat is released from the substance and transferred to the environment around it. The condenser is occupied by heat transfer blades from outside to inside the unit through which cooling air can circulate. Condenser made up of copper is good when compared to aluminium.</p>
-<p>Locate the AC Condenser online and improve your car's performance. </p>
-<p>Air conditioning is an important part of vehicles that is responsible to maintain the cooling level. A car should have a proper ventilation system so that you can travel comfortably. It consists of several parts such as condenser, compressor and not to forget the accumulator. You should <b>buy used AC Condenser</b> as it is uses the refrigerant gas Freon and take in the water and other contaminants out of the AC system. If the AC system has stopped providing cool air, then you should definitely think of purchasing the <b>online AC Condenser. </b></p>
-<p>You should examine the AC Condenser from time to time to identify the exact problem. Sometimes you feel warm air coming out from the AC as soon as you turn it on, it may happen due to the low level of refrigerant. The AC Condenser is placed between the grille and car radiator and generates a proper airflow whenever the vehicle is moving. The refrigerant travels through the path directly into the evaporator. Before placing the order for the used auto parts make sure to check the warranty statement.  </p>
-<p>The OEM parts should be installed in case there is a leak in the refrigerant. You can find a variety of auto parts at the online store. You can also buy the salvage parts in bulk quantity and get them replaced or repaired free of cost. </p>
-<p>Visit the online site of QAP to get the cost-effective used car parts</p>
-<p>If you are looking for the used OEM parts for your vehicle, then QAP is the perfect platform for you. The site allows the customers to view the different car parts. Each car part sold online has the product description that allows the customers to learn more about the product dimensions and the kind of material used to manufacture it. All the auto parts can be installed in the car easily without any modifications. </p>
+ -->
                 </div>
- <div class="authimg">
-                            <img src="img/auth.jpg" alt="Authorized" />
-                        </div>
                 <!--#partshidetrow-->
                 <!--partshidetrow#-->
             </div>

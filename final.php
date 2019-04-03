@@ -107,7 +107,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Dorne - Directory &amp; Listing Template</title>
+    <title>Wolf Autoparts</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -177,43 +177,9 @@
                 <!-- Tabs Content -->
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                        <!-- <form action="#" method="get">
-                            <select class="custom-select" id="destinations">
-                                 <option selected>Make</option>
-                                <option value="1">AMC</option>
-                                <option value="2">Acura</option>
-                                <option value="3">Alfa-Romeo</option>
-                                <option value="4">Audi</option>
-                                <option value="5">BMW</option>
-                            </select>
-                            <select class="custom-select" id="catagories">
-                                <option selected>Model</option>
-                                <option value="1">Ambassador</option>
-                                <option value="2">American</option>
-                                <option value="3">Amx</option>
-                                <option value="4">Classic</option>
-                            </select>
-                            <select class="custom-select" id="price-range">
-                               <option selected>Part</option>
-                                <option value="1">AC Compressor</option>
-                                <option value="2">AC Condensor</option>
-                                <option value="3">AC Evaporator</option>
-                                <option value="4">Air Injection Pump</option>
-                            </select>
-                            <select class="custom-select" id="proximity">
-                                <option selected>Year</option>
-                                <option value="1">1974</option>
-                                <option value="2">1973</option>
-                                <option value="3">1972</option>
-                                <option value="3">1971</option>
-                                <option value="3">1970</option>
-                            </select>
-                        </form> -->
-
-                            
             <div class="contact-form">
                 <form action="finish.php">
-                    <div class="row">
+                            <div class="row mt-md-5 mt-0">
                             <?php
                                 include_once "includes/database.php";
 
@@ -222,20 +188,23 @@
                                 $year_id = extractYearId($conn, $_GET['year']);
 
                                 if(ifExists($conn, $inv_id, $year_id)&&!ifOptExists($conn, $inv_id, 15, $year_id)
-                            ) {?>
-                                    <div class="col-12">
-                                        <select class="custom-select" id="opt1">
-                                            <option disabled selected>Select Option</option>
-                                        <?php
+                            ) {                                                                                                                                                                                                                                                                             
                                         $sql = "SELECT o.opt_name as opt FROM tbl_part_details p INNER JOIN tbl_part_options o ON p.opt_id = o.opt_id WHERE inv_id=\"".$inv_id."\" AND year_id=\"".$year_id."\"";
                                         $result = $conn->query($sql);
                                         while ($row=$result->fetch_assoc()) {
-                                            echo "<option>".$row['opt']."</option>";
+                                            echo "<div class=\"col-12 col-xl-6\">
+                                            <label class=\"custom-control custom-checkbox mb-3\">
+                                                <input type=\"checkbox\" class=\"custom-control-input\">
+                                                <span class=\"custom-control-indicator\"></span>";
+                                            echo "<span class=\"custom-control-description\">".$row['opt']."</span>";
                                         }
                                 }
                             ?>
-                            </select>
+                            </label>
                         </div>
+                       </div>
+                        <div class="contact-form">
+                            <div class="row">
                         <div class="col-12">
                             <input type="text" name="name" class="form-control" placeholder="Your Name">
                         </div>

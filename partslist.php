@@ -114,7 +114,9 @@
                               $sql="SELECT part_name as part FROM tbl_car_part ORDER BY part_name";
                               $result=$conn->query($sql);
                               while ($row=$result->fetch_assoc()) {
+                                if (glob('images/'.strtolower($row["part"]).'.png')) {
                                 echo "<li><a href=\"parts.php?part=".$row["part"]."\"  title=\"".$row["part"]."\">".$row["part"]."</a></li>";
+                                }
                                } 
                             ?>
                         </ul>

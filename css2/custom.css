@@ -1274,12 +1274,14 @@ transform: scale(1.1,1.1);
 	overflow:hidden;
 }
 .subbannerproduct {
-
-	height:330px;/*345px*/
-	padding:40px 50px;
-	text-align:center;
-    text-shadow: 0px 0 9px 2px #b9b9b9ba;
+    background: #dadada;
+    height: 330px;
+    padding: 40px 50px;
+    text-align: center;
+    border: 8px solid #b5b5b5;
+    box-shadow: 0px 0 9px 2px #b9b9b9ba;
 }
+
 .subbannerproduct img {
 	height:100%;
 }
