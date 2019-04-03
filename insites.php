@@ -48,50 +48,9 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header_area main" id="header">
-        <div class="wrapper">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-                        <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                            <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="aboutus.html">About Us </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partslist.html">Part List </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partrequest.html">Part Request</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="resources.html">Resources</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="customerservice.html">Customer Service</a>
-                                </li>
-                            </ul>
-                            <!-- Search btn -->
-                            <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="#" class="btn dorne-btn">Free Quote $</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-
-        </div>
-
-    </header>
+    <?php include_once "includes/header.php"; ?>
     <!-- ***** Header Area End ***** -->
+
 
     <section class="pagebanner layer-overlay overlay-dark-5">
         <div class="container">
@@ -100,27 +59,58 @@
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1 class="pagebannerh1h1">Privacy Policy <span class="text-blue"></span></h1>
+                    <h1 class="pagebannerh1h1">AUTO PARTS INSIGHTS<span class="text-blue"></span></h1>
                 </div>
             </div>
         </div>
-
     </section>
-    <section class="bggrey bg-img bg-overlay-9 " style="background-image: url(img/bg-img/hero-2.jpg);">
+    <section class="mt-5 mb-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12" style="">
-                    <div class="contdivtxt">
-                        <p style="color: #fff;">Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.</p>
-                        <p style="color: #fff;">We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
-                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:"><strong></strong></a></span>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
+						<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="reelative"><div class="subtitle">Read from our articles below</div></div>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<div class="divlistblog">
+						<ul>
+							
+							<li><a href="Auto-Part-Insights/ABS.html">ABS</a></li>
+							
+							<li><a href="Auto-Part-Insights/Aftermarket-Austin-Parts-vs.-Used-Auto-Parts-vs.html">Aftermarket Austin Parts vs. Used Auto Parts vs. Brand New Parts</a></li>
+							
+							<li><a href="Auto-Part-Insights/Best-Quality-Used-Parts-for-your-Chevy.html">Best Quality Used Parts for your Chevy</a></li>
+							
+							<li><a href="Auto-Part-Insights/Best-Used-Parts-for-Silverado-and-Sierra.html">Best Used Parts for Silverado and Sierra</a></li>
+							
+							<li><a href="Auto-Part-Insights/Motor-Engine.html">Motor Engine</a></li>
+							
+							<li><a href="Auto-Part-Insights/Original-Used-Parts-for-Your-Mercedes.html">Original Used Parts for Your Mercedes</a></li>
+							
+							<li><a href="Auto-Part-Insights/Original-Used-Parts-for-Your-Subaru.html">Original Used Parts for Your Subaru</a></li>
+							
+							<li><a href="Auto-Part-Insights/Strut-Bar.html">Strut Bar</a></li>
+							
+							<li><a href="Auto-Part-Insights/Used-Auto-Parts---Affordable%2c-Convenient%2c-Practical-and-Popular.html">Used Auto Parts - Affordable, Convenient, Practical and Popular</a></li>
+							
+							<li><a href="Auto-Part-Insights/How-Does-a-Car-Battery-Work.html">How Does a Car Battery Work</a></li>
+							
+							<li><a href="Auto-Part-Insights/Online-Purchase-of-a-Used-Car-Part.html">Online Purchase of a Used Car Part</a></li>
+							
+							<li><a href="Auto-Part-Insights/The-Radiator-in-You-Car-is-as-Important-as-Your-Engine.html">The Radiator in You Car is as Important as Your Engine</a></li>
+							
+							<li><a href="Auto-Part-Insights/Hybrid-Cars.html">Hybrid Cars</a></li>
+							
+							<li><a href="Auto-Part-Insights/Green-Vehicles.html">Green Vehicles</a></li>
+							
+							<li><a href="Auto-Part-Insights/Genuine-Auto-Parts.html">How to buy genuine auto parts online?</a></li>
+							
+							
+						</ul>
+					</div>
+				</div>
+			</div>
         </div>
-    </section>
+    </section>   
 
     <!-- ***** Features Events Area Start ***** -->
     <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
@@ -148,7 +138,7 @@
                                        <div class="section-heading text-center">
                         <span></span>
                         <h4>Client Testimonials</h4>
-                        <p>Editor’s pick</p>
+                        <p>Editor's pick</p>
                     </div>
                                        <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
@@ -163,7 +153,7 @@
                                         <div class="section-heading text-center">
                         <span></span>
                         <h4>Client Testimonials</h4>
-                        <p>Editor’s pick</p>
+                        <p>Editor's pick</p>
                     </div>
 
                                         <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
@@ -179,7 +169,7 @@
                                         <div class="section-heading text-center">
                         <span></span>
                         <h4>Client Testimonials</h4>
-                        <p>Editor’s pick</p>
+                        <p>Editor's pick</p>
                     </div>
                                        <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
@@ -194,7 +184,7 @@
                                         <div class="section-heading text-center">
                         <span></span>
                         <h4>Client Testimonials</h4>
-                        <p>Editor’s pick</p>
+                        <p>Editor's pick</p>
                     </div>
                                        <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
                                     </div>
@@ -217,7 +207,7 @@
                     <div class="section-heading text-center">
                         <span></span>
                         <h4>Some of our Clients</h4>
-                        <p>Editor’s pick</p>
+                        <p>Editor's pick</p>
                     </div>                    
                     <div class="row">
                         <div class="col-md-4 col-4"><img src="img/client-logo-1.jpg" class="img-fluid" alt=""></div>
@@ -282,45 +272,7 @@
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
- <footer class="dorne-footer-area bg-default">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Part Request</h4>
-                    <ul>
-                        <li><a href="partsrequest.html">Find A Part</a></li>
-                        <li><a href="partslist.html">Search by Car Make</a></li>
-                         <li><a href="partslist.html">Search by Part Type</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="customerservice.html">Submit A Ticket</a></li>
-                        <li><a href="warranty.html">Warranty</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="resources.html">Articles</a></li>
-                        <li><a href="reviews.html">Testimonials</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="aboutus.html">Why AP?</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
-                    </a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once "includes/footer.php"; ?>
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->

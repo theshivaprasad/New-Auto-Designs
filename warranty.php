@@ -48,49 +48,7 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header_area main" id="header">
-        <div class="wrapper">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-                        <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                            <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="aboutus.html">About Us </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partslist.html">Part List </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partrequest.html">Part Request</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="resources.html">Resources</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="customerservice.html">Customer Service</a>
-                                </li>
-                            </ul>
-                            <!-- Search btn -->
-                            <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="#" class="btn dorne-btn">Free Quote $</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-
-        </div>
-
-    </header>
+    <?php include_once "includes/header.php";?>
     <!-- ***** Header Area End ***** -->
 
     <section class="pagebanner layer-overlay overlay-dark-5">
@@ -100,29 +58,73 @@
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1 class="pagebannerh1h1">Terms and Conditions <span class="text-blue"></span></h1>
+                    <h1 class="pagebannerh1h1">Warranty Policy <span class="text-blue"></span></h1>
                 </div>
             </div>
         </div>
-
     </section>
-    <section class="bggrey bg-img bg-overlay-9 " style="background-image: url(img/bg-img/hero-2.jpg);">
+    <section class="bggreypl">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12" style="">
-                    <div class="contdivtxt">
-                        <p style="color: #fff;">Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.</p>
-                        <p style="color: #fff;">We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
-                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:"><strong></strong></a></span>
-                        </p>
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="abtcontent">
+    <h4 class="text-black float-left"><strong>QUALITY AUTO PARTS 30 DAY WARRANTY</strong></h4>
+						
+						<div class="clearfix"></div>
+						<p>This warranty covers defective parts and items sent incorrectly. We offer a parts only warranty.</p>
 
-                    </div>
-                </div>
-            </div>
+						<p>NO LABOR COSTS are covered for any part sold by Quality Auto Parts. In the event that the part is defective we will first attempt to replace it and if a replacement cannot be sent we will issue a refund for the total sale amount. In the event a reorder is made prior to return of the first part we will require payment for the second part and refund the initial order upon return. Return shipping costs will not be reimbursed. Upon contacting Quality Auto Parts please provide a detailed explanation as to why the part is being returned.</p>
+
+						<p>In the event a part is returned that does not fit the specifications listed in this warranty Quality Auto Parts reserves the right to apply a 25% restocking fee and withhold shipping amounts in the refund.</p>
+
+						<p>Quality Auto Parts is not responsible for items delivered to the address given at the time of sale according to tracking information but not taken into possession by the customer.</p>
+
+						<p>Items ordered for 'testing purposes only' or ordered incorrectly by the customer will not be available for return. Verify with a mechanical or body expert the actual part needed before ordering. We do a very good job at sending correct parts and would ask you, our customer to do the necessary research before ordering. Items returned after the warranty period will not be refunded and will be returned to sender. Parts must be received within 30 days of the original shipment delivery date in order to be accepted.</p>
+						<div class="alert alert-primary">
+							<strong>Below are some exceptions that will either void a warranty or are exceptions to our 30 day standard warranty</strong>
+						</div>
+						<p>Engines are complete assemblies including manifolds, oil pan, timing belts and covers, fuel injection or carburetor, we guarantee only the long block. The manifolds, gaskets, seals, hoses, oil pan, timing belts and covers, fuel injection or carburetor, are not. Accessories such as but not limited to Turbos, Starters, air compressors, alternator, power steering pumps, optical distributors or electrical water pumps are usually not included nor under warranty in regards to the sale and/or warranty of an engine. If these parts are purchased separately they will be under warranty. Other items that may need to be replaced are the water pump, distributor cap, spark plugs and wires and possibly timing chain. Quality Auto Parts will not be held liable for these parts listed as they are considered high-wear parts</p>
+ 
+						<p>Instrument and Speedometer Clusters : We do not guarantee mileage. For particular vehicles such as but not limited to Lexus, Audi, BMW, Mercedes and Cadillac the customer will be required to take the cluster to a dealership to have the unit reprogrammed. Quality Auto Parts will not return or refund any units until the customer can provide written documentation from an Authorized Dealer proving the part was reprogrammed and still not functioning properly.</p>
+						 
+						<p>Carburetors: We guarantee only the ability to be rebuilt</p>
+						 
+						<p>Rotors are guaranteed to be machinable only since normal use can leave them slightly warped. They will be guaranteed against cracks or non-machinable surface damage.</p>
+						 
+						<p>Cylinder heads are guaranteed to not be warped or cracked. Rings and valves may need to be re-machined.</p>
+						 
+						<p>Orders of "Block Only" (Short or Long Block) are guaranteed to be rebuildable only.</p>
+						 
+						<p>Electrical items such as engine computers and body control modules, transmission modules, transfer case modules are only guaranteed to have the correct manufacturer part number and are not sold for testing purposes. All electrical items have a replacement warranty only. Up to one replacement will be sent in order to rectify a non-working module. Modules may need to be reset by the dealer. In the event this is required the part cannot be returned until verified by the dealer that the part has been reset properly. Electrical parts that have been modified in any way will not be refunded.</p>
+						 
+						<p>Struts are sold with working condition warranty only. We do not guarantee to actual ride quality of the shocks or springs. We do guarantee that the springs and strut tower will be in working condition. However, shocks may need to be replaced to improve ride quality.</p>
+						 
+						<p>Control arms are guaranteed to be true and straight. Any rubber bushings or non-metal parts attached to control arms are not guaranteed.</p>
+						 
+						<p>Bushings and Ball Joints are not guaranteed on parts</p>
+						 
+						<p>Transmissions: We guarantee that it will shift properly, gears to be good and bearings to be good. Thoroughly clean all components of the transmission including oil pan before assembly. Replace oil and filter in all automatic transmissions. You must replace ALL seals and gaskets prior to installation. Flush & flow test cooler and lines. Fully engage torque converter in front pump. Manual transmission you must install a new clutch, pressure plate, and slave cylinder. You must also have your fly wheel turned prior to installation. Fill and check fluid to insure proper levels</p>
+						 
+						<p>Seals in turbos are not guaranteed to be perfect. These seals may need replacing during the warranty period.</p>
+						 
+						<p>Doors are complete assemblies however they are not guaranteed to come with such accessories as windows, window regulators, handles, hinges, or interior panels. We only guarantee the door shell.</p>
+						 
+						<p>Other body parts such as hoods, fenders, bumpers, quarter panels, and header panels are not guaranteed to come with hinges, hood ornaments, latches, trim, headlights, or grilles.</p>
+						 
+						<p>Specific colors may be requested for body parts, but a color match is not guaranteed. We recommend that body parts be repainted to match your vehicle. Body parts that do not match the color of your vehicle will not be available for return for that reason.</p>
+						<div class="alert alert-primary">
+							<strong>***RETURN POLICY***</strong>
+						</div>
+						<p>Items modified or taken apart for testing will not be available for return. Items returned that are not the original part shipped will not be refunded. PARTS ARE UNIQUELY IDENTIFIED BY MARKINGS ON THE PART. Items returned that are not in the original condition shipped (excluding items damaged in shipping and verified by a Quality Auto Parts representative) will not be refunded</p>
+ 
+						<p>ALL PROBLEMS MUST BE IN WRITING via MAIL, EMAIL OR FAX to verify a problem with a particular part or installation.</p>
+						 
+						<p>If you receive a damaged part or an incorrect part please notify our customer service department. DO NOT SEND THE PART BACK BEFORE RECEIVING A RMA. Returning the part is the responsibility of the customer and Quality Auto Parts must be provided with a return tracking number when the item is returned. The item must be returned within 7 business days of the receipt of the RMA. The return address will be provided at the time we are contacted. Parts must be returned to the location address provided upon receiving RMA. Items returned to Quality Auto Parts will be forwarded to the correct address listed on the RMA instructions, at the customer's expense. Once the item is returned we will gladly issue a full refund on the original purchase price or send a replacement part. Once the item is returned it will be inspected and upon approval a credit request will be forwarded to accounting. Customer refunds are issued once the returned part has been verified and inspected.</p>
+					</div>
+				</div>
+			</div>
         </div>
-    </section>
-
-    <!-- ***** Features Events Area Start ***** -->
+    </section>   
     <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
         <div class="container">
             <div class="row">
@@ -282,45 +284,7 @@
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
- <footer class="dorne-footer-area bg-default">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Part Request</h4>
-                    <ul>
-                        <li><a href="partsrequest.html">Find A Part</a></li>
-                        <li><a href="partslist.html">Search by Car Make</a></li>
-                         <li><a href="partslist.html">Search by Part Type</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="customerservice.html">Submit A Ticket</a></li>
-                        <li><a href="warranty.html">Warranty</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="resources.html">Articles</a></li>
-                        <li><a href="reviews.html">Testimonials</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="aboutus.html">Why AP?</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
-                    </a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once "includes/footer.php";?>
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->

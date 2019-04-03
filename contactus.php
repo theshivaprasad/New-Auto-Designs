@@ -48,49 +48,7 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header_area main" id="header">
-        <div class="wrapper">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-                        <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                            <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="aboutus.html">About Us </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partslist.html">Part List </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partrequest.html">Part Request</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="resources.html">Resources</a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="customerservice.html">Customer Service</a>
-                                </li>
-                            </ul>
-                            <!-- Search btn -->
-                            <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="partsrequest.html" class="btn dorne-btn">Free Quote $</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-
-        </div>
-
-    </header>
+    <?php include_once "includes/header.php"; ?>
     <!-- ***** Header Area End ***** -->
 
     <section class="pagebanner layer-overlay overlay-dark-5">
@@ -100,7 +58,7 @@
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1 class="pagebannerh1h1">Site Map <span class="text-blue"></span></h1>
+                    <h1 class="pagebannerh1h1">Contact Us <span class="text-blue"></span></h1>
                 </div>
             </div>
         </div>
@@ -108,30 +66,85 @@
     <section class="bggreypl">
         <div class="container">
 			<div class="row">
-				<div class="col-md-12 col-sm-12">
-					<div class="sitemapulli">
-						<ul>
-							<li><a href="index.html">   Home</a></li>
-							<li><a href="aboutus.html">   About Us</a></li>
-							<li><a href="partslist.html">   Part List</a></li>
-							<li><a href="partsrequest.html">   Part Request</a></li>
-							<li><a href="resources.html">   Resources</a></li>	
-							<li><a href="customerservice.html">   Customer Service</a></li>
-							<li><a href="privacypolicy.html">   Privacy Policy</a></li>	
-							<li><a href="contactus.html">   Contact Us</a></li>
-							<li><a href="partsrequest.html">   Find A Part</a></li>	
-							<li><a href="partslist.html">   Search By Part Type</a></li></li>
-							<li><a href="partslist.html">   Search By Car Make</a></li> 	
-							<li><a href="resources.html">   Articles</a></li>
-							<li><a href="warranty.html">   Warranty Policy</a></li> 	
-							<li><a href="reviews.html">   Testimonials</a></li>
-						</ul>
+				<div class="col-md-6 col-sm-12 ftcontactdivbk">
+					<div class="col-12 addressctdiv row">
+						<div class="col-2">
+							<i class="glyph-icon flaticon-flag text-black"></i>
+						</div>
+						<div class="col-10">
+							<h1>IUGALE Services PVT LTD </h1>
+							<h2>Pillana Garden <br />
+							Bangalore, India 560096</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 ftcontactdivbk">					
+					<div class="col-12 addressctdiv row">
+						<div class="col-2">
+							<i class="glyph-icon flaticon-mail text-black"></i>
+						</div>
+						<div class="col-10">
+							<h2><a href="mailto:info@qualityautoparts.com">info@iugale.com</a></h2>
+						</div>
+					</div>
+					<div class="col-12 addressctdiv row">
+						<div class="col-2">
+							<i class="glyph-icon flaticon-phone text-black"></i>
+						</div>
+						<div class="col-10">
+							<h2><a href="tel:1-800-508-0741">1-800-508-0741</a></h2>
+						</div>
+					</div>
+					<div class="col-12 addressctdiv row">
+						<div class="col-2">
+							<i class="glyph-icon flaticon-telephone text-black"></i>
+						</div>
+						<div class="col-10">
+							<h2><a href="tel:1-312-509-4799">1-312-509-4799</a></h2>
+						</div>
+					</div>
+					<div class="col-12 addressctdiv row">
+						<div class="col-2">
+							<i class="glyph-icon flaticon-phone-1 text-black"></i>
+						</div>
+						<div class="col-10">
+							<h2><a href="tel:1-800-582-2420">1-800-582-2420</a></h2>
+						</div>
 					</div>
 				</div>
 			</div>
         </div>
     </section>   
-
+    <section class="bggreypl">
+        <div class="container">
+            <div class="row">
+            <div class="contact-form">
+                <div class="contact-form-title">
+                    <h6>Contact Business</h6>
+                </div>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn dorne-btn">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </section>   
     <!-- ***** Features Events Area Start ***** -->
     <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
         <div class="container">
@@ -292,45 +305,7 @@
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
-    <footer class="dorne-footer-area bg-default">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Part Request</h4>
-                    <ul>
-                        <li><a href="partsrequest.html">Find A Part</a></li>
-                        <li><a href="partslist.html">Search by Car Make</a></li>
-                         <li><a href="partslist.html">Search by Part Type</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="customerservice.html">Submit A Ticket</a></li>
-                        <li><a href="warranty.html">Warranty</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="resources.html">Articles</a></li>
-                        <li><a href="reviews.html">Testimonials</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="aboutus.html">Why AP?</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
-                    </a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once "includes/footer.php";?>
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->
@@ -356,6 +331,7 @@
                 
                 $(".regular").slick({
                     dots: false,
+                   
                     prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fa fa-chevron-left"></i></button>',
                     nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fa fa-chevron-right"></i></button>',
                     speed: 300,

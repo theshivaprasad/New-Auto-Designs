@@ -48,51 +48,8 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header_area main" id="header">
-        <div class="wrapper">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
-                        <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                            <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="aboutus.html">About Us </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partslist.html">Part List </a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="partrequest.html">Part Request</a>
-                                </li>
-                                            <li class="nav-item active">
-                                    <a class="nav-link" href="resources.html">Resources <span class="sr-only">(current)</span></a>
-                                </li>
-                                           <li class="nav-item">
-                                    <a class="nav-link" href="customerservice.html">Customer Service</a>
-                                </li>
-                            </ul>
-                            <!-- Search btn -->
-                            <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="partsrequest.html" class="btn dorne-btn">Free Quote $</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-
-        </div>
-
-    </header>
+    <?php include_once "includes/header.php"; ?>
     <!-- ***** Header Area End ***** -->
-
 
     <section class="pagebanner layer-overlay overlay-dark-5">
         <div class="container">
@@ -101,52 +58,31 @@
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1 class="pagebannerh1h1">AUTO PARTS INSIGHTS<span class="text-blue"></span></h1>
+                    <h1 class="pagebannerh1h1">Site Map <span class="text-blue"></span></h1>
                 </div>
             </div>
         </div>
     </section>
-    <section class="mt-5 mb-5">
+    <section class="bggreypl">
         <div class="container">
-						<div class="row">
+			<div class="row">
 				<div class="col-md-12 col-sm-12">
-					<div class="reelative"><div class="subtitle">Read from our articles below</div></div>
-				</div>
-				<div class="col-md-12 col-sm-12">
-					<div class="divlistblog">
+					<div class="sitemapulli">
 						<ul>
-							
-							<li><a href="Auto-Part-Insights/ABS.html">ABS</a></li>
-							
-							<li><a href="Auto-Part-Insights/Aftermarket-Austin-Parts-vs.-Used-Auto-Parts-vs.html">Aftermarket Austin Parts vs. Used Auto Parts vs. Brand New Parts</a></li>
-							
-							<li><a href="Auto-Part-Insights/Best-Quality-Used-Parts-for-your-Chevy.html">Best Quality Used Parts for your Chevy</a></li>
-							
-							<li><a href="Auto-Part-Insights/Best-Used-Parts-for-Silverado-and-Sierra.html">Best Used Parts for Silverado and Sierra</a></li>
-							
-							<li><a href="Auto-Part-Insights/Motor-Engine.html">Motor Engine</a></li>
-							
-							<li><a href="Auto-Part-Insights/Original-Used-Parts-for-Your-Mercedes.html">Original Used Parts for Your Mercedes</a></li>
-							
-							<li><a href="Auto-Part-Insights/Original-Used-Parts-for-Your-Subaru.html">Original Used Parts for Your Subaru</a></li>
-							
-							<li><a href="Auto-Part-Insights/Strut-Bar.html">Strut Bar</a></li>
-							
-							<li><a href="Auto-Part-Insights/Used-Auto-Parts---Affordable%2c-Convenient%2c-Practical-and-Popular.html">Used Auto Parts - Affordable, Convenient, Practical and Popular</a></li>
-							
-							<li><a href="Auto-Part-Insights/How-Does-a-Car-Battery-Work.html">How Does a Car Battery Work</a></li>
-							
-							<li><a href="Auto-Part-Insights/Online-Purchase-of-a-Used-Car-Part.html">Online Purchase of a Used Car Part</a></li>
-							
-							<li><a href="Auto-Part-Insights/The-Radiator-in-You-Car-is-as-Important-as-Your-Engine.html">The Radiator in You Car is as Important as Your Engine</a></li>
-							
-							<li><a href="Auto-Part-Insights/Hybrid-Cars.html">Hybrid Cars</a></li>
-							
-							<li><a href="Auto-Part-Insights/Green-Vehicles.html">Green Vehicles</a></li>
-							
-							<li><a href="Auto-Part-Insights/Genuine-Auto-Parts.html">How to buy genuine auto parts online?</a></li>
-							
-							
+							<li><a href="index.html">   Home</a></li>
+							<li><a href="aboutus.html">   About Us</a></li>
+							<li><a href="partslist.html">   Part List</a></li>
+							<li><a href="partsrequest.html">   Part Request</a></li>
+							<li><a href="resources.html">   Resources</a></li>	
+							<li><a href="customerservice.html">   Customer Service</a></li>
+							<li><a href="privacypolicy.html">   Privacy Policy</a></li>	
+							<li><a href="contactus.html">   Contact Us</a></li>
+							<li><a href="partsrequest.html">   Find A Part</a></li>	
+							<li><a href="partslist.html">   Search By Part Type</a></li></li>
+							<li><a href="partslist.html">   Search By Car Make</a></li> 	
+							<li><a href="resources.html">   Articles</a></li>
+							<li><a href="warranty.html">   Warranty Policy</a></li> 	
+							<li><a href="reviews.html">   Testimonials</a></li>
 						</ul>
 					</div>
 				</div>
@@ -314,45 +250,7 @@
     <!-- ***** Clients Area End ***** -->
 
     <!-- ****** Footer Area Start ****** -->
-    <footer class="dorne-footer-area bg-default">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Part Request</h4>
-                    <ul>
-                        <li><a href="partsrequest.html">Find A Part</a></li>
-                        <li><a href="partslist.html">Search by Car Make</a></li>
-                         <li><a href="partslist.html">Search by Part Type</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="customerservice.html">Submit A Ticket</a></li>
-                        <li><a href="warranty.html">Warranty</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="resources.html">Articles</a></li>
-                        <li><a href="reviews.html">Testimonials</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-sm-12 infooter">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="aboutus.html">Why AP?</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
-                    </a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include_once "includes/footer.php"; ?>
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->
