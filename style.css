@@ -293,6 +293,7 @@ img {
 
 .mt-50 {
     margin-top: 50px;
+    margin-left: 40px;
 }
 
 .mt-100 {
@@ -1228,7 +1229,7 @@ z-index: 11;
 }
 .explore-search-form {
     background-color: #7643ea;
-    padding: 50px 40px;
+    padding: 40px 40px;
 }
 
 .explore-search-form h6 {
@@ -1284,7 +1285,7 @@ z-index: 11;
 
 .explore-search-form .custom-control-description {
     font-size: 13px;
-    color: #fff;
+    color: #000;
     font-weight: 600;
     line-height: 24px;
 }

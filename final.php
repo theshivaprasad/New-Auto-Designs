@@ -123,6 +123,12 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
+        <style type="text/css">
+
+html{overflow-x:hidden;}
+        </style>
+
+
 </head>
 
 <body>
@@ -156,7 +162,7 @@
                 <div class="col-12 col-md-12 col-sm-12">
                     <div class="invisible" style="height:70px">height</div>
                 </div>
-                <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
+                <div class="col-12 col-md-12 col-sm-12 pagebannerh2">
                     <div class="caption d-none d-md-block d-lg-block">
                             <center><h1 class='captionh5 text-black text-left'><strong>You have selected a <span class='text-red'><strong><?php echo $_GET['year']." ".$_GET['maker']." ".$_GET['model']." ".$_GET['part']; ?></strong></span> Complete the fields to get an Instant Quote </strong></h1></center>
                         </div>
@@ -172,7 +178,7 @@
         <div class="explore-search-area d-md-flex">
             <!-- Explore Search Form -->
             <div class="explore-search-form">
-                <h6>FIND THE PART NOW</h6>
+                <!-- <h6>FIND THE PART NOW</h6> -->
                 <!-- Tabs -->
                 <!-- Tabs Content -->
                 <div class="tab-content" id="nav-tabContent">
@@ -192,11 +198,12 @@
                                         $sql = "SELECT o.opt_name as opt FROM tbl_part_details p INNER JOIN tbl_part_options o ON p.opt_id = o.opt_id WHERE inv_id=\"".$inv_id."\" AND year_id=\"".$year_id."\"";
                                         $result = $conn->query($sql);
                                         while ($row=$result->fetch_assoc()) {
-                                            echo "<div class=\"col-12 col-xl-6\">
+                                            echo "<div class=\"col-12 col-6\">
                                             <label class=\"custom-control custom-checkbox mb-3\">
                                                 <input type=\"checkbox\" class=\"custom-control-input\">
                                                 <span class=\"custom-control-indicator\"></span>";
                                             echo "<span class=\"custom-control-description\">".$row['opt']."</span>";
+                                            echo "</div>";  
                                         }
                                 }
                             ?>
