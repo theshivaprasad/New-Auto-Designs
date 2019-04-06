@@ -177,7 +177,7 @@ html{overflow-x:hidden;}
         <!-- Explore Search Area -->
         <div class="explore-search-area d-md-flex">
             <!-- Explore Search Form -->
-            <div class="explore-search-form">
+            <div class="explore-search-form" style="z-index: 1; margin-top: -113px;">
                 <!-- <h6>FIND THE PART NOW</h6> -->
                 <!-- Tabs -->
                 <!-- Tabs Content -->
@@ -246,8 +246,8 @@ html{overflow-x:hidden;}
                 
                 <div class="col-md-12 col-sm-12">
 
-                    <div class="makecontent">
-                        <p><u>Used AC condenser</u></p>
+                    <div class="makecontent" style="margin-top: -115px;">
+                        <p mar><u>Used AC condenser</u></p>
 <p>AC condenser is an system used by cooling a substance gaseous liquid state. In this way, the latent heat is released from the substance and transferred to the environment around it. The condenser is occupied by heat transfer blades from outside to inside the unit through which cooling air can circulate. Condenser made up of copper is good when compared to aluminium.</p>
 <p>Locate the AC Condenser online and improve your car's performance. </p>
 <p>Air conditioning is an important part of vehicles that is responsible to maintain the cooling level. A car should have a proper ventilation system so that you can travel comfortably. It consists of several parts such as condenser, compressor and not to forget the accumulator. You should <b>buy used AC Condenser</b> as it is uses the refrigerant gas Freon and take in the water and other contaminants out of the AC system. If the AC system has stopped providing cool air, then you should definitely think of purchasing the <b>online AC Condenser. </b></p>

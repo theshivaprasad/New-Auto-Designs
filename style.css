@@ -1174,6 +1174,7 @@ li {
 .contact-form {
     padding: 70px 30px;
     background-color: #f3edff;
+    margin-bottom: -125px;
 }
 
 .contact-form-title h6 {
@@ -1230,6 +1231,8 @@ z-index: 11;
 .explore-search-form {
     background-color: #7643ea;
     padding: 40px 40px;
+    /*z-index: 1;*/
+    /*margin-top: -113px;*/
 }
 
 .explore-search-form h6 {

@@ -73,6 +73,10 @@
             }
     </script>
 </head>
+<style type="text/css">
+
+html{overflow-x:hidden;}
+        </style>
 
 <body>
     <!-- Preloader -->
@@ -169,7 +173,7 @@
             <div class="row">
                 
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h1 class='captionh5 text-black text-left'><strong>You have selected a <span class='text-blue'><strong><?php echo $_GET["part"]; ?></strong></span> Complete the fields to get an Instant Quote </strong></h1></div>
+                    <div class="reelative"><h1 class='captionh5 text-black text-left'><strong style="color:#000;">You have selected a <span style="color:#5d25dd ;"><strong><?php echo $_GET["part"]; ?></strong></span> Complete the fields to get an Instant Quote </strong></h1></div>
                     <div class="makecontent">
                         <div class="subbannerproduct cstbanner2">
                             <?php
