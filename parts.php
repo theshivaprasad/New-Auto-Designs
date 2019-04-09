@@ -177,10 +177,10 @@ html{overflow-x:hidden;}
                     <div class="makecontent">
                         <div class="subbannerproduct cstbanner2">
                             <?php
-                            if (glob("images/".strtolower($_GET["part"]).".png")) {
-                                echo "<img src=\"images/".strtolower($_GET["part"]).".png\">";
+                            if (glob("images/parts/".strtolower($_GET["part"]).".png")) {
+                                echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";
                                 echo "<p>";
-                                $fh = fopen("images/".strtolower($_GET["part"]).".txt",'r');
+                                $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
                                   while (! feof($fh)) {
                                     $s = fgets($fh);
                                     if (("\n" == $s) || ("\r\n" == $s)) {
@@ -190,7 +190,8 @@ html{overflow-x:hidden;}
                                   }
                                 echo "</p>";
                                 fclose($fh);
-                            }?>
+                            }
+                            ?>
                     </div>
                         <!-- <p><u>Used AC condenser</u></p>
 <p>AC condenser is an system used by cooling a substance gaseous liquid state. In this way, the latent heat is released from the substance and transferred to the environment around it. The condenser is occupied by heat transfer blades from outside to inside the unit through which cooling air can circulate. Condenser made up of copper is good when compared to aluminium.</p>

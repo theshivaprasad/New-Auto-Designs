@@ -277,19 +277,38 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="reelative"><h2 class="subtitle"><!--<?php echo $_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']; ?>-->Lorem Ipsum</h2></div>
                     <div class="makecontent">
-                        <p><p><strong>Lorem Ipsum</strong></p>
-                        <?php
-                          if ($fh = fopen('lorem.txt','r')) {
-                            echo "<p>";
-                            while (!feof($fh)) {
-                              $s = fgets($fh);
-                              if (("\n" == $s) || ("\r\n" == $s)) {
-                                echo "</p><p>";
-                              }
-                              echo "$s";
+                        <div class="subbannerproduct cstbanner2">
+                            <?php
+                            if(isset($_GET["part"])&&glob("images/parts/".strtolower($_GET["part"]).".png")) {
+                                echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";
+                                echo "<p>";
+                                $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
+                                  while (! feof($fh)) {
+                                    $s = fgets($fh);
+                                    if (("\n" == $s) || ("\r\n" == $s)) {
+                                        echo "<br><br>";
+                                    }
+                                    echo "$s";
+                                  }
+                                echo "</p>";
+                                fclose($fh);
                             }
-                          }
-                        ?>
+                            else if (glob("images/maker/".strtolower($_GET["maker"]).".png")&&!isset($_GET["model"])&&!isset($_GET["part"])) {
+                                echo "<img src=\"images/maker/".strtolower($_GET["maker"]).".png\">";
+                                echo "<p>";
+                                $fh = fopen("images/maker/".strtolower($_GET["maker"]).".txt",'r');
+                                  while (! feof($fh)) {
+                                    $s = fgets($fh);
+                                    if (("\n" == $s) || ("\r\n" == $s)) {
+                                        echo "<br><br>";
+                                    }
+                                    echo "$s";
+                                  }
+                                echo "</p>";
+                                fclose($fh);
+                            } else  { echo "DUDE"; }
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
