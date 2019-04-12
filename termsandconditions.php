@@ -94,7 +94,7 @@
                     <!-- Testimonial Slider from Baamboo Studio modified for The Mentor Group (http://www.mentor-group.com/clients--testimonials.html) -->
 
                     <!-- TestimonialS Slider - Free Weebly Widget by Baamboo Studio - Style 2 -->
-                    <div class="testimonial_slider_2">
+<!--                     <div class="testimonial_slider_2">
                         <input type="radio" name="slider_2" id="slide_2_1" checked />
                         <input type="radio" name="slider_2" id="slide_2_2" />
                         <input type="radio" name="slider_2" id="slide_2_3" />
@@ -187,7 +187,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- ***** Features Events Area End ***** -->
 

@@ -477,7 +477,7 @@ li {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(14, 2, 35, 0.5);
+    background-color: rgba(14, 2, 35, 0.05);
     z-index: -1;
 }
 
@@ -589,7 +589,7 @@ li {
     z-index: 9999;
     height: 80px;
     top: 0;
-    background-color: rgba(54, 38, 84, 0.64);
+    background-color: white;
     left: 0;
     z-index: 99;
     -webkit-transition-duration: 700ms;
@@ -621,13 +621,13 @@ li {
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 15px;
     padding-left: 15px;
-    color: #fff;
+    color: purple;
     font-size: 15px;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-item.active .nav-link {
-    color: #7643ea;
+    color: black;
 }
 
 .dorne-search-btn > a,

@@ -4,7 +4,10 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.php"><img src="img/core-img/logo.png" alt=""></a>
+                       <style>
+@import url('https://fonts.googleapis.com/css?family=Shojumaru');
+</style>
+                        <a class="navbar-brand" href="index.php"><p style="font-size: 35px;font-weight:700; color: purple; font-family: 'Shojumaru', cursive;" >WOLF AUTOPARTS</p></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
@@ -31,7 +34,7 @@
                             <!-- Search btn -->
                             <!-- Add listings btn -->
                             <div class="dorne-add-listings-btn">
-                                <a href="#" class="btn dorne-btn">Free Quote $</a>
+                                <a href="partsrequest.php" class="btn dorne-btn">Get Free Quote $</a>
                             </div>
                         </div>
                     </nav>

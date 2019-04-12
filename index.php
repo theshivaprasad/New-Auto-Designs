@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Wolf Autoparts</title>
+    <title>Wolf Autoparts | Home</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -126,6 +126,7 @@
 </head>
 
 <body>
+
     <!-- Preloader -->
 
 
@@ -514,7 +515,7 @@
                     <!-- Testimonial Slider from Baamboo Studio modified for The Mentor Group (http://www.mentor-group.com/clients--testimonials.html) -->
 
                     <!-- TestimonialS Slider - Free Weebly Widget by Baamboo Studio - Style 2 -->
-                    <div class="testimonial_slider_2">
+                    <!-- <div class="testimonial_slider_2">
                         <input type="radio" name="slider_2" id="slide_2_1" checked />
                         <input type="radio" name="slider_2" id="slide_2_2" />
                         <input type="radio" name="slider_2" id="slide_2_3" />
@@ -607,8 +608,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </div>-->
+    </section> 
     <!-- ***** Features Events Area End ***** -->
     <!-- ***** Clients Area Start ***** -->
     <!--<section class="partnersdiv">

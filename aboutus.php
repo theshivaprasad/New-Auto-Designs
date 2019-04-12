@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Dorne - Directory &amp; Listing Template</title>
+    <title>Wolf Autoparts | About us</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -122,7 +122,7 @@
                     <!-- Testimonial Slider from Baamboo Studio modified for The Mentor Group (http://www.mentor-group.com/clients--testimonials.html) -->
 
                     <!-- TestimonialS Slider - Free Weebly Widget by Baamboo Studio - Style 2 -->
-                    <div class="testimonial_slider_2">
+                   <!--  <div class="testimonial_slider_2">
                         <input type="radio" name="slider_2" id="slide_2_1" checked />
                         <input type="radio" name="slider_2" id="slide_2_2" />
                         <input type="radio" name="slider_2" id="slide_2_3" />
@@ -201,21 +201,21 @@
                 </div>
                 <div class="col-md-6">
                     <div class="section-heading text-center">
-                        <span></span>
-                        <h4>Some of our Clients</h4>
+                        <span></span> -->
+                        <!-- <h4>Some of our Clients</h4>
                         <p>Editor’s pick</p>
-                    </div>                    
-                    <div class="row">
+                    </div>        -->             
+                    <!-- <div class="row">
                         <div class="col-md-4 col-4"><img src="img/client-logo-1.jpg" class="img-fluid" alt=""></div>
                         <div class="col-md-4 col-4"><img src="img/client-logo-2.jpg" class="img-fluid" alt=""></div>
                         <div class="col-md-4 col-4"><img src="img/client-logo-3.jpg" class="img-fluid" alt=""></div>
                         <div class="col-md-4 col-4"><img src="img/client-logo-6.jpg" class="img-fluid" alt=""></div>
                         <div class="col-md-4 col-4"><img src="img/client-logo-4.jpg" class="img-fluid" alt=""></div>
                         <div class="col-md-4 col-4"><img src="img/client-logo-5.jpg" class="img-fluid" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </div> -->
+               <!--  </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
     </section>
     <!-- ***** Features Events Area End ***** -->
 
