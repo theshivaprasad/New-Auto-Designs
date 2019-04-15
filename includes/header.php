@@ -7,7 +7,7 @@
                        <style>
 @import url('https://fonts.googleapis.com/css?family=Shojumaru');
 </style>
-                        <a class="navbar-brand" href="index.php"><p style="font-size: 35px;font-weight:700; color: purple; font-family: 'Shojumaru', cursive;" >WOLF AUTOPARTS</p></a>
+                        <a class="navbar-brand" href="index.php"><p style="font-size: 35px;font-weight:700; color:#313131; font-family: 'Shojumaru', cursive;" >AUTOPARTS WOLF</p></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">

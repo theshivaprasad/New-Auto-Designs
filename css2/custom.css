@@ -464,7 +464,7 @@ select {
 	line-height:21px!important;
 }
 .popularpdt-content {
-	background:#000000;	
+	background:#0c0c0cb5;	
 	padding:15px;
 }
 .pdtname {
@@ -474,7 +474,7 @@ select {
 	text-overflow: ellipsis;
 	height: 50px;
 	word-break:  break-all;
-	color: #7643ea;
+	color: #fdfdfd;
 }
 .popularpdt-content p {
 	color:#000000;
@@ -501,7 +501,7 @@ select {
 .rounddiv {
     font-size: 43px;
     line-height: 54px;
-    color: #7643ea;
+    color: #FDFDFD;
     font-weight: 400;
     text-transform: uppercase;
     overflow: hidden;
