@@ -33,9 +33,6 @@
                             </ul>
                             <!-- Search btn -->
                             <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="partsrequest.php" class="btn dorne-btn">Get Free Quote $</a>
-                            </div>
                         </div>
                     </nav>
                 </div>
