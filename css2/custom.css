@@ -729,6 +729,8 @@ transform: scale(1.1,1.1);
 .item-3 {
     position: absolute;
     top: 7em;
+    width: inherit;
+    right: 18em;
   font-size: -1em;
 
     animation-duration: 20s;
@@ -750,21 +752,21 @@ transform: scale(1.1,1.1);
 }
 
 @keyframes anim-1 {
-    0%, 8.3% { left: -100%; opacity: 0; }
+    0%, 8.3% { left: -50%; opacity: 0; }
   8.3%,25% { left: 25%; opacity: 1; }
-  33.33%, 100% { left: 110%; opacity: 0; }
+  33.33%, 100% { left: 50%; opacity: 0; }
 }
 
 @keyframes anim-2 {
-    0%, 33.33% { left: -100%; opacity: 0; }
+    0%, 33.33% { left: -50%; opacity: 0; }
   41.63%, 58.29% { left: 25%; opacity: 1; }
-  66.66%, 100% { left: 110%; opacity: 0; }
+  66.66%, 100% { left: 50%; opacity: 0; }
 }
 
 @keyframes anim-3 {
-    0%, 66.66% { left: -100%; opacity: 0; }
+    0%, 66.66% { left: -50%; opacity: 0; }
   74.96%, 91.62% { left: 25%; opacity: 1; }
-  100% { left: 110%; opacity: 0; }
+  100% { left: 50%; opacity: 0; }
 }
 .author_2 h3 {
     color: #000000;
