@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Wolf Autoparts | Home</title>
+    <title> Autoparts Wolf  | Home</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -125,7 +125,7 @@
     </style>
 </head>
 
-<body>
+<body >
 
     <!-- Preloader -->
 
@@ -238,7 +238,7 @@
     <!-- ***** About Area End ***** -->
 
     <!-- ***** Editor Pick Area Start ***** -->
-    <section class="dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100" style="background-image: url(img/bg-img/hero-2.jpg);">
+    <section class="dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100" style="background-image: url(img/services.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -249,30 +249,28 @@
                     </div>
                 </div>
             </div>
-<center>
            <div class="row">
-                <div class="col-md-6 col-sm-12 at wow fadeInLeft">
-                    <div class="col-8 rounddiv rounddivtext float-left">
-                        <div class="rounddivtexth1">Quick Quotes that save you money</div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext  ">
+                        <div class="rounddivtexth1">Quick Quotes <br> that save you money</div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 at wow fadeInLeft">
-                    <div class="col-8 rounddiv rounddivtext float-left">
-                        <div class="rounddivtexth1">Save over 50% off dealer prices</div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext ">
+                        <div class="rounddivtexth1">Save over 50% <br>off dealer prices</div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 at wow fadeInLeft">
-                    <div class="col-8 rounddiv rounddivtext float-left">
-                        <div class="rounddivtexth1">Fast delivery to your home or mechanic</div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext">
+                        <div class="rounddivtexth1">Fast delivery to <br>your home or mechanic</div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 at wow fadeInLeft">
-                    <div class="col-8 rounddiv rounddivtext float-left">
-                        <div class="rounddivtexth1">home or mechanic We service all major makes</div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext">
+                        <div class="rounddivtexth1">home or mechanic <br>We service all major makes</div>
                     </div>
                 </div>
             </div>
-        </center>
         </div>
     </section>
     <!-- ***** Editor Pick Area End ***** -->
@@ -618,15 +616,15 @@
             <section class="section1">
                 	<div class="container1">
         <div class="carousel">         
-            <figure><img class="img1" src="images/maker/acura.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/alfa-romeo.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/Allard.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/Alpina.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/amc.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/Ariel.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/Aston-martin.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/audi.webp" alt=""></figure>
-            <figure><img class="img1" src="images/maker/austin.png" alt=""></figure>
+            <figure><img class="img1" src="images/car1.png" alt=""></figure>
+            <figure><img class="img1" src="images/car2.png" alt=""></figure>
+            <figure><img class="img1" src="images/car3.png" alt=""></figure>
+            <figure><img class="img1" src="images/car4.png" alt=""></figure>
+            <figure><img class="img1" src="images/car10.png" alt=""></figure>
+            <figure><img class="img1" src="images/car12.png" alt=""></figure>
+            <figure><img class="img1" src="images/car11.png" alt=""></figure>
+            <figure><img class="img1" src="images/car1.webp" alt=""></figure>
+            <figure><img class="img1" src="images/car18.png" alt=""></figure>
         </div>    
     </div>
                    <!--<div class="regular slider">

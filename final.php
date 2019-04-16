@@ -201,7 +201,7 @@ html{overflow-x:hidden;}
                                         while ($row=$result->fetch_assoc()) {#fff
                                             echo "<div class=\"col-12 col-6\">
                                             <label class=\"custom-control custom-checkbox mb-3\">
-                                                <input type=\"checkbox\" class=\"custom-control-input\" required>
+                                                <input type=\"checkbox\" class=\"custom-control-input\" >
                                                 <span class=\"custom-control-indicator\"></span>";
                                             echo "<span class=\"custom-control-description\">".$row['opt']."</span>";
                                             echo "</div>";  
@@ -214,16 +214,16 @@ html{overflow-x:hidden;}
                         <div class="contact-form">
                             <div class="row">
                         <div class="col-12">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="col-12">
-                            <input type="email" name="email" class="form-control" placeholder="Email Address">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                         </div>
                          <div class="col-12">
-                            <input type="tel" name="phone" class="form-control" placeholder="Phone">
+                            <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
                         </div>
                          <div class="col-12">
-                            <input type="text" name="zip" class="form-control" placeholder="ZIP">
+                            <input type="text" name="zip" class="form-control" placeholder="ZIP" required>
                         </div>
                         <input type="hidden" name="maker" id="qap_make" value=<?php echo "\"".$_GET["maker"]."\""?>>
                         <input type="hidden" name="model" id="qap_model" value=<?php echo "\"".$_GET["model"]."\""?>>
@@ -256,6 +256,20 @@ html{overflow-x:hidden;}
                     <div class="makecontent" style="margin-top: 20%">
                         <?php
                             if (glob("images/parts/".strtolower($_GET["part"]).".png")) {
+                                echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";
+                                if(glob("images/parts/".strtolower($_GET["part"]).".txt")){
+                                    echo "<p>";
+                                    $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
+                                      while (! feof($fh)) {
+                                        $s = fgets($fh);
+                                        if (("\n" == $s) || ("\r\n" == $s)) {
+                                            echo "<br><br>";
+                                        }
+                                        echo "$s";
+                                      }
+                                    echo "</p>";
+                                    fclose($fh);
+                                }
                                 echo "<p>";
                                 $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
                                   while (! feof($fh)) {
@@ -267,7 +281,7 @@ html{overflow-x:hidden;}
                                   }
                                 echo "</p>";
                                 fclose($fh);
-                            }
+                               }
                             ?>
                     </div>
                 </div>
