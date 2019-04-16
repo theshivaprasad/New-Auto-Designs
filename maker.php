@@ -312,7 +312,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><div class="subtitle"><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
+                    <div class="reelative" style="margin-top: 222px"><div class="subtitle"><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
                      echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></div></div>
                 
 
