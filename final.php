@@ -250,17 +250,19 @@ html{overflow-x:hidden;}
                         <?php
                             if (glob("images/parts/".strtolower($_GET["part"]).".png")) {
                                 echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";
-                                echo "<p>";
-                                $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
-                                  while (! feof($fh)) {
-                                    $s = fgets($fh);
-                                    if (("\n" == $s) || ("\r\n" == $s)) {
-                                        echo "<br><br>";
-                                    }
-                                    echo "$s";
-                                  }
-                                echo "</p>";
-                                fclose($fh);
+                                if(glob("images/parts/".strtolower($_GET["part"]).".txt")){
+                                    echo "<p>";
+                                    $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
+                                      while (! feof($fh)) {
+                                        $s = fgets($fh);
+                                        if (("\n" == $s) || ("\r\n" == $s)) {
+                                            echo "<br><br>";
+                                        }
+                                        echo "$s";
+                                      }
+                                    echo "</p>";
+                                    fclose($fh);
+                                }
                             }
                             ?>
                 </div>

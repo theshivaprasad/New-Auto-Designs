@@ -281,39 +281,58 @@
                             <?php
                             if(isset($_GET["part"])&&glob("images/parts/".strtolower($_GET["part"]).".png")) {
                                 echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";
-                                echo "<p>";
-                                $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
-                                  while (! feof($fh)) {
-                                    $s = fgets($fh);
-                                    if (("\n" == $s) || ("\r\n" == $s)) {
-                                        echo "<br><br>";
-                                    }
-                                    echo "$s";
-                                  }
-                                echo "</p>";
-                                fclose($fh);
-                            }
+                                if(glob("images/parts/".strtolower($_GET["part"]).".txt")){
+                                    echo "<p>";
+                                    $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
+                                      while (! feof($fh)) {
+                                        $s = fgets($fh);
+                                        if (("\n" == $s) || ("\r\n" == $s)) {
+                                            echo "<br><br>";
+                                        }
+                                        echo "$s";
+                                      }
+                                    echo "</p>";
+                                    fclose($fh);
+                                }
+                            } else if(isset($_GET["model"])&&glob("images/model/".strtolower($_GET["model"]).".png")) {
+                                echo "<img src=\"images/model/".strtolower($_GET["model"]).".png\">";
+                                if(glob("images/model/".strtolower($_GET["model"]).".txt")){
+                                    echo "<p>";
+                                    $fh = fopen("images/model/".strtolower($_GET["model"]).".txt",'r');
+                                      while (!feof($fh)) {
+                                        $s = fgets($fh);
+                                        if (("\n" == $s) || ("\r\n" == $s)) {
+                                            echo "<br><br>";
+                                        }
+                                        echo "$s";
+                                      }
+                                    echo "</p>";
+                                    fclose($fh);
+                                }
+                            } 
                             else if (glob("images/maker/".strtolower($_GET["maker"]).".png")&&!isset($_GET["model"])&&!isset($_GET["part"])) {
                                 echo "<img src=\"images/maker/".strtolower($_GET["maker"]).".png\">";
-                                echo "<p>";
-                                $fh = fopen("images/maker/".strtolower($_GET["maker"]).".txt",'r');
-                                  while (! feof($fh)) {
-                                    $s = fgets($fh);
-                                    if (("\n" == $s) || ("\r\n" == $s)) {
-                                        echo "<br><br>";
-                                    }
-                                    echo "$s";
-                                  }
-                                echo "</p>";
-                                fclose($fh);
+                                if(glob("images/maker/".strtolower($_GET["maker"]).".txt")){
+                                    echo "<p>";
+                                    $fh = fopen("images/maker/".strtolower($_GET["maker"]).".txt",'r');
+                                      while (! feof($fh)) {
+                                        $s = fgets($fh);
+                                        if (("\n" == $s) || ("\r\n" == $s)) {
+                                            echo "<br><br>";
+                                        }
+                                        echo "$s";
+                                      }
+                                    echo "</p>";
+                                    fclose($fh);
+                                }
                             } else  { echo "DUDE"; }
                             ?>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><div class="subtitle"><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
-                     echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></div></div>
+                    <div class="reelative"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
+                     echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></p></div></div>
                 
 
                     <div class="make-listpart">
@@ -326,7 +345,6 @@
                                 echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&model=".$row["model"]."\">".$row["model"]."</a></li>";
                                  }
                                } 
-                               echo "</table>";
                             ?>
                         </ul>
                     </div>
@@ -341,7 +359,11 @@
                                 $sql="SELECT DISTINCT p.part_name as part FROM tbl_car_maker m, tbl_car_model mo, tbl_inventory i, tbl_car_part p WHERE m.maker_id=\"".extractId($conn,'maker',$_GET['maker'])."\" AND mo.model_id=i.model_id AND i.part_id=p.part_id ORDER BY p.part_name";
                                 $result=$conn->query($sql);
                                 while ($row=$result->fetch_assoc()) {
-                                  echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
+                                    if(isset($_GET['model'])) {
+                                        echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
+                                    } else {
+                                        echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
+                                    }
                                  }
                                 } 
                             ?>
