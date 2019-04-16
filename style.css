@@ -256,7 +256,7 @@ p {
 
 .section-padding-100-50 {
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 407px;
 }
 
 .section-padding-100 {
@@ -1546,13 +1546,3 @@ z-index: 11;
     font-size: 12px;
 }
 
-.location-on-map h4 {
-    margin-bottom: 60px;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-#locationMap {
-    width: 100%;
-    height: 380px;
-}

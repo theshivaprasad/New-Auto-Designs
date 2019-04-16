@@ -1,40 +1,32 @@
 <html>
 <head>
-<script type="text/javascript">
-function Validation()
-{
-var a = document.form.phone.value;
-if(a=="")
-{
-alert("please Enter the Contact Number");
-document.form.phone.focus();
-return false;
-}
-if(isNaN(a))
-{
-alert("Enter the valid Mobile Number(Like : 9566137117)");
-document.form.phone.focus();
-return false;
-}
-if((a.length < 1) && (a.length > 10))
-{
-alert(" Your Mobile Number must be 1 to 10 Integers");
-document.form.phone.select();
-return false;
-}
-}
-</script>
+     <script src="jmin.js"></script>
 </head>
 <body>
-<form name="form" method="post" onsubmit="return Validation()">
-<tr>
-<td> Mobile No:</td>
-<td><input type="text" name="phone"></td>
-</tr>
-<tr>
-<td></td>
-<td><input type="submit" name="sub" value="Submit"></td>
-</tr>
-</form>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $('#checkBtn').click(function() {
+      checked = $("input[type=checkbox]:checked").length;
+
+      if(!checked) {
+        alert("You must check at least one checkbox.");
+        return false;
+      }
+
+    });
+});
+
+</script>
+
+<p>Box Set 1</p>
+<ul>
+   <li><input name="BoxSelect[]" type="checkbox" value="Box 1" required><label>Box 1</label></li>
+   <li><input name="BoxSelect[]" type="checkbox" value="Box 2" required><label>Box 2</label></li>
+   <li><input name="BoxSelect[]" type="checkbox" value="Box 3" required><label>Box 3</label></li>
+   <li><input name="BoxSelect[]" type="checkbox" value="Box 4" required><label>Box 4</label></li>
+</ul>
+<input type="button" value="Test Required" id="checkBtn">
+
 </body>
 </html>
