@@ -7,7 +7,7 @@
                        <style>
 @import url('https://fonts.googleapis.com/css?family=Shojumaru');
 </style>
-                        <a class="navbar-brand" href="index.php"><p style="font-size: 35px;font-weight:700; color: purple; font-family: 'Shojumaru', cursive;" >WOLF AUTOPARTS</p></a>
+                        <a class="navbar-brand" href="index.php"><p style="font-size: 35px;font-weight:700; color: purple; font-family: 'Shojumaru', cursive;" >AUTOPARTS WOLF</p></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
@@ -33,12 +33,13 @@
                             </ul>
                             <!-- Search btn -->
                             <!-- Add listings btn -->
-                            <div class="dorne-add-listings-btn">
-                                <a href="partsrequest.php" class="btn dorne-btn">Get Free Quote $</a>
-                            </div>
+                            
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
+        <div class="btn-drone-btn" id="chat">
+                                <a href="partsrequest.php" class="btn dorne-btn">Get Live Quote </a>
+                            </div>
 </header>
