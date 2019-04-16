@@ -33,7 +33,7 @@
                             </ul>
                             <!-- Search btn -->
                             <!-- Add listings btn -->
-                            
+
                         </div>
                     </nav>
                 </div>
