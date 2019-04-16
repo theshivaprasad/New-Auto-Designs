@@ -125,7 +125,7 @@
     </style>
 </head>
 
-<body>
+<body >
 
     <!-- Preloader -->
 

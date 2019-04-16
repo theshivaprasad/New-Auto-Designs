@@ -39,7 +39,29 @@
                 </div>
             </div>
         </div>
-        <div class="btn-drone-btn" id="chat">
-                                <a href="partsrequest.php" class="btn dorne-btn">Get Live Quote </a>
+        <div id="status">
+
+        <div class="btn-drone-btn" id="chat" >
+                                <a onclick="javascript:void(Tawk_API.toggle())"class="btn dorne-btn" style="color:#ffffff">Get Live Quote </a>
                             </div>
+                            </div>
+                            <script>
+function chatFunction() {
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(
+	function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/5cb5711fc1fe2560f3ff05b5/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+
+	}
+)();
+}
+
+</script>
+
 </header>
+<body onload="chatFunction();">
