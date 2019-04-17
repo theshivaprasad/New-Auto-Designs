@@ -128,7 +128,19 @@
 html{overflow-x:hidden;}
         </style>
 
-
+        <script type="text/javascript">
+            function validateCheckBox() {
+                var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+                if (checkedOne===true) {
+                    alert("wow");
+                    window.location.href = <?php echo "\"finish.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]."&year=".$_GET["year"]."\""; ?>;
+                } else {
+                    alert("Select Option");
+                    window.location.href = <?php echo "\"final.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]."&year=".$_GET["year"]."\""; ?>;
+                }
+            }           
+        </script>
 </head>
 
 <body>
@@ -215,7 +227,7 @@ $(document).ready(function () {
                                         while ($row=$result->fetch_assoc()) {#fff
                                             echo "<div  class=\"col-12 col-6\">
                                             <label class=\"custom-control custom-checkbox mb-3\">
-                                                <input id='type' type=\"checkbox\" class=\"custom-control-input\" >
+                                                <input type=\"checkbox\" class=\"custom-control-input\">
                                                 <span class=\"custom-control-indicator\"></span>";
                                             echo "<span class=\"custom-control-description\">".$row['opt']."</span>";
                                             echo "</div>";  
@@ -246,7 +258,7 @@ $(document).ready(function () {
                         <input type="hidden" name="year" id="qap_year" value=<?php echo "\"".$_GET["year"]."\""?>>
                     </div>
             </div>
-                            <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2" id="checkBtn"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
+                            <button type="button" onclick="validateCheckBox()" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
                         </form>
                     </div>
                 </div>

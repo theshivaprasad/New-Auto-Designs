@@ -325,7 +325,7 @@
                                     echo "</p>";
                                     fclose($fh);
                                 }
-                            } else  { echo "DUDE"; }
+                            } else  { echo "No Image"; }
                             ?>
                         </div>
                     </div>
