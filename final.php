@@ -199,9 +199,9 @@ html{overflow-x:hidden;}
                                         $sql = "SELECT o.opt_name as opt FROM tbl_part_details p INNER JOIN tbl_part_options o ON p.opt_id = o.opt_id WHERE inv_id=\"".$inv_id."\" AND year_id=\"".$year_id."\"";
                                         $result = $conn->query($sql);
                                         while ($row=$result->fetch_assoc()) {#fff
-                                            echo "<div class=\"col-12 col-6\">
+                                            echo "<div  class=\"col-12 col-6\">
                                             <label class=\"custom-control custom-checkbox mb-3\">
-                                                <input type=\"checkbox\" class=\"custom-control-input\" >
+                                                <input id='type' type=\"checkbox\" class=\"custom-control-input\" >
                                                 <span class=\"custom-control-indicator\"></span>";
                                             echo "<span class=\"custom-control-description\">".$row['opt']."</span>";
                                             echo "</div>";  
@@ -232,7 +232,7 @@ html{overflow-x:hidden;}
                         <input type="hidden" name="year" id="qap_year" value=<?php echo "\"".$_GET["year"]."\""?>>
                     </div>
             </div>
-                            <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
+                            <button type="submit" id="submit"class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
                         </form>
                     </div>
                 </div>
@@ -548,8 +548,27 @@ html{overflow-x:hidden;}
                 });
             });  
         </script>
+        <script type="text/javascript">
+$(document).ready(function () {
+    $('#submit').click(function() {
+      if($("input[type=checkbox]").length>0)  {
+      checked = $("input[type=checkbox]:checked").length;
+      
+      if(!checked) {
+    
+        return false;
+      }
+      }
+
+    });
+});
+
+
+</script>
 
 
 </body>
 
 </html>
+
+
