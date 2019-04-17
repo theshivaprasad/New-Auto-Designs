@@ -616,16 +616,16 @@
             <section class="section1">
                 	<div class="container1">
         <div class="carousel">         
-            <figure><img class="img1" src="images/car1.png" alt=""></figure>
-            <figure><img class="img1" src="images/car2.png" alt=""></figure>
-            <figure><img class="img1" src="images/car3.png" alt=""></figure>
-            <figure><img class="img1" src="images/car4.png" alt=""></figure>
-            <figure><img class="img1" src="images/car10.png" alt=""></figure>
-            <figure><img class="img1" src="images/car12.png" alt=""></figure>
-            <figure><img class="img1" src="images/car11.png" alt=""></figure>
-            <figure><img class="img1" src="images/car1.webp" alt=""></figure>
-            <figure><img class="img1" src="images/car18.png" alt=""></figure>
-        </div>    
+            <figure><img class="img1" src="images/maker/acura.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/alfa-romeo.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/Allard.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/Alpina.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/amc.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/Ariel.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/Aston-martin.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/audi.webp" alt=""></figure>
+            <figure><img class="img1" src="images/maker/austin.png" alt=""></figure>
+        </div>       
     </div>
                    <!--<div class="regular slider">
 
