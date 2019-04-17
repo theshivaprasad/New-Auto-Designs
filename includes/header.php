@@ -4,31 +4,31 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg">
-                       <style>
-@import url('https://fonts.googleapis.com/css?family=Shojumaru');
+                    <style>
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 </style>
-                        <a class="navbar-brand" href="index.php"><p style="font-size: 35px;font-weight:700; color: purple; font-family: 'Shojumaru', cursive;" >AUTOPARTS WOLF</p></a>
+                        <a class="navbar-brand" href="index.php"><p style="font-size: 35px;font-weight:bold; color: purple; font-family: 'Orbitron', cursive;margin-top: 5px;" >AUTOPARTS WOLF</p></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
-                        <div class="collapse navbar-collapse" id="dorneNav">
-                            <ul class="navbar-nav mr-auto" id="dorneMenu">
+                        <div class="collapse navbar-collapse" id="dorneNav" style="font-size: 15px;font-weight:bold; color: purple; font-family: 'Orbitron', cursive;">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu" style="margin-left:60px;">
                                 <li class="nav-item active">
                                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="aboutus.php">About Us</a>
+                                    <a class="nav-link" href="aboutus.php" style="width: 110px;">About Us</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="partslist.php">Part List</a>
+                                    <a class="nav-link" href="partslist.php" style="width: 105px;">Part List</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="partsrequest.php">Part Request</a>
+                                    <a class="nav-link" href="partsrequest.php" style="width: 140px;">Part Request</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="resources.php">Resources</a>
+                                    <a class="nav-link" href="resources.php" style="width: 110px;">Resources</a>
                                 </li>
                                            <li class="nav-item">
-                                    <a class="nav-link" href="customerservice.php">Customer Service</a>
+                                    <a class="nav-link" href="customerservice.php" style="width: 185px;">Customer Service</a>
                                 </li>
                             </ul>
                             <!-- Search btn -->

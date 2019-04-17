@@ -132,6 +132,20 @@ html{overflow-x:hidden;}
 </head>
 
 <body>
+    <script type="text/javascript">
+$(document).ready(function () {
+    $('#checkBtn').click(function() {
+      checked = $("input[type=checkbox]:checked").length;
+
+      if(!checked) {
+        alert("You must check at least one checkbox.");
+        return false;
+      }
+
+    });
+});
+
+</script>
     <!-- Preloader -->
 
 
@@ -220,10 +234,10 @@ html{overflow-x:hidden;}
                             <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                         </div>
                          <div class="col-12">
-                            <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
+                            <input type="text" name="phone" pattern="[1-9]{1}[0-9]{9}" class="form-control" placeholder="Phone" required>
                         </div>
                          <div class="col-12">
-                            <input type="text" name="zip" class="form-control" placeholder="ZIP" required>
+                            <input type="text" name="zip" pattern="^[0-9]{3}(?:-[0-9]{3})?$" class="form-control"  placeholder="ZIP" required>
                         </div>
                         <input type="hidden" name="maker" id="qap_make" value=<?php echo "\"".$_GET["maker"]."\""?>>
                         <input type="hidden" name="model" id="qap_model" value=<?php echo "\"".$_GET["model"]."\""?>>
@@ -232,7 +246,7 @@ html{overflow-x:hidden;}
                         <input type="hidden" name="year" id="qap_year" value=<?php echo "\"".$_GET["year"]."\""?>>
                     </div>
             </div>
-                            <button type="submit" id="submit"class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
+                            <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2" id="checkBtn"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
                         </form>
                     </div>
                 </div>
@@ -256,20 +270,7 @@ html{overflow-x:hidden;}
                     <div class="makecontent" style="margin-top: 20%">
                         <?php
                             if (glob("images/parts/".strtolower($_GET["part"]).".png")) {
-                                echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";
-                                if(glob("images/parts/".strtolower($_GET["part"]).".txt")){
-                                    echo "<p>";
-                                    $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
-                                      while (! feof($fh)) {
-                                        $s = fgets($fh);
-                                        if (("\n" == $s) || ("\r\n" == $s)) {
-                                            echo "<br><br>";
-                                        }
-                                        echo "$s";
-                                      }
-                                    echo "</p>";
-                                    fclose($fh);
-                                }
+
                                 echo "<p>";
                                 $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
                                   while (! feof($fh)) {
@@ -292,10 +293,8 @@ html{overflow-x:hidden;}
                 </div>
         </div>
     </section>
-    </section>
-    <!-- ***** Features Events Area End ***** -->
     <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
-        <div class="container">
+        <div class="container" style="text-align: center;">
             <div class="row">
                 <div class="col-12">
                     
@@ -303,89 +302,38 @@ html{overflow-x:hidden;}
             </div>
 
             <div class="row">
-                <div class="col-md-6">
-                    <!-- Testimonial Slider from Baamboo Studio modified for The Mentor Group (http://www.mentor-group.com/clients--testimonials.html) -->
-
-                    <!-- TestimonialS Slider - Free Weebly Widget by Baamboo Studio - Style 2 -->
-                    <div class="testimonial_slider_2">
-                        <input type="radio" name="slider_2" id="slide_2_1" checked />
-                        <input type="radio" name="slider_2" id="slide_2_2" />
-                        <input type="radio" name="slider_2" id="slide_2_3" />
-                        <input type="radio" name="slider_2" id="slide_2_4" />
-                        <div class="boo_inner clearfix">
-                            <div class="slide_content">
-                                <div class="testimonial_2">
-                                    <div class="content_2">
-                                       <div class="section-heading text-center">
+                <div class="col-md-6" style="flex: 0 0 100%; max-width: 100%">
+                    <div class="section-heading text-center">
                         <span></span>
                         <h4>Client Testimonials</h4>
-                        <p>Editor’s pick</p>
+                    <p>Editor's pick</p>
                     </div>
-                                        <p style="color:#fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
-                                    </div>
-                                    <div class="author_2">
-                                        <h3 class="text-red">Daniel Frank, Seo Master</h3>
-                                    </div>
-                                </div>
+                    <div style="overflow: hidden;">
+                        <div class="item-1">
+                            <div>
+                               <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p> 
                             </div>
-                            <div class="slide_content">
-                                <div class="testimonial_2">
-                                    <div class="content_2">
-                                        <div class="section-heading text-center">
-                        <span></span>
-                        <h4>Client Testimonials</h4>
-                        <p>Editor’s pick</p>
-                    </div>
-                                        <p style="color:#fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
-                                    </div>
-                                    <div class="author_2">
-                                        <h3 class="text-red">Leah Jordan</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide_content">
-                                <div class="testimonial_2">
-                                    <div class="content_2">
-                                        <div class="section-heading text-center">
-                        <span></span>
-                        <h4>Client Testimonials</h4>
-                        <p>Editor’s pick</p>
-                    </div>
-                                        <p style="color:#fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
-                                    </div>
-                                    <div class="author_2">
-                                        <h3 class="text-red">Brian McNaught</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide_content">
-                                <div class="testimonial_2">
-                                    <div class="content_2">
-                                        <div class="section-heading text-center">
-                        <span></span>
-                        <h4>Client Testimonials</h4>
-                        <p>Editor’s pick</p>
-                    </div>
-                                        <p style="color:#fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p>
-                                    </div>
-                                    <div class="author_2">
-                                        <h3 class="text-red">Lee Barker</h3>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="author_2"><h3 class="text-red">Daniel Frank, Seo Master</h3></div>
                         </div>
-                        <div id="controls">
-                            <label for="slide_2_1"></label>
-                            <label for="slide_2_2"></label>
-                            <label for="slide_2_3"></label>
-                            <label for="slide_2_4"></label>
-                        </div>
-                    </div>
 
+                        <div class="item-2">
+                            <div><p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p></div>
+                             <div class="author_2"><h3 class="text-red">Leah Jordan</h3></div>
+                        </div>
+                                                <div class="item-3">
+                           <div><p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p></div>
+                             <div class="author_2"><h3 class="text-red">Brian McNaught</h3></div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+                </div>
+        </section>
+    </div>
+</section>
+    <!-- ***** Features Events Area End ***** -->
+
     <!-- ***** Clients Area Start ***** -->
    <section class="partnersdiv">
         <div class="container-fluid">
