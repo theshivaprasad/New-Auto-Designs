@@ -10,7 +10,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Wolf Autoparts | Parts List</title>
+    <title>Autoparts Wolf | Parts List</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">

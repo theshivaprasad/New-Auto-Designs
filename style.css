@@ -407,7 +407,7 @@ li {
 .section-heading {
     position: relative;
     z-index: 1;
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 
 .section-heading span {
@@ -497,7 +497,7 @@ li {
     min-width: 180px;
     height: 52px;
     background-color: #7643ea;
-    border-radius: 0;
+    border-radius: 12px;
     padding: 0 15px;
     line-height: 50px;
     color: #fff;
@@ -692,8 +692,8 @@ li {
 
 .hero-search-form .nav-tabs .nav-link {
     border: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     font-size: 12px;
     font-weight: 700;
     color: #fff;
@@ -714,6 +714,9 @@ li {
 .hero-search-form .tab-content .tab-pane {
     padding: 35px;
     margin-right: 0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
     background-color: rgba(67, 25, 159, 0.46);
 }
 
@@ -1297,7 +1300,7 @@ z-index: 11;
     
     position: relative;
     z-index: 1;
-    height: 1100px;
+    height: calc(100vh);
     overflow-y: auto;
 }
 
