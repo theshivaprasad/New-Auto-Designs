@@ -490,13 +490,13 @@ li {
 }
 
 .bg-default {
-    background-color: #36353a;
+    background-color: #2e2e2f;
 }
 
 .dorne-btn {
     min-width: 180px;
     height: 52px;
-    background-color: #0c0c0cb5;
+    background-color: #000;
     border-radius: 0;
     padding: 0 15px;
     line-height: 50px;
@@ -589,7 +589,7 @@ li {
     z-index: 9999;
     height: 80px;
     top: 0;
-    background-color: #F7F7F7;
+    background-color:#FED81A;
     left: 0;
     z-index: 99;
     -webkit-transition-duration: 700ms;
@@ -621,7 +621,7 @@ li {
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 15px;
     padding-left: 15px;
-    color: #403F3F;
+    color:#000;
     font-size: 15px;
 }
 
@@ -706,7 +706,7 @@ li {
 }
 
 .hero-search-form .nav-tabs .nav-link.active {
-    color: #191919;
+    color: #fff;
     background-color: #f7f7f747;
     border-color: transparent;
 }
