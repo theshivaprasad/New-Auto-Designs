@@ -152,7 +152,7 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Welcome Area Start ***** -->
-    <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg);">
+    <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/h6.jpg);">
          
 
         
@@ -173,7 +173,7 @@
                                                <div class="hero-search-form">
                         <!-- Tabs -->
                         <div class="nav nav-tabs" id="heroTab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Find a Part Now</a>
+                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" style="font-size:20px;text-shadow: 2px 2px; " href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Find a Part Now</a>
                             
                         </div>
                         <!-- Tabs Content -->
