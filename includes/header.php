@@ -39,12 +39,6 @@
                 </div>
             </div>
         </div>
-        <div id="status">
-
-        <div class="btn-drone-btn" id="chat" >
-                                <a onclick="javascript:void(Tawk_API.toggle())"class="btn dorne-btn" style="color:#ffffff">Get Live Quote </a>
-                            </div>
-                            </div>
                             <script>
 function chatFunction() {
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
