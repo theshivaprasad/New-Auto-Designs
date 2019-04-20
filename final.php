@@ -1,5 +1,5 @@
 <?php
-        function ifExists($conn, $inv_id, $year_id) {
+    function ifExists($conn, $inv_id, $year_id) {
         $sql = "SELECT opt_id FROM tbl_part_details WHERE inv_id=\"".$inv_id."\" AND year_id=\"".$year_id."\"";
         $result = $conn->query($sql);
         if($result) {
@@ -107,59 +107,55 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Wolf Autoparts</title>
+    <title>Autoparts Wolf</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
-            <link href="css2/custom.css" rel="stylesheet">
-<link href="css2/animate.css" rel="stylesheet">
+    <link href="css2/custom.css" rel="stylesheet">
+    <link href="css2/animate.css" rel="stylesheet">
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="wm-zoom/jquery.wm-zoom-1.0.min.css">
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
-        <style type="text/css">
+    <style type="text/css">
+        html{overflow-x:hidden;}
+    </style>
 
-html{overflow-x:hidden;}
-        </style>
-
-        <script type="text/javascript">
-            function validateCheckBox() {
-                var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-                var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
-                if (checkedOne===true) {
-                    alert("wow");
-                    window.location.href = <?php echo "\"finish.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]."&year=".$_GET["year"]."\""; ?>;
-                } else {
-                    alert("Select Option");
-                    window.location.href = <?php echo "\"final.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]."&year=".$_GET["year"]."\""; ?>;
-                }
-            }           
-        </script>
+    <script type="text/javascript">
+        function validateCheckBox() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+            if (checkedOne===true) {
+                alert("wow");
+                window.location.href = <?php echo "\"finish.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]."&year=".$_GET["year"]."\""; ?>;
+            } else {
+                alert("Select Option");
+                window.location.href = <?php echo "\"final.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]."&year=".$_GET["year"]."\""; ?>;
+            }
+        }           
+    </script>
 </head>
 
 <body>
     <script type="text/javascript">
-$(document).ready(function () {
-    $('#checkBtn').click(function() {
-      checked = $("input[type=checkbox]:checked").length;
+        $(document).ready(function () {
+            $('#checkBtn').click(function() {
+                checked = $("input[type=checkbox]:checked").length;
 
-      if(!checked) {
-        alert("You must check at least one checkbox.");
-        return false;
-      }
-
-    });
-});
-
-</script>
+                if(!checked) {
+                    alert("You must check at least one checkbox.");
+                    return false;
+                }
+            });
+        });
+    </script>
     <!-- Preloader -->
-
 
     <!-- ***** Search Form Area ***** -->
     <div class="dorne-search-form d-flex align-items-center">

@@ -158,7 +158,7 @@
         
         <!-- Hero Social Btn -->
   <canvas id="effect-js"></canvas><h1 style="text-align: center; color:#f3f3f3; margin-top:-52px; font-family:'Orbitron',cursive; font-size: 30px">“Our Motto; <span style="color:white;">Right Part</span> at the <span style="color:white;">Right Price</span>, every time for everyone”</h1> 
-    <div class="glowing"> <button class="btn btn1"> Contact Now: +919756753489</button></div>
+    <div class="glowing"> <button class="btn btn1"> Call Now : 1-888-892-9092</button></div>
          <div id="particles-js"></div>
     </section>
     <!-- ***** Welcome Area End ***** -->
@@ -433,7 +433,7 @@
                         <h2><br><span><i>“Your search for used Auto Part ends here!!”</i></span></h2>
                                     <!-- <h3 style="color:blue;">Welcome</h3> -->
                                         <div class="content" style="color: black; font-size: 25px">
-                        <p style="color: white;">Auto Parts Wolf is a start-up aimed at being your one-stop destination for quality used OEM parts. We are connected with hundreds of Junkyards who have a huge selection of Used OEM Parts and Accessories at the best prices. If you need to repair your vehicle, do it right the first time with OEM parts and accessories salvaged by professionals. 
+                        <p style="color: white;">Auto Parts Wolf is aimed at being your one-stop destination for quality used OEM parts. We are connected with hundreds of Junkyards who have a huge selection of used OEM Parts and Accessories at the best prices. If you need to repair your vehicle, do it right the first time with OEM parts and accessories salvaged by professionals. 
                         <br><br>
                         We as a company are all about helping you get the most enjoyment and convenience possible out of your vehicle by connecting you with the right seller.
                         </p>

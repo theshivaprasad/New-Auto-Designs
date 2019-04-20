@@ -17,37 +17,17 @@
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
-            <link href="css2/custom.css" rel="stylesheet">
-<link href="css2/animate.css" rel="stylesheet">
+    <link href="css2/custom.css" rel="stylesheet">
+    <link href="css2/animate.css" rel="stylesheet">
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
 </head>
 
 <body>
-    <!-- Preloader -->
-
-
-    <!-- ***** Search Form Area ***** -->
-    <div class="dorne-search-form d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-close-btn" id="closeBtn">
-                        <i class="pe-7s-close-circle" aria-hidden="true"></i>
-                    </div>
-                    <form action="#" method="get">
-                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Desire Destinations or Events">
-                        <input type="submit" class="d-none" value="submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- ***** Header Area Start ***** -->
     <?php include_once 'includes/header.php'?>
     <!-- ***** Header Area End ***** -->
@@ -111,12 +91,12 @@
                     <div class="listdivpart">
                         <ul style="color: #000000;">
                            <?php
-                              $sql="SELECT part_name as part FROM tbl_car_part ORDER BY part_name";
+                              $sql="SELECT part_name_ui as part, part_name as img FROM tbl_car_part_sj ORDER BY part_name";
                               $result=$conn->query($sql);
                               while ($row=$result->fetch_assoc()) {
-                                if (glob('images/parts/'.strtolower($row["part"]).'.png')) {
-                                echo "<li><a href=\"parts.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\">Used OEM ".$row["part"]."</a></li>";
-                                }
+                                //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
+                                echo "<li><a href=\"parts.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\">".$row["part"]."</a></li>";
+                                //}
                                } 
                             ?>
                         </ul>
