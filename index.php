@@ -279,7 +279,7 @@
     <!-- ***** Features Destinations Area End ***** -->
 
     <!-- ***** Features Restaurant Area Start ***** -->
-    <section class="dorne-features-restaurant-area bg-default">
+     <section class="dorne-features-restaurant-area bg-default">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -288,20 +288,20 @@
                         <h4>Products</h4>
                         <p>Most Popular..!!</p>
                     </div>
-                </div>
+                </div>                   
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <div class="responsive slider">                        
+                    <div class="responsive slider">             
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Side-View-Mirror')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Engine')" >
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <img src="img/parts/side-view-mirror.png" alt="Side View Mirror" />
+                                        <img src="img/parts/engine.png" alt="Engine" />
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Side View Mirror Doors</div>                   
+                                        <div class="pdtname">Engine</div>                   
                                                                                 
                                     </div>
                                 </div>
@@ -312,80 +312,10 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Transmission')" >
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <img src="img/parts/transmission.png" alt="Transmission" />
+                                       <a href="parts.php?part=Transmission"> <img src="img/parts/transmission.png" alt="Transmission" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Transmission/Transaxle Assembly</div>                  
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Head-Light')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/head-light.png" alt="Head Light" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Headlamp Assembly</div>                    
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Tail-Light')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/tail-light.png" alt="Tail Light" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Tail Lamp</div>                    
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('ABS-System')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/abs-system.png" alt="ABS System" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Anti Lock Brake Parts Brakes</div>                 
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Engine')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/engine.png" alt="Engine" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Engine Assembly Engine</div>                   
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Steering-Column')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/steering-column.png" alt="Steering Column" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Steering Column</div>                  
+                                        <div class="pdtname">Transmission</div>                  
                                                                                 
                                     </div>
                                 </div>
@@ -396,66 +326,10 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Electronic-Control-Module')" >
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <img src="img/parts/electronic-control-module.png" alt="Electronic Control Module" />
+                                        <a href="parts.php?part=Electronic-Control-Module"><img src="img/parts/electronic-control-module.png" alt="Electronic-Control-Module" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Electronic Engine Control Module Electronic Modules</div>                  
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Spindle-Knuckle-Front')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/spindle-knuckle-front.png" alt="Spindle Knuckle Front" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Spindle/Knuckle - Front</div>                  
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Rear-Drive-Shaft')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/rear-drive-shaft.png" alt="Rear Drive Shaft" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Drive Shaft - Rear Axle</div>                  
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Speedometer-Cluster')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/speedometer-cluster.png" alt="Speedometer Cluster" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Speedometer Head /Cluster Cowl</div>                   
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                         
-                        <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Wheel')" >
-                                <div class="popularpdt">
-                                    <div class="popularpdt-image">
-                                        <img src="img/parts/wheel.png" alt="Wheel" />
-                                    </div>
-                                    <div class="popularpdt-content">
-                                        <div class="pdtname">Wheel Wheel Manual</div>                   
+                                        <div class="pdtname">Electronic-Control-Module</div>                    
                                                                                 
                                     </div>
                                 </div>
@@ -466,10 +340,10 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Temperature-Control-Module')" >
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <img src="img/parts/temperature-control-module.png" alt="Temperature Control Module" />
+                                       <a href="parts.php?part=Temperature-Control-Module"> <img src="img/parts/temperature-control-module.png" alt="Temperature-Control-Module" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Temperature Control Cowl</div>                 
+                                        <div class="pdtname">Temperature-Control-Module</div>                    
                                                                                 
                                     </div>
                                 </div>
@@ -477,20 +351,62 @@
                         </div>  
                          
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Cylinder-Head')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Front-Bumper')" >
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <img src="img/parts/cylinder-head.png" alt="Cylinder Head" />
+                                        <a href="parts.php?part=Front-Bumper"><img src="img/parts/front-bumper.png" alt="Front-Bumper" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Cylinder Head Engine</div>                 
+                                        <div class="pdtname">Front-Bumper</div>                 
                                                                                 
                                     </div>
                                 </div>
                             </div>
                         </div>  
                          
-
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Front-End-Assembly')" >
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                        <a href="parts.php?part=Front-End-Assembly"><img src="img/parts/front-end-assembly.png" alt="Front-End-Assembly" /></a>
+                                    </div>
+                                    <div class="popularpdt-content">
+                                        <div class="pdtname">Front-End-Assembly</div>                   
+                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                         
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Axle-Shaft')" >
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                    <a href="parts.php?part=Axle-Shaft"><img src="img/parts/axle-shaft.png" alt="Axle-Shaft" /></a>
+                                    </div>
+                                    <div class="popularpdt-content">
+                                        <div class="pdtname">Axle-Shaft</div>                  
+                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                         
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect(' Strut')" >
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                      <a href="parts.php?part=Strut">  <img src="img/parts/strut.png" alt=" Strut" /></a>
+                                    </div>
+                                    <div class="popularpdt-content">
+                                        <div class="pdtname"> Strut</div>                  
+                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        
+                  
                   </div>
               </div>
                 

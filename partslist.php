@@ -245,17 +245,22 @@
                    <div class="regular slider">
                         <div>
                             <div class="item">
-                                <img src="img/partnerslogos/acura.jpg" alt="ACURA" />
+                                <img src="img/partnerslogos/Ford-logo.png" alt="FORD" />
                             </div>
                         </div>
                         <div>
                             <div class="item">
-                                <img src="img/partnerslogos/alfa-romeo.png" alt="ALFA-ROMEO" />
+                                <img src="img/partnerslogos/Chevrolet-logo.png" alt="CHEVROLET" />
                             </div>
                         </div>
                         <div>
                             <div class="item">
-                                <img src="img/partnerslogos/AMC.jpg" alt="AMC" />
+                                <img src="img/partnerslogos/volkswagen-logo.jpeg" alt="VOLKSWAGON" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="item">
+                                <img src="img/partnerslogos/Toyota-Logo.jpg" alt="TOYOTA" />
                             </div>
                         </div>
                         <div>
@@ -265,23 +270,19 @@
                         </div>
                         <div>
                             <div class="item">
+                                <img src="img/partnerslogos/dodge-logo.png" alt="DODGE" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="item">
                                 <img src="img/partnerslogos/BMW.png" alt="BMW" />
                             </div>
                         </div>
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/British-Leyland.png" alt="BRITISH-LEYLAND" />
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/Cooper.png" alt="COOPER" />
-                            </div>
-                        </div>
-                   </div>
+                       
+                    </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </section>
     <!-- ***** Clients Area End ***** -->
 
