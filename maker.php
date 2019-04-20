@@ -363,7 +363,7 @@
                                     if(isset($_GET['model'])) {
                                         echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
                                     } else {
-                                        echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
+                                        echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."Used OEM".&part=".$row["part"]."\">".$row["part"]."</a></li>";
                                     }
                                  }
                                 } 
