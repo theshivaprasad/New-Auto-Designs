@@ -158,7 +158,7 @@
         
         <!-- Hero Social Btn -->
 
-  <canvas id="effect-js"></canvas><h1 style="text-align: center; color:purple; margin-top:-52px; font-family:'Orbitron',cursive;"> Hi Welcome to our website </h1> 
+  <canvas id="effect-js"></canvas><h1 style="text-align: center; color:white; margin-top:-52px; font-family:'Orbitron',cursive; font-size: 30px">“Our Motto; Right Part at the Right Price, every time for everyone”</h1> 
   <
          <div id="particles-js"></div>
     </section>
