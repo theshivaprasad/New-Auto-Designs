@@ -24,9 +24,9 @@
                                            <li class="nav-item">
                                     <a class="nav-link" href="partsrequest.php" style="width: 140px;">Part Request</a>
                                 </li>
-                                           <li class="nav-item">
+                                           <!-- <li class="nav-item">
                                     <a class="nav-link" href="resources.php" style="width: 110px;">Resources</a>
-                                </li>
+                                </li> -->
                                            <li class="nav-item">
                                     <a class="nav-link" href="customerservice.php" style="width: 185px;">Customer Service</a>
                                 </li>

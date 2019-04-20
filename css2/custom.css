@@ -419,7 +419,7 @@ select {
     margin-top:50px;
 }
 .content p {
-    text-align:center;
+    text-align:justify;
     color:#fff;
 }
 .sectionppdt{
@@ -495,7 +495,7 @@ select {
     background-image:url(../images/qap-ourservicebanner.jpg);
 }
 .rounddiv:hover {
-    color: #7643ea;
+    color: #DEB887;
 }
 .rounddiv {
     font-size: 43px;
@@ -1077,6 +1077,12 @@ transform: scale(1.1,1.1);
 .bggreypl {
     background:#7643ea;
     padding:50px 0px;
+    color: #000000; 
+}
+
+.bggreypl-contact-form {
+    background:#7643ea;
+    padding:50px 0px 170px 0px;
     color: #000000; 
 }
 .subtitle {

@@ -158,7 +158,7 @@
         
         <!-- Hero Social Btn -->
 
-  <canvas id="effect-js"></canvas><h1 style="text-align: center; color:white; margin-top:-52px; font-family:'Orbitron',cursive; font-size: 30px">“Our Motto; Right Part at the Right Price, every time for everyone”</h1> 
+  <canvas id="effect-js"></canvas><h1 style="text-align: center; color:#f3f3f3; margin-top:-52px; font-family:'Orbitron',cursive; font-size: 30px">“Our Motto; <span style="color:white;">Right Part</span> at the <span style="color:white;">Right Price</span>, every time for everyone”</h1> 
   <
          <div id="particles-js"></div>
     </section>
@@ -221,15 +221,14 @@
     <!-- ***** Catagory Area End ***** -->
 
     <!-- ***** About Area Start ***** -->
-    <section class="dorne-about-area section-padding-0-100">
+    <section class="dorne-about-area section-padding-0-150">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="about-content text-center">
-                        <h2>Welcome To <br><span>Our Store</span></h2>
+                        <h2>AUTO PARTS WOLF FAMILY<br>WARMLY WELCOMES YOU<br>TO<br><span>Our Store</span></h2>
                                         <div class="content" style="color: black; font-size: 25px">
-                        <p style="color: black;">Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
-                      
+                        <p style="color: black;">Your search for high quality used OEM automotive parts and accessories ends here. For a couple of years we have catered to the needs of hundreds of customers across the length and breadth of America, working unceasingly together with our team of suppliers spread across North America stopping at nothing until our each and every customer has got the right part . Our aim is to find you the correct part at the correct price, within a close proximity of your Residential or Business Address. We can assist you in locating those hard-to-find parts. We ship your order directly to your designated address so that you can get back onto the road as quickly as possible.</p>                      
                     </div>
                     </div>
                 </div>
@@ -239,36 +238,46 @@
     <!-- ***** About Area End ***** -->
 
     <!-- ***** Editor Pick Area Start ***** -->
-    <section class="dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100" style="background-image: url(img/services.jpg);">
+    <section class="dorne-editors-pick-area bg-img bg-overlay-9-services section-padding-100" style="background-image: url(img/services.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center">
                         <span></span>
                         <h4>SERVICES</h4>
-                        <p>Millions of Quality used OEM Parts</p>
+                        <p>Millions of Quality Used OEM Parts</p>
                     </div>
                 </div>
-            </div>
+            </div>  
            <div class="row">
                 <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
                     <div class="col-12 rounddiv rounddivtext  ">
-                        <div class="rounddivtexth1">Quick Quotes <br> that save you money</div>
+                        <div class="rounddivtexth1">Competitive Prices<br>to suit your budget</div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
                     <div class="col-12 rounddiv rounddivtext ">
-                        <div class="rounddivtexth1">Save over 50% <br>off dealer prices</div>
+                        <div class="rounddivtexth1">Thousands of Late Model Parts<br>Vehicles in Stock</div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
                     <div class="col-12 rounddiv rounddivtext">
-                        <div class="rounddivtexth1">Fast delivery to <br>your home or mechanic</div>
+                        <div class="rounddivtexth1">Environmentally Green<br>Conscious Recycling</div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
                     <div class="col-12 rounddiv rounddivtext">
-                        <div class="rounddivtexth1">home or mechanic <br>We service all major makes</div>
+                        <div class="rounddivtexth1">Quality used parts<br>from prequalified Junkyards</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext">
+                        <div class="rounddivtexth1">You get to choose<br>the price and Warranty</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext">
+                        <div class="rounddivtexth1">We connect you with dealers<br>and junkyards all over America.</div>
                     </div>
                 </div>
             </div>
