@@ -420,8 +420,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    
+                    <div class="about-content text-center">
+                        <h2><br><span><i>“Your search for used Auto Part ends here!!”</i></span></h2>
+                                    <h3 style="color:blue;">Welcome</h3>
+                                        <div class="content" style="color: black; font-size: 25px">
+                        <p style="color: white;">Auto Parts Wolf is a start-up aimed at being your one-stop destination for quality used OEM parts. We are connected with hundreds of Junkyards who have a huge selection of Used OEM Parts and Accessories at the best prices. If you need to repair your vehicle, do it right the first time with OEM parts and accessories salvaged by professionals. 
+                        <br>   
+                        We as a company are all about helping you get the most enjoyment and convenience possible out of your vehicle by connecting you with the right seller.
+                        </p>
+                       </div>
                 </div>
+                <div class="about-content text-center">
+                        <h2><br><span><i>“Our Motto; Right Part at the Right Price, every time for everyone”</i></span></h2>
+                                        <div class="content" style="color: black; font-size: 25px">
+                        <p style="color: white;">The disadvantage of the traditional method of visiting a junkyard to find your part is; you might spend gallons of fuel visiting Junk yards but end up without getting the right part, your time is wasted, dollars are wasted and most importantly precious fuel is wasted.    
+                        <br>   
+                        Everyday our team works hard searching through our vast network of Junkyards and Dealers to offer you the best salvaged OEM part at the best possible price.
+                        </p>
+                       </div>
+
             </div>
 
             <div class="row">
