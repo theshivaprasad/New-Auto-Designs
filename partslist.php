@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-md-10 offset-md-1 col-sm-12">
                     <div class="contdivtxt">
-                        <p style="color:white;">We carry huge stock <span class="text-red"><strong>Auto Parts</strong></span> in our store.  Auto Body Parts stock comprises of doors, bonnets,  wind shields, shock absorbers, front grills, back cabins, roofs and all other body parts. We have in our stock body parts of all popular models including AMC, Acura, Ford, BMW etc..</p>
+                        <p style="color:white;"><!-- We carry huge stock of <span class="text-red"><strong>Used OEM Auto Parts</strong></span> in our store.  -->TEXT TO BE GIVEN BY CLIENT GOES HERE</p>
                     </div>
                 </div>
             </div>

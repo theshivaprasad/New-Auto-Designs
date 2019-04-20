@@ -227,7 +227,7 @@
                     <div class="about-content text-center">
                         <h2>AUTO PARTS WOLF FAMILY<br>WARMLY WELCOMES YOU<br>TO<br><span>Our Store</span></h2>
                                         <div class="content" style="color: black; font-size: 25px">
-                        <p style="color: black;">Your search for high quality used OEM automotive parts and accessories ends here. For a couple of years we have catered to the needs of hundreds of customers across the length and breadth of America, working unceasingly together with our team of suppliers spread across North America stopping at nothing until our each and every customer has got the right part . Our aim is to find you the correct part at the correct price, within a close proximity of your Residential or Business Address. We can assist you in locating those hard-to-find parts. We ship your order directly to your designated address so that you can get back onto the road as quickly as possible.</p>                      
+                        <p style="color: black;">Your search for high quality used OEM automotive parts and accessories ends here. For a couple of years we have catered to the needs of hundreds of customers across the length and breadth of America, working unceasingly together with our team of suppliers spread across North America stopping at nothing until our each and every customer has got the right part. Our aim is to find you the correct part at the correct price, within a close proximity of your Residential or Business Address. We can assist you in locating those hard-to-find parts. We ship your order directly to your designated address so that you can get back onto the road as quickly as possible.</p>                      
                     </div>
                     </div>
                 </div>
@@ -431,10 +431,10 @@
                 <div class="col-12">
                     <div class="about-content text-center">
                         <h2><br><span><i>“Your search for used Auto Part ends here!!”</i></span></h2>
-                                    <h3 style="color:blue;">Welcome</h3>
+                                    <!-- <h3 style="color:blue;">Welcome</h3> -->
                                         <div class="content" style="color: black; font-size: 25px">
                         <p style="color: white;">Auto Parts Wolf is a start-up aimed at being your one-stop destination for quality used OEM parts. We are connected with hundreds of Junkyards who have a huge selection of Used OEM Parts and Accessories at the best prices. If you need to repair your vehicle, do it right the first time with OEM parts and accessories salvaged by professionals. 
-                        <br>   
+                        <br><br>
                         We as a company are all about helping you get the most enjoyment and convenience possible out of your vehicle by connecting you with the right seller.
                         </p>
                        </div>
@@ -443,7 +443,7 @@
                         <h2><br><span><i>“Our Motto; Right Part at the Right Price, every time for everyone”</i></span></h2>
                                         <div class="content" style="color: black; font-size: 25px">
                         <p style="color: white;">The disadvantage of the traditional method of visiting a junkyard to find your part is; you might spend gallons of fuel visiting Junk yards but end up without getting the right part, your time is wasted, dollars are wasted and most importantly precious fuel is wasted.    
-                        <br>   
+                        <br><br>
                         Everyday our team works hard searching through our vast network of Junkyards and Dealers to offer you the best salvaged OEM part at the best possible price.
                         </p>
                        </div>

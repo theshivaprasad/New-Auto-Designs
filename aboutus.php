@@ -82,7 +82,7 @@ ul li::before {
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="contdivtxt">
-                        <p style="color: #fff;font-size: 21px;">We are a team comprising experienced junkyard worker and techies who have been closely associated with the used parts and salvaged parts market. In our years of working in the field we realised that:</p>
+                        <p style="color: #fff;font-size: 21px;">We are a team comprising of experienced junkyard workers and techies, who have been closely associated with the used parts and salvaged parts market. In our years of working in the field we realised that:</p>
                             <ul style="color: #fff; padding-left: 60px;padding-right: 60px;">
                                 <li>Most of the car owners like you, think that the after-market parts are not exactly the same as OEM and their vehicle deserves a genuine part</li>
                                 <li>The brand new OEM parts are expensive and it is economically not viable to fix them in your vehicle as they do not increase the resale value of your car.</li>
