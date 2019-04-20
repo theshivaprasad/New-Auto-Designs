@@ -159,7 +159,7 @@
         <!-- Hero Social Btn -->
 
   <canvas id="effect-js"></canvas><h1 style="text-align: center; color:purple; margin-top:-52px; font-family:'Orbitron',cursive;"> Hi Welcome to our website </h1> 
-  <
+  <div class="glowing"> <button class="btn btn1"> Contact Now: +919756753489</button></div>
          <div id="particles-js"></div>
     </section>
     <!-- ***** Welcome Area End ***** -->
