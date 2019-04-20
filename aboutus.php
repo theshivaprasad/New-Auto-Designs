@@ -16,14 +16,27 @@
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
-            <link href="css2/custom.css" rel="stylesheet">
-<link href="css2/animate.css" rel="stylesheet">
+    <link href="css2/custom.css" rel="stylesheet">
+    <link href="css2/animate.css" rel="stylesheet">
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <style>
+ul {
+  list-style: none;
+}
 
+ul li::before {
+  content: "\2022";
+  color: white;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+  text-align: justify;
+}
+</style>
 </head>
 
 <body>
@@ -62,45 +75,57 @@
                 </div>
             </div>
         </div>
-
     </section>
-    <section class="bggrey bg-img bg-overlay-9 " style="background-image: url(img/bg-img/hero-2.jpg);">
+
+    <section class="bggrey bg-img bg-overlay-9" style="background-image: url(img/bg-img/hero-2.jpg);">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12" style="">
+                <div class="col-md-12 col-sm-12">
                     <div class="contdivtxt">
-                        <p style="color: #fff;">Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.</p>
-                        <p style="color: #fff;">We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
-                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:"><strong></strong></a></span>
-                        </p>
-
+                        <p style="color: #fff;font-size: 21px;">We are a team comprising experienced junkyard worker and techies who have been closely associated with the used parts and salvaged parts market. In our years of working in the field we realised that:</p>
+                            <ul style="color: #fff; padding-left: 60px;padding-right: 60px;">
+                                <li>Most of the car owners like you, think that the after-market parts are not exactly the same as OEM and their vehicle deserves a genuine part</li>
+                                <li>The brand new OEM parts are expensive and it is economically not viable to fix them in your vehicle as they do not increase the resale value of your car.</li>
+                                <li>But it is waste of money to buy mint parts for your used cars.</li>
+                                <li>In the end they are left with no option but to search local Junkyards, where most of the time the part is unavailable, some of you go further contacting shady dealers or buying expensive used parts from online sites which neither ensure that the part retrieved is an OEM nor assure you about the quality of the part.</li>
+                            </ul>
+                            <br>
+                            <br>
+                            <p style="color: #fff;font-size: 21px;">It is from this demand for quality used OEM parts, Auto Parts Wolf was born.<br>
+                                “We understand that there is a shortage of Used OEM parts and we are here to fill the gap”</p>
+                                <ul style="color: #fff; padding-left: 60px;padding-right: 60px;">
+                                    <li>We focus on connecting you with genuine used OEM parts sellers and Junkyard situated all over America.</li>
+                                    <li>We are able accomplish this feat through our connectivity with multitudes of Junkyards spread across length and breadth of USA.</li>
+                                    <li>As multiple junkyards are able to see your request, the role is reversed; you are no longer the desperate “part seeker” who will shell out Dollars on Demand, but now from the comfort of your home you can choose your part based upon the price, quality, warranty, and shipping terms as junkyard after junkyard approach you vying for your business.</li>
+                                    <li>And the best part is our services are absolutely free.</li>
+                                </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bggreypl">
+ <section class="bggreypl">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="reelative"><div class="subtitle">Why choose us?</div></div>
                 </div>
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-6 col-sm-12">
                     <div class="abtliststyle">
                         <ul>
-                            <li>Easily Find Quality Used Parts</li>
-                            <li>Great Service Backed By A Great Team</li>
-                            <li>Parts Stored Inside Our Facility</li>
+                            <li>Competitive Prices to suit your budget.</li>
+                            <li>Thousands of Late Model Parts Vehicles in Stock</li>
+                            <li>Environmentally Green Conscious Recycling</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-6 col-sm-12">
                     <div class="abtliststyle">
                         <ul>
-                            <li>Save Money Buying Used Parts</li>
-                            <li>Top Highest Green Quality Operations</li>
-                            <li>Serving all over 15+ Years</li>
+                            <li>Quality used parts from prequalified Junkyards</li>
+                            <li>You get to choose the price and Warranty</li>
+                            <li>We connect you with dealers and junkyards all over America</li>
                         </ul>
                     </div>
                 </div>

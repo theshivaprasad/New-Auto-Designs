@@ -58,7 +58,7 @@
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1 class="pagebannerh1h1">Hello, Get in touch with us<span class="text-blue"></span></h1>
+                    <h1 class="pagebannerh1h1">AutoParts Wolf | Get in touch with us<span class="text-blue"></span></h1>
                 </div>
             </div>
         </div>
@@ -70,9 +70,7 @@
             <div class="contact-text">
                                 <div class="col-md-12 col-sm-12">
                     <div class="contdivtxt">
-                        <p style="color: #fff;">Auto Parts is your one-stop shop for replacement high quality used OEM automotive parts and accessories. Since 2002 we have served hundreds of thousands of customers across the world, working hand in hand to find high quality parts for your vehicle.</p>
-                        <p style="color: #fff;">We are headquartered in Chicago, IL, with suppliers across North America. Our goal is to find you the correct part at an inexpensive price, close to your home or business. We can help you locate those hard-to-find parts. We ship your order directly to your home, business or to your mechanic to help you get back onto the road as rapidly as possible.</p>
-                        <p style="color: #fff;">We understand that your car or truck can break-down anytime, and that there is no holiday for your disabled vehicle. We staff sales professionals 365 days a year. Our sales department is available to help you to place new orders from 6am to 9pm CST, 7 days a week. Give us a call today at <span><a href="tel:"><strong></strong></a></span>
+                        <p style="color: #fff;">Give us a call today at <span><a href="tel:+18888929092" style="color: #fff;"><strong>+1-888-892-9092</strong></a></span>
                         </p>
 
 
@@ -83,26 +81,26 @@
         </div>
     </section>
 
-    <section class="bggreypl">
+    <section class="bggreypl-contact-form">
         <div class="container">
             <div class="row">
-            <div class="contact-form">
+            <div class="contact-form" style="border-radius:10px;">
                 <div class="contact-form-title">
-                    <h6>Contact Business</h6>
+                    <h6>Fill in this form and we will get back to you ASAP</h6>
                 </div>
                 <form action="#" method="post">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            <input type="text" style="border-radius:10px;" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="col-12 col-md-6" >
-                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                            <input type="email" style="border-radius:10px;" name="email" class="form-control" placeholder="Email Address" required>
                         </div>
                         <div class="col-12">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                            <input type="text" style="border-radius:10px;" name="subject" class="form-control" placeholder="Subject" required>
                         </div>
                         <div class="col-12">
-                            <textarea name="message" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                            <textarea name="message" style="border-radius:10px;" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                         </div>
                         <div class="col-12">
                             <button name="submit" type="submit" class="btn dorne-btn">Send</button>
