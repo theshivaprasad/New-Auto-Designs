@@ -20,8 +20,8 @@
                 <div class="col-md-3 col-sm-12 infooter">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="resources.php">Articles</a></li>
-                        <li><a href="index.php">Testimonials</a></li>
+<!--                         <li><a href="resources.php">Articles</a></li>
+ -->                        <li><a href="index.php">Testimonials</a></li>
                         <li><a href="index.php">Important Links</a></li>
                     </ul>
                 </div>

@@ -34,11 +34,11 @@
     animation: change 2s infinite;
 }
 @keyframes change {
-    0%{background-color: #1abc9c;}
-    25%{background-color: #2ecc71;}
-    50%{background-color: #3498db;}
-    75%{background-color: #9b59b6;}
-    100%{background-color: #e74c3c;}
+    0%{background-color: #551a8b;}
+    25%{background-color: #885ead;}
+    50%{background-color: #bba3d0;}
+    75%{background-color: #3b1261;}
+    100%{background-color: #190729;}
 }
 
 .section1{
