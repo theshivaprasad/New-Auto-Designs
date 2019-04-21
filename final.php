@@ -305,7 +305,7 @@ $(document).ready(function () {
                 </div>
         </div>
     </section>
-    <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
+    <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg); height: 47.3%">
         <div class="container" style="text-align: center;">
             <div class="row">
                 <div class="col-12">
