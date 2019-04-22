@@ -12,8 +12,8 @@
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav" style="font-size: 15px;font-weight:bold; color: purple; font-family: 'Orbitron', cursive;">
                             <ul class="navbar-nav mr-auto" id="dorneMenu" style="margin-left:60px;">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.php">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="aboutus.php" style="width: 110px;">About Us</a>

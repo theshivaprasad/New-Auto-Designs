@@ -7,7 +7,7 @@
                         <li><a href="partsrequest.php">Find A Part</a></li>
                         <li><a href="partslist.php">Search By Car Make</a></li>
                         <li><a href="partslist.php">Search By Part Type</a></li>
-                        <li><a href="index.php">Sitemap  </a></li>
+                        <li><a href="sitemap.php">Sitemap  </a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-12 infooter">
