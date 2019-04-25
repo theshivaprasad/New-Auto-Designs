@@ -1,0 +1,8 @@
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICAL.
+LOCATION - .
+INCLUDES - MODULE ONLY.
+
+INFO - Door Control Unit (DCU) is a generic term for an embedded system that controls a number of electrical systems associated with an advanced motor vehicle. An advanced motor vehicle consists of a number of ECUs (Electrical Control Units), and the Door Control Unit (DCU) is an important one among them.
+The Door Control Unit is responsible for controlling and monitoring various electronic accessories in a vehicle's door. Since most of the vehicles have more than one door, generally DCUs are present in each door separately.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.

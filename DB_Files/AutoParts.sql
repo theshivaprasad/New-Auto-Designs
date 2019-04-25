@@ -456,7 +456,113 @@ INSERT INTO `tbl_car_part_sj` (`part_id`, `part_name`, `part_name_ui`) VALUES
 (186, 'NA in QAP - Windshield Wiper Switch', 'NA in QAP - Windshield Wiper Switch');
 
 -- --------------------------------------------------------
+-- our new table
 
+CREATE TABLE `tbl_car_part_new` (
+  `part_id` int(5) NOT NULL,
+  `part_name` varchar(100) NOT NULL,
+  `part_name_ui` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_car_part_sj`
+--
+
+INSERT INTO `tbl_car_part_new` (`part_id`, `part_name`, `part_name_ui`) VALUES
+(1, 'ABS-Control-Module', 'ABS Control Module'),
+(2, 'ABS-System', 'ABS System Anti Lock'),
+(3, 'AC-Compressor', 'AC Compressor'),
+(4, 'AC-Condenser', 'AC Condenser'),
+(5, 'AC-Evaporator', 'AC Evaporator'),
+(6, 'Air-Bag-Control-Module', 'Air Bag Control Module'),
+(7, 'Air-Flow-Meter', 'Air Flow Meter'),
+(8, 'Alternator', 'Alternator'),
+(9, 'Axle-Shaft', 'Axle Shaft'),
+(10, 'Back-Glass', 'Back Glass'),
+(11, 'Blower-Motor', 'Blower Motor'),
+(12, 'Brake-Master-Cylinder', 'Brake Master Cylinder'),
+(13, 'Front-Bumper', 'Front Bumper'),
+(14, 'Rear-Bumper', 'Rear Bumper'),
+(15, 'F-Bumper-Renf', 'Bumper Reinforcement Front'),
+(16, 'R-Bump-Reinfor', 'Bumper Reinforcement Rear'),
+(17, 'Column-Switch', 'Column Switch'),
+(18, 'Communication-Control-Module', 'Communication Control Module'),
+(19, 'Ecu', 'ECMECU Engine'),
+(20, 'Front-Lower-Control-Arm', 'Lower Control Arm Front'),
+(21, 'Rear-Lower-Control-Arm', 'Lower Control Arm Rear'),
+(22, 'Front-Upper-Control-Arm', 'Upper Control Arm Front'),
+(23, 'Cruise-Control-Switch', 'Cruise Switch'),
+(24, 'Cylinder-Block', 'Cylinder Block'),
+(25, 'Cylinder-Head', 'Cylinder Head'),
+(26, 'Dash-Panel', 'Dash Panel'),
+(27, 'Fsrnt-Door-Asm', 'Door Assembly Front'),
+(28, 'Rear-Door-Asm', 'Door Assembly Rear'),
+(29, 'Front-Door-Glass', 'Side Door Glass Front'),
+(30, 'Rear-Dr-Glass', 'Side Door Glass Rear'),
+(31, 'Door-Lock-Control-Module', 'Door Lock Control Module'),
+(32, 'Rear-VentGlass', 'Side Door Vent Glass Rear'),
+(33, 'Front-Window-Regulator', 'Front Window Regulator'),
+(34, 'Ecm', 'Engine Control Module'),
+(35, 'Engine', 'Engine'),
+(36, 'Engine-Computer', 'Engine Computer'),
+(37, 'Engine-Computer-Module', 'Computer Engine Module-ECM'),
+(38, 'Exhaust-Manifold', 'Exhaust Manifold'),
+(39, 'Flywheel', 'Flywheel'),
+(40, 'Fog-Light-Lever', 'Fog Light Stalk'),
+(41, 'Front-Clip', 'Front Clip'),
+(42, 'Front-End-Assembly', 'Front End Assembly'),
+(43, 'Front-Wiper-Motor', 'Front Wiper Motor'),
+(44, 'Fuel-Pump-Control-Module', 'Fuel Pump Control Module'),
+(45, 'Headlight-Switch', 'Head Light Switch'),
+(46, 'Ignition-Switch', 'Ignition Switch'),
+(47, 'Intake-Manifold', 'Intake Manifold'),
+(48, 'Interior-Light-Control-Module', 'Interior Light Control Module'),
+(49, 'Navigation-Control-Module', 'Navigation Control Module'),
+(50, 'Oil-Pan', 'Oil Pan'),
+(51, 'Power-Steering-Pump', 'Power Steering Pump'),
+(52, 'Power-Supply-Control-Module', 'Power Supply Control Module'),
+(53, 'Radiator', 'Radiator'),
+(54, 'Roof-Control-Module', 'Roof Control Module'),
+(55, 'Seat-Control-Module', 'Seat Control Module'),
+(56, 'Security-System-Control-Module', 'Security System Control Module'),
+(57, 'Side-View-Mirror', 'Side View Mirror'),
+(58, 'Speedometer-Cluster', 'Speedometer Cluster'),
+(59, 'Spindle-Knuckle-Front', 'Spindle Knuckle Front'),
+(60, 'Starter-Motor', 'Starter Motor'),
+(61, 'Steering-Column', 'Steering Column'),
+(62, 'Strut', 'Strut'),
+(63, 'Suspension-Control-Module', 'Suspension Control Module'),
+(64, 'Tail-Light', 'Tail Light'),
+(65, 'Temperature-Control-Module', 'Temperature Control Module'),
+(66, 'Throttle-Body-Assembly', 'Throttle Body Assembly'),
+(67, 'Transmission', 'Transmission'),
+(68, 'Transmission-Control-Module', 'Transmission Control Module'),
+(69, 'Water-Pump', 'Water Pump'),
+(71, 'Carrier-Assembly', 'Carrier Assembly'),
+(72, 'Crankshaft', 'Crankshaft'),
+(73, 'Distributor', 'Distributor'),
+(74, 'Rear-Drive-Shaft', 'Drive Shaft Rear'),
+(75, 'AC-Compressor-Clutch', 'AC Compressor Clutch'),
+(76, 'Differential-Case', 'Differential Case'),
+(77, 'Engine-Oil-Cooler', 'Engine Oil Cooler'),
+(78, 'Front-Axle', 'Axle Front'),
+(79, 'Rear-Axle', 'Axle Rear'),
+(80, 'Differential-Assembly', 'Differential Assembly'),
+(81, 'Front-Drive-Shaft', 'Drive Shaft Front'),
+(82, 'Fan-Clutch', 'Fan Clutch'),
+(83, 'Torsion-Bar', 'Torsion Bar'),
+(84, 'DC-Converter', 'DC Converter Invertor');
+
+
+
+
+
+
+
+
+
+
+-- our new table
 --
 -- Table structure for table `tbl_cust_data`
 --

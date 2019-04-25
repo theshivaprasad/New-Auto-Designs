@@ -1,0 +1,9 @@
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICALS
+LOCATION - 
+INCLUDES - MODULE ONLY
+
+INFO - SAM stands for Signal Acquisition Module. A SAM module (also called Signal Actuation Module) receives data from sensors, switches, and controllers, and can send data, actuate (activate) components and monitor systems.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
+

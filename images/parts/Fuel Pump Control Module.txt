@@ -1,0 +1,8 @@
+TYPE -  USED OEM PART
+CATEGORY - FUEL DELIVERY.
+LOCATION - USUALLY INSIDE THE FUEL TANK
+INCLUDES - MODULE ONLY.
+
+INFO - The fuel pump control module is responsible for supply and regulation of voltage to the fuel pump relay and the fuel pump.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
