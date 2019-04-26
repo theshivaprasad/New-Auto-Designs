@@ -177,10 +177,10 @@ html{overflow-x:hidden;}
                     <div class="makecontent">
                         <div class="subbannerproduct cstbanner2">
                             <?php
-                            if (glob("images/parts/".strtolower($_GET["part"]).".png")) {
-                                echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";
+                            if (glob("images/parts/".$_GET["part"].".png")) {
+                                echo "<img src=\"images/parts/".$_GET["part"].".png\">";
                                 echo "<p>";
-                                $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
+                                $fh = fopen("images/parts/".$_GET["part"].".txt",'r');
                                   while (! feof($fh)) {
                                     $s = fgets($fh);
                                     if (("\n" == $s) || ("\r\n" == $s)) {
