@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,120 +16,115 @@
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
-            <link href="css2/custom.css" rel="stylesheet">
-<link href="css2/animate.css" rel="stylesheet">
+    <link href="css2/custom.css" rel="stylesheet">
+    <link href="css2/animate.css" rel="stylesheet">
+    
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
+
     <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
     <script type="text/javascript">
         function myFunction(e) {
-                var xmlhttp = new XMLHttpRequest();
-                if (e.currentTarget.id == "maker") {
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("model").innerHTML = this.responseText;
-                        }
-                    };
-                } else if (e.currentTarget.id == "model") {
-                  xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("part").innerHTML = this.responseText;
-                        }
-                    };
-                } else if (e.currentTarget.id == "part")  {
-                  xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("year").innerHTML = this.responseText;
-                        }
-                    };
-                }
-                  if (e.currentTarget.id == "maker")
-                    xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
-                  else if (e.currentTarget.id == "model") 
-                    xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
-                  else if (e.currentTarget.id == "part") 
-                    xmlhttp.open("GET", "show.php?part=" + e.target.value + "&model=" + document.getElementById("model").value, true);
-                  xmlhttp.send();
+            var xmlhttp = new XMLHttpRequest();
+            if (e.currentTarget.id == "maker") {
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("model").innerHTML = this.responseText;
+                    }
+                };
+            } else if (e.currentTarget.id == "model") {
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                      document.getElementById("part").innerHTML = this.responseText;
+                    }
+                };
+            } else if (e.currentTarget.id == "part")  {
+              xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                      document.getElementById("year").innerHTML = this.responseText;
+                    }
+                };
             }
+
+            if (e.currentTarget.id == "maker")
+                xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
+            else if (e.currentTarget.id == "model") 
+                xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
+            else if (e.currentTarget.id == "part") 
+                xmlhttp.open("GET", "show.php?part=" + e.target.value + "&model=" + document.getElementById("model").value, true);
+            xmlhttp.send();
+        }
     </script>
 
-        <style type="text/css">
-        .section1{
-            position:relative;
-            max-height: 30%;
-            background-color: #EEE;
-            
+    <style type="text/css">
+    .section1{
+        position:relative;
+        max-height: 30%;
+        background-color: #EEE;
+        
+    }
+    .container1{
+        margin:auto;
+        width:  250px;
+        height: 0px;
+        position:relative;
+        -webkit-perspective: 1800px;
+        z-index:999;    
+    }
+    #carousel{
+        width: 80%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotation 40s infinite linear;
+
+    }
+    #carousel:hover{
+        animation-play-state: paused;
+    }
+    #carousel figure{
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        left: -10px;
+        right: -10px;
+
+    }
+    #carousel figure:nth-child(1) { -webkit-transform:  rotateY(0deg)  translateZ(700px);}
+    #carousel figure:nth-child(2) { -webkit-transform: rotateY(40deg) translateZ(700px);}
+    #carousel figure:nth-child(3) { -webkit-transform: rotateY(80deg) translateZ(700px);}
+    #carousel figure:nth-child(4) { -webkit-transform: rotateY(120deg) translateZ(700px);}
+    #carousel figure:nth-child(5) { -webkit-transform: rotateY(160deg) translateZ(700px);}
+    #carousel figure:nth-child(6) { -webkit-transform: rotateY(200deg) translateZ(700px);}
+    #carousel figure:nth-child(7) { -webkit-transform: rotateY(240deg) translateZ(700px);}
+    #carousel figure:nth-child(8) { -webkit-transform: rotateY(280deg) translateZ(700px);}
+    #carousel figure:nth-child(9) { -webkit-transform: rotateY(320deg) translateZ(700px);}
+
+    .img1{
+        cursor: pointer;
+        transition: all .2s linear;
+        width: 100%;
+    }
+    .img1:hover{
+      transform: scale(1.2,1.2);
+    }
+
+    @keyframes rotation{
+        from{
+            transform: rotateY(360deg);
         }
-.container1{
-    margin:auto;
-    width:  250px;
-    height: 0px;
-    position:relative;
-    -webkit-perspective: 1800px;
-    z-index:999;    
-}
-#carousel{
-    width: 80%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: rotation 40s infinite linear;
-
-}
-#carousel:hover{
-    animation-play-state: paused;
-
-}
-#carousel figure{
-    display: block;
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    left: -10px;
-    right: -10px;
-
-}
-#carousel figure:nth-child(1) { -webkit-transform:  rotateY(0deg)  translateZ(700px);}
-#carousel figure:nth-child(2) { -webkit-transform: rotateY(40deg) translateZ(700px);}
-#carousel figure:nth-child(3) { -webkit-transform: rotateY(80deg) translateZ(700px);}
-#carousel figure:nth-child(4) { -webkit-transform: rotateY(120deg) translateZ(700px);}
-#carousel figure:nth-child(5) { -webkit-transform: rotateY(160deg) translateZ(700px);}
-#carousel figure:nth-child(6) { -webkit-transform: rotateY(200deg) translateZ(700px);}
-#carousel figure:nth-child(7) { -webkit-transform: rotateY(240deg) translateZ(700px);}
-#carousel figure:nth-child(8) { -webkit-transform: rotateY(280deg) translateZ(700px);}
-#carousel figure:nth-child(9) { -webkit-transform: rotateY(320deg) translateZ(700px);}
-
-.img1{
-    cursor: pointer;
-    transition: all .2s linear;
-    width: 100%;
-}
-.img1:hover{
-  transform: scale(1.2,1.2);
-}
-
-@keyframes rotation{
-    from{
-        transform: rotateY(360deg);
+        to{
+            transform: rotateY(0deg);
+        }
     }
-    to{
-        transform: rotateY(0deg);
-    }
-}
-        </style>
-
     </style>
 </head>
 
 <body >
-
-    <!-- Preloader -->
-
-
     <!-- ***** Search Form Area ***** -->
     <div class="dorne-search-form d-flex align-items-center">
         <div class="container">
@@ -153,91 +148,75 @@
 
     <!-- ***** Welcome Area Start ***** -->
     <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg);">
-         
-
-        
         <!-- Hero Social Btn -->
-  <canvas id="effect-js"></canvas><h1 style="text-align: center; color:#f3f3f3; margin-top:-52px; font-family:'Orbitron',cursive; font-size: 30px">“Our Motto; <span style="color:white;">Right Part</span> at the <span style="color:white;">Right Price</span>, every time for everyone”</h1> 
-    <div class="glowing"> <button class="btn btn1"> Call Now : 1-888-892-9092</button></div>
-         <div id="particles-js"></div>
+        <canvas id="effect-js"></canvas><h1 style="text-align: center; color:#f3f3f3; margin-top:-52px; font-family:'Orbitron',cursive; font-size: 30px">“Our Motto; <span style="color:white;">Right Part</span> at the <span style="color:white;">Right Price</span>, every time for everyone”</h1> 
+        <div class="glowing"> <button class="btn btn1"> Call Now : 1-888-892-9092</button></div>
+        <div id="particles-js"></div>
     </section>
     <!-- ***** Welcome Area End ***** -->
 
     <!-- ***** Catagory Area Start ***** -->
-        <section class="dorne-catagory-area">
+    <section class="dorne-catagory-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="all-catagories">
                         <div class="row">
-                                               <div class="hero-search-form">
-                        <!-- Tabs -->
-                        <div class="nav nav-tabs" id="heroTab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Find a Part Now</a>
-                            
-                        </div>
-                        <!-- Tabs Content -->
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                             
-                                <center>
-                                <form action="new-form.php" method="get">
-                                    <select name="maker" id="maker" required class="custom-select" oninput="myFunction(event)" required>
-                                        <option disabled selected value="">Select Maker</option>
-                                       <?php
-                                          include_once "includes/database.php";
+                            <div class="hero-search-form">
+                                <!-- Tabs -->
+                                <div class="nav nav-tabs" id="heroTab" role="tablist">
+                                    <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Find a Part Now</a>
+                                </div>
+                                <!-- Tabs Content -->
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
+                                        <center>
+                                            <form action="new-form.php" method="get">
+                                                <select name="maker" id="maker" required class="custom-select" oninput="myFunction(event)" required>
+                                                    <option disabled selected value="">Select Maker</option>
+                                                    <?php
+                                                        include_once "includes/database.php";
 
-                                          // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
-                                          $sql = "SELECT DISTINCT maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
-                                          $result=$conn->query($sql);
-                                          while ($row=$result->fetch_assoc()) {
-                                            echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
-                                          }
-                                        ?>
-
-                                    </select>
-                                    <select name="model" id="model" class="custom-select" oninput="myFunction(event)" required>
-                                        <option disabled selected>Select Model</option>
-                                    </select>
-                                    <select name="part" id="part" class="custom-select" oninput="myFunction(event)" required>
-                                        <option disabled selected>Select Part</option>
-
-                                         <?php
-                                          include_once "includes/database.php";
-
-                                          // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
-                                          $sql = "SELECT  part_name_ui FROM tbl_car_part_new ORDER BY part_name_ui ASC";
-                                          $result=$conn->query($sql);
-                                          while ($row=$result->fetch_assoc()) {
-                                            echo "<option value=\"".$row['part_name_ui']."\">".$row['part_name_ui']."</option>";
-                                          }
-                                        ?>
-
-
-
-
-                                    </select>
-                                     <select name="year" id="year" class="custom-select" required>
-                                        <option disabled selected>Select Year</option>
-                                    
-                                    <?php
-                                        
-                                          for ($year=1970; $year<=2019 ; $year++) { 
-                                              
-                                            echo "<option value=\"".$year."\">".$year."</option>";
-                                          }
-                                        ?>
-
-
-                                    </select>
-                                    <button type="submit" class="btn dorne-btn" onclick="document.location.href='new-form.php'"><i></i> Get Quote</button>
-                                </form>
-                            </center>
+                                                        // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
+                                                        $sql = "SELECT DISTINCT maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
+                                                        $result=$conn->query($sql);
+                                                        
+                                                        while ($row=$result->fetch_assoc()) {
+                                                            echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
+                                                        }
+                                                    ?>
+                                                </select>
+                                                <select name="model" id="model" class="custom-select" oninput="myFunction(event)" required>
+                                                    <option disabled selected>Select Model</option>
+                                                </select>
+                                                <select name="part" id="part" class="custom-select" oninput="myFunction(event)" required>
+                                                    <option disabled selected>Select Part</option>
+                                                    <?php
+                                                        include_once "includes/database.php";
+                                                        
+                                                        // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
+                                                        $sql = "SELECT  part_name_ui FROM tbl_car_part_new ORDER BY part_name_ui ASC";
+                                                        $result=$conn->query($sql);
+                                                        
+                                                        while ($row=$result->fetch_assoc()) {
+                                                            echo "<option value=\"".$row['part_name_ui']."\">".$row['part_name_ui']."</option>";
+                                                        }
+                                                    ?>
+                                                </select>
+                                                <select name="year" id="year" class="custom-select" required>
+                                                    <option disabled selected>Select Year</option>
+                                                    <?php
+                                                        for($year = 1970; $year <= 2019 ; $year++) {
+                                                            echo "<option value=\"".$year."\">".$year."</option>";
+                                                        }
+                                                    ?>
+                                                </select>
+                                                <button type="submit" class="btn dorne-btn" onclick="document.location.href='new-form.php'"><i></i> Get Quote</button>
+                                            </form>
+                                        </center>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -254,7 +233,7 @@
                 <div class="col-12">
                     <div class="about-content text-center">
                         <h2>AUTO PARTS WOLF FAMILY<br>WARMLY WELCOMES YOU<br>TO<br><span>Our Store</span></h2>
-                                        <div class="content" style="color: black; font-size: 25px">
+                        <div class="content" style="color: black; font-size: 25px">
                         <p style="color: black;">Your search for high quality used OEM automotive parts and accessories ends here. For a couple of years we have catered to the needs of hundreds of customers across the length and breadth of America, working unceasingly together with our team of suppliers spread across North America stopping at nothing until our each and every customer has got the right part. Our aim is to find you the correct part at the correct price, within a close proximity of your Residential or Business Address. We can assist you in locating those hard-to-find parts. We ship your order directly to your designated address so that you can get back onto the road as quickly as possible.</p>                      
                     </div>
                     </div>
@@ -312,10 +291,7 @@
     </section>
     <!-- ***** Editor Pick Area End ***** -->
 
-    <!-- ***** Features Destinations Area Start ***** -->
-    <!-- ***** Features Destinations Area End ***** -->
-
-    <!-- ***** Features Restaurant Area Start ***** -->
+    <!-- ***** Features Products Area Start ***** -->
      <section class="dorne-features-restaurant-area bg-default">
         <div class="container-fluid">
             <div class="row">
@@ -332,10 +308,10 @@
                 <div class="col-12">
                     <div class="responsive slider">             
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Engine')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <img src="img/parts/engine.png" alt="Engine" />
+                                        <a href="parts.php?part=Engine"><img src="images/parts/Engine.png" alt="Engine" />
                                     </div>
                                     <div class="popularpdt-content">
                                         <div class="pdtname">Engine</div>                   
@@ -346,10 +322,10 @@
                         </div>  
                          
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Transmission')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                       <a href="parts.php?part=Transmission"> <img src="img/parts/transmission.png" alt="Transmission" /></a>
+                                       <a href="parts.php?part=Transmission"> <img src="images/parts/Transmission.png" alt="Transmission" /></a>
                                     </div>
                                     <div class="popularpdt-content">
                                         <div class="pdtname">Transmission</div>                  
@@ -360,13 +336,13 @@
                         </div>  
                          
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Electronic-Control-Module')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <a href="parts.php?part=Electronic-Control-Module"><img src="img/parts/electronic-control-module.png" alt="Electronic-Control-Module" /></a>
+                                        <a href="parts.php?part=ECM or ECU Engine"><img src="images/parts/ECM or ECU Engine.png" alt="Electronic-Control-Module" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Electronic-Control-Module</div>                    
+                                        <div class="pdtname">ECM/ECU Engine</div>                    
                                                                                 
                                     </div>
                                 </div>
@@ -374,13 +350,13 @@
                         </div>  
                          
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Temperature-Control-Module')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                       <a href="parts.php?part=Temperature-Control-Module"> <img src="img/parts/temperature-control-module.png" alt="Temperature-Control-Module" /></a>
+                                       <a href="parts.php?part=Temperature Control Module"><img src="images/parts/Temperature Control Module.png" alt="Temperature-Control-Module" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Temperature-Control-Module</div>                    
+                                        <div class="pdtname">Temperature Control Module</div>                    
                                                                                 
                                     </div>
                                 </div>
@@ -388,13 +364,13 @@
                         </div>  
                          
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Front-Bumper')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <a href="parts.php?part=Front-Bumper"><img src="img/parts/front-bumper.png" alt="Front-Bumper" /></a>
+                                        <a href="parts.php?part=Front Bumper"><img src="images/parts/Front Bumper.png" alt="Front-Bumper" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Front-Bumper</div>                 
+                                        <div class="pdtname">Front Bumper</div>                 
                                                                                 
                                     </div>
                                 </div>
@@ -402,13 +378,13 @@
                         </div>  
                          
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Front-End-Assembly')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                        <a href="parts.php?part=Front-End-Assembly"><img src="img/parts/front-end-assembly.png" alt="Front-End-Assembly" /></a>
+                                        <a href="parts.php?part=Front End Assembly"><img src="images/parts/Front End Assembly.png" alt="Front-End-Assembly" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Front-End-Assembly</div>                   
+                                        <div class="pdtname">Front End Assembly</div>                   
                                                                                 
                                     </div>
                                 </div>
@@ -416,13 +392,13 @@
                         </div>  
                          
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect('Axle-Shaft')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                    <a href="parts.php?part=Axle-Shaft"><img src="img/parts/axle-shaft.png" alt="Axle-Shaft" /></a>
+                                    <a href="parts.php?part=Axle Shaft"><img src="images/parts/Axle Shaft.png" alt="Axle-Shaft" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname">Axle-Shaft</div>                  
+                                        <div class="pdtname">Axle Shaft</div>                  
                                                                                 
                                     </div>
                                 </div>
@@ -430,13 +406,13 @@
                         </div>  
                          
                         <div>
-                            <div class="col-md-12 col-sm-12 pdtdiv cursor" onclick="redirect(' Strut')" >
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                      <a href="parts.php?part=Strut">  <img src="img/parts/strut.png" alt=" Strut" /></a>
+                                      <a href="parts.php?part=Strut">  <img src="images/parts/Strut.png" alt=" Strut" /></a>
                                     </div>
                                     <div class="popularpdt-content">
-                                        <div class="pdtname"> Strut</div>                  
+                                        <div class="pdtname">Strut</div>                  
                                                                                 
                                     </div>
                                 </div>
@@ -656,100 +632,93 @@
     <!-- Active JS -->
     <script src="js/active.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script></pre>
+    <script type="text/javascript">
 
-
-            <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-            <script type="text/javascript" src="jquery.js"></script>
-
-  
-<script src="js/particles.js"></script>
-<script src="js/app.js"></script>
-        <script src="slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script></pre>
-        <script type="text/javascript">
-
-            new WOW().init();
-            $(document).ready(function() {
-                
-                $(".regular").slick({
-                    dots: false,
-                    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fa fa-chevron-left"></i></button>',
-                    nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fa fa-chevron-right"></i></button>',
-                    speed: 300,
+        new WOW().init();
+        $(document).ready(function() {
+            
+            $(".regular").slick({
+                dots: false,
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fa fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fa fa-chevron-right"></i></button>',
+                speed: 300,
+                infinite: true,
+                autoplay: true,
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                 responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 3,
                     infinite: true,
-                    autoplay: true,
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-                     responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 5,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: false
-                      }
-                    },
-                    {
-                      breakpoint: 600,
-                      settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 2
-                      }
-                    },
-                    {
-                      breakpoint: 480,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                      }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                  ]
-                });
-                $('.responsive').slick({
-                  dots: false,
-                  infinite: true,
-                  speed: 300,
-                  autoplay: true,
-                  arrows:false,
-                  slidesToShow: 4,
-                  slidesToScroll: 1,
-                  responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: false
-                      }
-                    },
-                    {
-                      breakpoint: 600,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                      }
-                    },
-                    {
-                      breakpoint: 480,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                      }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                  ]
-                });
-            });  
-        </script>
-
-
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+            $('.responsive').slick({
+              dots: false,
+              infinite: true,
+              speed: 300,
+              autoplay: true,
+              arrows:false,
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+              ]
+            });
+        });  
+    </script>
 </body>
-
 </html>

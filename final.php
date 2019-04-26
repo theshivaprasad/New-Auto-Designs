@@ -208,29 +208,29 @@
                     <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
             <div class="contact-form">
                 <form action="finish.php">
-                            <div class="row mt-md-5 mt-0">
+                            <!-- <div class="row mt-md-5 mt-0">
                             <?php
-                                include_once "includes/database.php";
+                            //     include_once "includes/database.php";
 
-                                $inv_id = extractInvId($conn, extractId($conn, "part", $_GET['part']), extractId($conn, "model", $_GET['model']));
-                                $opt_id = 
-                                $year_id = extractYearId($conn, $_GET['year']);
+                            //     $inv_id = extractInvId($conn, extractId($conn, "part", $_GET['part']), extractId($conn, "model", $_GET['model']));
+                            //     $opt_id = 
+                            //     $year_id = extractYearId($conn, $_GET['year']);
 
-                                if(ifExists($conn, $inv_id, $year_id)&&!ifOptExists($conn, $inv_id, 15, $year_id)
-                            ) {                                                                                                                                                                                                                                                                             
-                                        $sql = "SELECT o.opt_name as opt FROM tbl_part_details p INNER JOIN tbl_part_options o ON p.opt_id = o.opt_id WHERE inv_id=\"".$inv_id."\" AND year_id=\"".$year_id."\"";
-                                        $result = $conn->query($sql);
-                                        while ($row=$result->fetch_assoc()) {#fff
-                                            echo "<div  class=\"col-12 col-6\">
-                                            <label class=\"custom-control custom-checkbox mb-3\">
-                                                <input type=\"checkbox\" class=\"custom-control-input\">
-                                                <span class=\"custom-control-indicator\"></span>";
-                                            echo "<span class=\"custom-control-description\">".$row['opt']."</span>";
-                                            echo "</div>";  
-                                        }
-                                }
+                            //     if(ifExists($conn, $inv_id, $year_id)&&!ifOptExists($conn, $inv_id, 15, $year_id)
+                            // ) {                                                                                                                                                                                                                                                                             
+                            //             $sql = "SELECT o.opt_name as opt FROM tbl_part_details p INNER JOIN tbl_part_options o ON p.opt_id = o.opt_id WHERE inv_id=\"".$inv_id."\" AND year_id=\"".$year_id."\"";
+                            //             $result = $conn->query($sql);
+                            //             while ($row=$result->fetch_assoc()) {#fff
+                            //                 echo "<div  class=\"col-12 col-6\">
+                            //                 <label class=\"custom-control custom-checkbox mb-3\">
+                            //                     <input type=\"checkbox\" class=\"custom-control-input\">
+                            //                     <span class=\"custom-control-indicator\"></span>";
+                            //                 echo "<span class=\"custom-control-description\">".$row['opt']."</span>";
+                            //                 echo "</div>";  
+                            //             }
+                            //     }
                             ?>
-                            </label>
+                            </label> -->
                         </div>
                        </div>
                         <div class="contact-form">
@@ -269,18 +269,18 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="subbannerproduct cstbanner2">
                        <?php
-                            if (glob("images/parts/".strtolower($_GET["part"]).".png")) {
-                                echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";}
+                            if (glob("images/parts/".$_GET["part"].".png")) {
+                                echo "<img src=\"images/parts/".$_GET["part"].".png\">";}
                                 ?>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="makecontent" style="margin-top: -21%">
                         <?php
-                            if (glob("images/parts/".strtolower($_GET["part"]).".png")) {
+                            if (glob("images/parts/".$_GET["part"].".png")) {
 
                                 echo "<p>";
-                                $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
+                                $fh = fopen("images/parts/".$_GET["part"].".txt",'r');
                                   while (! feof($fh)) {
                                     $s = fgets($fh);
                                     if (("\n" == $s) || ("\r\n" == $s)) {

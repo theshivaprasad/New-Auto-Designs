@@ -103,7 +103,7 @@
                             <textarea name="message" style="border-radius:10px;" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                         </div>
                         <div class="col-12">
-                            <button name="submit" type="submit" class="btn dorne-btn">Send</button>
+                            <button name="submit" type="submit" class="btn dorne-btn pull-right">Send</button>
                         </div>
                     </div>
                 </form>

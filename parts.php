@@ -110,7 +110,7 @@ html{overflow-x:hidden;}
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1>USED <span class="text-black fnt-big"> amc </span> OEM PARTS</h1>
+                    <h1>USED <?php echo $_GET['part']; ?> OEM PARTS</h1>
                 </div>
             </div>
         </div>
@@ -173,7 +173,7 @@ html{overflow-x:hidden;}
             <div class="row">
                 
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h1 class='captionh5 text-black text-left'><strong style="color:#000;">You have selected a <span style="color:#5d25dd ;"><strong><?php echo $_GET["part"]; ?></strong></span> Complete the fields to get an Instant Quote </strong></h1></div>
+                    <div class="reelative"><h1 class='captionh5 text-black text-left'><strong style="color:#000;">You have selected <span style="color:#5d25dd ;"><?php echo $_GET["part"]; ?></span></strong></h1></div>
                     <div class="makecontent">
                         <div class="subbannerproduct cstbanner2">
                             <?php

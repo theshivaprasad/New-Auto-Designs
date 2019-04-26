@@ -28,7 +28,7 @@
                 <div class="col-md-3 col-sm-12 infooter">
                     <h4>About Us</h4>
                     <ul>
-                        <li><a href="aboutus.php">Why AP?</a></li>
+                        <li><a href="aboutus.php">Why AutoParts Wolf?</a></li>
                         <li><a href="index.php">Privacy Policy</a></li>
                         <li><a href="index.php">Terms and Conditions</a></li>
                         

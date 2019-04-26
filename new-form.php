@@ -170,151 +170,136 @@
                 <div class="col-12">
                     <div class="all-catagories">
                         <div class="row">
-                                               <div class="hero-search-form">
-                        <!-- Tabs -->
-                        <div class="nav nav-tabs" id="heroTab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Step 2</a>
-                            
-                        </div>
-                        <!-- Tabs Content -->
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                             
-                                <center>
-                                <form action="maker.php" method="get">
-                                    <table>
-                                        <tr><td>
-                                            <select name="body_style" id="body_style" required class="custom-select"  required>
-                                                <option disabled selected value="">Select Body Style</option>
-                                                <?php
-                                                // include_once "includes/database.php";
-                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                    if($data[0]!=NULL)
-                                             
-                                                    echo "<option value=\"".$data[0]."\">".$data[0]."</option>";
+                            <div class="hero-search-form">
+                            <!-- Tabs -->
+                            <div class="nav nav-tabs" id="heroTab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Step 2</a>
+                            </div>
+                            <!-- Tabs Content -->
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
+                                    <center>
+                                        <form action="final.php" method="get">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <select name="body_style" id="body_style" required class="custom-select"  required>
+                                                            <option disabled selected value="">Select Body Style</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[0]!=NULL) echo "<option value=\"".$data[0]."\">".$data[0]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                    </td>
 
-                                                }
-                                            fclose($handle);}
-                                                ?>
-                                            </select></td>
+                                                    <td>
+                                                        <select name="engine_liter" id="engine_liter" class="custom-select" oninput="myFunction(event)" required>
+                                                            <option disabled selected>Select Engine Liter</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[1]!=NULL) echo "<option value=\"".$data[1]."\">".$data[1]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                    </td>
 
+                                                    <td>
+                                                        <select name="engine_size" id="engine_size" class="custom-select" oninput="myFunction(event)" required>
+                                                            <option disabled selected>Select Engine Size</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[2]!=NULL) echo "<option value=\"".$data[2]."\">".$data[2]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                    </td>
+                                                </tr>
 
-                                            <td><select name="engine_liter" id="engine_liter" class="custom-select" oninput="myFunction(event)" required>
-                                                <option disabled selected>Select Engine Liter</option>
-                                                <?php
-                                                // include_once "includes/database.php";
-                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                    if($data[1]!=NULL)
-                                             
-                                                    echo "<option value=\"".$data[1]."\">".$data[1]."</option>";
+                                                <tr>
+                                                    <td>
+                                                        <select name="turbo_charge" id="turbo_charge" class="custom-select" oninput="myFunction(event)" required>
+                                                            <option disabled selected>Select Turbo Charge</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[3]!=NULL) echo "<option value=\"".$data[3]."\">".$data[3]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                    </td>
 
-                                                }
-                                            fclose($handle);}
-                                                ?>
-                                            </select></td>
+                                                    <td>
+                                                        <select name="transmission_type" id="transmission_type" class="custom-select" oninput="myFunction(event)" required>
+                                                            <option disabled selected>Select Transmission Type</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[4]!=NULL) echo "<option value=\"".$data[4]."\">".$data[4]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                    </td>
+                                            
+                                                    <td>
+                                                        <select name="fuel_type" id="fuel_type" class="custom-select" oninput="myFunction(event)" required>
+                                                            <option disabled selected>Select Fuel Type</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[5]!=NULL) echo "<option value=\"".$data[5]."\">".$data[5]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                    </td>
+                                                </tr>
 
-                                            <td><select name="engine_size" id="engine_size" class="custom-select" oninput="myFunction(event)" required>
-                                                <option disabled selected>Select Engine Size
-                                                    <?php
-                                                // include_once "includes/database.php";
-                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                    if($data[2]!=NULL)
-                                             
-                                                    echo "<option value=\"".$data[2]."\">".$data[2]."</option>";
+                                                <tr>
+                                                    <td>
+                                                        <input type="hidden" name="maker" id="maker" value="<?php echo $_GET['maker']; ?>">
+                                                        <input type="hidden" name="model" id="model" value="<?php echo $_GET['model']; ?>">
+                                                        <input type="hidden" name="part" id="part" value="<?php echo $_GET['part']; ?>">
+                                                        <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+                                                    </td>
+                                                </tr>
 
-                                                }
-                                            fclose($handle);}
-                                                ?>
-                                                </option>
-                                            </select></td>
-                                            </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input class="text_box" name="" placeholder="VIN Number(Optional)" type="text">
+                                                    </td>
 
-                                           
-                                            <tr> <td><select name="turbo_charge" id="turbo_charge" class="custom-select" oninput="myFunction(event)" required>
-                                                <option disabled selected>Select Turbo Charge
-                                                     <?php
-                                                // include_once "includes/database.php";
-                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                    if($data[3]!=NULL)
-                                             
-                                                    echo "<option value=\"".$data[3]."\">".$data[3]."</option>";
+                                                    <td>
+                                                        <input class="text_box" name="" placeholder="Message(Optional)" type="text">
+                                                    </td>
 
-                                                }
-                                            fclose($handle);}
-                                                ?>
-</option>
-                                            </select></td>
-                                            <td><select name="transmission_type" id="transmission_type" class="custom-select" oninput="myFunction(event)" required>
-                                                <option disabled selected>Select Transmission Type
-                                                    <?php
-                                                // include_once "includes/database.php";
-                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                    if($data[4]!=NULL)
-                                             
-                                                    echo "<option value=\"".$data[4]."\">".$data[4]."</option>";
-
-                                                }
-                                            fclose($handle);}
-                                                ?>
-</option>
-                                            </select>
-                                            </td>
-                                            <td><select name="fuel_type" id="fuel_type" class="custom-select" oninput="myFunction(event)" required>
-                                                <option disabled selected>Select Fuel Type
-                                                    <?php
-                                                // include_once "includes/database.php";
-                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                    if($data[5]!=NULL)
-                                             
-                                                    echo "<option value=\"".$data[5]."\">".$data[5]."</option>";
-
-                                                }
-                                            fclose($handle);}
-                                                ?>
-</option>
-                                            </select></td>
-                                        </tr>
-                                    </table>
-
-                                    
-
-
-                                       
-                                        
-
-
-                                    
-                                    <!-- <select name="part" id="part" class="custom-select" oninput="myFunction(event)" required>
-                                        <option disabled selected>Select Part</option>
-                                    </select><br>
-                                     <select name="year" id="year" class="custom-select" required>
-                                        <option disabled selected>Select Year</option>
-                                    </select><br>
-                                    <select name="part" id="part" class="custom-select" oninput="myFunction(event)" required>
-                                        <option disabled selected>Select Part</option>
-                                    </select> -->
-                                    
-                                </form>
-
-                               
-
-                            </center>
-                                    <tr>
-                                        <input class="text_box" name="" placeholder="VIN Number(Optional)" type="text">
-                                           </tr>
-                                       <tr>
-                                        <input class="text_box" name="" placeholder="Message(Optional)" type="text">
-                                       </tr>
-                                       <tr>
-                                           <button type="submit" class="btn dorne-btn" onclick="document.location.href='final.php'"><i></i> Get Quote</button>
-                                       </tr>
-                               </table>
+                                                    <td>
+                                                        <button type="submit" class="btn dorne-btn">Get Quote</button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                    </center>
                             </div>
                         </div>
                     </div>

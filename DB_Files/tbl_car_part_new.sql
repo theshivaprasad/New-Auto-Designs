@@ -56,7 +56,7 @@ INSERT INTO `tbl_car_part_new` (`part_id`, `part_name_ui`) VALUES
 (18, 'Bumper Reinforcement Rear'),
 (19, 'Column Switch'),
 (20, 'Communication Control Module'),
-(21, 'ECM/ECU Engine'),
+(21, 'ECM or ECU Engine'),
 (22, 'Lower Control Arm Front'),
 (23, 'Lower Control Arm Rear'),
 (24, 'Upper Control Arm Front'),
