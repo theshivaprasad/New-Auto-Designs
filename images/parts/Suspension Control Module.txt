@@ -1,0 +1,8 @@
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICAL
+LOCATION - 
+INCLUDES - MODULE ONLY
+
+INFO -  The Air Suspension Control Unit controls the air suspension of the vehicle while optimizing passenger comfort and dynamics. Through an ideal adaptation to the road it reduces the pitch and roll motion and increases safety.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+

@@ -1,0 +1,6 @@
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICAL
+LOCATION - 
+INCLUDES - MODULE ONLY
+
+INFO - The Lighting Control Module is a device that controls the different lighting systems on your vehicle including the headlight assembly, tail-light assembly, turning lamps, and fog-lights. The module provides a central microprocessor-based device from where all the lighting functions in your automobile can be controlled. Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.	

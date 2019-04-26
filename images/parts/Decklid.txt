@@ -1,0 +1,7 @@
+TYPE -  USED OEM PART
+CATEGORY - BODY MECHANICAL.
+LOCATION - USUALLY ON THE TAILGATE.
+INCLUDES - DECKLID ONLY
+
+
+INFO - The trunk lid (in the U.S. automotive industry sometimes also called decklid or deck lid) is the cover that allows access to the main storage or luggage compartment. Hinges allow the lid to be raised.
