@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - BODY ELECTRICALS
 LOCATION - USUALLY UNDER THE CENTER CONSOLE
@@ -6,3 +7,13 @@ INCLUDES - MODULE ONLY
 INFO -  vehicle security system is an intelligent communications interface between the engine control unit and the ignition key transponder. ... Products such as sirens for car alarm systems, remote keys, RF antennas and electronic ignition locks grant security of the vehicle against theft and burglary.
 Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
 
+=======
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICALS
+LOCATION - USUALLY UNDER THE CENTER CONSOLE
+INCLUDES - MODULE ONLY
+
+INFO -  vehicle security system is an intelligent communications interface between the engine control unit and the ignition key transponder. ... Products such as sirens for car alarm systems, remote keys, RF antennas and electronic ignition locks grant security of the vehicle against theft and burglary.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
+>>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - 
 LOCATION - 
@@ -5,3 +6,12 @@ INCLUDES - MODULE ONLY
 
 INFO - PCM is an automotive component, a control unit, used on motor vehicles. It is generally a combined control unit, consisting of the engine control unit (ECU) and the transmission control unit (TCU).
 Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+=======
+TYPE -  USED OEM PART
+CATEGORY - 
+LOCATION - 
+INCLUDES - MODULE ONLY
+
+INFO - PCM is an automotive component, a control unit, used on motor vehicles. It is generally a combined control unit, consisting of the engine control unit (ECU) and the transmission control unit (TCU).
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+>>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75

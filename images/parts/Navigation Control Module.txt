@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - ENGINE ELECTRICAL
 LOCATION - USUALLY BEHIND THE DASH
@@ -6,3 +7,13 @@ INCLUDES - MODULE ONLY
 INFO - When it comes to cars, there are three main GPS navigation system options. You can opt for a factory-installed system on a new car, a dealer-installed system on a new or used vehicle or get a portable device that requires little or no installation.
 Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
 
+=======
+TYPE -  USED OEM PART
+CATEGORY - ENGINE ELECTRICAL
+LOCATION - USUALLY BEHIND THE DASH
+INCLUDES - MODULE ONLY
+
+INFO - When it comes to cars, there are three main GPS navigation system options. You can opt for a factory-installed system on a new car, a dealer-installed system on a new or used vehicle or get a portable device that requires little or no installation.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
+>>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75

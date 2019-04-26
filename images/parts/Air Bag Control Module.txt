@@ -1,0 +1,9 @@
+TYPE -  USED OEM PART
+CATEGORY -
+LOCATION - USUALLY LOCATED UNDER THE DRIVER'S SEAT
+INCLUDES - MODULE ONLY
+
+INFO -It constantly monitors the vehicle sensors and stores this information in a temporary file.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
+

@@ -203,7 +203,7 @@
                                      <select name="year" id="year" class="custom-select" required>
                                         <option disabled selected>Select Year</option>
                                     </select>
-                                    <button type="submit" class="btn dorne-btn"><i></i> Get Quote</button>
+                                    <button type="submit" class="btn dorne-btn" onclick="document.location.href='new-form.php'"><i></i> Get Quote</button>
                                 </form>
                             </center>
                             </div>

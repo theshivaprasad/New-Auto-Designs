@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - STEERING
 LOCATION - USUALLY ON THE SIDE OF THE STEERING COLUMN
 INCLUDES - COMPLETE COLUMN ASSEMBLY WITH SWITCHES COLUMN COVER AND SIGNAL LEVER
 
 INFO - Your windshield wiper switch, located on the side of the steering column, is your input to activate your windshield wipers and washer pump.
+=======
+TYPE -  USED OEM PART
+CATEGORY - STEERING
+LOCATION - USUALLY ON THE SIDE OF THE STEERING COLUMN
+INCLUDES - COMPLETE COLUMN ASSEMBLY WITH SWITCHES COLUMN COVER AND SIGNAL LEVER
+
+INFO - Your windshield wiper switch, located on the side of the steering column, is your input to activate your windshield wipers and washer pump.
+>>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
