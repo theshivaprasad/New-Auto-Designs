@@ -91,7 +91,7 @@
                     <div class="listdivpart">
                         <ul style="color: #000000;">
                            <?php
-                              $sql="SELECT part_name_ui as part, part_name as img FROM tbl_car_part_sj ORDER BY part_name";
+                              $sql="SELECT part_name_ui as part, part_name as img FROM tbl_car_part_new ORDER BY part_name";
                               $result=$conn->query($sql);
                               while ($row=$result->fetch_assoc()) {
                                 //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
