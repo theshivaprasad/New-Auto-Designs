@@ -68,6 +68,7 @@ INSERT INTO `tbl_car_model` (`model_id`, `model_name`, `maker_id`) VALUES
 
 -- --------------------------------------------------------
 
+
 CREATE TABLE `tbl_temp_make_model` (
   `id` int(11) NOT NULL,
   `maker_name` varchar(255) NOT NULL,
@@ -1162,17 +1163,7 @@ ALTER TABLE `tbl_temp_make_model`
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 
-
-
-
-
-
-
-
-
-
-
------------------------------------------------------------------
+-- --------------------------------------------------------
 --
 -- Table structure for table `tbl_car_part`
 --

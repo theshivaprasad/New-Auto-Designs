@@ -115,7 +115,7 @@
                         <div class="form-title2 bt-radius">
                             <h1>Find A Part Now : <small><span id="yr"></span> <span id="mke"></span> <span id="mdl"></span> <span id="prt"></span></small></h1>
                         </div>
-                        <form id="qapform" class="form-custompartrequest w-100 float-left bb-radius" method='get' action="finish.php" style="background-color: #d8b6f7;">
+                        <form id="qapform" class="form-custompartrequest w-100 float-left bb-radius" method='get' action="final.php" style="background-color: #d8b6f7;">
                             <div class="col-md-6 col-sm-12 no-pad float-left">
                                 <div class="form-group row">
                                     <label for="qap_make" class="col-3 col-form-label">Make <span class="text-danger">*</span></label>
@@ -138,7 +138,7 @@
                                     
                                     <label for="qap_model" class="col-3 col-form-label">Model <span class="text-danger">*</span></label>
                                     <div class="col-9">
-                                        <select name="model" id="model" oninput="myFunction(event)" class="form-control">
+                                        <select name="model" id="model" oninput="myFunction(event)" class="form-control" required>
                                              <option disabled selected>Select Model</option>
                                         </select>
                                     </div>
@@ -147,7 +147,7 @@
                                   
                                     <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
                                     <div class="col-9">
-                                        <select name="part" id="part" oninput="myFunction(event)" class="form-control ">
+                                        <select name="part" id="part" oninput="myFunction(event)" class="form-control " >
                                              <option disabled selected>Select Part</option>
                                         </select>
                                     </div>
@@ -156,7 +156,7 @@
                                     
                                     <label for="qap_year" class="col-3 col-form-label">Year <span class="text-danger">*</span></label>
                                     <div class="col-9">
-                                        <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class">
+                                        <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class" >
                                              <option disabled selected>Select Year</option>
                                         </select>
                                     </div>
@@ -284,7 +284,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-md-7 offset-md-5 col-sm-12 text-right">
-                                        <button type="submit" class="btn btn-custom">Find Part</button>
+                                        <button type="submit" class="btn btn-custom">Get Quote </button>
                                     </div>
                                 </div>
                             </div>

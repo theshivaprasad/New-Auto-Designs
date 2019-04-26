@@ -101,7 +101,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Dorne - Directory &amp; Listing Template</title>
+    <title>Autoparts Wolf | Parts List</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -172,7 +172,9 @@
 
     <!-- ***** Header Area Start ***** -->
     <?php include_once 'includes/header.php'?>
-    <!-- ***** Header Area End ***** -->
+    <!-- ***** Header Area End ***** --> 
+
+    <!-- flag102 -->
 
       <section class="pagebanner layer-overlay overlay-dark-5" style="background-image: url(images/cars/AMC-Rebel.jpg);">
         <div class="container">
@@ -181,7 +183,10 @@
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1>USED <span class="text-black fnt-big"> amc </span> OEM PARTS</h1>
+                    <h1>USED 
+
+                        <?php echo $_GET['maker'].$_GET['maker']; ?>  OEM PARTS
+                    </h1>
                 </div>
             </div>
         </div>
@@ -274,8 +279,10 @@
         <div class="container">
             <div class="row">
                 
+                <!-- flag101 -->
+
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h2 class="subtitle"><!--<?php echo $_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']; ?>-->Lorem Ipsum</h2></div>
+                    <div class="reelative"><h2 class="subtitle"><?php echo $_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']; ?></h2></div>
                     <div class="makecontent">
                         <div class="subbannerproduct cstbanner2">
                             <?php

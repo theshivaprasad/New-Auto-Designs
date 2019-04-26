@@ -181,7 +181,7 @@
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                              
                                 <center>
-                                <form action="maker.php" method="get">
+                                <form action="partsrequest.php" method="get">
                                     <select name="maker" id="maker" required class="custom-select" oninput="myFunction(event)" required>
                                         <option disabled selected value="">Select Maker</option>
                                        <?php
@@ -230,7 +230,7 @@
 
 
                                     </select>
-                                    <button type="submit" class="btn dorne-btn"><i></i> Get Quote</button>
+                                    <button type="submit" class="btn dorne-btn" onclick="document.location.href='new-form.php'"><i></i> Get Quote</button>
                                 </form>
                             </center>
                             </div>

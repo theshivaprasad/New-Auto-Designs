@@ -66,12 +66,18 @@
                     <div class="listdiv">
                         <ul>
                             <?php
-                              $sql="SELECT maker_name as maker FROM tbl_car_maker ORDER BY maker_name";
+                              $sql="SELECT DISTINCT maker_name as maker FROM tbl_temp_make_model ORDER BY maker_name";
                               $result=$conn->query($sql);
+                              $i = 0;
                               while ($row=$result->fetch_assoc()) {
+                                if($i == 0){
+                                    $i++;
+                                    continue;
+                                }
                                 echo "<li><a href=\"maker.php?maker=".$row["maker"]."\" title=\"".$row["maker"]."\">".$row["maker"]."</a></li>";
                                } 
                             ?>
+                            
                         </ul>
                     </div>
                 </div>
@@ -91,7 +97,7 @@
                     <div class="listdivpart">
                         <ul style="color: #000000;">
                            <?php
-                              $sql="SELECT part_name_ui as part, part_name as img FROM tbl_car_part_new ORDER BY part_name";
+                              $sql="SELECT part_name_ui as part, part_name_ui as img FROM tbl_car_part_new ORDER BY part_name_ui ASC";
                               $result=$conn->query($sql);
                               while ($row=$result->fetch_assoc()) {
                                 //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
