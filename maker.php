@@ -183,9 +183,8 @@
                     <div class="invisible" style="height:70px">height</div>
                 </div>
                 <div class="col-12 col-md-12 col-sm-12 pagebannerh1">
-                    <h1>USED 
-
-                        <?php echo $_GET['maker'].$_GET['maker']; ?>  OEM PARTS
+                    <h1>USED
+                        <?php echo $_GET['maker']; ?> OEM PARTS
                     </h1>
                 </div>
             </div>
@@ -282,15 +281,15 @@
                 <!-- flag101 -->
 
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><h2 class="subtitle"><?php echo $_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']; ?></h2></div>
+                    <div class="reelative"><h2 class="subtitle"><?php echo $_GET['maker']." Used OEM Parts - Buy Quality Parts for ".$_GET['maker']; ?></h2></div>
                     <div class="makecontent">
                         <div class="subbannerproduct cstbanner2">
                             <?php
-                            if(isset($_GET["part"])&&glob("images/parts/".strtolower($_GET["part"]).".png")) {
-                                echo "<img src=\"images/parts/".strtolower($_GET["part"]).".png\">";
-                                if(glob("images/parts/".strtolower($_GET["part"]).".txt")){
+                            if(isset($_GET["part"])&&glob("images/parts/".$_GET["part"].".png")) {
+                                echo "<img src=\"images/parts/".$_GET["part"].".png\">";
+                                if(glob("images/parts/".$_GET["part"].".txt")){
                                     echo "<p>";
-                                    $fh = fopen("images/parts/".strtolower($_GET["part"]).".txt",'r');
+                                    $fh = fopen("images/parts/".$_GET["part"].".txt",'r');
                                       while (! feof($fh)) {
                                         $s = fgets($fh);
                                         if (("\n" == $s) || ("\r\n" == $s)) {
