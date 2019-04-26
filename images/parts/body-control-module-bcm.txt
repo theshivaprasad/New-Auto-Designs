@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICAL
+LOCATION - 
+INCLUDES - MODULE ONLY
+
+INFO - body control module (BCM) is a processor-based power distribution center that supervises and controls functions related to the car body such as lights, windows, security, door locks and access control, and various comfort controls
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
+
+=======
+>>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICAL
+LOCATION - 
+INCLUDES - MODULE ONLY
+
+INFO - body control module (BCM) is a processor-based power distribution center that supervises and controls functions related to the car body such as lights, windows, security, door locks and access control, and various comfort controls
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
+>>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2

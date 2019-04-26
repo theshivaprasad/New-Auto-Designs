@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - BODY ELECTRICALS
 LOCATION - 
@@ -5,3 +8,16 @@ INCLUDES - MODULE ONLY
 
 INFO - Control units combine various comfort and safety function for a wide range of applications such as light control, roof control, body control system and the system for the trunks. Automotive roof control module is commonly found in all the modern cars is an example of the resulting challenges.
 Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+=======
+>>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICALS
+LOCATION - 
+INCLUDES - MODULE ONLY
+
+INFO - Control units combine various comfort and safety function for a wide range of applications such as light control, roof control, body control system and the system for the trunks. Automotive roof control module is commonly found in all the modern cars is an example of the resulting challenges.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+<<<<<<< HEAD
+=======
+>>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
+>>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2

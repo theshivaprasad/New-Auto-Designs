@@ -1,6 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - ENGINE MECHANISM
 LOCATION - UNDER THE HOOD
 INCLUDES - ENGINE ONLY
 
 INFO - a car. engine generates power from the expansion of compressed air in a contained cylinder with the help of fuel that is. why it's called as an internal combustion engine before getting into the working. ... the crankshaft and the valves which controls the flow of air and fuel into the cylinders.
+=======
+>>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
+TYPE -  USED OEM PART
+CATEGORY - ENGINE MECHANISM
+LOCATION - UNDER THE HOOD
+INCLUDES - ENGINE ONLY
+
+INFO - a car. engine generates power from the expansion of compressed air in a contained cylinder with the help of fuel that is. why it's called as an internal combustion engine before getting into the working. ... the crankshaft and the valves which controls the flow of air and fuel into the cylinders.
+<<<<<<< HEAD
+=======
+>>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
+>>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2

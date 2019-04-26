@@ -1,6 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - DRIVESHAFT AND AXEL
 LOCATION - 
 INCLUDES - LOADED BEAM AXEL ONLY
 
 INFO - A beam axle, rigid axle or solid axle is a dependent suspension design, in which a set of wheels is connected laterally by a single beam or shaft. Beam axles were once commonly used at the rear wheels of a vehicle.
+=======
+>>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
+TYPE -  USED OEM PART
+CATEGORY - DRIVESHAFT AND AXEL
+LOCATION - 
+INCLUDES - LOADED BEAM AXEL ONLY
+
+INFO - A beam axle, rigid axle or solid axle is a dependent suspension design, in which a set of wheels is connected laterally by a single beam or shaft. Beam axles were once commonly used at the rear wheels of a vehicle.
+<<<<<<< HEAD
+=======
+>>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
+>>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
