@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
  TYPE -  USED OEM PART
 CATEGORY - AUTO BODY PARTS.
 LOCATION - EXTERIOR
 INCLUDES - FENDER, HOOD, GRILL, FRONT BUMPER ASSEMBLY, HEADLAMPS, SIGNAL LAMPS AND INNER STRUCTER.
 
 INFO - It usually refers to the entire front portion of the car from the front doors / side mirrors forward. This terminology usually comes up when someone is parting out a car after a rear end collision or a body shop is trying to buy the 'front clip' to fix another car.
-=======
->>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
- TYPE -  USED OEM PART
-CATEGORY - AUTO BODY PARTS.
-LOCATION - EXTERIOR
-INCLUDES - FENDER, HOOD, GRILL, FRONT BUMPER ASSEMBLY, HEADLAMPS, SIGNAL LAMPS AND INNER STRUCTER.
-
-INFO - It usually refers to the entire front portion of the car from the front doors / side mirrors forward. This terminology usually comes up when someone is parting out a car after a rear end collision or a body shop is trying to buy the 'front clip' to fix another car.
-<<<<<<< HEAD
-=======
->>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
->>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2

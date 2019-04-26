@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - AUTO BODY PARTS.
 LOCATION - USUALLY BESIDE THE STEERING.
 INCLUDES - COMPLETE COLUMN ASSEMBLY WITH SWITCHES COLUMN COVER AND SIGNAL LEVER.
 
 INFO - Headlamps are also often called headlights, but in the most precise usage, headlamp is the term for the device itself and headlight is the term for the beam of light produced and distributed by the device.
-=======
->>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
-TYPE -  USED OEM PART
-CATEGORY - AUTO BODY PARTS.
-LOCATION - USUALLY BESIDE THE STEERING.
-INCLUDES - COMPLETE COLUMN ASSEMBLY WITH SWITCHES COLUMN COVER AND SIGNAL LEVER.
-
-INFO - Headlamps are also often called headlights, but in the most precise usage, headlamp is the term for the device itself and headlight is the term for the beam of light produced and distributed by the device.
-<<<<<<< HEAD
-=======
->>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
->>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2

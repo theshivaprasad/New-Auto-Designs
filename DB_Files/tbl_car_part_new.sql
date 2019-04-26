@@ -48,7 +48,7 @@ INSERT INTO `tbl_car_part_new` (`part_id`, `part_name_ui`) VALUES
 (10, 'Back Glass'),
 (11, 'Blower Motor'),
 (12, 'Control Module - BCM'),
-(13, 'Bran Box Module - ECM|ECU'),
+(13, 'Bran Box Module - ECM or ECU'),
 (14, 'Brake Master Cylinder'),
 (15, 'Front Bumper'),
 (16, 'Rear Bumper'),

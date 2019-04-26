@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - ENGINE ELECTRICAL
 LOCATION - USUALLY IN ENGINE COMPARTMENT
@@ -8,16 +5,3 @@ INCLUDES - MODULE ONLY
 
 INFO - The ABS control module is a microprocessor that runs diagnostic checks of a vehicle's antilock braking system and processes information from wheel-speed sensors and the hydraulic brake system to determine when to release braking pressure at a wheel that's about to lock up and start skidding.
 Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
-=======
->>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
-TYPE -  USED OEM PART
-CATEGORY - ENGINE ELECTRICAL
-LOCATION - USUALLY IN ENGINE COMPARTMENT
-INCLUDES - MODULE ONLY
-
-INFO - The ABS control module is a microprocessor that runs diagnostic checks of a vehicle's antilock braking system and processes information from wheel-speed sensors and the hydraulic brake system to determine when to release braking pressure at a wheel that's about to lock up and start skidding.
-Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
-<<<<<<< HEAD
-=======
->>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
->>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2

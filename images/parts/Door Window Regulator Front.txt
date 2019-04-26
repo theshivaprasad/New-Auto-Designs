@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 TYPE -  USED OEM PART
 CATEGORY - BODY MECHANICAL AND TRIM.
 LOCATION - USUALLY ON THE DOOR.
 INCLUDES - DOOR WINDOW REGULATOR AND MOTOR ONLY.
 
 INFO - It transforms and up and down motion. Manual window regulators can be operated by simply turning the crank on the door while electric window regulators are activated by pressing a button or flicking a switch, this type of regulator is usually connected to a window motor that controls its function.
-=======
->>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
-TYPE -  USED OEM PART
-CATEGORY - BODY MECHANICAL AND TRIM.
-LOCATION - USUALLY ON THE DOOR.
-INCLUDES - DOOR WINDOW REGULATOR AND MOTOR ONLY.
-
-INFO - It transforms and up and down motion. Manual window regulators can be operated by simply turning the crank on the door while electric window regulators are activated by pressing a button or flicking a switch, this type of regulator is usually connected to a window motor that controls its function.
-<<<<<<< HEAD
-=======
->>>>>>> 2251742adfcfb931c5c7c25867599c9aeefbcc75
->>>>>>> 95e9fed524b7e7c3b65a2cb70c72ed45c7af04c2
