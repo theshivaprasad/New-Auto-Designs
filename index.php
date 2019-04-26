@@ -187,21 +187,48 @@
                                        <?php
                                           include_once "includes/database.php";
 
-                                          $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
+                                          // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
+                                          $sql = "SELECT DISTINCT maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
                                           $result=$conn->query($sql);
                                           while ($row=$result->fetch_assoc()) {
                                             echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
                                           }
                                         ?>
+
                                     </select>
                                     <select name="model" id="model" class="custom-select" oninput="myFunction(event)" required>
                                         <option disabled selected>Select Model</option>
                                     </select>
                                     <select name="part" id="part" class="custom-select" oninput="myFunction(event)" required>
                                         <option disabled selected>Select Part</option>
+
+                                         <?php
+                                          include_once "includes/database.php";
+
+                                          // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
+                                          $sql = "SELECT  part_name_ui FROM tbl_car_part_new ORDER BY part_name_ui ASC";
+                                          $result=$conn->query($sql);
+                                          while ($row=$result->fetch_assoc()) {
+                                            echo "<option value=\"".$row['part_name_ui']."\">".$row['part_name_ui']."</option>";
+                                          }
+                                        ?>
+
+
+
+
                                     </select>
                                      <select name="year" id="year" class="custom-select" required>
                                         <option disabled selected>Select Year</option>
+                                    
+                                    <?php
+                                        
+                                          for ($year=1970; $year<=2019 ; $year++) { 
+                                              
+                                            echo "<option value=\"".$year."\">".$year."</option>";
+                                          }
+                                        ?>
+
+
                                     </select>
                                     <button type="submit" class="btn dorne-btn"><i></i> Get Quote</button>
                                 </form>
@@ -209,6 +236,7 @@
                             </div>
                         </div>
                     </div>
+
 
                         </div>
                     </div>
