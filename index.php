@@ -181,7 +181,7 @@
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                              
                                 <center>
-                                <form action="maker.php" method="get">
+                                <form action="partsrequest.php" method="get">
                                     <select name="maker" id="maker" required class="custom-select" oninput="myFunction(event)" required>
                                         <option disabled selected value="">Select Maker</option>
                                        <?php
