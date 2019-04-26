@@ -1,0 +1,10 @@
+TYPE -  USED OEM PART
+CATEGORY - BODY ELECTRICAL
+LOCATION - USUALLY LOCATED BEHIND THE DASH
+INCLUDES - MODULE ONLY
+
+
+INFO - It is yet another major module that usually handles multiple tasks ranging from lighting and other electrical accessories to climate control, keyless entry, anti-theft duties and managing communications between other modules.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
+

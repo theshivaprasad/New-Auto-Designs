@@ -1,0 +1,8 @@
+TYPE -  USED OEM PART
+CATEGORY - ACCESSORY.
+LOCATION - USUALLY BEHIND THE DASH.
+INCLUDES - MODULE ONLY
+
+INFO - The navigation control module is typically located behind the dash, usually in the center of the vehicle, although in some vehicles it may be mounted in the trunk. It receives inputs from a variety of sensors, some hardwired directly to it, most are sent over the bus communications system.
+Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
+
