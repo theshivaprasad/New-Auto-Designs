@@ -1,8 +1,8 @@
 <?php
 	$servername = "localhost";
-	$username = "elliot";
-	$password = "password";
-	$dbname = "project_autoz";
+	$username = "root";
+	$password = "admindb";
+	$dbname = "AutoParts";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,4 +12,3 @@
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 ?>
- 	 
