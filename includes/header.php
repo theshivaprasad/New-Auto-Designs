@@ -11,7 +11,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav" style="font-size: 15px;font-weight:bold; color: purple; font-family: 'Orbitron', cursive;">
-                            <ul class="navbar-nav mr-auto" id="dorneMenu" style="margin-left:60px;">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu" style="margin-left:0px;">
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.php">Home</a>
                                 </li>

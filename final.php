@@ -231,7 +231,7 @@
                             //     }
                             ?>
                             </label> -->
-                        </div>
+                        <!-- </div> -->
                        </div>
                         <div class="contact-form">
                             <div class="row">
@@ -295,9 +295,9 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12 d-none d-md-block d-lg-block detads">
-                    <div class="ads" style="margin-top: -3%">
+                    <!-- <div class="ads" style="margin-top: -3%"> -->
                         <img src="img/ads1.jpg" alt="Ads">
-                    </div>
+                    <!-- </div> -->
                 </div>
         </div>
     </section>

@@ -172,13 +172,13 @@
                                     <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                                         <center>
                                             <form action="new-form.php" method="get">
-                                                <select name="maker" id="maker" required class="custom-select" oninput="myFunction(event)" required>
+                                                <select name="maker" id="maker" required class="custom-select" required>
                                                     <option disabled selected value="">Select Maker</option>
                                                     <?php
                                                         include_once "includes/database.php";
 
                                                         // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
-                                                        $sql = "SELECT DISTINCT maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
+                                                        $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
                                                         $result=$conn->query($sql);
                                                         
                                                         while ($row=$result->fetch_assoc()) {
@@ -186,11 +186,11 @@
                                                         }
                                                     ?>
                                                 </select>
-                                                <select name="model" id="model" class="custom-select" oninput="myFunction(event)" required>
+                                               <!--  <select name="model" id="model" class="custom-select" oninput="myFunction(event)" required>
                                                     <option disabled selected>Select Model</option>
-                                                </select>
-                                                <select name="part" id="part" class="custom-select" oninput="myFunction(event)" required>
-                                                    <option disabled selected>Select Part</option>
+                                                </select> -->
+                                                <select name="part" id="part" class="custom-select" required>
+                                                    <option disabled selected value="" >Select Part</option>
                                                     <?php
                                                         include_once "includes/database.php";
                                                         
@@ -204,14 +204,14 @@
                                                     ?>
                                                 </select>
                                                 <select name="year" id="year" class="custom-select" required>
-                                                    <option disabled selected>Select Year</option>
+                                                    <option disabled selected value="" >Select Year</option>
                                                     <?php
                                                         for($year = 1970; $year <= 2019 ; $year++) {
                                                             echo "<option value=\"".$year."\">".$year."</option>";
                                                         }
                                                     ?>
                                                 </select>
-                                                <button type="submit" class="btn dorne-btn" onclick="document.location.href='new-form.php'"><i></i> Get Quote</button>
+                                                <button type="submit" class="btn dorne-btn" style="    margin-top: 10px;"><i></i> Get Quote</button>
                                             </form>
                                         </center>
                                     </div>
@@ -563,14 +563,14 @@
                 	<div class="container1">
         <div class="carousel">         
             <figure><img class="img1" src="images/maker/acura.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/alfa-romeo.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/Allard.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/Alpina.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/amc.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/Ariel.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/Aston-martin.png" alt=""></figure>
-            <figure><img class="img1" src="images/maker/audi.webp" alt=""></figure>
-            <figure><img class="img1" src="images/maker/austin.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/audi.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/bmw.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/buick.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/cooper.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/hummer.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/saturn.png" alt=""></figure>
+            <figure><img class="img1" src="images/maker/toyota.webp" alt=""></figure>
+            <figure><img class="img1" src="images/maker/volvo.png" alt=""></figure>
         </div>       
     </div>
                    <!--<div class="regular slider">
