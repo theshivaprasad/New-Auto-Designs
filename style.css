@@ -785,6 +785,7 @@ li {
     border: none;
     margin-right: 10px;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .hero-social-btn {
@@ -1593,3 +1594,29 @@ z-index: 11;
     font-size: 12px;
 }
 
+.hero-search-form1 .tab-content1 .tab-pane1 {
+    padding: 35px;
+    margin-right: 0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: rgba(67, 25, 159, 0.46);
+    padding-top: 0px;
+    margin-left: 370px;
+}
+
+.dorne-btn1 {
+    min-width: 180px;
+    height: 45px;
+    margin-top: 5px;
+    background-color: #7643ea;
+    border-radius: 12px;
+    padding: 0 15px;
+    line-height: 46px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+            margin-left: 10px;
+}

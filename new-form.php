@@ -164,27 +164,27 @@
     <!-- ***** Welcome Area End ***** -->
 
     <!-- ***** Catagory Area Start ***** -->
-        <section class="dorne-catagory-area">
+        <section class="dorne-catagory-area" style="column-width: 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="all-catagories">
                         <div class="row">
-                            <div class="hero-search-form">
+                            <div class="hero-search-form1">
                             <!-- Tabs -->
-                            <div class="nav nav-tabs" id="heroTab" role="tablist">
+                            <div class="nav nav-tabs" id="heroTab" role="tablist" style="margin-left: 370px;">
                                 <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Step 2</a>
                             </div>
                             <!-- Tabs Content -->
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
+                            <div class="tab-content1" id="nav-tabContent">
+                                <div class="tab-pane1 fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                                     <center>
                                         <form action="final.php" method="get">
                                             <table>
                                                 <tr>
-                                                    <td>
+                                                    <td width="120">
                                                         <select name="body_style" id="body_style" required class="custom-select"  required>
-                                                            <option disabled selected value="">Select Body Style</option>
+                                                            <option disabled selected value="" >Select Body Style</option>
                                                             <?php
                                                                 // include_once "includes/database.php";
                                                                 if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
@@ -197,7 +197,7 @@
                                                         </select>
                                                     </td>
 
-                                                    <td>
+                                                    <td style="padding: 10px;">
                                                         <select name="engine_liter" id="engine_liter" class="custom-select" oninput="myFunction(event)" required>
                                                             <option disabled selected>Select Engine Liter</option>
                                                             <?php
@@ -229,7 +229,7 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td>
+                                                    <td width="120">
                                                         <select name="turbo_charge" id="turbo_charge" class="custom-select" oninput="myFunction(event)" required>
                                                             <option disabled selected>Select Turbo Charge</option>
                                                             <?php
@@ -244,7 +244,7 @@
                                                         </select>
                                                     </td>
 
-                                                    <td>
+                                                    <td width="120" style="padding-right: 10px;">
                                                         <select name="transmission_type" id="transmission_type" class="custom-select" oninput="myFunction(event)" required>
                                                             <option disabled selected>Select Transmission Type</option>
                                                             <?php
@@ -259,7 +259,7 @@
                                                         </select>
                                                     </td>
                                             
-                                                    <td>
+                                                    <td width="60%">
                                                         <select name="fuel_type" id="fuel_type" class="custom-select" oninput="myFunction(event)" required>
                                                             <option disabled selected>Select Fuel Type</option>
                                                             <?php
@@ -283,18 +283,19 @@
                                                         <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
                                                     </td>
                                                 </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <input class="text_box" name="" placeholder="VIN Number(Optional)" type="text">
+                                                
+                                                    <tr>
+                                                    <td style="padding: 12px;">
+                                                        <input class="text_box" size="25" style="height: 37px;" name="" placeholder="VIN Number(Optional)" type="text">
                                                     </td>
 
                                                     <td>
-                                                        <input class="text_box" name="" placeholder="Message(Optional)" type="text">
+                                                        <input class="text_box" size="25" style="height: 37px;"  name="" placeholder="Message(Optional)" type="text">
                                                     </td>
+                                                   
 
                                                     <td>
-                                                        <button type="submit" class="btn dorne-btn">Get Quote</button>
+                                                        <button type="submit" class="btn dorne-btn1">Get Quote</button>
                                                     </td>
                                                 </tr>
                                             </table>
