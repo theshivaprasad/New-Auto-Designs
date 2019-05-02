@@ -116,25 +116,129 @@
                             <h1>Find A Part Now : <small><span id="yr"></span> <span id="mke"></span> <span id="mdl"></span> <span id="prt"></span></small></h1>
                         </div>
                         <form id="qapform" class="form-custompartrequest w-100 float-left bb-radius" method='get' action="final.php" style="background-color: #d8b6f7;">
+                           
                             <div class="col-md-6 col-sm-12 no-pad float-left">
+                                
                                 <div class="form-group row">
-                                    <label for="qap_make" class="col-3 col-form-label">Make <span class="text-danger">*</span></label>
+                                    <label for="qap_make" class="col-3 col-form-label">maker <span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="maker" id="maker" oninput="myFunction(event)" class="form-control" required>
-                                            <option disabled selected value="">Select Maker</option>
+                                            <option disabled selected value="">Select maker</option>
                                            <?php
                                               include_once "includes/database.php";
-
-                                              $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
-                                              $result=$conn->query($sql);
-                                              while ($row=$result->fetch_assoc()) {
-                                                echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
-                                              }
+$sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
+                                                        $result=$conn->query($sql);
+                                                        
+                                                        while ($row=$result->fetch_assoc()) {
+                                                            echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
+                                                        }
                                             ?>
                                         </select>
                                     </div>
                                 </div>
+
                                 <div class="form-group row">
+                                    <label for="qap_year" class="col-3 col-form-label">Year <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class" >
+                                             <option disabled selected>Select Year</option>
+                                             <?php
+                                                        for($year = 1970; $year <= 2019 ; $year++) {
+                                                            echo "<option value=\"".$year."\">".$year."</option>";
+                                                        }
+                                                    ?>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                   <div class="form-group row">
+                                    <label for="qap_year" class="col-3 col-form-label">Engine Liter <span class="text-danger">*</span></label>
+                                    <div class="col-9"> 
+                                    <select name="engine_liter" id="engine_liter"  oninput="myFunction(event)" class="form-control qap_part_class" >
+                                                            <option disabled selected value="" >Select Engine Liter</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[1]!=NULL) echo "<option value=\"".$data[1]."\">".$data[1]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+
+                                     </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="qap_year" class="col-3 col-form-label">Turbo Charge <span class="text-danger">*</span></label>
+                                    <div class="col-9"> 
+                                <select name="turbo_charge" id="turbo_charge" oninput="myFunction(event)" class="form-control qap_part_class" >
+                                                            <option disabled selected value="" >Select Turbo Charge</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[3]!=NULL) echo "<option value=\"".$data[3]."\">".$data[3]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+
+                                          </div>
+                                </div>
+                                    
+                                 <div class="form-group row">
+                                    <label for="qap_year" class="col-3 col-form-label">Fuel Type<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                    <select name="fuel_type" id="fuel_type" oninput="myFunction(event)" class="form-control qap_part_class" >
+                                                            <option disabled selected value="" >Select Fuel Type</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[5]!=NULL) echo "<option value=\"".$data[5]."\">".$data[5]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>                                                        
+                                    </div>
+                                </div>
+
+
+                                 <div class="form-group row">
+                                    <label for="qap_year" class="col-3 col-form-label">Message<span class="text-danger "></span></label>
+                                    <div class="col-9">
+                                <!-- <input class="text_box" size="25" class="custom-select" name="vim_num" placeholder="Vin Number (optional)" type="text">
+ -->
+                                <input class="form-control" size="25" class="custom-select" name="message" placeholder="Message (optional)" type="text">
+
+                                 </div>
+                                </div> 
+
+
+                                <div class="form-group row">
+                                    <span class="phone d-none">
+                                                                           </span>
+                                    <label for="phone" class="col-3 col-form-label">Phone <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="tel" id="phone" name="phone" onkeyup="jm_phonemask(this);" onblur="jm_phonemask(this);" placeholder="Enter Your Phone" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                 
+                                    <label for="zip" class="col-3 col-form-label">Zip <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="Enter Your Zip" />
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-group row">
                                     
                                     <label for="qap_model" class="col-3 col-form-label">Model <span class="text-danger">*</span></label>
                                     <div class="col-9">
@@ -142,25 +246,10 @@
                                              <option disabled selected>Select Model</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                  
-                                    <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <select name="part" id="part" oninput="myFunction(event)" class="form-control " >
-                                             <option disabled selected>Select Part</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
+                                </div> -->
+
                                     
-                                    <label for="qap_year" class="col-3 col-form-label">Year <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class" >
-                                             <option disabled selected>Select Year</option>
-                                        </select>
-                                    </div>
-                                </div>
+
                                 <div id="wow">
                                 </div>
                                 <div class="form-group row opttwo d-none">
@@ -246,7 +335,101 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-12 no-pad float-left">
+
+                            
+                            
+                            <div class="form-group row">
+                                  
+                                    <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                        <select name="part" id="part" oninput="myFunction(event)" class="form-control " >
+                                             <option disabled selected>Select Part</option>
+
+                                             <?php
+                                                            include_once "includes/database.php";
+                                                            
+                                                            // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
+                                                            $sql = "SELECT  part_name_ui FROM tbl_car_part_new ORDER BY part_name_ui ASC";
+                                                            $result=$conn->query($sql);
+                                                            
+                                                            while ($row=$result->fetch_assoc()) {
+                                                                echo "<option value=\"".$row['part_name_ui']."\">".$row['part_name_ui']."</option>";
+                                                            }
+                                                        ?>
+
+                                        </select>
+                                    </div>
+                                </div> 
+
+                                <div class="form-group row">
+                                    <label for="qap_part" class="col-3 col-form-label">Body Style <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                <select name="body_style" id="body_style" oninput="myFunction(event)" class="form-control " >
+                                                            <option disabled selected value="" >Select Body Style</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[0]!=NULL) echo "<option value=\"".$data[0]."\">".$data[0]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                    </div>
+                                </div> 
+
+
+                                <div class="form-group row">
+                                    <label for="qap_part" class="col-3 col-form-label">Engine Size <span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                <select name="engine_size" id="engine_size" oninput="myFunction(event)" class="form-control " >
+                                                            <option disabled selected value="" >Select Engine Size</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[2]!=NULL) echo "<option value=\"".$data[2]."\">".$data[2]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                </div>
+                                </div> 
+
+
+                                 <div class="form-group row">
+                                    <label for="qap_part" class="col-3 col-form-label">Transmission<span class="text-danger">*</span></label>
+                                    <div class="col-9">
+                                <select name="transmission_type" id="transmission_type" oninput="myFunction(event)" class="form-control " >
+                                                            <option disabled selected value="" >Select Transmission Type</option>
+                                                            <?php
+                                                                // include_once "includes/database.php";
+                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                                        if($data[4]!=NULL) echo "<option value=\"".$data[4]."\">".$data[4]."</option>";
+                                                                    }
+                                                                    fclose($handle);
+                                                                }
+                                                            ?>
+                                                        </select>
+                                </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="qap_year" class="col-3 col-form-label">Vin Number<span class="text-danger "></span></label>
+                                    <div class="col-9">
+                                
+                                <input class="form-control" size="25" class="custom-select" name="vim_num" placeholder="Vin Number (optional)" type="text">
+                                
+
+                                 </div>
+                                </div>  
+
+
+                                 <div class="col-md-6 col-sm-12 no-pad float-left">
                                 <div class="form-group row">
                                     <span class="customername d-none">
                                         
@@ -256,14 +439,8 @@
                                         <input class="form-control" type="text" id="customername" name="customername"  placeholder="Enter Your Name" />
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <span class="phone d-none">
-                                                                           </span>
-                                    <label for="phone" class="col-3 col-form-label">Phone <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <input class="form-control" type="tel" id="phone" name="phone" onkeyup="jm_phonemask(this);" onblur="jm_phonemask(this);" placeholder="Enter Your Phone" />
-                                    </div>
-                                </div>
+
+
                                 <div style="position: relative;width: 100%;"><div class='col-md-12 pull-left d-none' id='pmsg'></div></div>
                                 <div class="form-group row">
                                     <span class="email d-none">
@@ -274,13 +451,9 @@
                                         <input class="form-control" type="email" id="email" name="email" placeholder="Enter Your Email" />
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                 
-                                    <label for="zip" class="col-3 col-form-label">Zip <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="Enter Your Zip" />
-                                    </div>
-                                </div>
+
+
+                                
 
                                 <div class="form-group row">
                                     <div class="col-md-7 offset-md-5 col-sm-12 text-right">
