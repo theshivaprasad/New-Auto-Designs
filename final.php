@@ -126,35 +126,9 @@
     <style type="text/css">
         html{overflow-x:hidden;}
     </style>
-
-    <script type="text/javascript">
-        function validateCheckBox() {
-            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
-            if (checkedOne===true) {
-                alert("wow");
-                window.location.href = <?php echo "\"finish.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]."&year=".$_GET["year"]."\""; ?>;
-            } else {
-                alert("Select Option");
-                window.location.href = <?php echo "\"final.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]."&year=".$_GET["year"]."\""; ?>;
-            }
-        }           
-    </script>
 </head>
 
 <body>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#checkBtn').click(function() {
-                checked = $("input[type=checkbox]:checked").length;
-
-                if(!checked) {
-                    alert("You must check at least one checkbox.");
-                    return false;
-                }
-            });
-        });
-    </script>
     <!-- Preloader -->
 
     <!-- ***** Search Form Area ***** -->
@@ -207,7 +181,7 @@
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
             <div class="contact-form">
-                <form action="finish.php">
+                <form action="finish.php" method="get">
                             <!-- <div class="row mt-md-5 mt-0">
                             <?php
                             //     include_once "includes/database.php";

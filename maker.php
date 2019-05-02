@@ -398,7 +398,7 @@
                               $result=$conn->query($sql);
                               while ($row=$result->fetch_assoc()) {
                                 //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
-                                echo "<li><a href=\"parts.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\">Used OEM ".$row["part"]."</a></li>";
+                                echo "<li><a href=\"index.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\">Used OEM ".$row["part"]."</a></li>";
                                 //}
                                } 
                             ?>
