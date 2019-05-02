@@ -1,3 +1,10 @@
+<?php
+include_once 'includes/mailer.php'; 
+ if(isset($_GET['name']) && isset($_GET['email']) && isset($_GET['subject']) && isset($_GET['message'] )){
+    $maildata = customer_service_form($_GET['message'], $_GET['name'], $_GET['email'], $_GET['subject']);
+
+ }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,7 +95,7 @@
                 <div class="contact-form-title">
                     <h6>Fill in this form and we will get back to you ASAP</h6>
                 </div>
-                <form action="#" method="post">
+                <form action="#" method="get">
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <input type="text" style="border-radius:10px;" name="name" class="form-control" placeholder="Your Name" required>
@@ -100,7 +107,7 @@
                             <input type="text" style="border-radius:10px;" name="subject" class="form-control" placeholder="Subject" required>
                         </div>
                         <div class="col-12">
-                            <textarea name="message" style="border-radius:10px;" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                            <textarea name="message" style="border-radius:10px;" class="form-control" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                         </div>
                         <div class="col-12">
                             <button name="submit" type="submit" class="btn dorne-btn pull-right">Send</button>

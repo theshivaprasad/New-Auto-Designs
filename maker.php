@@ -341,7 +341,6 @@
                     <div class="reelative"style="margin-top: 222px"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
                      echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></p></div></div>
                 
-
                     <div class="make-listpart">
                         <ul>
                             <?php
@@ -360,7 +359,60 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="reelative" ><div class="subtitle"><?php if (!isset($_GET["part"])) {
                      echo "Popular ".$_GET['maker']." Used Parts - Auto Parts";?></div></div>
-                    <div class="make-listpart">
+                    <div class="col-md-12 col-sm-12" style="color: black;">
+                    <div class="listdivpart">
+                        <ul style="color: #000000;">
+
+
+ <?php
+                              $sql="SELECT model_name FROM tbl_temp_make_model WHERE maker_name='".$_GET['maker']."'";
+                              $result=$conn->query($sql);
+                              while ($row=$result->fetch_assoc()) {
+                                //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
+                                echo "<li><a href=\"index.php?maker=".$_GET['maker']." ".$row["model_name"]."\"  title=\"".$row["model_name"]."\">".$_GET['maker']." ".$row["model_name"]."</a></li>";
+                                //}
+                               } 
+                            ?></ul>
+                        </div></div>
+                    </div>
+
+
+
+
+
+
+                   
+
+<div class="reelative" ></div>
+
+<div class="subtitle" style="margin-left: 19px; margin-top: 30px;">Search by Part Type</div>
+                </div>
+                <div class="col-md-12 col-sm-12" style="color: black;">
+                    <div class="reelative" ></div>
+                    <div class="listdivpart">
+                        <ul style="color: #000000;">
+                        
+
+                        <?php
+                              $sql="SELECT part_name_ui as part, part_name_ui as img FROM tbl_car_part_new ORDER BY part_name_ui ASC";
+                              $result=$conn->query($sql);
+                              while ($row=$result->fetch_assoc()) {
+                                //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
+                                echo "<li><a href=\"parts.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\">Used OEM ".$row["part"]."</a></li>";
+                                //}
+                               } 
+                            ?>
+                        </ul>
+                    </div>
+                </div>  
+            <!-- </div> -->
+  
+
+
+
+
+
+
                         <ul>
                            <?php 
                                 $sql="SELECT DISTINCT p.part_name as part FROM tbl_car_maker m, tbl_car_model mo, tbl_inventory i, tbl_car_part p WHERE m.maker_id=\"".extractId($conn,'maker',$_GET['maker'])."\" AND mo.model_id=i.model_id AND i.part_id=p.part_id ORDER BY p.part_name";
@@ -387,6 +439,11 @@
 
         </div>
     </section>
+
+
+
+
+
 
     <!-- ****** Footer Area Start ****** -->
      <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
@@ -495,7 +552,7 @@
                 </div>
             </div>
         </div> -->
-    </section>
+</section>
     <!-- ***** Features Events Area End ***** -->
 
     <!-- ***** Clients Area Start ***** -->

@@ -252,6 +252,15 @@
                         <input type="hidden" name="part" id="qap_part" value=<?php echo "\"".$_GET["part"]."\""?>>
                         <input type="hidden" name="qap_part_url" id="qap_part_url" value=''>
                         <input type="hidden" name="year" id="qap_year" value=<?php echo "\"".$_GET["year"]."\""?>>
+                        <input type="hidden" name="body_style" id="qap_body_style" value=<?php echo "\"".$_GET["body_style"]."\""?>>
+                        <input type="hidden" name="engine_liter" id="qap_engine_liter" value=<?php echo "\"".$_GET["engine_liter"]."\""?>>
+                        <input type="hidden" name="engine_size" id="qap_engine_size" value=<?php echo "\"".$_GET["engine_size"]."\""?>>
+                        <input type="hidden" name="turbo_charge" id="qap_turbo_charge" value=<?php echo "\"".$_GET["turbo_charge"]."\""?>>
+                        <input type="hidden" name="transmission_type" id="qap_transmission_type" value=<?php echo "\"".$_GET["transmission_type"]."\""?>>
+                        <input type="hidden" name="fuel_type" id="qap_fuel_type" value=<?php echo "\"".$_GET["fuel_type"]."\""?>>
+
+
+
                     </div>
             </div>
                             <button type="button" onclick="validateCheckBox()" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
