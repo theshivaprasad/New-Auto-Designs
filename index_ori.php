@@ -182,13 +182,7 @@
                                                         $result=$conn->query($sql);
                                                         
                                                         while ($row=$result->fetch_assoc()) {
-                                                               if($_GET['maker'] == $row['maker_name']){
-                                                                echo "<option value=\"".$row['maker_name']."\" selected>".$row['maker_name']."</option>";
-                                                            }
-                                                        else{
                                                             echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
-                                                        }
-
                                                         }
                                                     ?>
                                                 </select>
@@ -205,16 +199,8 @@
                                                         $result=$conn->query($sql);
                                                         
                                                         while ($row=$result->fetch_assoc()) {
-                                                           if($_GET['part'] == $row['part_name_ui'])
-                                                           {
-                                                            echo "<option value=\"".$_GET['part']."\" selected>".$_GET['part']."</option>";
-                                                           }
-                                                           else{
                                                             echo "<option value=\"".$row['part_name_ui']."\">".$row['part_name_ui']."</option>";
                                                         }
-                                                        }
-                                                           
-
                                                     ?>
                                                 </select>
                                                 <select name="year" id="year" class="custom-select" required>
