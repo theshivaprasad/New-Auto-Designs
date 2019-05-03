@@ -1,7 +1,11 @@
 TYPE -  USED OEM PART
+
 CATEGORY - TRANSMISSION
+
 LOCATION - USUALLY INSIDE THE TRANSMISSION UNDERNEATH THE END COVER
+
 INCLUDES - MODULE ONLY
+
 
 INFO - A transmission control module is an electronic mechanism that collects data and processes signals within your transmission in order to regulate the transmission gear shifting.
 Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
