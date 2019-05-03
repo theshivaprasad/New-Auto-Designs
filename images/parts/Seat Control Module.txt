@@ -1,7 +1,11 @@
 TYPE -  USED OEM PART
+
 CATEGORY - BODY ELECTRICALS
+
 LOCATION -  USUALLY UNDER THE CENTER CONSOLE
+
 INCLUDES - MODULE ONLY
+
 
 INFO - These include the positions of the seats, mirrors and steering wheel as well as the pedal positions and seat belt height. The heat seating module (HSM) controls the heating, ventilation and cooling. HELLA supplies a standardized module for saving seat settings and controlling the air conditioning.
 Modules will need to have an exact part match, please provide your exact part number and Modules must be reset by a dealer before installing.
