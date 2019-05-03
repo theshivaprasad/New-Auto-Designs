@@ -336,9 +336,13 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                
                 <div class="col-md-12 col-sm-12">
 
-                    <div class="reelative"style="margin-top: 222px"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
+                    <div class="reelative"style="margin-top: 400px"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
                      echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></p></div></div>
                 
                     <div class="make-listpart">
@@ -354,8 +358,10 @@
                             ?>
                         </ul>
                     </div>
-                </div>
+                
+
                 <!--#partshidetrow-->
+
                 <div class="col-md-12 col-sm-12">
                     <div class="reelative" ><div class="subtitle"><?php if (!isset($_GET["part"])) {
                      echo "Popular ".$_GET['maker']." Used Parts - Auto Parts";?></div></div>
@@ -385,9 +391,9 @@
 
 <div class="reelative" ></div>
 
-<div class="subtitle" style="margin-left: 19px; margin-top: 30px;">Search by Part Type</div>
+<div class="subtitle" style="margin-top: 95px; margin-left: 20px;" >Search by Part Type</div>
                 </div>
-                <div class="col-md-12 col-sm-12" style="color: black;">
+                <div class="col-md-12 col-sm-12" style="color: black; margin-left: 30px;">
                     <div class="reelative" ></div>
                     <div class="listdivpart">
                         <ul style="color: #000000;">
