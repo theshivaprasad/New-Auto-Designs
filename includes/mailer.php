@@ -5,10 +5,10 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
-require '../vendor/autoload.php';
-function main_form_data($make,
+require './vendor/autoload.php';
+function main_form_data($maker,
 $model,
-$part_name,
+$part,
 $year,
 $body_style,
 $engine_liter,
@@ -38,14 +38,14 @@ try {
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'admin@autopartswolf.com';              // SMTP username
-    $mail->Password   = 'SunRise@1818';                    // SMTP password
+    $mail->Username   = 'vinayprathap5@gmail.com';              // SMTP username
+    $mail->Password   = 'qwpoaslkzxmn0280';                    // SMTP password
     $mail->SMTPSecure = 'tls';                             
          // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('admin@autopartswolf.com', 'WebApp Query');
+    $mail->setFrom('vinayprathap5@gmail.com', 'WebApp Query');
     // $mail->addAddress('enquiry@autopartswolf.com', 'WebApp Enquiry');    
      $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry'); // Add a recipient
    /* $mail->addAddress('ellen@example.com');               // Name is optional
@@ -60,20 +60,20 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Car make Forms';
-    $mail->Body    = 'Make \t: $make\nModel \t:$model\n Part-Name \t: $part_name\n
-Year \t:$year\n
-Body-Style \t:$body_style\n
-Engine-Liter \t:$engine_liter\n
-Engine-Size \t:$engine_size\n
-Turbo-Charge \t:$turbo_charge\n
-Transmission_Type \t:$transmission_type\n
-Fuel-Type \t:$fuel_type\n
-Vin-Number \t:$vin_number\n
-Message \t:$message\n
-Name \t:$name\n
-Email \t:$email\n
-Phone \t:$phone\n
-Zip \t:$zip\n<b>in bold!</b>';
+    $mail->Body    = 'Make \t: '.$maker.'\nModel \t:'.$model.'\n Part-Name \t: '.$part.'\n
+Year \t:'.$year.'\n
+Body-Style \t:'.$body_style.'\n
+Engine-Liter \t:'.$engine_liter.'\n
+Engine-Size \t:'.$engine_size.'\n
+Turbo-Charge \t:'.$turbo_charge.'\n
+Transmission_Type \t:'.$transmission_type.'\n
+Fuel-Type \t:'.$fuel_type.'\n
+Vin-Number \t:'.$vin_number.'\n
+Message \t:'.$message.'\n
+Name \t:'.$name.'\n
+Email \t:'.$email.'\n
+Phone \t:'.$phone.'\n
+Zip \t:'.$zip.'\n<b>in bold!</b>';
     $mail->AltBody = 'Make \t: $make\nModel \t:$model\n This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
@@ -107,14 +107,14 @@ try {
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'admin@autopartswolf.com';              // SMTP username
-    $mail->Password   = 'SunRise@1818';                     // SMTP password
+    $mail->Username   = 'vinayprathap5@gmail.com';              // SMTP username
+    $mail->Password   = 'qwpoaslkzxmn0280';                     // SMTP password
     $mail->SMTPSecure = 'tls';                             
          // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('admin@autopartswolf.com', 'WebApp Query');
+    $mail->setFrom('vinayprathap5@gmail.com', 'WebApp Query');
     // $mail->addAddress('enquiry@autopartswolf.com', 'WebApp Enquiry');    
      $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry'); // Add a recipient
    /* $mail->addAddress('ellen@example.com');               // Name is optional
