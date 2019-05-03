@@ -115,7 +115,7 @@ xmlhttp.send();
                         <div class="form-title2 bt-radius">
                             <h1>Find A Part Now : <small><span id="yr"></span> <span id="mke"></span> <span id="mdl"></span> <span id="prt"></span></small></h1>
                         </div>
-                        <form id="qapform" class="form-custompartrequest w-100 float-left bb-radius" method='get' action="final.php" style="background-color: #d8b6f7;">
+                        <form id="qapform" class="form-custompartrequest w-100 float-left bb-radius" method='get' action="finish.php" style="background-color: #d8b6f7;">
 
                             <div class="col-md-6 col-sm-12 no-pad float-left">
 
@@ -342,7 +342,7 @@ xmlhttp.send();
 
                                 <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
                                 <div class="col-9">
-                                    <select name="part_name" id="part_name" oninput="myFunction(event)" class="form-control " required>
+                                    <select name="part" id="part" oninput="myFunction(event)" class="form-control " required>
                                        <option disabled selected>Select Part</option>
 
                                        <?php
