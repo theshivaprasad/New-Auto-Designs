@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
-require './vendor/autoload.php';
+require '../vendor/autoload.php';
 function main_form_data($make,
 $model,
 $part_name,
@@ -34,12 +34,12 @@ try {
     )
 );
     //Server settings
-    $mail->SMTPDebug = 2;                                       // Enable verbose debug output
+   /* $mail->SMTPDebug = 2;  */                                     // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'admin@autopartswolf.com';              // SMTP username
-    $mail->Password   = 'SunRise@1818';                     // SMTP password
+    $mail->Password   = 'SunRise@1818';                    // SMTP password
     $mail->SMTPSecure = 'tls';                             
          // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
@@ -47,7 +47,7 @@ try {
     //Recipients
     $mail->setFrom('admin@autopartswolf.com', 'WebApp Query');
     // $mail->addAddress('enquiry@autopartswolf.com', 'WebApp Enquiry');    
-     $mail->addAddress('manju97.m@gmail.com', 'WebApp Enquiry'); // Add a recipient
+     $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry'); // Add a recipient
    /* $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
@@ -103,7 +103,7 @@ try {
     )
 );
     //Server settings
-    $mail->SMTPDebug = 2;                                       // Enable verbose debug output
+   /* $mail->SMTPDebug = 2;  */                                     // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -116,7 +116,7 @@ try {
     //Recipients
     $mail->setFrom('admin@autopartswolf.com', 'WebApp Query');
     // $mail->addAddress('enquiry@autopartswolf.com', 'WebApp Enquiry');    
-     $mail->addAddress('manju97.m@gmail.com', 'WebApp Enquiry'); // Add a recipient
+     $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry'); // Add a recipient
    /* $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');

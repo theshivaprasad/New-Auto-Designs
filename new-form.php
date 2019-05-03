@@ -257,7 +257,7 @@
     <!-- ***** About Area End ***** -->
 
     <!-- ***** Editor Pick Area Start ***** -->
-    <section class="dorne-editors-pick-area bg-img bg-overlay-9-services section-padding-100" style="background-image: url(img/services.jpg);">
+   <!--  <section class="dorne-editors-pick-area bg-img bg-overlay-9-services section-padding-100" style="background-image: url(img/services.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -301,11 +301,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ***** Editor Pick Area End ***** -->
 
     <!-- ***** Features Products Area Start ***** -->
-     <section class="dorne-features-restaurant-area bg-default">
+     <!-- <section class="dorne-features-restaurant-area bg-default">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -438,18 +438,18 @@
                 
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ***** Features Restaurant Area End ***** -->
 
     <!-- ***** Features Events Area Start ***** -->
-    <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
+    <!-- <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="about-content text-center">
-                        <h2><br><span><i>“Your search for used Auto Part ends here!!”</i></span></h2>
+                        <h2><br><span><i>“Your search for used Auto Part ends here!!”</i></span></h2> -->
                                     <!-- <h3 style="color:blue;">Welcome</h3> -->
-                                        <div class="content" style="color: black; font-size: 25px">
+                                        <!-- <div class="content" style="color: black; font-size: 25px">
                         <p style="color: white;">Auto Parts Wolf is aimed at being your one-stop destination for quality used OEM parts. We are connected with hundreds of Junkyards who have a huge selection of used OEM Parts and Accessories at the best prices. If you need to repair your vehicle, do it right the first time with OEM parts and accessories salvaged by professionals. 
                         <br><br>
                         We as a company are all about helping you get the most enjoyment and convenience possible out of your vehicle by connecting you with the right seller.
@@ -465,10 +465,10 @@
                         </p>
                        </div>
 
-            </div>
-
+            </div> -->
+<!-- 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6"> -->
                     <!-- Testimonial Slider from Baamboo Studio modified for The Mentor Group (http://www.mentor-group.com/clients--testimonials.html) -->
 
                     <!-- TestimonialS Slider - Free Weebly Widget by Baamboo Studio - Style 2 -->

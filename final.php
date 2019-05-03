@@ -1,4 +1,13 @@
 <?php
+include_once 'includes/mailer.php';
+
+if( isset($_GET['make']) && isset($_GET['model']) && isset($_GET['part_name']) && isset($_GET['year']) && isset($_GET['body_style']) && isset($_GET['engine_liter']) && isset($_GET['engine_size']) && isset($_GET['turbo_charge']) && isset($_GET['transmission_type']) && isset($_GET['fuel_type']) && isset($_GET['vin_number']) && isset($_GET['message']) && isset($_GET['name']) && isset($_GET['phone']) && isset($_GET['email']) && isset($_GET['zip'])) {
+    $maildata = main_form_data($_GET['make'], $_GET['model'], $_GET['part_name'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], $_GET['vin_number'], $_GET['message'], $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+}
+
+ ?>
+
+<?php
     function ifExists($conn, $inv_id, $year_id) {
         $sql = "SELECT opt_id FROM tbl_part_details WHERE inv_id=\"".$inv_id."\" AND year_id=\"".$year_id."\"";
         $result = $conn->query($sql);
@@ -237,7 +246,7 @@
 
                     </div>
             </div>
-                            <button type="button" onclick="validateCheckBox()" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
+                            <button type="submit" onclick="validateCheckBox()" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
                         </form>
                     </div>
                 </div>
