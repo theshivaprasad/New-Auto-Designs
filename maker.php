@@ -382,17 +382,10 @@
                         </div></div>
                     </div>
 
-
-
-
-
-
-                   
-
-<div class="reelative" ></div>
-
-<div class="subtitle" style="margin-top: 95px; margin-left: 20px;" >Search by Part Type</div>
                 </div>
+
+                                   <div> <p style="font-weight: bold; margin-left: 34px; margin-top: 34px;">Search by Part Type</p></div>
+
                 <div class="col-md-12 col-sm-12" style="color: black; margin-left: 30px;">
                     <div class="reelative" ></div>
                     <div class="listdivpart">
