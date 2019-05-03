@@ -267,7 +267,7 @@
                                   while (! feof($fh)) {
                                     $s = fgets($fh);
                                     if (("\n" == $s) || ("\r\n" == $s)) {
-                                        echo "<br><br>";
+                                        echo "<br>";
                                     }
                                     echo "$s";
                                   }
