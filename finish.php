@@ -1,3 +1,23 @@
+<?php
+include_once 'includes/mailer.php';
+
+if( isset($_GET['maker']) && isset($_GET['model']) && isset($_GET['part']) && isset($_GET['year']) && isset($_GET['body_style']) && isset($_GET['engine_liter']) && isset($_GET['engine_size']) && isset($_GET['turbo_charge']) && isset($_GET['transmission_type']) && isset($_GET['fuel_type']) && isset($_GET['vin_number']) && isset($_GET['message']) && isset($_GET['name']) && isset($_GET['phone']) && isset($_GET['email']) && isset($_GET['zip']))
+
+        if ( isset($_GET['vin_number']) && isset($_GET['message']) ) {
+            $maildata1 = main_form_data($_GET['maker'], $_GET['model'], $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], $_GET['vin_number'], $_GET['message'], $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+        }
+        elseif ( isset($_GET['message']) && !isset($_GET['vin_number'])) {
+            $maildata2 = main_form_data($_GET['maker'], $_GET['model'], $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], '', $_GET['message'], $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+        }
+        elseif ( isset($_GET['vin_number']) && !isset($_GET['message'])) {
+            $maildata3 = main_form_data($_GET['maker'], $_GET['model'], $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], $_GET['vin_number'], '', $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+        }
+        else{
+            $maildata4 = main_form_data($_GET['maker'], $_GET['model'], $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], '','', $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+        }
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
