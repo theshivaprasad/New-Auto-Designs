@@ -193,84 +193,10 @@
     <!-- ***** Breadcumb Area End ***** -->
 
     <!-- Explore Area -->
-    <section class="dorne-explore-area d-md-flex">
+    <!-- <section class="dorne-explore-area d-md-flex"> -->
         <!-- Explore Search Area -->
         <div class="explore-search-area d-md-flex">
             <!-- Explore Search Form -->
-            <div class="explore-search-form">
-                <h6>FIND THE PART NOW</h6>
-                <!-- Tabs -->
-                <!-- Tabs Content -->
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                        <form action="maker.php" method="GET">
-                            <select name="maker" class="custom-select" id="maker" onchange="myFunction(event)">
-                                 <option disabled selected>Maker</option>
-                                <?php
-                                  $sql="SELECT maker_name as maker FROM tbl_car_maker ORDER BY maker_name";
-                                  $result=$conn->query($sql);
-                                  while ($row=$result->fetch_assoc()) {
-                                    if ($row["maker"]==$_GET["maker"]) {
-                                      echo "<option selected value=\"".$row['maker']."\">".$row['maker']."</option>";
-                                    } else {
-                                      echo "<option value=\"".$row['maker']."\">".$row['maker']."</option>";
-                                    }
-                                  }
-                                ?>
-                            </select>
-                            <select name="model" class="custom-select" id="model" oninput="myFunction(event)">
-                                <option disabled selected>Select Model</option>
-                                <?php
-                                  $sql="SELECT model_name as model FROM tbl_car_model WHERE maker_id=\"".extractId($conn,'maker',$_GET["maker"])."\"";
-                                  $result=$conn->query($sql);
-                                  while ($row=$result->fetch_assoc()) {
-                                    if ($row["model"]==$_GET["model"]) {
-                                      echo "<option selected value=\"".$row['model']."\">".$row['model']."</option>";
-                                    } else {
-                                      echo "<option value=\"".$row['model']."\">".$row['model']."</option>";
-                                    }
-                                  }
-                                ?>
-                            </select>
-                            <select name="part" class="custom-select" id="part" oninput="myFunction(event)">
-                               <option disabled selected>Select Part</option>
-                              <?php
-                                echo $_GET["model"];
-                                if (isset($_GET["model"])) {
-                                  echo "wow";
-                                  $sql="SELECT p.part_name as part FROM tbl_car_part p INNER JOIN tbl_inventory i ON p.part_id = i.part_id WHERE i.model_id=\"".extractId($conn,'model',$_GET["model"])."\" ORDER BY p.part_name";
-                                  $result=$conn->query($sql);
-                                  while ($row=$result->fetch_assoc()) {
-                                    if ($row["part"]==$_GET["part"]) {
-                                      echo "<option selected value=\"".$row['part']."\">".$row['part']."</option>";
-                                    } else {
-                                      echo "<option value=\"".$row['part']."\">".$row['part']." </option>";
-                                    }
-                                  }
-                                }
-                              ?>
-                            </select>
-                            <select name="year" class="custom-select" id="year">
-                                 <option disabled selected>Select Year</option>
-                                <?php
-                                  if(isset($_GET["part"])){
-    
-                                    $inv_id = extractInvId($conn, extractId($conn, "part", $_GET['part']), extractId($conn, "model", $_GET['model']));
-
-                                    $sql = "SELECT DISTINCT y.year as year from tbl_part_details p INNER JOIN tbl_year y ON p.year_id = y.year_id WHERE inv_id=".$inv_id;
-                                    $result=$conn->query($sql);
-                                    echo $sql;
-
-                                while($row=$result->fetch_assoc()) {
-                                  echo "<option value=\"".$row['year']."\">".$row['year']."</option>";
-                                }
-                                }?>
-                            </select>
-                            <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
             
             <!-- Explore Search Result -->
             <div class="explore-search-result">
@@ -336,9 +262,13 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                
                 <div class="col-md-12 col-sm-12">
 
-                    <div class="reelative"style="margin-top: 222px"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
+                    <div class="reelative"style="margin-top: 400px"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
                      echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></p></div></div>
                 
                     <div class="make-listpart">
@@ -354,8 +284,10 @@
                             ?>
                         </ul>
                     </div>
-                </div>
+                
+
                 <!--#partshidetrow-->
+
                 <div class="col-md-12 col-sm-12">
                     <div class="reelative" ><div class="subtitle"><?php if (!isset($_GET["part"])) {
                      echo "Popular ".$_GET['maker']." Used Parts - Auto Parts";?></div></div>
@@ -376,18 +308,11 @@
                         </div></div>
                     </div>
 
-
-
-
-
-
-                   
-
-<div class="reelative" ></div>
-
-<div class="subtitle" style="margin-left: 19px; margin-top: 30px;">Search by Part Type</div>
                 </div>
-                <div class="col-md-12 col-sm-12" style="color: black;">
+
+                                   <div> <p style="font-weight: bold; margin-left: 34px; margin-top: 34px;">Search by Part Type</p></div>
+
+                <div class="col-md-12 col-sm-12" style="color: black; margin-left: 30px;">
                     <div class="reelative" ></div>
                     <div class="listdivpart">
                         <ul style="color: #000000;">

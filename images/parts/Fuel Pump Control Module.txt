@@ -1,6 +1,9 @@
 TYPE -  USED OEM PART
-CATEGORY - FUEL DELIVERY.
+
+CATEGORY - FUEL DELIVERY
+
 LOCATION - USUALLY INSIDE THE FUEL TANK
+
 INCLUDES - MODULE ONLY.
 
 INFO - The fuel pump control module is responsible for supply and regulation of voltage to the fuel pump relay and the fuel pump.

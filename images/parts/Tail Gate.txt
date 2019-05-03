@@ -1,6 +1,10 @@
 TYPE -  USED OEM PART
+
 CATEGORY - AUTO BODY PARTS
+
 LOCATION - BACK OF THE CAR
+
 INCLUDES - 
+
 
 INFO - A tailgate, or sometimes the hatch, is a hinged board or door at the rear of a vehicle that can be moved up or down during loading and unloading. Also called a tailboard, it is commonly found in pickup trucks or hatchback vehicles.

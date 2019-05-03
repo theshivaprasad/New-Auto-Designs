@@ -122,16 +122,16 @@
                                 <div class="form-group row">
                                     <label for="qap_make" class="col-3 col-form-label">maker <span class="text-danger">*</span></label>
                                     <div class="col-9">
-                                        <select name="maker" id="maker" class="form-control" required>
+                                        <select name="maker" id="maker" oninput="myFunction(event)" class="form-control" required>
                                             <option disabled selected value="">Select maker</option>
-                                           <?php
-                                              include_once "includes/database.php";
-$sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
-                                                        $result=$conn->query($sql);
-                                                        
-                                                        while ($row=$result->fetch_assoc()) {
-                                                            echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
-                                                        }
+                                            <?php
+                                            include_once "includes/database.php";
+                                            $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
+                                            $result=$conn->query($sql);
+                                            
+                                            while ($row=$result->fetch_assoc()) {
+                                                echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
+                                            }
                                             ?>
                                         </select>
                                     </div>
@@ -140,7 +140,7 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
                                 <div class="form-group row">
                                     <label for="qap_year" class="col-3 col-form-label">Year <span class="text-danger">*</span></label>
                                     <div class="col-9">
-                                        <select name="year" id="year" class="form-control qap_part_class" required>
+                                        <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class" >
                                              <option disabled selected>Select Year</option>
                                              <?php
                                                         for($year = 1970; $year <= 2019 ; $year++) {
@@ -155,7 +155,7 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
                                    <div class="form-group row">
                                     <label for="qap_year" class="col-3 col-form-label">Engine Liter <span class="text-danger">*</span></label>
                                     <div class="col-9"> 
-                                    <select name="engine_liter" id="engine_liter" class="form-control qap_part_class" required>
+                                    <select name="engine_liter" id="engine_liter"  oninput="myFunction(event)" class="form-control qap_part_class" >
                                                             <option disabled selected value="" >Select Engine Liter</option>
                                                             <?php
                                                                 // include_once "includes/database.php";
