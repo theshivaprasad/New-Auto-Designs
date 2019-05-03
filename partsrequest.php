@@ -120,10 +120,10 @@
                             <div class="col-md-6 col-sm-12 no-pad float-left">
                                 
                                 <div class="form-group row">
-                                    <label for="qap_make" class="col-3 col-form-label">maker <span class="text-danger">*</span></label>
+                                    <label for="qap_make" class="col-3 col-form-label">Maker <span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="maker" id="maker" class="form-control" required>
-                                            <option disabled selected value="">Select maker</option>
+                                            <option disabled selected value="">Select Car</option>
                                            <?php
                                               include_once "includes/database.php";
 $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
@@ -173,7 +173,7 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
 
 
                                 <div class="form-group row">
-                                    <label for="qap_year" class="col-3 col-form-label">Turbo Charge <span class="text-danger">*</span></label>
+                                    <label for="qap_year" class="col-3 col-form-label">Turbo <span class="text-danger">*</span></label>
                                     <div class="col-9"> 
                                 <select name="turbo_charge" id="turbo_charge" oninput="myFunction(event)" class="form-control qap_part_class" >
                                                             <option disabled selected value="" >Select Turbo Charge</option>
@@ -419,10 +419,10 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
 
 
                                 <div class="form-group row">
-                                    <label for="qap_year" class="col-3 col-form-label">Vin Number<span class="text-danger "></span></label>
+                                    <label for="qap_year" class="col-3 col-form-label">VIN Number<span class="text-danger "></span></label>
                                     <div class="col-9">
                                 
-                                <input class="form-control" size="25" class="custom-select" name="vim_num" placeholder="Vin Number (optional)" type="text">
+                                <input class="form-control" size="25" class="custom-select" name="vim_num" placeholder="VIN Number (optional)" type="text">
                                 
 
                                  </div>
@@ -457,7 +457,7 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
 
                                 <div class="form-group row">
                                     <div class="col-md-7 offset-md-5 col-sm-12 text-right">
-                                        <button type="submit" class="btn btn-custom">Get Quote </button>
+                                        <button type="submit" class="btn btn-custom" style="border-radius: 5px">Get Quote </button>
                                     </div>
                                 </div>
                             </div>
