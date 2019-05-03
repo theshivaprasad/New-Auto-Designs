@@ -342,7 +342,7 @@
                 
                 <div class="col-md-12 col-sm-12">
 
-                    <div class="reelative"style="margin-top: 400px"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
+                    <div class="reelative"style="margin-top: 500px"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
                      echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></p></div></div>
                 
                     <div class="make-listpart">
@@ -397,7 +397,7 @@
                               $result=$conn->query($sql);
                               while ($row=$result->fetch_assoc()) {
                                 //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
-                                echo "<li><a href=\"index.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\">Used OEM ".$row["part"]."</a></li>";
+                                echo "<li><a href=\"parts.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\">Used OEM ".$row["part"]."</a></li>";
                                 //}
                                } 
                             ?>
