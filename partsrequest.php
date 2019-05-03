@@ -16,53 +16,53 @@
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
-            <link href="css2/custom.css" rel="stylesheet">
-<link href="css2/animate.css" rel="stylesheet">
+    <link href="css2/custom.css" rel="stylesheet">
+    <link href="css2/animate.css" rel="stylesheet">
     <!-- Responsive CSS -->
     <link href="css/responsive/responsive.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
     <script type="text/javascript">
         function myFunction(e) {
-                var xmlhttp = new XMLHttpRequest();
-                if (e.currentTarget.id == "maker") {
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("model").innerHTML = this.responseText;
-                        }
-                    };
-                } else if (e.currentTarget.id == "model") {
-                  xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("part").innerHTML = this.responseText;
-                        }
-                    };
-                } else if (e.currentTarget.id == "part")  {
-                  xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("year").innerHTML = this.responseText;
-                        }
-                    };
-                } else if (e.currentTarget.id == "year")  {
-                  xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                          document.getElementById("wow").innerHTML = this.responseText;
-                        }
-                    };
-                }
-                  if (e.currentTarget.id == "maker")
-                    xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
-                  else if (e.currentTarget.id == "model") 
-                    xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
-                  else if (e.currentTarget.id == "part") 
-                    xmlhttp.open("GET", "show.php?part=" + e.target.value+ "&model=" + document.getElementById("model").value, true);
-                  else if (e.currentTarget.id == "year") 
-                    xmlhttp.open("GET", "show.php?year=" + e.target.value+ "&part=" + document.getElementById("part").value+ "&model=" + document.getElementById("model").value, true);
-                  xmlhttp.send();
-            }
-    </script>
+            var xmlhttp = new XMLHttpRequest();
+            if (e.currentTarget.id == "maker") {
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                      document.getElementById("model").innerHTML = this.responseText;
+                  }
+              };
+          } else if (e.currentTarget.id == "model") {
+              xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("part").innerHTML = this.responseText;
+              }
+          };
+      } else if (e.currentTarget.id == "part")  {
+          xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("year").innerHTML = this.responseText;
+          }
+      };
+  } else if (e.currentTarget.id == "year")  {
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("wow").innerHTML = this.responseText;
+      }
+  };
+}
+if (e.currentTarget.id == "maker")
+    xmlhttp.open("GET", "show.php?maker=" + e.target.value, true);
+else if (e.currentTarget.id == "model") 
+    xmlhttp.open("GET", "show.php?model=" + e.target.value, true);
+else if (e.currentTarget.id == "part") 
+    xmlhttp.open("GET", "show.php?part=" + e.target.value+ "&model=" + document.getElementById("model").value, true);
+else if (e.currentTarget.id == "year") 
+    xmlhttp.open("GET", "show.php?year=" + e.target.value+ "&part=" + document.getElementById("part").value+ "&model=" + document.getElementById("model").value, true);
+xmlhttp.send();
+}
+</script>
 </head>
 
 <body>
@@ -89,7 +89,7 @@
     <!-- ***** Header Area Start ***** -->
     <?php include_once 'includes/header.php'?>
 
-        <section class="pagebanner layer-overlay overlay-dark-5">
+    <section class="pagebanner layer-overlay overlay-dark-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-sm-12">
@@ -105,18 +105,18 @@
     <section class=" mt-3 mb-3" style="background-color: #d8b6f7;">
         <div class="container-fluid">
             <div class="row"> 
-            <div class="col-md-2 col-sm-12 d-none d-md-block d-lg-block detads">
+                <div class="col-md-2 col-sm-12 d-none d-md-block d-lg-block detads">
                     <div class="ads">
                       
                     </div>
                 </div>                      
-                                <div class="col-md-8 col-sm-12 det2">
+                <div class="col-md-8 col-sm-12 det2">
                     <div class="form-block bg-grey overflow-none bt-radius">
                         <div class="form-title2 bt-radius">
                             <h1>Find A Part Now : <small><span id="yr"></span> <span id="mke"></span> <span id="mdl"></span> <span id="prt"></span></small></h1>
                         </div>
                         <form id="qapform" class="form-custompartrequest w-100 float-left bb-radius" method='get' action="final.php" style="background-color: #d8b6f7;">
-                           
+                         
                             <div class="col-md-6 col-sm-12 no-pad float-left">
                                 
                                 <div class="form-group row">
@@ -124,14 +124,14 @@
                                     <div class="col-9">
                                         <select name="maker" id="maker" oninput="myFunction(event)" class="form-control" required>
                                             <option disabled selected value="">Select maker</option>
-                                           <?php
-                                              include_once "includes/database.php";
-$sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
-                                                        $result=$conn->query($sql);
-                                                        
-                                                        while ($row=$result->fetch_assoc()) {
-                                                            echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
-                                                        }
+                                            <?php
+                                            include_once "includes/database.php";
+                                            $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
+                                            $result=$conn->query($sql);
+                                            
+                                            while ($row=$result->fetch_assoc()) {
+                                                echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
+                                            }
                                             ?>
                                         </select>
                                     </div>
@@ -141,102 +141,102 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
                                     <label for="qap_year" class="col-3 col-form-label">Year <span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class" >
-                                             <option disabled selected>Select Year</option>
-                                             <?php
-                                                        for($year = 1970; $year <= 2019 ; $year++) {
-                                                            echo "<option value=\"".$year."\">".$year."</option>";
-                                                        }
-                                                    ?>
-                                        </select>
-                                    </div>
+                                           <option disabled selected>Select Year</option>
+                                           <?php
+                                           for($year = 1970; $year <= 2019 ; $year++) {
+                                            echo "<option value=\"".$year."\">".$year."</option>";
+                                        }
+                                        ?>
+                                    </select>
                                 </div>
+                            </div>
 
 
-                                   <div class="form-group row">
-                                    <label for="qap_year" class="col-3 col-form-label">Engine Liter <span class="text-danger">*</span></label>
-                                    <div class="col-9"> 
+                            <div class="form-group row">
+                                <label for="qap_year" class="col-3 col-form-label">Engine Liter <span class="text-danger">*</span></label>
+                                <div class="col-9"> 
                                     <select name="engine_liter" id="engine_liter"  oninput="myFunction(event)" class="form-control qap_part_class" >
-                                                            <option disabled selected value="" >Select Engine Liter</option>
-                                                            <?php
+                                        <option disabled selected value="" >Select Engine Liter</option>
+                                        <?php
                                                                 // include_once "includes/database.php";
-                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                                        if($data[1]!=NULL) echo "<option value=\"".$data[1]."\">".$data[1]."</option>";
-                                                                    }
-                                                                    fclose($handle);
-                                                                }
-                                                            ?>
-                                                        </select>
+                                        if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                if($data[1]!=NULL) echo "<option value=\"".$data[1]."\">".$data[1]."</option>";
+                                            }
+                                            fclose($handle);
+                                        }
+                                        ?>
+                                    </select>
 
-                                     </div>
                                 </div>
+                            </div>
 
 
-                                <div class="form-group row">
-                                    <label for="qap_year" class="col-3 col-form-label">Turbo Charge <span class="text-danger">*</span></label>
-                                    <div class="col-9"> 
-                                <select name="turbo_charge" id="turbo_charge" oninput="myFunction(event)" class="form-control qap_part_class" >
-                                                            <option disabled selected value="" >Select Turbo Charge</option>
-                                                            <?php
+                            <div class="form-group row">
+                                <label for="qap_year" class="col-3 col-form-label">Turbo Charge <span class="text-danger">*</span></label>
+                                <div class="col-9"> 
+                                    <select name="turbo_charge" id="turbo_charge" oninput="myFunction(event)" class="form-control qap_part_class" >
+                                        <option disabled selected value="" >Select Turbo Charge</option>
+                                        <?php
                                                                 // include_once "includes/database.php";
-                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                                        if($data[3]!=NULL) echo "<option value=\"".$data[3]."\">".$data[3]."</option>";
-                                                                    }
-                                                                    fclose($handle);
-                                                                }
-                                                            ?>
-                                                        </select>
+                                        if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                if($data[3]!=NULL) echo "<option value=\"".$data[3]."\">".$data[3]."</option>";
+                                            }
+                                            fclose($handle);
+                                        }
+                                        ?>
+                                    </select>
 
-                                          </div>
                                 </div>
-                                    
-                                 <div class="form-group row">
-                                    <label for="qap_year" class="col-3 col-form-label">Fuel Type<span class="text-danger">*</span></label>
-                                    <div class="col-9">
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label for="qap_year" class="col-3 col-form-label">Fuel Type<span class="text-danger">*</span></label>
+                                <div class="col-9">
                                     <select name="fuel_type" id="fuel_type" oninput="myFunction(event)" class="form-control qap_part_class" >
-                                                            <option disabled selected value="" >Select Fuel Type</option>
-                                                            <?php
+                                        <option disabled selected value="" >Select Fuel Type</option>
+                                        <?php
                                                                 // include_once "includes/database.php";
-                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                                        if($data[5]!=NULL) echo "<option value=\"".$data[5]."\">".$data[5]."</option>";
-                                                                    }
-                                                                    fclose($handle);
-                                                                }
-                                                            ?>
-                                                        </select>                                                        
-                                    </div>
+                                        if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                                if($data[5]!=NULL) echo "<option value=\"".$data[5]."\">".$data[5]."</option>";
+                                            }
+                                            fclose($handle);
+                                        }
+                                        ?>
+                                    </select>                                                        
                                 </div>
+                            </div>
 
 
-                                 <div class="form-group row">
-                                    <label for="qap_year" class="col-3 col-form-label">Message<span class="text-danger "></span></label>
-                                    <div class="col-9">
+                            <div class="form-group row">
+                                <label for="qap_year" class="col-3 col-form-label">Message<span class="text-danger "></span></label>
+                                <div class="col-9">
                                 <!-- <input class="text_box" size="25" class="custom-select" name="vim_num" placeholder="Vin Number (optional)" type="text">
- -->
+                                -->
                                 <input class="form-control" size="25" class="custom-select" name="message" placeholder="Message (optional)" type="text">
 
-                                 </div>
-                                </div> 
+                            </div>
+                        </div> 
 
 
-                                <div class="form-group row">
-                                    <span class="phone d-none">
-                                                                           </span>
-                                    <label for="phone" class="col-3 col-form-label">Phone <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <input class="form-control" type="tel" id="phone" name="phone" onkeyup="jm_phonemask(this);" onblur="jm_phonemask(this);" placeholder="Enter Your Phone" />
-                                    </div>
-                                </div>
+                        <div class="form-group row">
+                            <span class="phone d-none">
+                            </span>
+                            <label for="phone" class="col-3 col-form-label">Phone <span class="text-danger">*</span></label>
+                            <div class="col-9">
+                                <input class="form-control" type="tel" id="phone" name="phone" onkeyup="jm_phonemask(this);" onblur="jm_phonemask(this);" placeholder="Enter Your Phone" />
+                            </div>
+                        </div>
 
-                                <div class="form-group row">
-                                 
-                                    <label for="zip" class="col-3 col-form-label">Zip <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="Enter Your Zip" />
-                                    </div>
-                                </div>
+                        <div class="form-group row">
+                           
+                            <label for="zip" class="col-3 col-form-label">Zip <span class="text-danger">*</span></label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="Enter Your Zip" />
+                            </div>
+                        </div>
 
                                 <!-- <div class="form-group row">
                                     
@@ -248,7 +248,7 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
                                     </div>
                                 </div> -->
 
-                                    
+                                
 
                                 <div id="wow">
                                 </div>
@@ -262,12 +262,12 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
                                     </div>
                                 </div>
                                 <div class="form-group row optthree d-none">
-                                 
+                                   
                                     <label for="opt3" class="col-3 col-form-label">Option 3 <span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="MainOpt3" id="MainOpt3" class="form-control">
                                             <option value="">Select Option2</option>
-                                             
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -281,7 +281,7 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
                                     </div>
                                 </div>
                                 <div class="form-group row d-none optfive">
-                                   
+                                 
                                     <label for="MainOpt5" class="col-3 col-form-label">Option 5<span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="MainOpt5" id="MainOpt5" class="form-control">
@@ -326,7 +326,7 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
                                     </div>
                                 </div>
                                 <div class="form-group row d-none optten">
-                                   
+                                 
                                     <label for="MainOpt10" class="col-3 col-form-label">Option 10<span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="MainOpt10" id="MainOpt10" class="form-control">
@@ -339,152 +339,152 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
                             
                             
                             <div class="form-group row">
-                                  
-                                    <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <select name="part" id="part" oninput="myFunction(event)" class="form-control " >
-                                             <option disabled selected>Select Part</option>
+                              
+                                <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
+                                <div class="col-9">
+                                    <select name="part" id="part" oninput="myFunction(event)" class="form-control " >
+                                       <option disabled selected>Select Part</option>
 
-                                             <?php
-                                                            include_once "includes/database.php";
-                                                            
+                                       <?php
+                                       include_once "includes/database.php";
+                                       
                                                             // $sql="SELECT maker_name FROM tbl_car_maker ORDER BY maker_name";
-                                                            $sql = "SELECT  part_name_ui FROM tbl_car_part_new ORDER BY part_name_ui ASC";
-                                                            $result=$conn->query($sql);
-                                                            
-                                                            while ($row=$result->fetch_assoc()) {
-                                                                echo "<option value=\"".$row['part_name_ui']."\">".$row['part_name_ui']."</option>";
-                                                            }
-                                                        ?>
+                                       $sql = "SELECT  part_name_ui FROM tbl_car_part_new ORDER BY part_name_ui ASC";
+                                       $result=$conn->query($sql);
+                                       
+                                       while ($row=$result->fetch_assoc()) {
+                                        echo "<option value=\"".$row['part_name_ui']."\">".$row['part_name_ui']."</option>";
+                                    }
+                                    ?>
 
-                                        </select>
-                                    </div>
-                                </div> 
+                                </select>
+                            </div>
+                        </div> 
 
-                                <div class="form-group row">
-                                    <label for="qap_part" class="col-3 col-form-label">Body Style <span class="text-danger">*</span></label>
-                                    <div class="col-9">
+                        <div class="form-group row">
+                            <label for="qap_part" class="col-3 col-form-label">Body Style <span class="text-danger">*</span></label>
+                            <div class="col-9">
                                 <select name="body_style" id="body_style" oninput="myFunction(event)" class="form-control " >
-                                                            <option disabled selected value="" >Select Body Style</option>
-                                                            <?php
+                                    <option disabled selected value="" >Select Body Style</option>
+                                    <?php
                                                                 // include_once "includes/database.php";
-                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                                        if($data[0]!=NULL) echo "<option value=\"".$data[0]."\">".$data[0]."</option>";
-                                                                    }
-                                                                    fclose($handle);
-                                                                }
-                                                            ?>
-                                                        </select>
-                                    </div>
-                                </div> 
+                                    if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                            if($data[0]!=NULL) echo "<option value=\"".$data[0]."\">".$data[0]."</option>";
+                                        }
+                                        fclose($handle);
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div> 
 
 
-                                <div class="form-group row">
-                                    <label for="qap_part" class="col-3 col-form-label">Engine Size <span class="text-danger">*</span></label>
-                                    <div class="col-9">
+                        <div class="form-group row">
+                            <label for="qap_part" class="col-3 col-form-label">Engine Size <span class="text-danger">*</span></label>
+                            <div class="col-9">
                                 <select name="engine_size" id="engine_size" oninput="myFunction(event)" class="form-control " >
-                                                            <option disabled selected value="" >Select Engine Size</option>
-                                                            <?php
+                                    <option disabled selected value="" >Select Engine Size</option>
+                                    <?php
                                                                 // include_once "includes/database.php";
-                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                                        if($data[2]!=NULL) echo "<option value=\"".$data[2]."\">".$data[2]."</option>";
-                                                                    }
-                                                                    fclose($handle);
-                                                                }
-                                                            ?>
-                                                        </select>
-                                </div>
-                                </div> 
+                                    if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                            if($data[2]!=NULL) echo "<option value=\"".$data[2]."\">".$data[2]."</option>";
+                                        }
+                                        fclose($handle);
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div> 
 
 
-                                 <div class="form-group row">
-                                    <label for="qap_part" class="col-3 col-form-label">Transmission<span class="text-danger">*</span></label>
-                                    <div class="col-9">
+                        <div class="form-group row">
+                            <label for="qap_part" class="col-3 col-form-label">Transmission<span class="text-danger">*</span></label>
+                            <div class="col-9">
                                 <select name="transmission_type" id="transmission_type" oninput="myFunction(event)" class="form-control " >
-                                                            <option disabled selected value="" >Select Transmission Type</option>
-                                                            <?php
+                                    <option disabled selected value="" >Select Transmission Type</option>
+                                    <?php
                                                                 // include_once "includes/database.php";
-                                                                if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
-                                                                    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                                                                        if($data[4]!=NULL) echo "<option value=\"".$data[4]."\">".$data[4]."</option>";
-                                                                    }
-                                                                    fclose($handle);
-                                                                }
-                                                            ?>
-                                                        </select>
-                                </div>
-                                </div>
+                                    if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
+                                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                                            if($data[4]!=NULL) echo "<option value=\"".$data[4]."\">".$data[4]."</option>";
+                                        }
+                                        fclose($handle);
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
 
 
-                                <div class="form-group row">
-                                    <label for="qap_year" class="col-3 col-form-label">Vin Number<span class="text-danger "></span></label>
-                                    <div class="col-9">
+                        <div class="form-group row">
+                            <label for="qap_year" class="col-3 col-form-label">Vin Number<span class="text-danger "></span></label>
+                            <div class="col-9">
                                 
                                 <input class="form-control" size="25" class="custom-select" name="vim_num" placeholder="Vin Number (optional)" type="text">
                                 
 
-                                 </div>
-                                </div>  
+                            </div>
+                        </div>  
 
 
-                                 <div class="col-md-6 col-sm-12 no-pad float-left">
-                                <div class="form-group row">
-                                    <span class="customername d-none">
-                                        
-                                    </span>
-                                    <label for="customername" class="col-3 col-form-label">Name <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <input class="form-control" type="text" id="customername" name="customername"  placeholder="Enter Your Name" />
-                                    </div>
-                                </div>
-
-
-                                <div style="position: relative;width: 100%;"><div class='col-md-12 pull-left d-none' id='pmsg'></div></div>
-                                <div class="form-group row">
-                                    <span class="email d-none">
-                                        
-                                    </span>
-                                    <label for="email" class="col-3 col-form-label">Email <span class="text-danger">*</span></label>
-                                    <div class="col-9">
-                                        <input class="form-control" type="email" id="email" name="email" placeholder="Enter Your Email" />
-                                    </div>
-                                </div>
-
-
-                                
-
-                                <div class="form-group row">
-                                    <div class="col-md-7 offset-md-5 col-sm-12 text-right">
-                                        <button type="submit" class="btn btn-custom">Get Quote </button>
-                                    </div>
+                        <div class="col-md-6 col-sm-12 no-pad float-left">
+                            <div class="form-group row">
+                                <span class="customername d-none">
+                                    
+                                </span>
+                                <label for="customername" class="col-3 col-form-label">Name <span class="text-danger">*</span></label>
+                                <div class="col-9">
+                                    <input class="form-control" type="text" id="customername" name="customername"  placeholder="Enter Your Name" />
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>              
-              
+
+
+                            <div style="position: relative;width: 100%;"><div class='col-md-12 pull-left d-none' id='pmsg'></div></div>
+                            <div class="form-group row">
+                                <span class="email d-none">
+                                    
+                                </span>
+                                <label for="email" class="col-3 col-form-label">Email <span class="text-danger">*</span></label>
+                                <div class="col-9">
+                                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter Your Email" />
+                                </div>
+                            </div>
+
+
+                            
+
+                            <div class="form-group row">
+                                <div class="col-md-7 offset-md-5 col-sm-12 text-right">
+                                    <button type="submit" class="btn btn-custom">Get Quote </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>              
+            
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ***** Features Events Area Start ***** -->
+<section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                
             </div>
         </div>
-    </section>
 
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Testimonial Slider from Baamboo Studio modified for The Mentor Group (http://www.mentor-group.com/clients--testimonials.html) -->
 
-
-    <!-- ***** Features Events Area Start ***** -->
-    <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Testimonial Slider from Baamboo Studio modified for The Mentor Group (http://www.mentor-group.com/clients--testimonials.html) -->
-
-                    <!-- TestimonialS Slider - Free Weebly Widget by Baamboo Studio - Style 2 -->
+                <!-- TestimonialS Slider - Free Weebly Widget by Baamboo Studio - Style 2 -->
                     <!-- <div class="testimonial_slider_2">
                         <input type="radio" name="slider_2" id="slide_2_1" checked />
                         <input type="radio" name="slider_2" id="slide_2_2" />
@@ -582,156 +582,156 @@ $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_m
     <!-- ***** Features Events Area End ***** -->
 
     <!-- ***** Clients Area Start ***** -->
-   <section class="partnersdiv">
+    <section class="partnersdiv">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                   <div class="regular slider">
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/Ford-logo.png" alt="FORD" />
-                            </div>
+                 <div class="regular slider">
+                    <div>
+                        <div class="item">
+                            <img src="img/partnerslogos/Ford-logo.png" alt="FORD" />
                         </div>
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/Chevrolet-logo.png" alt="CHEVROLET" />
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/volkswagen-logo.jpeg" alt="VOLKSWAGON" />
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/Toyota-Logo.jpg" alt="TOYOTA" />
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/audi.png" alt="AUDI" />
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/dodge-logo.png" alt="DODGE" />
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item">
-                                <img src="img/partnerslogos/BMW.png" alt="BMW" />
-                            </div>
-                        </div>
-                       
                     </div>
+                    <div>
+                        <div class="item">
+                            <img src="img/partnerslogos/Chevrolet-logo.png" alt="CHEVROLET" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                            <img src="img/partnerslogos/volkswagen-logo.jpeg" alt="VOLKSWAGON" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                            <img src="img/partnerslogos/Toyota-Logo.jpg" alt="TOYOTA" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                            <img src="img/partnerslogos/audi.png" alt="AUDI" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                            <img src="img/partnerslogos/dodge-logo.png" alt="DODGE" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                            <img src="img/partnerslogos/BMW.png" alt="BMW" />
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ***** Clients Area End ***** -->
+    </div>
+</section>
+<!-- ***** Clients Area End ***** -->
 
-    <!-- ****** Footer Area Start ****** -->
-    <?php include_once 'includes/footer.php'; ?>
-    <!-- ****** Footer Area End ****** -->
+<!-- ****** Footer Area Start ****** -->
+<?php include_once 'includes/footer.php'; ?>
+<!-- ****** Footer Area End ****** -->
 
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap-4 js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/others/plugins.js"></script>
-    <!-- Active JS -->
-    <script src="js/active.js"></script>
+<!-- jQuery-2.2.4 js -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/bootstrap/popper.min.js"></script>
+<!-- Bootstrap-4 js -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- All Plugins js -->
+<script src="js/others/plugins.js"></script>
+<!-- Active JS -->
+<script src="js/active.js"></script>
 
 
-  
+
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>
-        <script src="slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script></pre>
-        <script type="text/javascript">
-            new WOW().init();
-            $(document).ready(function() {
-                
-                $(".regular").slick({
-                    dots: false,
-                    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fa fa-chevron-left"></i></button>',
-                    nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fa fa-chevron-right"></i></button>',
-                    speed: 300,
-                    infinite: true,
-                    autoplay: true,
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-                     responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 5,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: false
-                      }
-                    },
-                    {
-                      breakpoint: 600,
-                      settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 2
-                      }
-                    },
-                    {
-                      breakpoint: 480,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                      }
-                    }
+<script src="slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script></pre>
+<script type="text/javascript">
+    new WOW().init();
+    $(document).ready(function() {
+        
+        $(".regular").slick({
+            dots: false,
+            prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fa fa-chevron-left"></i></button>',
+            nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fa fa-chevron-right"></i></button>',
+            speed: 300,
+            infinite: true,
+            autoplay: true,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false
+            }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2
+        }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+    }
+}
                     // You can unslick at a given breakpoint now by adding:
                     // settings: "unslick"
                     // instead of a settings object
-                  ]
+                    ]
                 });
-                $('.responsive').slick({
-                  dots: false,
-                  infinite: true,
-                  speed: 300,
-                  autoplay: true,
-                  arrows:false,
-                  slidesToShow: 4,
-                  slidesToScroll: 1,
-                  responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: false
-                      }
-                    },
-                    {
-                      breakpoint: 600,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                      }
-                    },
-                    {
-                      breakpoint: 480,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                      }
-                    }
+        $('.responsive').slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          autoplay: true,
+          arrows:false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          responsive: [
+          {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: false
+            }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+        }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+    }
+}
                     // You can unslick at a given breakpoint now by adding:
                     // settings: "unslick"
                     // instead of a settings object
-                  ]
+                    ]
                 });
-            });  
-        </script>
+    });  
+</script>
 
 
 </body>
