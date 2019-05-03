@@ -1,3 +1,32 @@
+<?php
+include_once 'includes/mailer.php';
+
+if( isset($_GET['maker']) && isset($_GET['part']) && isset($_GET['year']) && isset($_GET['body_style']) && isset($_GET['engine_liter']) && isset($_GET['engine_size']) && isset($_GET['turbo_charge']) && isset($_GET['transmission_type']) && isset($_GET['fuel_type']) && isset($_GET['name']) && isset($_GET['phone']) && isset($_GET['email']) && isset($_GET['zip'])){
+
+        if ( isset($_GET['vin_number']) && isset($_GET['message']) ) {
+            echo 'vin and message';
+
+            
+            $maildata1 = main_form_data($_GET['maker'], '', $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], $_GET['vin_number'], $_GET['message'], $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+        }
+        elseif ( isset($_GET['message']) && !isset($_GET['vin_number'])) {
+            echo 'vin';
+            
+            $maildata2 = main_form_data($_GET['maker'], '', $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], '', $_GET['message'], $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+        }
+        elseif ( isset($_GET['vin_number']) && !isset($_GET['message'])) {
+            echo 'message';
+            
+            $maildata3 = main_form_data($_GET['maker'], '', $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], $_GET['vin_number'], '', $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+        }
+        else{
+            echo 'vin 1and message1';
+            
+            $maildata4 = main_form_data($_GET['maker'], '', $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], '','', $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
+        }
+    }
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +100,7 @@
             <div class="row">
                 <div class="col-md-10 offset-md-1 col-sm-12">
                     <div class="contdivtxt">
-                        <div class="captionh5 text-red text-left"><strong><?php echo $_GET['year']." ".$_GET['maker']." ".$_GET['model']." ".$_GET['part']; ?></strong></div>
+                        <div class="captionh5 text-red text-left"><strong><?php echo $_GET['year']." ".$_GET['maker']." ".$_GET['part']; ?></strong></div>
                         <p class="text-black">Hey, Thanks for your Part Request. For the fastest service and quote, call us at <span><a href="tel:1-866-293-3731" class="text-red"><strong>1-866-293-3731</strong></a></span> during the hours of 9am to 6pm Central Time - Monday to Saturday</p>
                     </div>
                 </div>

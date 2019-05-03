@@ -222,8 +222,8 @@
                                                         <input type="hidden" name="model" id="model" value="<?php echo $_GET['model']; ?>">
                                                         <input type="hidden" name="part" id="part" value="<?php echo $_GET['part']; ?>">
                                                         <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
-                                                        <input class="text_box" size="25" class="custom-select" name="" style="height: 52px; border-radius: 5px; margin-top: 10px; margin-right: 10px; color: #72728c; font-size: 12px; font-weight: 600;" class="custom-select" placeholder="VIN Number (optional)" type="text"></li><li>
-                                                        <input class="text_box" size="25" class="custom-select"  style="height: 52px; border-radius: 5px; margin-top: 10px; margin-right: 10px; color: #72728c; font-size: 12px; font-weight: 600;" name="" placeholder="Message (optional)" type="text">
+                                                        <input class="text_box" size="25" class="custom-select" name="vin_number" id="vin_number" style="height: 52px; border-radius: 5px; margin-top: 10px; margin-right: 10px; color: #72728c; font-size: 12px; font-weight: 600;" class="custom-select" placeholder="VIN Number (optional)" type="text"></li><li>
+                                                        <input class="text_box" size="25" class="custom-select"  style="height: 52px; border-radius: 5px; margin-top: 10px; margin-right: 10px; color: #72728c; font-size: 12px; font-weight: 600;" name="message" id="message" placeholder="Message (optional)" type="text">
                                                 <button type="submit" class="btn dorne-btn" style="    margin-top: 10px;"><i></i> Get Quote</button></li></ul>
                                             </form>
                                         </center>

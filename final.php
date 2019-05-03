@@ -1,13 +1,4 @@
 <?php
-include_once 'includes/mailer.php';
-
-if( isset($_GET['make']) && isset($_GET['model']) && isset($_GET['part_name']) && isset($_GET['year']) && isset($_GET['body_style']) && isset($_GET['engine_liter']) && isset($_GET['engine_size']) && isset($_GET['turbo_charge']) && isset($_GET['transmission_type']) && isset($_GET['fuel_type']) && isset($_GET['vin_number']) && isset($_GET['message']) && isset($_GET['name']) && isset($_GET['phone']) && isset($_GET['email']) && isset($_GET['zip'])) {
-    $maildata = main_form_data($_GET['make'], $_GET['model'], $_GET['part_name'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], $_GET['vin_number'], $_GET['message'], $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
-}
-
- ?>
-
-<?php
     function ifExists($conn, $inv_id, $year_id) {
         $sql = "SELECT opt_id FROM tbl_part_details WHERE inv_id=\"".$inv_id."\" AND year_id=\"".$year_id."\"";
         $result = $conn->query($sql);
@@ -241,6 +232,19 @@ if( isset($_GET['make']) && isset($_GET['model']) && isset($_GET['part_name']) &
                         <input type="hidden" name="turbo_charge" id="qap_turbo_charge" value=<?php echo "\"".$_GET["turbo_charge"]."\""?>>
                         <input type="hidden" name="transmission_type" id="qap_transmission_type" value=<?php echo "\"".$_GET["transmission_type"]."\""?>>
                         <input type="hidden" name="fuel_type" id="qap_fuel_type" value=<?php echo "\"".$_GET["fuel_type"]."\""?>>
+                        <?php
+                            if(isset($_GET['vin_number'])){
+
+                        ?>
+                        <input type="hidden" name="vin_number" id="qap_vin_number" value=<?php echo "\"".$_GET["vin_number"]."\""?>>
+                        <?php
+                        }
+
+                        if(isset($_GET['message'])) {
+                        ?>
+                        <input type="hidden" name="message" id="qap_message" value=<?php echo "\"".$_GET["message"]."\""?>>
+
+                        <?php } ?>
 
 
 
