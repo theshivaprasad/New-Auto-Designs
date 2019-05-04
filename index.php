@@ -306,7 +306,110 @@
     <!-- ***** Editor Pick Area End ***** -->
 
     <!-- ***** Features Products Area Start ***** -->
-     <section class="dorne-features-restaurant-area bg-default">
+    <section class="dorne-features-restaurant-area bg-default">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                      <div class="section-heading text-center">
+                        <span></span>
+                        <h4>Products</h4>
+                        <p>Most Popular..!!</p>
+                    </div>
+
+            <div class="row">
+                <div class="col-12">  
+                   <div class="regular slider">
+
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                               <a href="parts.php?part=Engine"><img src="images/parts/Engine.png" alt="Engine" />
+                                <div class="pdtname">Engine</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                <a href="parts.php?part=Transmission"> <img src="images/parts/Transmission.png" alt="Transmission" /></a>
+                                <div class="pdtname">Transmission</div> 
+                                 </div>
+                        </div> 
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                <a href="parts.php?part=ECM or ECU Engine"><img src="images/parts/ECM or ECU Engine.png" alt="Electronic-Control-Module" /></a>
+                                <div class="pdtname">ECM/ECU Engine</div>
+                                 </div>
+                        </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
+                                 <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                <a href="parts.php?part=Temperature Control Module"><img src="images/parts/Temperature Control Module.png" alt="Temperature-Control-Module" /></a>
+                                <div class="pdtname">Temperature Control Module</div>
+                                   </div>
+                        </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                <a href="parts.php?part=Front Bumper"><img src="images/parts/Front Bumper.png" alt="Front-Bumper" /></a>
+                                <div class="pdtname">Front Bumper</div> 
+                            </div>
+                             </div>
+                        </div>
+                        </div>
+                        <div>
+                           <div class="col-md-12 col-sm-12 pdtdiv cursor">
+                            <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                               <a href="parts.php?part=Front End Assembly"><img src="images/parts/Front End Assembly.png" alt="Front-End-Assembly" /></a>
+                               <div class="pdtname">Front End Assembly</div>
+                            </div>
+                             </div>
+                        </div>
+                        </div>
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                 <a href="parts.php?part=Axle Shaft"><img src="images/parts/Axle Shaft.png" alt="Axle-Shaft" /></a>
+                                 <div class="pdtname">Axle Shaft</div> 
+                            </div>
+                             </div>
+                        </div>
+                        </div>
+                        <div>
+                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
+                                <div class="popularpdt">
+                                    <div class="popularpdt-image">
+                                 <a href="parts.php?part=Strut">  <img src="images/parts/Strut.png" alt=" Strut" /></a>
+                                 <div class="pdtname">Strut</div> 
+                            </div>
+                        </div>
+                         </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- <section class="dorne-features-restaurant-area bg-default">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -319,11 +422,7 @@
             </div>
 
             <div class="row">
-                <div class="col-12">
-
-                    <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="display: block;"><i class="fa fa-chevron-left"></i></button>
-                    <button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: block;"><i class="fa fa-chevron-right"></i></button>  
-                    <div class="responsive slider">  
+                <div class="col-12">  
                                   
                         <div>
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
@@ -443,7 +542,7 @@
                 
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ***** Features Restaurant Area End ***** -->
 
     <!-- ***** Features Events Area Start ***** -->
