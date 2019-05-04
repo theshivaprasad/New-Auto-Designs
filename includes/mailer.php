@@ -46,13 +46,14 @@ try {
 
     //Recipients
     $mail->setFrom('vinayprathap5@gmail.com', 'WebApp Query');
-    // $mail->addAddress('enquiry@autopartswolf.com', 'WebApp Enquiry');    
+    // $mail->addAddress('rumanpasha.ruman@gmail.com', 'WebApp Enquiry');    
      $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry'); // Add a recipient
-   /* $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
+     $mail->addAddress('rumanpasha.ruman@gmail.com', 'WebApp Enquiry');
+    /*$mail->addAddress('rumanpasha.ruman@gmail.com', 'WebApp Enquiry 2');*/               // Name is optional
+    /*$mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
-    $mail->addBCC('bcc@example.com');
-*/
+    $mail->addBCC('bcc@example.com');*/
+
     // Attachments
    /* $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
     $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
@@ -115,8 +116,8 @@ try {
 
     //Recipients
     $mail->setFrom('vinayprathap5@gmail.com', 'WebApp Query');
-    // $mail->addAddress('enquiry@autopartswolf.com', 'WebApp Enquiry');    
-     $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry'); // Add a recipient
+     $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry');    
+     $mail->addAddress('rumanpasha.ruman@gmail.com', 'WebApp Enquiry'); // Add a recipient
    /* $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
@@ -130,10 +131,10 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Car make Forms';
     $mail->Body    = '
-Message \t:$message\n
-Name \t:$name\n
-Email \t:$email\n
-subject \t:$subject\n';
+Message <br>'.$message.'\n
+Name <br>'.$name.'\n
+Email <br>'.$email.'\n
+subject <br>'.$subject.'\n'.('Mail id='.'<--'.(idate("U")).uniqid()).'-->';
     $mail->AltBody = 'Make \t: $make\nModel \t:$model\n This is the body in plain text for non-HTML mail clients';
 
     $mail->send();

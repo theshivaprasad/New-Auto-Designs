@@ -320,7 +320,11 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="responsive slider">             
+
+                    <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="display: block;"><i class="fa fa-chevron-left"></i></button>
+                    <button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: block;"><i class="fa fa-chevron-right"></i></button>  
+                    <div class="responsive slider">  
+                                  
                         <div>
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
@@ -427,7 +431,7 @@
                                     </div>
                                     <div class="popularpdt-content">
                                         <div class="pdtname">Strut</div>                  
-                                                                                
+                                                                            
                                     </div>
                                 </div>
                             </div>
@@ -699,7 +703,7 @@
               dots: false,
               infinite: true,
               speed: 300,
-              autoplay: true,
+              autoplay: false,
               arrows:false,
               slidesToShow: 4,
               slidesToScroll: 1,
@@ -709,7 +713,7 @@
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    infinite: true,
+                    infinite: false,
                     dots: false
                   }
                 },
