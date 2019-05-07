@@ -224,7 +224,6 @@
                         <input type="hidden" name="maker" id="qap_make" value=<?php echo "\"".$_GET["maker"]."\""?>>
                         <input type="hidden" name="model" id="qap_model" value=<?php echo "\"".$_GET["model"]."\""?>>
                         <input type="hidden" name="part" id="qap_part" value=<?php echo "\"".$_GET["part"]."\""?>>
-                        <input type="hidden" name="qap_part_url" id="qap_part_url" value=''>
                         <input type="hidden" name="year" id="qap_year" value=<?php echo "\"".$_GET["year"]."\""?>>
                         <input type="hidden" name="body_style" id="qap_body_style" value=<?php echo "\"".$_GET["body_style"]."\""?>>
                         <input type="hidden" name="engine_liter" id="qap_engine_liter" value=<?php echo "\"".$_GET["engine_liter"]."\""?>>
@@ -312,7 +311,7 @@
                         <h4>Client Testimonials</h4>
                     <p>Editor's pick</p>
                     </div>
-                    <div style="overflow: hidden;">
+                    <div style="overflow-x: hidden;">
                         <div class="item-1">
                             <div>
                                <p style="color: #fff">Lorem Ipsum is simply dummy text of the printing and typeseto f and typesetting industry. to the Lorem Ipsum has been the industry's printer a galley</p> 

@@ -242,7 +242,7 @@ select {
     margin:10px 0px;
     text-align:center;
     border-radius:8px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .form-banner-contact h2 {
     font-family: 'Montserrat', sans-serif;
@@ -467,13 +467,14 @@ select {
     padding:15px;
 }
 .pdtname {
-    font-size: 12pt;
+    font-size: 18pt;
     font-weight: bolder;
-    overflow: hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
-    height: 50px;
+    height: 150px;
     word-break:  break-all;
     color: #7643ea;
+    padding-top: 50px;
 }
 .popularpdt-content p {
     color:#000000;
@@ -624,7 +625,7 @@ transform: scale(1.1,1.1);
 
 .testimonial_slider_2 {
     width: 208%;
-    overflow: hidden;
+    overflow-x: hidden;
     box-sizing: border-box;
     padding-bottom: 30px;
 }
@@ -827,6 +828,7 @@ transform: scale(1.1,1.1);
 .partnersdiv {
     padding:15px;
     background:#fff;
+    height: 100px;
 }
 .item  {
     border: none;

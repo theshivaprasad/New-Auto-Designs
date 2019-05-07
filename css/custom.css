@@ -246,7 +246,7 @@ select {
 	margin:10px 0px;
 	text-align:center;
 	border-radius:8px;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 .form-banner-contact h2 {
 	font-family: 'Montserrat', sans-serif;
@@ -473,7 +473,7 @@ select {
 .pdtname {
 	font-size: 12pt;
 	font-weight: bolder;
-	overflow: hidden;
+	overflow-x: hidden;
 	text-overflow: ellipsis;
 	height: 50px;
 	word-break:  break-all;
@@ -507,7 +507,7 @@ select {
     color: #88c200;
     font-weight: 400;
     text-transform: uppercase;
-    overflow: hidden;
+    overflow-x: hidden;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
@@ -628,7 +628,7 @@ transform: scale(1.1,1.1);
 
 .testimonial_slider_2 {
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     box-sizing: border-box;
     padding-bottom: 30px;
 }
@@ -747,7 +747,7 @@ transform: scale(1.1,1.1);
     text-decoration: none;
     position: relative;
     padding-bottom: 1px;
-    overflow: hidden;
+    overflow-x: hidden;
     border-bottom: 1px solid;
 }
 

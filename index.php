@@ -122,6 +122,27 @@
         }
     }
     </style>
+    <script>
+        var fixmeTop = $('.fixme').offset().top;       // get initial position of the element
+
+$(window).scroll(function() {                  // assign scroll event listener
+
+    var currentScroll = $(window).scrollTop(); // get current position
+
+    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+        $('.fixme').css({                      // scroll to that element or below it
+            position: 'fixed',
+            top: '0',
+            left: '0'
+        });
+    } else {                                   // apply position: static
+        $('.fixme').css({                      // if you scroll above it
+            position: 'static'
+        });
+    }
+
+});
+    </script>
 </head>
 
 <body >
@@ -150,7 +171,7 @@
     <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg);">
         <!-- Hero Social Btn -->
         <canvas id="effect-js"></canvas><h1 style="text-align: center; color:#f3f3f3; margin-top:-52px; font-family:'Orbitron',cursive; font-size: 30px">“Our Motto; <span style="color:white;">Right Part</span> at the <span style="color:white;">Right Price</span>, every time for everyone”</h1> 
-        <div class="glowing"> <button class="btn btn1"> Call Now : 1-888-892-9092</button></div>
+        <div class="glowing" id="fixme"> <button class="btn btn1"> Call Now : 1-888-892-9092</button></div>
         <div id="particles-js"></div>
     </section>
     <!-- ***** Welcome Area End ***** -->
@@ -172,7 +193,7 @@
                                     <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                                         <center>
                                             <form action="new-form.php" method="get">
-                                                <select name="maker" id="maker" required class="custom-select" required>
+                                                <select name="maker" id="maker" class="custom-select" required>
                                                     <option disabled selected value="">Select Maker</option>
                                                     <?php
                                                         include_once "includes/database.php";
@@ -324,7 +345,7 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                               <a href="parts.php?part=Engine"><img src="images/parts/Engine.png" alt="Engine" />
+                               <a href="maker1.php?part=Engine"><img src="images/parts/Engine.png" alt="Engine" />
                                 <div class="pdtname">Engine</div>
                             </div>
                         </div>
@@ -334,7 +355,7 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                <a href="parts.php?part=Transmission"> <img src="images/parts/Transmission.png" alt="Transmission" /></a>
+                                <a href="maker1.php?part=Transmission"><img src="images/parts/Transmission.png" alt="Transmission" /></a>
                                 <div class="pdtname">Transmission</div> 
                                  </div>
                         </div> 
@@ -345,7 +366,7 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                <a href="parts.php?part=ECM or ECU Engine"><img src="images/parts/ECM or ECU Engine.png" alt="Electronic-Control-Module" /></a>
+                                <a href="maker1.php?part=ECM or ECU Engine"><img src="images/parts/ECM or ECU Engine.png" alt="Electronic-Control-Module" /></a>
                                 <div class="pdtname">ECM/ECU Engine</div>
                                  </div>
                         </div>
@@ -356,7 +377,7 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                  <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                <a href="parts.php?part=Temperature Control Module"><img src="images/parts/Temperature Control Module.png" alt="Temperature-Control-Module" /></a>
+                                <a href="maker1.php?part=Temperature Control Module"><img src="images/parts/Temperature Control Module.png" alt="Temperature-Control-Module" /></a>
                                 <div class="pdtname">Temperature Control Module</div>
                                    </div>
                         </div>
@@ -367,7 +388,7 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                <a href="parts.php?part=Front Bumper"><img src="images/parts/Front Bumper.png" alt="Front-Bumper" /></a>
+                                <a href="maker1.php?part=Front Bumper"><img src="images/parts/Front Bumper.png" alt="Front-Bumper" /></a>
                                 <div class="pdtname">Front Bumper</div> 
                             </div>
                              </div>
@@ -377,7 +398,7 @@
                            <div class="col-md-12 col-sm-12 pdtdiv cursor">
                             <div class="popularpdt">
                                     <div class="popularpdt-image">
-                               <a href="parts.php?part=Front End Assembly"><img src="images/parts/Front End Assembly.png" alt="Front-End-Assembly" /></a>
+                               <a href="maker1.php?part=Front End Assembly"><img src="images/parts/Front End Assembly.png" alt="Front-End-Assembly" /></a>
                                <div class="pdtname">Front End Assembly</div>
                             </div>
                              </div>
@@ -387,7 +408,7 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                 <a href="parts.php?part=Axle Shaft"><img src="images/parts/Axle Shaft.png" alt="Axle-Shaft" /></a>
+                                 <a href="maker1.php?part=Axle Shaft"><img src="images/parts/Axle Shaft.png" alt="Axle-Shaft" /></a>
                                  <div class="pdtname">Axle Shaft</div> 
                             </div>
                              </div>
@@ -397,7 +418,7 @@
                             <div class="col-md-12 col-sm-12 pdtdiv cursor">
                                 <div class="popularpdt">
                                     <div class="popularpdt-image">
-                                 <a href="parts.php?part=Strut">  <img src="images/parts/Strut.png" alt=" Strut" /></a>
+                                 <a href="maker1.php?part=Strut">  <img src="images/parts/Strut.png" alt=" Strut" /></a>
                                  <div class="pdtname">Strut</div> 
                             </div>
                         </div>
@@ -767,7 +788,7 @@
                 speed: 300,
                 infinite: true,
                 autoplay: true,
-                slidesToShow: 6,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                  responsive: [
                 {

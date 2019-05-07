@@ -74,7 +74,7 @@
                                     $i++;
                                     continue;
                                 }
-                                echo "<li><a href=\"maker.php?maker=".$row["maker"]."\" title=\"".$row["maker"]."\">".$row["maker"]."</a></li>";
+                                echo "<li><a href=\"maker1.php?maker=".$row["maker"]."\" title=\"".$row["maker"]."\">".$row["maker"]."</a></li>";
                                } 
                             ?>
                             
@@ -101,7 +101,7 @@
                               $result=$conn->query($sql);
                               while ($row=$result->fetch_assoc()) {
                                 //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
-                                echo "<li><a href=\"parts.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\" >Used OEM ".$row["part"]."</a></li>";
+                                echo "<li><a href=\"maker1.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\" >Used OEM ".$row["part"]."</a></li>";
                                 //}
                                } 
                             ?>
@@ -221,7 +221,7 @@
             </div>
         </div>-->
     </section>
-    <!-- ***** Features Events Area End ***** 
+    <!-- ***** Features Events Area End ***** -->
 
     <!-- ***** Clients Area Start ***** -->
    <section class="partnersdiv">

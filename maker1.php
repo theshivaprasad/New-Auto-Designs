@@ -82,12 +82,11 @@ function extractInvId($conn, $part_id, $model_id) {
         }
     }
 }
-if (isset($_GET["year"])) {
-    if (!empty($_GET["year"])) {
-      header("Location: final.php?year=".$_GET["year"]."&maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]." ");
-  }
-}
-if (isset($_GET["maker"])) {
+// if (isset($_GET["year"])) {
+//     if (!empty($_GET["year"])) {
+//       header("Location: final.php?year=".$_GET["year"]."&maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$_GET["part"]." ");
+//   }
+// }
 
     ?>
     <!DOCTYPE html>
@@ -161,7 +160,7 @@ if (isset($_GET["maker"])) {
                     <div class="search-close-btn" id="closeBtn">
                         <i class="pe-7s-close-circle" aria-hidden="true"></i>
                     </div>
-                    <form action="#" method="get">
+                    <form action="maker2.php" method="get">
                         <input type="search" name="caviarSearch" id="search" placeholder="Search Your Desire Destinations or Events">
                         <input type="submit" class="d-none" value="submit">
                     </form>
@@ -198,43 +197,68 @@ if (isset($_GET["maker"])) {
         <div class="explore-search-area d-md-flex">
             <!-- Explore Search Form -->
             <div class="explore-search-form scroll">
-                <h6>FIND THE PART NOW</h6>
+                <h6>
+                    <?php 
+                        if(isset($_GET['maker'])) { 
+                            echo "FIND THE PART FOR ".strtoupper($_GET['maker']); 
+                        }
+                        elseif (isset($_GET['maker_name'])) {
+                            echo "FIND THE PART FOR ".strtoupper($_GET['maker_name']); 
+                        }
+                        elseif (isset($_GET['maker_model'])) {
+                            echo "FIND THE PART FOR ".strtoupper($_GET['maker_model']);
+                        }
+                        else{
+                            echo "FIND THE PART NOW";
+                        }
+                    ?>
+                </h6>
                 <!-- Tabs -->
                 <!-- Tabs Content -->
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                        <form action="maker.php" method="GET">
 
-                            <select name="maker" class="custom-select" id="maker" onchange="myFunction(event)">
-                               <option disabled selected>Maker</option>
-                               <?php
-                               include_once "includes/database.php";
-                               $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
-                               $result=$conn->query($sql);
+                        <?php
+                            if (isset($_GET['maker']) || isset($_GET['maker_model']) || isset($_GET['part']) && !isset($_GET['year'])){
+                        ?>
 
-                               while ($row=$result->fetch_assoc()) {
-                                echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
-                            }
-                            ?>
-                        </select>
-
-                           <!--  <select name="model" class="custom-select" id="model" oninput="myFunction(event)">
-                                <option disabled selected>Select Model</option>
+                        <form action="maker1.php" method="GET">
+                           <select name="maker_name" class="custom-select" id="maker_name" required>
+                                <option disabled selected value="">Select Model</option>
                                 <?php
-                                $sql="SELECT model_name as model FROM tbl_car_model WHERE maker_id=\"".extractId($conn,'maker',$_GET["maker"])."\"";
+                                //$sql="SELECT model_name as model FROM tbl_car_model WHERE maker_id=\"".extractId($conn,'maker',$_GET["maker"])."\"";
+                                
+                                if(isset($_GET['maker_model'])){
+                                    $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
+                                }
+
+                                elseif(isset($_GET['maker'])) {
+                                    $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model WHERE maker_name = \"".$_GET['maker']."\" ORDER BY maker_name ASC";
+                                }
+                                else{
+                                    $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
+                                }
+
                                 $result=$conn->query($sql);
                                 while ($row=$result->fetch_assoc()) {
-                                    if ($row["model"]==$_GET["model"]) {
-                                      echo "<option selected value=\"".$row['model']."\">".$row['model']."</option>";
-                                  } else {
-                                      echo "<option value=\"".$row['model']."\">".$row['model']."</option>";
-                                  }
+                                  //   if ($row["model"]==$_GET["model"]) {
+                                  //     echo "<option selected value=\"".$row['model']."\">".$row['model']."</option>";
+                                  // } else {
+                                    if(isset($_GET['maker_model'])){
+                                        if($_GET['maker_model'] == $row['maker_name'] ){
+                                            echo "<option value=\"".$row['maker_name']."\" selected>".$row['maker_name']."</option>";
+                                            continue;
+                                        }
+                                    }
+                                    echo "<option value=\"".$row['maker_name']."\">".$row['maker_name']."</option>";
+                                    
+                                  // }
                               }
                               ?>
-                          </select> -->
+                          </select>
 
-                          <select name="part" class="custom-select" id="part" oninput="myFunction(event)">
-                             <option disabled selected>Select Part</option>
+                          <select name="part" class="custom-select" id="part" required>
+                             <option disabled selected value="">Select Part</option>
                              <?php
                              include_once "includes/database.php";
 
@@ -243,22 +267,39 @@ if (isset($_GET["maker"])) {
                              $result=$conn->query($sql);
 
                              while ($row=$result->fetch_assoc()) {
+                                if(isset($_GET['part'])){
+                                    if($_GET['part'] == $row['part_name_ui']){
+                                        echo "<option value=\"".$row['part_name_ui']."\" selected>".$row['part_name_ui']."</option>";
+                                        continue;
+                                    }
+                                }
                                 echo "<option value=\"".$row['part_name_ui']."\">".$row['part_name_ui']."</option>";
                             }
                             ?>
                         </select>
 
-                        <select name="year" class="custom-select" id="year">
-                           <option disabled selected>Select Year</option>
+                        <select name="year" class="custom-select" id="year" required>
+                           <option disabled selected value="">Select Year</option>
                            <?php
                            for($year = 1970; $year <= 2019 ; $year++) {
                             echo "<option value=\"".$year."\">".$year."</option>";
                         }
                         ?>
                     </select>
+                    <?php
+                        }
 
-                    <select name="body_style" id="body_style" class="custom-select">
-                        <option disabled selected >Select Body Style</option>
+                        if( isset($_GET['maker_name']) && isset($_GET['part']) && isset($_GET['year']) && !isset($_GET['body_style']) && !isset($_GET['engine_liter']) && !isset($_GET['transmission_type']) && !isset($_GET['turbo_charge']) && !isset($_GET['fuel_type']) && !isset($_GET['engine_size']) ){
+
+                    ?>
+                    <form action="maker1.php" method="GET">
+                    <input type="hidden" name="maker_name" id="maker_name" value="<?php echo $_GET['maker_name']; ?>">
+                    <input type="hidden" name="part" id="part" value="<?php echo $_GET['part']; ?>">
+                    <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+
+                    <select name="body_style" id="body_style" class="custom-select" required>
+                        <option disabled selected value="">Select Body Style</option>
                         <?php
                                                                 // include_once "includes/database.php";
                         if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
@@ -271,8 +312,8 @@ if (isset($_GET["maker"])) {
                     </select>
 
 
-                    <select name="engine_liter" id="engine_liter"  class="custom-select">
-                        <option disabled selected >Select Engine Liter</option>
+                    <select name="engine_liter" id="engine_liter"  class="custom-select" required>
+                        <option disabled selected value="">Select Engine Liter</option>
                         <?php
                                                                 // include_once "includes/database.php";
                         if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
@@ -285,7 +326,7 @@ if (isset($_GET["maker"])) {
                     </select>
 
 
-                    <select name="turbo_charge" id="turbo_charge" class="custom-select">
+                    <select name="turbo_charge" id="turbo_charge" class="custom-select" required>
                         <option disabled selected value="" >Select Turbo Charge</option>
                         <?php
                                                                 // include_once "includes/database.php";
@@ -299,8 +340,8 @@ if (isset($_GET["maker"])) {
                     </select>
 
 
-                    <select name="fuel_type" id="fuel_type" class="custom-select">
-                        <option disabled selected value="" >Select Fuel Type</option>
+                    <select name="fuel_type" id="fuel_type" class="custom-select" required>
+                        <option disabled selected value="">Select Fuel Type</option>
                         <?php
                                                                 // include_once "includes/database.php";
                         if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
@@ -313,8 +354,8 @@ if (isset($_GET["maker"])) {
                     </select>     
 
 
-                    <select name="engine_size" id="engine_size" class="custom-select">
-                        <option disabled selected value="" >Select Engine Size</option>
+                    <select name="engine_size" id="engine_size" class="custom-select" required>
+                        <option disabled selected value="">Select Engine Size</option>
                         <?php
                                                                 // include_once "includes/database.php";
                         if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
@@ -327,8 +368,8 @@ if (isset($_GET["maker"])) {
                     </select>
 
 
-                    <select name="transmission_type" id="transmission_type" class="custom-select">
-                        <option disabled selected value="" >Select Transmission Type</option>
+                    <select name="transmission_type" id="transmission_type" class="custom-select" required>
+                        <option disabled selected value="">Select Transmission</option>
                         <?php
                                                                 // include_once "includes/database.php";
                         if (($handle = fopen("partstype.csv", "r")) !== FALSE) {
@@ -339,45 +380,72 @@ if (isset($_GET["maker"])) {
                         }
                         ?>
                     </select>
+                    <input class="custom-select" size="25" name="vin_num" placeholder="VIN Number (optional)" type="text">
+
+                    <input class="custom-select" size="25" name="message" placeholder="Message (optional)" type="text">
+
+                    <?php
+                        }
+
+                        if( isset($_GET['maker_name']) && isset($_GET['part']) && isset($_GET['year']) && isset($_GET['body_style']) && isset($_GET['engine_liter']) && isset($_GET['transmission_type']) && isset($_GET['turbo_charge']) && isset($_GET['fuel_type']) && isset($_GET['engine_size']) && !isset($_GET['email']) && !isset($_GET['name'])){
+
+                    ?>
+                    <form action="finish.php" method="GET">
+                    <input type="hidden" name="maker" id="maker" value="<?php echo $_GET['maker_name']; ?>">
+                    <input type="hidden" name="part" id="part" value="<?php echo $_GET['part']; ?>">
+                    <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+                    <input type="hidden" name="body_style" id="body_style" value="<?php echo $_GET['body_style']; ?>">
+                    <input type="hidden" name="engine_liter" id="engine_liter" value="<?php echo $_GET['engine_liter']; ?>">
+                    <input type="hidden" name="transmission_type" id="transmission_type" value="<?php echo $_GET['transmission_type']; ?>">
+                    <input type="hidden" name="turbo_charge" id="turbo_charge" value="<?php echo $_GET['turbo_charge']; ?>">
+                    <input type="hidden" name="fuel_type" id="fuel_type" value="<?php echo $_GET['fuel_type']; ?>">
+                    <input type="hidden" name="engine_size" id="engine_size" value="<?php echo $_GET['engine_size']; ?>">
+
+                    <?php
+                        if (isset($_GET['vin_num'])){
+                    ?>
+                    <input type="hidden" name="vin_number" id="vin_number" value="<?php echo $_GET['vin_num']; ?>">
+
+                    <?php
+                        }
+
+                        if (isset($_GET['message'])){
+                    ?>
+                    <input type="hidden" name="message" id="message" value="<?php echo $_GET['message']; ?>">
+
+                    <?php } ?>
 
                     <div>
-                        <input class="form-control" size="25" class="custom-select" name="message" placeholder="Message (optional)" type="text">
+                    <input class="form-control" type="text" id="name" name="name"  placeholder="Enter Your Name" required>
                     </div>
 
                     <br>
 
                     <div>
-                        <input class="form-control" type="tel" id="phone" name="phone" onkeyup="jm_phonemask(this);" onblur="jm_phonemask(this);" placeholder="Enter Your Phone" />
+                        <input class="form-control" type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <input class="form-control" type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 digit Phone" required />
                     </div>
 
 
                     <br>
 
                     <div>
-                        <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="Enter Your Zip" />
+                        <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="5 digit ZIP" required />
                     </div>
 
 
                     <br>
+                <?php } ?>
 
-                    <div>
-                      <input class="form-control" size="25" class="custom-select" name="vim_num" placeholder="Vin Number (optional)" type="text">
-                  </div>
-
-                  <br>
-
-                  <div>
-                    <input class="form-control" type="text" id="customername" name="customername"  placeholder="Enter Your Name" />
-                </div>
-
-                <br>
-
-                <div>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter Your Email" />
-                </div>
+                  
 
 
-                <button type="submit" class="btn dorne-btn mt-50 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
+                <button type="submit" class="btn dorne-btn mt-501 bg-white text-dark part2"><i class="fa fa-search pr-2" aria-hidden="true"></i>Get Quote</button>
             </form>
         </div>
     </div>
@@ -392,10 +460,39 @@ if (isset($_GET["maker"])) {
             <!-- flag101 -->
 
             <div class="col-md-12 col-sm-12">
-                <div class="reelative"><h2 class="subtitle"><?php echo $_GET['maker']." Used OEM Parts - Buy Quality Parts for ".$_GET['maker']; ?></h2></div>
+                <div class="reelative"><h2 class="subtitle">
+                    <?php 
+                        if(isset($_GET['maker_name'])) {
+                            echo $_GET['maker_name']." Used OEM Parts - Buy Quality Parts for ".$_GET['maker_name'];
+                            if(isset($_GET['part'])){
+                                echo " | ".$_GET['part'];
+                            }
+                        } 
+                        elseif(isset($_GET['maker'])){
+                            echo $_GET['maker']." Used OEM Parts - Buy Quality Parts for ".$_GET['maker'];
+                            if(isset($_GET['part'])){
+                                echo " | ".$_GET['part'];
+                            }
+                        }
+                        elseif (isset($_GET['maker_model'])) {
+                            echo $_GET['maker_model']." Used OEM Parts - Buy Quality Parts for ".strtoupper($_GET['maker_model']);
+                            if(isset($_GET['part'])){
+                                echo " | ".$_GET['part'];
+                            }
+                        }
+                        elseif (isset($_GET['part'])) {
+                            echo " Used OEM ".$_GET['part']." Part - Buy Quality Parts for ".strtoupper($_GET['part']);
+                        }
+                            ?></h2></div>
                 <div class="makecontent">
                     <div class="subbannerproduct cstbanner2">
                         <?php
+                        if(isset($_GET['maker_model'])){
+                            $maker_model_arr = explode(" ", $_GET['maker_model']);
+                        }
+                        else{
+                            $maker_model_arr = array();
+                        }
                         if(isset($_GET["part"])&&glob("images/parts/".$_GET["part"].".png")) {
                             echo "<img src=\"images/parts/".$_GET["part"].".png\">";
                             if(glob("images/parts/".$_GET["part"].".txt")){
@@ -404,16 +501,16 @@ if (isset($_GET["maker"])) {
                                 while (! feof($fh)) {
                                     $s = fgets($fh);
                                     if (("\n" == $s) || ("\r\n" == $s)) {
-                                        echo "<br><br>";
+                                        echo "<br>";
                                     }
                                     echo "$s";
                                 }
                                 echo "</p>";
                                 fclose($fh);
                             }
-                        } else if(isset($_GET["model"])&&glob("images/model/".strtolower($_GET["model"]).".png")) {
-                            echo "<img src=\"images/model/".strtolower($_GET["model"]).".png\">";
-                            if(glob("images/model/".strtolower($_GET["model"]).".txt")){
+                        } else if(isset($_GET["maker_model"])) {
+                            echo "<img src=\"images/model/".strtolower($maker_model_arr[0])."/".strtolower($maker_model_arr[1]).".png\">";
+                            if(glob("images/model/".strtolower($_GET["maker_model"]).".txt")){
                                 echo "<p>";
                                 $fh = fopen("images/model/".strtolower($_GET["model"]).".txt",'r');
                                 while (!feof($fh)) {
@@ -449,7 +546,18 @@ if (isset($_GET["maker"])) {
             </div>
             <div class="col-md-12 col-sm-12">
 
-                <div class="reelative"style="margin-top: 222px"><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
+                <div class="reelative" style="
+                <?php
+                if(isset($_GET['maker_model']) && !isset($_GET['year']) && !isset($_GET['part'])){
+                    echo "margin-top: 50px";
+                }
+                else{
+                    echo "margin-top: 400px";
+                }
+                ?>
+
+
+                "><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
                    echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></p></div></div>
 
                    <div class="make-listpart">
@@ -459,7 +567,7 @@ if (isset($_GET["maker"])) {
                         $result=$conn->query($sql);
                         $numOfRowElements=0;
                         while ($row=$result->fetch_assoc()) {
-                            echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&model=".$row["model"]."\">".$row["model"]."</a></li>";
+                            echo "<li><a href=\"maker1.php?maker_model=".$_GET["maker"]."&model=".$row["model"]."\">".$row["model"]."</a></li>";
                         }
                     } 
                     ?>
@@ -476,11 +584,11 @@ if (isset($_GET["maker"])) {
 
 
                        <?php
-                       $sql="SELECT model_name FROM tbl_temp_make_model WHERE maker_name='".$_GET['maker']."'";
+                       $sql="SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model WHERE maker_name = \"".$_GET['maker']."\" ORDER BY maker_name ASC";
                        $result=$conn->query($sql);
                        while ($row=$result->fetch_assoc()) {
                                 //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
-                        echo "<li><a href=\"index.php?maker=".$_GET['maker']." ".$row["model_name"]."\"  title=\"".$row["model_name"]."\">".$_GET['maker']." ".$row["model_name"]."</a></li>";
+                        echo "<li><a href=\"maker1.php?maker_model=".$row["maker_name"]."\"  title=\"".$row["maker_name"]."\">".$row["maker_name"]."</a></li>";
                                 //}
                     } 
                     ?></ul>
@@ -505,11 +613,19 @@ if (isset($_GET["maker"])) {
 
 
                     <?php
-                    $sql="SELECT part_name_ui as part, part_name_ui as img FROM tbl_car_part_new ORDER BY part_name_ui ASC";
+                    $sql="SELECT part_name_ui as part FROM tbl_car_part_new ORDER BY part_name_ui ASC";
                     $result=$conn->query($sql);
                     while ($row=$result->fetch_assoc()) {
                                 //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
-                        echo "<li><a href=\"parts.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\">Used OEM ".$row["part"]."</a></li>";
+                        echo "<li><a href=\"maker1.php?";
+                        if(isset($_GET['maker_model'])){
+                            echo "maker_model=".$_GET['maker_model']."&";
+                        }
+                        if(isset($_GET['maker'])){
+                            echo "maker=".$_GET['maker']."&";
+                        }
+
+                        echo "part=" .$row["part"]."\"  title=\"Used OEM ".$row["part"]."\">Used OEM ".$row["part"]."</a></li>";
                                 //}
                     } 
                     ?>
@@ -530,7 +646,7 @@ if (isset($_GET["maker"])) {
          $result=$conn->query($sql);
          while ($row=$result->fetch_assoc()) {
             if(isset($_GET['model'])) {
-                echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
+                echo "<li><a href=\"maker1.php?maker=".$_GET["maker"]."&model=".$_GET["model"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
             } else {
                 echo "<li><a href=\"maker.php?maker=".$_GET["maker"]."&part=".$row["part"]."\">".$row["part"]."</a></li>";
             }
@@ -822,8 +938,3 @@ if (isset($_GET["maker"])) {
 </body>
 
 </html>
-<?php
-} else {
-    header("Location: partslist.php");
-}
-?>

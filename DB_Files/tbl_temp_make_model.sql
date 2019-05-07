@@ -779,7 +779,7 @@ INSERT INTO `tbl_temp_make_model` (`id`, `maker_name`, `model_name`) VALUES
 (740, 'Mercedes-benz', '300D'),
 (741, 'Mercedes-benz', '260E'),
 (742, 'Mercedes-benz', 'CLS-Class'),
-(743, 'Mercedes-benz', '230'),
+(743, 'Mercedes-benz', '230-6'),
 (744, 'Mercedes-benz', 'E-Class'),
 (745, 'Mercedes-benz', 'ML-Class'),
 (746, 'Mercedes-benz', '190'),

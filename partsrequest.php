@@ -120,10 +120,10 @@ xmlhttp.send();
                             <div class="col-md-6 col-sm-12 no-pad float-left">
 
                                 <div class="form-group row">
-                                    <label for="qap_make" class="col-3 col-form-label">maker <span class="text-danger">*</span></label>
+                                    <label for="qap_make" class="col-3 col-form-label">Make <span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="maker" id="maker" oninput="myFunction(event)" class="form-control" required>
-                                            <option disabled selected value="">Select maker</option>
+                                            <option disabled selected value="">Select Make</option>
                                             <?php
                                             include_once "includes/database.php";
                                             $sql = "SELECT CONCAT(maker_name, ' ', model_name) as maker_name FROM tbl_temp_make_model ORDER BY maker_name ASC";
@@ -141,7 +141,7 @@ xmlhttp.send();
                                     <label for="qap_year" class="col-3 col-form-label">Year <span class="text-danger">*</span></label>
                                     <div class="col-9">
                                         <select name="year" id="year" oninput="myFunction(event)" class="form-control qap_part_class" required>
-                                           <option disabled selected>Select Year</option>
+                                           <option disabled selected value="">Select Year</option>
                                            <?php
                                            for($year = 1970; $year <= 2019 ; $year++) {
                                             echo "<option value=\"".$year."\">".$year."</option>";
@@ -173,7 +173,7 @@ xmlhttp.send();
 
 
                             <div class="form-group row">
-                                <label for="qap_year" class="col-3 col-form-label">Turbo Charge <span class="text-danger">*</span></label>
+                                <label for="qap_year" class="col-3 col-form-label">Turbo <span class="text-danger">*</span></label>
                                 <div class="col-9"> 
                                     <select name="turbo_charge" id="turbo_charge" oninput="myFunction(event)" class="form-control qap_part_class" required>
                                         <option disabled selected value="" >Select Turbo Charge</option>
@@ -226,15 +226,15 @@ xmlhttp.send();
                             </span>
                             <label for="phone" class="col-3 col-form-label">Phone <span class="text-danger">*</span></label>
                             <div class="col-9">
-                                <input class="form-control" type="tel" id="phone" name="phone" onkeyup="jm_phonemask(this);" onblur="jm_phonemask(this);" placeholder="Enter Your Phone" required/>
+                                <input class="form-control" type="tel" id="phone" name="phone"  pattern="[0-9]{10}" placeholder="10 digit Phone" required/>
                             </div>
                         </div>
 
                         <div class="form-group row">
 
-                            <label for="zip" class="col-3 col-form-label">Zip <span class="text-danger">*</span></label>
+                            <label for="zip" class="col-3 col-form-label">ZIP <span class="text-danger">*</span></label>
                             <div class="col-9">
-                                <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="Enter Your Zip" required/>
+                                <input class="form-control" type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="5 digit ZIP" required/>
                             </div>
                         </div>
 
@@ -343,7 +343,7 @@ xmlhttp.send();
                                 <label for="qap_part" class="col-3 col-form-label">Part <span class="text-danger">*</span></label>
                                 <div class="col-9">
                                     <select name="part" id="part" oninput="myFunction(event)" class="form-control " required>
-                                       <option disabled selected>Select Part</option>
+                                       <option disabled selected value="">Select Part</option>
 
                                        <?php
                                        include_once "includes/database.php";
@@ -419,10 +419,10 @@ xmlhttp.send();
 
 
                         <div class="form-group row">
-                            <label for="qap_year" class="col-3 col-form-label">Vin Number<span class="text-danger "></span></label>
+                            <label for="qap_year" class="col-3 col-form-label">VIN Number<span class="text-danger "></span></label>
                             <div class="col-9">
 
-                                <input class="form-control" size="25" class="custom-select" id = "vin_number" name="vin_number" placeholder="Vin Number (optional)" type="text">
+                                <input class="form-control" size="25" class="custom-select" id = "vin_number" name="vin_number" placeholder="VIN Number (optional)" type="text">
                                 
 
                             </div>

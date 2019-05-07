@@ -3,25 +3,16 @@ include_once 'includes/mailer.php';
 
 if( isset($_GET['maker']) && isset($_GET['part']) && isset($_GET['year']) && isset($_GET['body_style']) && isset($_GET['engine_liter']) && isset($_GET['engine_size']) && isset($_GET['turbo_charge']) && isset($_GET['transmission_type']) && isset($_GET['fuel_type']) && isset($_GET['name']) && isset($_GET['phone']) && isset($_GET['email']) && isset($_GET['zip'])){
 
-        if ( isset($_GET['vin_number']) && isset($_GET['message']) ) {
-            echo 'vin and message';
-
-            
+        if ( isset($_GET['vin_number']) && isset($_GET['message']) ) {       
             $maildata1 = main_form_data($_GET['maker'], '', $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], $_GET['vin_number'], $_GET['message'], $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
         }
-        elseif ( isset($_GET['message']) && !isset($_GET['vin_number'])) {
-            echo 'vin';
-            
+        elseif ( isset($_GET['message']) && !isset($_GET['vin_number'])) {            
             $maildata2 = main_form_data($_GET['maker'], '', $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], '', $_GET['message'], $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
         }
-        elseif ( isset($_GET['vin_number']) && !isset($_GET['message'])) {
-            echo 'message';
-            
+        elseif ( isset($_GET['vin_number']) && !isset($_GET['message'])) {            
             $maildata3 = main_form_data($_GET['maker'], '', $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], $_GET['vin_number'], '', $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
         }
-        else{
-            echo 'vin 1and message1';
-            
+        else{            
             $maildata4 = main_form_data($_GET['maker'], '', $_GET['part'], $_GET['year'], $_GET['body_style'], $_GET['engine_liter'], $_GET['engine_size'], $_GET['turbo_charge'], $_GET['transmission_type'], $_GET['fuel_type'], '','', $_GET['name'], $_GET['phone'], $_GET['email'], $_GET['zip']);
         }
     }
@@ -98,34 +89,56 @@ if( isset($_GET['maker']) && isset($_GET['part']) && isset($_GET['year']) && iss
         <center>
         <div class="container">
             <div class="row">
-                <div class="col-md-10 offset-md-1 col-sm-12">
+                <div class="col-md-10 col-sm-12">
                     <div class="contdivtxt">
-                        <div class="captionh5 text-red text-left"><strong><?php echo $_GET['year']." ".$_GET['maker']." ".$_GET['part']; ?></strong></div>
-                        <p class="text-black">Hey, Thanks for your Part Request. For the fastest service and quote, call us at <span><a href="tel:1-866-293-3731" class="text-red"><strong>1-866-293-3731</strong></a></span> during the hours of 9am to 6pm Central Time - Monday to Saturday</p>
+                        <div class="captionh5 text-red text-left"><strong>&nbsp<?php echo $_GET['year']." ".$_GET['maker']." ".$_GET['part']; ?></strong></div>
+                        <p class="text-black">Hey <?php echo $_GET['name']; ?>! Thanks for your Part Request. For the fastest service and quote, call us at <span><a href="tel:1-866-293-3731"  style="color: white;"><strong>1-866-293-3731</strong></a></span> during the hours of 9am to 6pm Central Time - Monday to Saturday</p>
                     </div>
                 </div>
             </div>
         </div>
     </center>
     </section>
-    <section class="bggrey" style="background-color: #7643ea;">
+    <section class="dorne-editors-pick-area bg-img bg-overlay-9-services section-padding-100" style="background-image: url(img/services.jpg);">
         <div class="container">
-            <div class="row">           
-                <div class="col-12 caption">
-                    <h2 class="text-black">Millions of Quality Used OEM Parts</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <span></span>
+                        <h4>SERVICES</h4>
+                        <p>Millions of Quality Used OEM Parts</p>
+                    </div>
                 </div>
-                <div class="col-md-10 offset-md-1 col-sm-12">
-                    <div class="col-md-6 col-sm-12 float-left">
-                        <h3 class="h3qttxt"><i class="text-blue"></i> Quick Quotes that save you money</h3>
+            </div>  
+            <div class="row">
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext  ">
+                        <div class="rounddivtexth1">Competitive Prices<br>to suit your budget</div>
                     </div>
-                    <div class="col-md-6 col-sm-12 float-left">
-                        <h3 class="h3qttxt"><i class=" text-blue"></i> Save over 50% off dealer prices</h3>
+                </div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext ">
+                        <div class="rounddivtexth1">Thousands of Late Model Parts<br>Vehicles in Stock</div>
                     </div>
-                    <div class="col-md-6 col-sm-12 float-left">
-                        <h3 class="h3qttxt"><i class=" text-blue"></i> Fast delivery to your home or mechanic</h3>
+                </div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext">
+                        <div class="rounddivtexth1">Environmentally Green<br>Conscious Recycling</div>
                     </div>
-                    <div class="col-md-6 col-sm-12 float-left">
-                        <h3 class="h3qttxt"><i class=" text-blue"></i> We service all major makes</h3>
+                </div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext">
+                        <div class="rounddivtexth1">Quality used parts<br>from prequalified Junkyards</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext">
+                        <div class="rounddivtexth1">You get to choose<br>the price and Warranty</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 at wow fadeInLeft text-center">
+                    <div class="col-12 rounddiv rounddivtext">
+                        <div class="rounddivtexth1">We connect you with dealers<br>and junkyards all over America.</div>
                     </div>
                 </div>
             </div>

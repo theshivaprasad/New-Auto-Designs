@@ -31,24 +31,31 @@ try {
         'verify_peer' => false,
         'verify_peer_name' => false,
         'allow_self_signed' => true
-    )
-);
+    ));
+
+    if($vin_number == ''){
+        $vin_number = "Not Available";
+    }
+
+    if($message == ''){
+        $message = "Not Available";
+    }
     //Server settings
    /* $mail->SMTPDebug = 2;  */                                     // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'vinayprathap5@gmail.com';              // SMTP username
-    $mail->Password   = 'qwpoaslkzxmn0280';                    // SMTP password
+    $mail->Username   = 'admin@autopartswolf.com';              // SMTP username
+    $mail->Password   = 'SunRise@1818';                    // SMTP password
     $mail->SMTPSecure = 'tls';                             
          // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('vinayprathap5@gmail.com', 'WebApp Query');
+    $mail->setFrom('admin@autopartswolf.com', 'WebApp Part Request');
     // $mail->addAddress('rumanpasha.ruman@gmail.com', 'WebApp Enquiry');    
-     $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry'); // Add a recipient
-     $mail->addAddress('rumanpasha.ruman@gmail.com', 'WebApp Enquiry');
+     $mail->addAddress('stanyjude@gmail.com', 'WebApp Part Request'); // Add a recipient
+     $mail->addAddress('enquiry@autopartswolf.com', 'WebApp Part Request');
     /*$mail->addAddress('rumanpasha.ruman@gmail.com', 'WebApp Enquiry 2');*/               // Name is optional
     /*$mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
@@ -60,22 +67,20 @@ try {
 */
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Car make Forms';
-    $mail->Body    = 'Make \t: '.$maker.'\nModel \t:'.$model.'\n Part-Name \t: '.$part.'\n
-Year \t:'.$year.'\n
-Body-Style \t:'.$body_style.'\n
-Engine-Liter \t:'.$engine_liter.'\n
-Engine-Size \t:'.$engine_size.'\n
-Turbo-Charge \t:'.$turbo_charge.'\n
-Transmission_Type \t:'.$transmission_type.'\n
-Fuel-Type \t:'.$fuel_type.'\n
-Vin-Number \t:'.$vin_number.'\n
-Message \t:'.$message.'\n
-Name \t:'.$name.'\n
-Email \t:'.$email.'\n
-Phone \t:'.$phone.'\n
-Zip \t:'.$zip.'\n<b>in bold!</b>';
-    $mail->AltBody = 'Make \t: $make\nModel \t:$model\n This is the body in plain text for non-HTML mail clients';
+    $mail->Subject = 'APW New Web Lead';
+    $mail->Body    = 'Year : '.$year.'<br>Make : '.$maker.'<br>Body-Style : '.$body_style.'<br>
+Engine Liter : '.$engine_liter.' Liter<br>
+Engine Size : '.$engine_size.'<br>
+Turbo Charge : '.$turbo_charge.'<br>
+Transmission Type : '.$transmission_type.'<br>
+Fuel Type : '.$fuel_type.'<br>
+VIN Number : '.$vin_number.'<br>
+Message : '.$message.'<br>--------------------------------------------<br>Part Name : '.$part.'<br>--------------------------------------------<br>
+Name : '.$name.'<br>
+Email : '.$email.'<br>
+Phone : '.$phone.'<br>
+ZIP : '.$zip.'<br><br>Thank you for using our service!<br>Team Autoparts Wolf';
+    $mail->AltBody = 'APW New Web Lead';
 
     $mail->send();
 /*    echo 'Message has been sent';
@@ -108,16 +113,16 @@ try {
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'vinayprathap5@gmail.com';              // SMTP username
-    $mail->Password   = 'qwpoaslkzxmn0280';                     // SMTP password
+    $mail->Username   = 'admin@autopartswolf.com';              // SMTP username
+    $mail->Password   = 'SunRise@1818';                         // SMTP password
     $mail->SMTPSecure = 'tls';                             
          // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('vinayprathap5@gmail.com', 'WebApp Query');
-     $mail->addAddress('vinayprathap5@gmail.com', 'WebApp Enquiry');    
-     $mail->addAddress('rumanpasha.ruman@gmail.com', 'WebApp Enquiry'); // Add a recipient
+    $mail->setFrom('admin@autopartswolf.com', 'WebApp Contact Form');
+     $mail->addAddress('stanyjude@gmail.com', 'WebApp Contact Form');    
+     $mail->addAddress('enquiry@autopartswolf.com', 'WebApp Contact Form'); // Add a recipient
    /* $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
@@ -129,13 +134,13 @@ try {
 */
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Car make Forms';
+    $mail->Subject = 'New APW Contact Form';
     $mail->Body    = '
-Message <br>'.$message.'\n
-Name <br>'.$name.'\n
-Email <br>'.$email.'\n
-subject <br>'.$subject.'\n'.('Mail id='.'<--'.(idate("U")).uniqid()).'-->';
-    $mail->AltBody = 'Make \t: $make\nModel \t:$model\n This is the body in plain text for non-HTML mail clients';
+    <b>Name</b><br>'.$name.'<br><br>
+    <b>Email</b><br>'.$email.'<br><br>
+    <b>Subject</b><br>'.$subject.'<br><br>
+    <b>Message</b><br>'.$message.'<br><br>';
+    $mail->AltBody = 'New APW Contact Form Request';
 
     $mail->send();
 /*    echo 'Message has been sent';
