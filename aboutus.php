@@ -109,23 +109,23 @@ ul li::before {
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <div class="reelative"><div class="subtitle">Why choose us?</div></div>
+                    <div class="reelative"><div class="subtitle" style="color: #ffffff;">Why choose us?</div></div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="abtliststyle">
                         <ul>
-                            <li>Competitive Prices to suit your budget.</li>
-                            <li>Thousands of Late Model Parts Vehicles in Stock</li>
-                            <li>Environmentally Green Conscious Recycling</li>
+                            <li style="color: #ffffff;">Competitive Prices to suit your budget.</li>
+                            <li style="color: #ffffff;">Thousands of Late Model Parts Vehicles in Stock</li>
+                            <li style="color: #ffffff;">Environmentally Green Conscious Recycling</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="abtliststyle">
                         <ul>
-                            <li>Quality used parts from prequalified Junkyards</li>
-                            <li>You get to choose the price and Warranty</li>
-                            <li>We connect you with dealers and junkyards all over America</li>
+                            <li style="color: #ffffff;">Quality used parts from prequalified Junkyards</li>
+                            <li style="color: #ffffff;">You get to choose the price and Warranty</li>
+                            <li style="color: #ffffff;">We connect you with dealers and junkyards all over America</li>
                         </ul>
                     </div>
                 </div>

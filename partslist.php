@@ -47,7 +47,7 @@
     <section class="bggrey bg-img bg-overlay-9 " style="background-image: url(img/bg-img/hero-2.jpg);">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 offset-md-1 col-sm-12">
+                <div class="col-md-10 col-sm-12">
                     <div class="contdivtxt">
                         <p style="color:white;"><!-- We carry huge stock of <span class="text-red"><strong>Used OEM Auto Parts</strong></span> in our store.  -->TEXT TO BE GIVEN BY CLIENT GOES HERE</p>
                     </div>
@@ -101,7 +101,7 @@
                               $result=$conn->query($sql);
                               while ($row=$result->fetch_assoc()) {
                                 //if (glob('images/parts/'.strtolower($row["img"]).'.png')) {
-                                echo "<li><a href=\"maker1.php?part=" .$row["part"]."\"  title=\"".$row["part"]."\" >Used OEM ".$row["part"]."</a></li>";
+                                echo "<li><a href=\"maker1.php?part=" .$row["part"]."\"  title=\"Used OEM ".$row["part"]."\" style=\"color:#ffffff;\">Used OEM ".$row["part"]."</a></li>";
                                 //}
                                } 
                             ?>

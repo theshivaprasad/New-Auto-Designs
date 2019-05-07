@@ -14,7 +14,7 @@
                     <h4>Customer Service</h4>
                     <ul>
                         <li><a href="customerservice.php">Submit A Ticket</a></li>
-                        <li><a href="index.php">Contact Us</a></li>
+                        <li><a href="customerservice.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-12 infooter">
