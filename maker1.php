@@ -551,6 +551,11 @@ function extractInvId($conn, $part_id, $model_id) {
                 if(isset($_GET['maker_model']) && !isset($_GET['year']) && !isset($_GET['part'])){
                     echo "margin-top: 50px";
                 }
+                elseif (isset($_GET['maker'])) {
+                    if($_GET['maker'] == "Toyota" || $_GET['maker'] == "Saab" ){
+                        echo "margin-top: 500px";
+                    }
+                }
                 else{
                     echo "margin-top: 400px";
                 }
