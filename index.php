@@ -122,27 +122,6 @@
         }
     }
     </style>
-    <script>
-        var fixmeTop = $('.fixme').offset().top;       // get initial position of the element
-
-$(window).scroll(function() {                  // assign scroll event listener
-
-    var currentScroll = $(window).scrollTop(); // get current position
-
-    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
-        $('.fixme').css({                      // scroll to that element or below it
-            position: 'fixed',
-            top: '0',
-            left: '0'
-        });
-    } else {                                   // apply position: static
-        $('.fixme').css({                      // if you scroll above it
-            position: 'static'
-        });
-    }
-
-});
-    </script>
 </head>
 
 <body >
@@ -171,7 +150,6 @@ $(window).scroll(function() {                  // assign scroll event listener
     <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg);">
         <!-- Hero Social Btn -->
         <canvas id="effect-js"></canvas><h1 style="text-align: center; color:#f3f3f3; margin-top:-52px; font-family:'Orbitron',cursive; font-size: 30px">“Our Motto; <span style="color:white;">Right Part</span> at the <span style="color:white;">Right Price</span>, every time for everyone”</h1> 
-        <div class="glowing" id="fixme"> <button class="btn btn1"> Call Now : 1-888-892-9092</button></div>
         <div id="particles-js"></div>
     </section>
     <!-- ***** Welcome Area End ***** -->
