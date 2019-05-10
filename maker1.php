@@ -496,7 +496,8 @@ function extractInvId($conn, $part_id, $model_id) {
                         if(isset($_GET["part"])&&glob("images/parts/".$_GET["part"].".png")) {
                             echo "<img src=\"images/parts/".$_GET["part"].".png\">";
                             if(glob("images/parts/".$_GET["part"].".txt")){
-                                echo "<p>";
+                                echo "</div></div></div><div class=\"col-md-12 col-sm-12\">
+                <div class=\"reelative\"><div class=\"makecontent\"><p>";
                                 $fh = fopen("images/parts/".$_GET["part"].".txt",'r');
                                 while (! feof($fh)) {
                                     $s = fgets($fh);
@@ -511,7 +512,8 @@ function extractInvId($conn, $part_id, $model_id) {
                         } else if(isset($_GET["maker_model"])) {
                             echo "<img src=\"images/model/".strtolower($maker_model_arr[0])."/".strtolower($maker_model_arr[1]).".png\">";
                             if(glob("images/model/".strtolower($_GET["maker_model"]).".txt")){
-                                echo "<p>";
+                                echo "</div></div></div><div class=\"col-md-12 col-sm-12\">
+                <div class=\"reelative\"><div class=\"makecontent\"><p>";
                                 $fh = fopen("images/model/".strtolower($_GET["model"]).".txt",'r');
                                 while (!feof($fh)) {
                                     $s = fgets($fh);
@@ -527,7 +529,8 @@ function extractInvId($conn, $part_id, $model_id) {
                         else if (glob("images/maker/".strtolower($_GET["maker"]).".png")&&!isset($_GET["model"])&&!isset($_GET["part"])) {
                             echo "<img src=\"images/maker/".strtolower($_GET["maker"]).".png\">";
                             if(glob("images/maker/".strtolower($_GET["maker"]).".txt")){
-                                echo "<p>";
+                                echo "</div></div></div><div class=\"col-md-12 col-sm-12\">
+                <div class=\"reelative\"><div class=\"makecontent\"><p>";
                                 $fh = fopen("images/maker/".strtolower($_GET["maker"]).".txt",'r');
                                 while (! feof($fh)) {
                                     $s = fgets($fh);
@@ -546,26 +549,26 @@ function extractInvId($conn, $part_id, $model_id) {
             </div>
             <div class="col-md-12 col-sm-12">
 
-                <div class="reelative" style="
+                <div class="reelative" style="margin-top: 10px;">
                 <?php
-                if(isset($_GET['maker_model']) && !isset($_GET['year']) && !isset($_GET['part'])){
-                    echo "margin-top: 50px";
-                }
-                elseif (isset($_GET['maker'])) {
-                    if($_GET['maker'] == "Toyota" || $_GET['maker'] == "Saab" ){
-                        echo "margin-top: 500px";
-                    }
-                    else{
-                        echo "margin-top: 400px";
-                    }
-                }
-                else{
-                    echo "margin-top: 400px";
-                }
+                // if(isset($_GET['maker_model']) && !isset($_GET['year']) && !isset($_GET['part'])){
+                //     echo "margin-top: 50px";
+                // }
+                // elseif (isset($_GET['maker'])) {
+                //     if($_GET['maker'] == "Toyota" || $_GET['maker'] == "Saab" ){
+                //         echo "margin-top: 500px";
+                //     }
+                //     else{
+                //         echo "margin-top: 400px";
+                //     }
+                // }
+                // else{
+                //     echo "margin-top: 400px";
+                // }
                 ?>
 
 
-                "><div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
+                <div class="subtitle"><p><?php if(!isset($_GET["model"])&&isset($_GET["maker"])){
                    echo "Popular ".$_GET['maker']." Used Parts - Auto Parts - Buy Quality Parts for a ".$_GET['maker']." Model"; ?></p></div></div>
 
                    <div class="make-listpart">
