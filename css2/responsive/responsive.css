@@ -272,7 +272,7 @@
     }
     .explore-search-result {
         padding: 0 30px;
-        height: 550px;
+        height: 1000px;
         overflow-y: auto
     }
     .explore-search-form .nav-tabs {
